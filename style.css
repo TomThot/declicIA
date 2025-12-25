@@ -15,7 +15,7 @@
     --background-color:rgba(215, 210, 255, 0.151);
     --white: #ffffff;
     --border-color: #e0e0e0;
-    --shadow:0 5px 10px rgba(171, 174, 185, 0.356);
+    --shadow:0 5px 25px rgba(171, 174, 185, 0.356);
     --titre-color:rgb(141, 49, 184)
 }
 
@@ -96,14 +96,6 @@ body {
     color: var(--secondary-color);
 }
 
-
-
-
-
-
-
-
-
 /* Position relative pour le menu item */
 .menu-item {
     position: relative;
@@ -160,21 +152,6 @@ body {
 .menu-item.active .arrow {
     transform: rotate(180deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .logo{
     display: flex;
@@ -233,7 +210,7 @@ body {
     color: var(--white);
     font-size: 3rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
 }
 
 .ContainerTitre .sousTitre{
@@ -242,7 +219,7 @@ margin-left: 30px;
 font-size: clamp(1rem, 2vw, 1.25rem);
 font-weight: bold;
 color: var(--white);
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
 }
 
 
@@ -313,8 +290,9 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
 .containerAxe{
     width: 270px;
-    display: grid;
-	place-items: center;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
     margin: 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -336,21 +314,41 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
 .cardContent{
     width: 100%;
-    text-align: center;
-    padding: 0 0 0 25px;
-    border: 2px solid rgba(128, 128, 128, 0.377);
+    padding: 10px 10px;
+    border: 2px solid rgba(128, 128, 128, 0.247);
     border-radius: 0 0 10px 10px;
-    transition: border-color 0.3S ease;
+    transition: border-color 0.3s ease;
+}
+
+.cardContent h3{
+    margin: 10px 10px ;
+}
+
+.cardContent p{
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 10px 10px ;
+}
+
+#lien{
+    color: rgb(104, 202, 206);
+    font-weight:400;
+    font-size: clamp(12px, 2vw, 14px);
+    margin: 10px 10px ;;
 }
 
 .containerAxe:hover {
-    transform : translateY(-7px);
+    transform :  translateY(-7px);
     box-shadow: 0 5px 25px rgba(120, 142, 241, 0.644);
 }
 
 .containerAxe:hover .cardContent{
     border-color: #a564e2;
+    
 }
+
+
+
 
 /*---------------------------------------------*/
 /* RESPONSIVE STYLES */
