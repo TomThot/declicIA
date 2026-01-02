@@ -332,9 +332,10 @@ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
 
 #lien{
     color: rgb(104, 202, 206);
-    font-weight:400;
+    font-weight: bold;
     font-size: clamp(12px, 2vw, 14px);
-    margin: 10px 10px ;;
+    margin: 10px 10px ;
+    transition: color 0.3s ease;
 }
 
 .containerAxe:hover {
@@ -347,6 +348,9 @@ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
     
 }
 
+.containerAxe:hover #lien {
+   color: #a564e2 ;
+}
 
 
 
@@ -438,20 +442,6 @@ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
         opacity: 1;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .hero {
        height: 20vh;
     }
@@ -461,7 +451,7 @@ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.747);
         position: absolute;
         z-index: 10;
         top: 30%;
-        left: 20%;
+        left: 10%;
         align-items: center;
         width: 90%;  /* Évite les débordements */
     }
