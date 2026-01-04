@@ -30,7 +30,8 @@ body {
 .header {
   background-color: var(--white);
   box-shadow: var(--shadow);
-  position: sticky; /*le header reste collé lors du scroll*/
+  position: sticky;
+  /*le header reste collé lors du scroll*/
   top: 0;
   z-index: 1000;
   padding: 10px 0;
@@ -48,8 +49,10 @@ body {
 
 /* Menu Burger */
 .burger {
-  display: none; /*caché par défaut*/
-  flex-direction: column; /* 3 span en colonne*/
+  display: none;
+  /*caché par défaut*/
+  flex-direction: column;
+  /* 3 span en colonne*/
   cursor: pointer;
   gap: 5px;
   z-index: 1001;
@@ -65,28 +68,34 @@ body {
 
 .burger.active span:nth-child(1) {
   /* quand Javascript ajoute la classe active à la classe burger*/
-  transform: rotate(45deg) translate(8px, 8px); /* rotation du 1er span*/
+  transform: rotate(45deg) translate(8px, 8px);
+  /* rotation du 1er span*/
 }
 
 .burger.active span:nth-child(2) {
-  opacity: 0; /* On masque le ée span*/
+  opacity: 0;
+  /* On masque le ée span*/
 }
 
 .burger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px); /* rotation du 3e span*/
+  transform: rotate(-45deg) translate(4px, -4px);
+  /* rotation du 3e span*/
 }
 
 /* Navigation */
 .nav-list {
-  display: flex; /* les li sont alignés horizontalement*/
-  list-style: none; /* supprime les puces*/
+  display: flex;
+  /* les li sont alignés horizontalement*/
+  list-style: none;
+  /* supprime les puces*/
   gap: 30px;
   margin: 0;
   padding: 0;
 }
 
 .nav-list a {
-  text-decoration: none; /* pas de soulignement des liens*/
+  text-decoration: none;
+  /* pas de soulignement des liens*/
   color: var(--text-color);
   font-weight: 505;
   transition: color 0.4s;
@@ -169,7 +178,8 @@ body {
 /* ----------------------------------------------------------------------------------------- */
 
 .hero {
-  height: 30vh; /*hauteur proportionnelle (30 % de la fenêtre*/
+  height: 30vh;
+  /*hauteur proportionnelle (30 % de la fenêtre*/
   min-height: 250px;
   max-height: 600px;
   position: relative;
@@ -183,7 +193,8 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   background-image: url("Images/Bannière.webp");
-  background-size: cover; /*l'image remplit tous l'espace*/
+  background-size: cover;
+  /*l'image remplit tous l'espace*/
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -225,7 +236,8 @@ body {
 
 /* Overlay pour fermer le menu : elle jette un voile noir sur la page qd le menu burger est ouvert*/
 .overlay {
-  display: none; /* cette div reste invisible*/
+  display: none;
+  /* cette div reste invisible*/
   position: fixed;
   top: 0;
   left: 0;
@@ -247,11 +259,14 @@ body {
 /* ----------------------------------------------------------------------------------------- */
 
 /*Intro*/
-
+/* ----------------------------------------------------------------------------------------- */
 .intro {
-  max-width: 1200px; /*Espace de la colonne centrale pour plus de visibilité*/
-  margin: 30px auto; /*centre horizontalement dans son conteneur.*/
-  padding: 10px 20px 20px 20px; /*marge interne de 40 en haut et bas et 20 sur les cotés*/
+  max-width: 1200px;
+  /*Espace de la colonne centrale pour plus de visibilité*/
+  margin: 30px auto;
+  /*centre horizontalement dans son conteneur.*/
+  padding: 10px 20px 20px 20px;
+  /*marge interne de 40 en haut et bas et 20 sur les cotés*/
   background-color: var(--background-color);
   border-radius: 20px;
 }
@@ -263,23 +278,29 @@ body {
 }
 
 .intro p {
-  line-height: 1.7; /* Interligne confortable */
-  margin-bottom: 1em; /* Espace entre les paragraphes */
+  line-height: 1.7;
+  /* Interligne confortable */
+  margin-bottom: 1em;
+  /* Espace entre les paragraphes */
   color: var(--text-color);
   font-family: "Segoe UI", sans-serif;
   font-size: clamp(1rem, 1vw, 2rem);
 }
 
 /* Sommaire*/
+/* ----------------------------------------------------------------------------------------- */
 .sommaire {
-  max-width: 1200px; /*Espace de la colonne centrale pour plus de visibilité*/
-  margin: 0 auto; /*centre horizontalement dans son conteneur.*/
-  padding: 10px 20px; /*marge interne de 40 en haut et bas et 20 sur les cotés*/
+  max-width: 1200px;
+  /*Espace de la colonne centrale pour plus de visibilité*/
+  margin: 0 auto;
+  /*centre horizontalement dans son conteneur.*/
+  padding: 10px 20px;
+  /*marge interne de 40 en haut et bas et 20 sur les cotés*/
 }
 
 .sommaire h2 {
   margin-bottom: 30px;
-  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   color: var(--titre-color);
 }
 
@@ -342,6 +363,7 @@ body {
   font-weight: bold;
   font-size: clamp(12px, 2vw, 14px);
   margin: 10px 10px;
+  padding-left: 150px;
   transition: all 0.3s ease;
 }
 
@@ -356,8 +378,81 @@ body {
 
 .containerAxe:hover #lien {
   color: #a564e2;
-  transform: translateX(10px);
+  transform: translateX(30px);
 }
+
+/* L'IA en chiffre */
+/* ----------------------------------------------------------------------------------------- */
+.chiffreIA {
+  max-width: 1200px;
+  /*Espace de la colonne centrale pour plus de visibilité*/
+  margin: 0 auto;
+  /*centre horizontalement dans son conteneur.*/
+  padding: 10px 20px;
+  /*marge interne de 40 en haut et bas et 20 sur les cotés*/
+}
+
+.chiffreIA h2 {
+  margin-bottom: 30px;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--titre-color);
+}
+
+.containerChiffre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.containerChiffre .carte {
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*---------------------------------------------*/
 /* Footer*/
@@ -487,7 +582,8 @@ footer {
   }
 
   .hero {
-    height: 20vh; /*hauteur proportionnelle (20 % de la fenêtre*/
+    height: 20vh;
+    /*hauteur proportionnelle (20 % de la fenêtre*/
   }
 }
 
@@ -536,11 +632,13 @@ footer {
   }
 
   .menu-item {
-    position: static; /* Annule le position relative */
+    position: static;
+    /* Annule le position relative */
   }
 
   .submenu {
-    position: static; /* Annule le position absolute */
+    position: static;
+    /* Annule le position absolute */
     background: rgba(0, 0, 0, 0.05);
     border: none;
     box-shadow: none;
@@ -570,7 +668,8 @@ footer {
     top: 30%;
     left: 10%;
     align-items: center;
-    width: 90%; /* Évite les débordements */
+    width: 90%;
+    /* Évite les débordements */
   }
 
   .ContainerTitre .titre {
@@ -578,7 +677,8 @@ footer {
   }
 
   .hero img {
-    height: 100px; /* Réduit la taille du logo */
+    height: 100px;
+    /* Réduit la taille du logo */
   }
 
   .axes {
