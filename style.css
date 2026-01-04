@@ -696,6 +696,17 @@ footer {
     width: 100%;
   }
 
+  .containerChiffre {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+  .containerChiffre .carte {
+                padding: 20px;
+                min-height: 150px;
+            }
+  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -730,4 +741,5 @@ footer {
   .hero {
     height: 20vh;
   }
+
 }
