@@ -1,14 +1,27 @@
  /* ====== BASE ====== */
+    /* Définition des variables du documents*/
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --background-color: rgba(215, 210, 255, 0.151);
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow: 0 5px 25px rgba(171, 174, 185, 0.356);
+  --titre-color: rgb(141, 49, 184);
+}
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      background-color: #f5f7fa;
-      color: #222;
+      background-color: var(--white);
+      color: var(--text-color);
     }
 
     header {
-      background: linear-gradient(135deg, #4b75b6, #6fa8dc);
+      background: linear-gradient(180deg, #360143,#2a81fc);
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -36,19 +49,153 @@
     }
 
     h2 {
-      color: #4b75b6;
-      border-left: 6px solid #4b75b6;
+      margin-bottom: 30px;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--titre-color);
+      border-left: 6px solid var(--titre-color);
       padding-left: 10px;
     }
 
     /* ====== CARTES ====== */
     .card {
-      background: white;
+      background: var(--background-color);
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       margin-top: 20px;
     }
+
+    .image{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img{
+      width: 60%;
+      height: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.axes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerAxe {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100px;
+  background-color: #360143;
+}
+
+
+
+.cardContent {
+  width: 100%;
+  padding: 10px 10px;
+  border: 2px solid rgba(128, 128, 128, 0.247);
+  border-radius: 0 0 10px 10px;
+  transition: border-color 0.3s ease;
+}
+
+.cardContent h3 {
+  margin: 10px 10px;
+}
+
+.cardContent p {
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
+  margin: 10px 10px;
+}
+
+.cardContent ul {
+  margin-left: 30px;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+#lien {
+  color: rgb(104, 202, 206);
+  font-weight: bold;
+  font-size: clamp(12px, 2vw, 14px);
+  margin: 10px 10px;
+  padding-left: 150px;
+  transition: all 0.3s ease;
+}
+
+.containerAxe:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 5px 25px rgba(120, 142, 241, 0.644);
+}
+
+.containerAxe:hover .cardContent {
+  border-color: #a564e2;
+}
+
+.containerAxe:hover #lien {
+  color: #a564e2;
+  transform: translateX(30px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* ====== SCHÉMAS ====== */
     .schema {
