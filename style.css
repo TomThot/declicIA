@@ -295,7 +295,7 @@ body {
   margin: 0 auto;
   /*centre horizontalement dans son conteneur.*/
   padding: 10px 20px;
-  /*marge interne de 40 en haut et bas et 20 sur les cotés*/
+  /*marge interne de 10 en haut et bas et 20 sur les cotés*/
 }
 
 .sommaire h2 {
@@ -548,7 +548,7 @@ footer {
 .footer-links a {
   color: #b8c1ec;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 

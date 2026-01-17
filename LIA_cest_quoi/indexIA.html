@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,6 +35,9 @@
             <strong>algorithmes</strong> et des
             <strong>modèles mathématiques</strong>.
           </p>
+          <div class="illustration">
+            <img src="../Images/historique.png" alt="historique" />
+          </div>
         </div>
       </section>
 
@@ -42,10 +45,6 @@
       <section>
         <h2>Comment fonctionne une IA ?</h2>
         <div class="card">
-          <p>
-            Une IA fonctionne en analysant de grandes quantités de données afin
-            de repérer des motifs (patterns).
-          </p>
           <p>
             Les intelligences artificielles modernes comme ChatGPT reposent sur
             des <strong>LLM</strong> (Large Language Models), c’est-à-dire de
@@ -71,20 +70,25 @@
           <div class="image">
             <img src="../Images/token.webp" alt="token" />
           </div>
-
+          <div class="resume">Pour faire simple :</div>
           <div class="bilan">
             <div class="axes">
               <div class="containerAxe">
                 <div class="cardImage">
                   <h3>
-                    <img src="../Images/icons/icons8-puzzle-100.png" alt="" class="icon"> 
-                    Qu'est ce qu'un token ?</h3>
+                    <img
+                      src="../Images/icons/icons8-puzzle-100.png"
+                      alt="icon"
+                      class="icon"
+                    />
+                    Qu'est ce qu'un token ?
+                  </h3>
                 </div>
                 <div class="cardContent">
                   <div class="sousTitre">Un token est un morceau mot.</div>
                   <div class="texte">
-                    Les LLM ne lisent pas les phrases : Ils lisent une suite de
-                    tokens.
+                    Les LLM ne lisent pas les phrases : Ils lisent (prédisent)
+                    une suite de tokens.
                   </div>
                   <div class="centrage">
                     <div class="exemple">Intelligence : intel-lig-ence</div>
@@ -95,6 +99,11 @@
               <div class="containerAxe">
                 <div class="cardImage">
                   <h3>
+                    <img
+                      src="../Images/icons/icons8-game-die-100.png"
+                      alt="icon"
+                      class="icon"
+                    />
                     Leur travail : <br />
                     prédire le token suivant
                   </h3>
@@ -114,7 +123,14 @@
 
               <div class="containerAxe">
                 <div class="cardImage">
-                  <h3>Pourquoi elle hallucine ?</h3>
+                  <h3>
+                    <img
+                      src="../Images/icons/icons8-box-important-100.png"
+                      alt="icon"
+                      class="icon"
+                    />
+                    Pourquoi elle hallucine ?
+                  </h3>
                 </div>
                 <div class="cardContent">
                   <div class="sousTitre">Le LLM prédit.</div>
@@ -128,16 +144,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="schema">
-            <div class="box">Données<br />(textes, images, sons)</div>
-            <div class="arrow">➡</div>
-            <div class="box">Algorithme<br />d'apprentissage</div>
-            <div class="arrow">➡</div>
-            <div class="box">Modèle IA<br />entraîné</div>
-            <div class="arrow">➡</div>
-            <div class="box">Résultat<br />(réponse, prédiction)</div>
           </div>
         </div>
       </section>
@@ -168,12 +174,14 @@
         <h2>Les différents types d'intelligence artificielle</h2>
         <div class="card">
           <p>
-            On distingue aujourd’hui quatre grands types d’intelligence
-            artificielle, classés selon leurs capacités et leur niveau
-            d’autonomie.
+            Selon <strong> Stuart Russell</strong>, ingénieur et co-auteur du
+            manuel de référence
+            <em>Artificial Intelligence: A Modern Approach</em>, il existe
+            <strong>cinq niveaux d'IA</strong> classés selon leurs capacités et
+            leur niveau d’autonomie.
           </p>
 
-          <h3>1. IA faible (ou IA réactive)</h3>
+          <h3>Niveau 1 : IA faible (ou IA réactive)</h3>
           <p>
             L’<strong>IA faible</strong> est conçue pour accomplir une seule
             tâche précise. Elle ne comprend pas ce qu’elle fait et ne peut pas
@@ -190,7 +198,11 @@
             <li>traduction automatique</li>
           </ul>
 
-          <h4>L’IA à mémoire limitée</h4>
+          <h3>Niveau 2 : L’IA à mémoire limitée</h3>
+          <p>
+            <strong>L'IA à mémoire limitée</strong> fonctionne en analysant de grandes quantités
+            de données afin de repérer des motifs (patterns).
+          </p>
           <p>
             Contrairement à l’IA réactive, l’IA à mémoire limitée peut apprendre
             à partir de données passées. Elle s’appuie sur ce qu’on appelle le
@@ -210,67 +222,132 @@
             ses applications IA sont déjà très puissantes et en constante
             évolution.
           </p>
+          <div class="resume">Pour faire simple :</div>
+          <div class="bilan">
+            <div class="axes">
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img
+                      src="../Images/icons/icon_number_one.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    Les données
+                  </h3>
+                </div>
+                <div class="cardContent">
+                  <div class="sousTitre">Nourrir l'IA</div>
+                  <div class="texte">
+                    Textes, images, sons, vidéos... L'IA a besoin de données
+                    pour apprendre. Les données doivent être variées et de
+                    qualité pour que l'IA deviennent performantes.
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      Pour reconnaitre un chat, l'IA est entrainée avec des
+                      millions de photos de chat.
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <h3>2. IA forte (ou IA générale)</h3>
-          <p>
-            On entre ici dans un autre univers. L’<strong>IA forte</strong> (ou
-            AGI pour Artificial General Intelligence) serait capable de
-            raisonner, apprendre et comprendre comme un humain voire mieux qu'un
-            humain, dans tous les domaines.
-          </p>
-          <p>
-            👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
-          </p>
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img
+                      src="../Images/icons/icon_number_two.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    Les algorithmes
+                  </h3>
+                </div>
+                <div class="cardContent">
+                  <div class="sousTitre">Analyser et trouver des patterns</div>
+                  <div class="texte">
+                    Programmes qui recherchent les occurences dans les données
+                    et en tirent des règles.
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      L'algorithme finit par comprendre que 2 "oreilles
+                      pointues", des "moustaches" + "fourrure" est sans doute un
+                      chat.
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <h3>3. IA selon son fonctionnement</h3>
-          <ul>
-            <li>
-              <strong>IA à règles</strong> : suit des règles programmées à
-              l’avance
-            </li>
-            <li>
-              <strong>IA à apprentissage automatique</strong> : apprend à partir
-              de données
-            </li>
-            <li>
-              <strong>IA à apprentissage profond</strong> : utilise des réseaux
-              de neurones
-            </li>
-          </ul>
-          <!-- Schéma visuel : types d'IA -->
-          <div class="schema">
-            <div class="box">
-              IA faible<br />
-              <small>(spécialisée)</small>
-            </div>
-
-            <div class="arrow">➡</div>
-
-            <div class="box">
-              IA générale<br />
-              <small>(humaine)</small>
-            </div>
-
-            <div class="arrow">➡</div>
-
-            <div class="box">
-              IA forte<br />
-              <small>(autonome)</small>
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img
+                      src="../Images/icons/icon_number_three.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    L'apprentissage
+                  </h3>
+                </div>
+                <div class="cardContent">
+                  <div class="sousTitre">S'améliorer avec le temps</div>
+                  <div class="texte">
+                    Plus l'IA s'entraine plus elle améliore et affine ses
+                    réponses. C'est le "Machine Learning".
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      Au fil du temps, les porpositions de votre plateforme
+                      vidéo sont de plus en plus pertinentes et vous
+                      correspondent.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <br />
-
-          <div class="schema">
-            <div class="box">IA à règles</div>
-
-            <div class="arrow">➡</div>
-
-            <div class="box">Apprentissage<br />automatique</div>
-
-            <div class="arrow">➡</div>
-
-            <div class="box">Apprentissage<br />profond</div>
+          <h3>Niveau 3 : La "théorie de l'esprit"</h3>
+          <p>
+            L'IA <strong>avec théorie de l'esprit</strong> serait capable de
+            comprendre les émotions, les croyances, les intentions et les désirs
+            d’autrui. Elle pourrait raisonner sur la façon dont les autres
+            voient le monde et adapter son comportement en conséquence. Ce
+            niveau représente une avancée majeure vers une véritable
+            intelligence sociale et émotionnelle. Des études rigoureuses
+            montrent que même les modèles les plus avancés restent en retrait de
+            la performance humaine.
+          </p>
+          <h3>Niveau 4 : L'IA consciente de soi <em>(Self-Aware AI)</em></h3>
+          <p>
+            👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
+          </p>
+          <p>
+            <strong>L’IA consciente de soi</strong> posséderait une conscience, une identité
+            propre, des désirs et une capacité à ressentir. Elle serait
+            consciente de sa propre existence et aurait ses propres expériences
+            subjectives. Ce niveau représente l’étape ultime de la conscience
+            artificielle, un concept qui se situe bien au-delà de la simple
+            imitation du comportement humain.
+          </p>
+          <h3>Niveau 5 : L’IA superintelligente (ASI) et l’AGI</h3>
+          <p>
+            👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
+          </p>
+          <p>
+            Ce niveau englobe l’AGI (IA générale, capable de résoudre toute
+            tâche intellectuelle humaine) et l’ASI ( IA superintelligente, qui
+            dépasserait l’intelligence humaine dans tous les domaines). En 2026,
+            ces concepts sont purement spéculatifs. L’émergence de l’ASI soulève
+            des questions fondamentales sur le contrôle, la sécurité et l’impact
+            sur l’humanité.
+          </p>
+          <div class="illustration">
+            <img
+              src="../Images/Les 5 Niveaux d'Intelligence Artificielle _ Un Schéma Explicatif - visual selection.svg"
+              alt="5 niveaux d'IA"
+            />
           </div>
         </div>
       </section>
@@ -312,8 +389,56 @@
     </main>
 
     <footer>
-      Page pédagogique – Intelligence Artificielle<br />
-      © 2026
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Section À propos -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">DéclicIA</span>
+                    </div>
+                    <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. 
+                        Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
+                </div>
+
+                <!-- Section Navigation -->
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#Menu1">L'IA c'est quoi ?</a></li>
+                        <li><a href="#Menu2">Cadre et défis</a></li>
+                        <li><a href="#Menu3">Outils pour la classe</a></li>
+                        <li><a href="#ressources">Ressources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Ressources -->
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Définitions IA</a></li>
+                        <li><a href="#">Cadre institutionnel</a></li>
+                        <li><a href="#">Outils recommandés</a></li>
+                        <li><a href="#">Formations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Contact -->
+                <div class="footer-section">
+                    <h3>Contact & Communauté</h3>
+                    <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Email">✉</a>
+                        <a href="#" class="social-link" title="GitHub">⚡</a>
+                        <a href="#" class="social-link" title="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DéclicIA - Tous droits réservés</p>
+                <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+            </div>
+        </div>
     </footer>
   </body>
 </html>
