@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/icons/favicon-16x16.png"
+    />
     <title>L'IA c'est quoi ?</title>
     <link rel="stylesheet" href="StyleIA.css" />
   </head>
@@ -13,12 +19,33 @@
         Qu'appelle-t-on IA ? Comprendre simplement le fonctionnement, les usages
         et les limites de l'intelligence artificielle.
       </p>
+      <div class="navigationPage">
+        <a href="#Definition">Définition</a>
+        <a href="#Fonctionnement">Comment Fonctionne L'IA ?</a>
+        <a href="#Exemple">Exemple</a>
+        <a href="#Types">Les différents types d'IA</a>
+        <a href="#Localisation">Où utilise-t-on l'IA</a>
+        <a href="#Ethique">Limites et questions éthiques</a>
+      </div>
     </header>
 
     <main>
+      <!-- Navigation -->
+      <nav class="menu">
+        <div class="menu-toggle">☰</div>
+      </nav>
+
+      <div class="sidebar">
+        <a href="../index.html">Accueil</a>
+        <a href="#">L'IA c'est quoi ?</a>
+        <a href="#">Cadre et défis</a>
+        <a href="#">Outils pour le classe</a>
+        <a href="#">Menu 5</a>
+      </div>
+
       <!-- SECTION 1 : définition -->
       <section>
-        <h2>Définition</h2>
+        <h2 id="Definition">Définition</h2>
         <div class="card">
           <p>
             Une <strong>intelligence artificielle (IA)</strong> est un programme
@@ -43,7 +70,7 @@
 
       <!-- SECTION 2 :Fonctionnement -->
       <section>
-        <h2>Comment fonctionne une IA ?</h2>
+        <h2 id="Fonctionnement">Comment fonctionne une IA ?</h2>
         <div class="card">
           <p>
             Les intelligences artificielles modernes comme ChatGPT reposent sur
@@ -111,7 +138,8 @@
                 <div class="cardContent">
                   <div class="sousTitre">Le LLM ne réfléchit pas.</div>
                   <div class="texte">
-                    L'IA calcule : Quel token à la plus forte probabilité ?
+                    L'IA calcule et fait des choix : Quel token à la plus forte
+                    probabilité ?
                   </div>
                   <div class="centrage">
                     <div class="exemple">
@@ -150,7 +178,7 @@
 
       <!-- SECTION 3 : exemple -->
       <section>
-        <h2>Exemple : reconnaissance d'images</h2>
+        <h2 id="Exemple">Exemple : reconnaissance d'images</h2>
         <div class="card">
           <p>
             Pour apprendre à reconnaître un chat, une IA analyse des milliers
@@ -171,7 +199,7 @@
 
       <!-- SECTION : Types d'intelligence artificielle -->
       <section>
-        <h2>Les différents types d'intelligence artificielle</h2>
+        <h2 id="Type">Les différents types d'intelligence artificielle</h2>
         <div class="card">
           <p>
             Selon <strong> Stuart Russell</strong>, ingénieur et co-auteur du
@@ -200,8 +228,8 @@
 
           <h3>Niveau 2 : L’IA à mémoire limitée</h3>
           <p>
-            <strong>L'IA à mémoire limitée</strong> fonctionne en analysant de grandes quantités
-            de données afin de repérer des motifs (patterns).
+            <strong>L'IA à mémoire limitée</strong> fonctionne en analysant de
+            grandes quantités de données afin de repérer des motifs (patterns).
           </p>
           <p>
             Contrairement à l’IA réactive, l’IA à mémoire limitée peut apprendre
@@ -324,12 +352,12 @@
             👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
           </p>
           <p>
-            <strong>L’IA consciente de soi</strong> posséderait une conscience, une identité
-            propre, des désirs et une capacité à ressentir. Elle serait
-            consciente de sa propre existence et aurait ses propres expériences
-            subjectives. Ce niveau représente l’étape ultime de la conscience
-            artificielle, un concept qui se situe bien au-delà de la simple
-            imitation du comportement humain.
+            <strong>L’IA consciente de soi</strong> posséderait une conscience,
+            une identité propre, des désirs et une capacité à ressentir. Elle
+            serait consciente de sa propre existence et aurait ses propres
+            expériences subjectives. Ce niveau représente l’étape ultime de la
+            conscience artificielle, un concept qui se situe bien au-delà de la
+            simple imitation du comportement humain.
           </p>
           <h3>Niveau 5 : L’IA superintelligente (ASI) et l’AGI</h3>
           <p>
@@ -354,7 +382,7 @@
 
       <!-- SECTION 4 : Utilisation-->
       <section>
-        <h2>Où utilise-t-on l'IA ?</h2>
+        <h2 id="Localisation">Où utilise-t-on l'IA ?</h2>
         <div class="card">
           <ul>
             <li>Assistants vocaux (Siri, Alexa…)</li>
@@ -362,6 +390,7 @@
             <li>Reconnaissance faciale</li>
             <li>Traduction automatique</li>
             <li>Voitures autonomes</li>
+            <li>Interprétation des images médicales</li>
             <li>Éducation et aide à l'apprentissage</li>
           </ul>
         </div>
@@ -369,8 +398,14 @@
 
       <!-- SECTION 5 : éthique -->
       <section>
-        <h2>Limites et questions éthiques</h2>
+        <h2 id="Ethique">Limites et questions éthiques</h2>
         <div class="card">
+          <p>
+            <em
+              >Cette partie sera développée plus loguement dans le section
+              <a href="">Cadre et défis</a></em
+            >
+          </p>
           <p>
             L'intelligence artificielle pose aussi des questions importantes :
           </p>
@@ -378,7 +413,7 @@
             <li>biais dans les données</li>
             <li>respect de la vie privée</li>
             <li>dépendance aux technologies</li>
-            <li>impact sur l'emploi</li>
+            <li>impact sur l'emploi et l'environnement</li>
           </ul>
           <p>
             L'IA est un outil puissant, mais elle doit être utilisée de manière
@@ -389,56 +424,64 @@
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Section À propos -->
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="footer-logo-text">DéclicIA</span>
-                    </div>
-                    <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. 
-                        Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
-                </div>
-
-                <!-- Section Navigation -->
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul class="footer-links">
-                        <li><a href="#Menu1">L'IA c'est quoi ?</a></li>
-                        <li><a href="#Menu2">Cadre et défis</a></li>
-                        <li><a href="#Menu3">Outils pour la classe</a></li>
-                        <li><a href="#ressources">Ressources</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section Ressources -->
-                <div class="footer-section">
-                    <h3>Ressources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Définitions IA</a></li>
-                        <li><a href="#">Cadre institutionnel</a></li>
-                        <li><a href="#">Outils recommandés</a></li>
-                        <li><a href="#">Formations</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section Contact -->
-                <div class="footer-section">
-                    <h3>Contact & Communauté</h3>
-                    <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" title="Email">✉</a>
-                        <a href="#" class="social-link" title="GitHub">⚡</a>
-                        <a href="#" class="social-link" title="Twitter">🐦</a>
-                    </div>
-                </div>
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Section À propos -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="footer-logo-text">DéclicIA</span>
             </div>
+            <p>
+              Des notions et des outils sur l'intelligence artificielle dans
+              l'éducation. Un site dédié aux enseignants pour comprendre et
+              intégrer l'IA de manière réfléchie et responsable.
+            </p>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 DéclicIA - Tous droits réservés</p>
-                <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+          <!-- Section Navigation -->
+          <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul class="footer-links">
+              <li><a href="#">L'IA c'est quoi ?</a></li>
+              <li><a href="#Menu2">Cadre et défis</a></li>
+              <li><a href="#Menu3">Outils pour la classe</a></li>
+            </ul>
+          </div>
+
+          <!-- Section Ressources -->
+          <div class="footer-section">
+            <h3>Ressources</h3>
+            <ul class="footer-links">
+              <li><a href="#">Définitions IA</a></li>
+              <li><a href="#">Cadre institutionnel</a></li>
+              <li><a href="#">Outils recommandés</a></li>
+              <li><a href="#">Formations</a></li>
+            </ul>
+          </div>
+
+          <!-- Section Contact -->
+          <div class="footer-section">
+            <h3>Contact & Communauté</h3>
+            <p>
+              Envie d'échanger, de contribuer ou de partager vos expériences ?
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Email">✉</a>
+              <a href="#" class="social-link" title="GitHub">⚡</a>
+              <a href="#" class="social-link" title="Twitter">🐦</a>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 DéclicIA - Tous droits réservés</p>
+          <p class="footer-credits">
+            Conçu avec passion pour l'éducation et l'innovation pédagogique
+          </p>
+        </div>
+      </div>
     </footer>
+
+    <script src="scriptIA.js"></script>
   </body>
 </html>
