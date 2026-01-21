@@ -229,7 +229,104 @@
                 </div>
             </div>    
         </section>
+
+        <!-- Quiz -->
+        <section class="quizz">
+            <div class="containerQuizz">
+                <h1>Auto-diagnostic : où en êtes-vous ?</h1>
+                <p class="introQuizz">Cochez les affirmations qui vous correspondent. 
+                    Le quiz calculera automatiquement votre profil dominant.</p>
+
+                <form id="quizForm">
+                    <div class="zone-section">
+                        <h2 class="zone-title zone-confort">Zone de confort</h2>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="confort" value="1">
+                            <span>Je préfère mes méthodes habituelles, elles fonctionnent bien</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="confort" value="1">
+                            <span>L'IA me semble être un gadget pas vraiment utile pour ma pratique</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="confort" value="1">
+                            <span>Je n'ai pas encore ressenti le besoin d'essayer</span>
+                        </label>
+                    </div>
+
+                    <div class="zone-section">
+                        <h2 class="zone-title zone-resistance">Zone de résistance</h2>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="resistance" value="1">
+                            <span>J'ai peur de mal faire ou de perdre le contrôle</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="resistance" value="1">
+                            <span>Les questions éthiques ou de données me freinent</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="resistance" value="1">
+                            <span>Je me sens dépassé par la technologie</span>
+                        </label>
+                    </div>
+
+                    <div class="zone-section">
+                        <h2 class="zone-title zone-exploration">Zone d'exploration</h2>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="exploration" value="1">
+                            <span>J'ai commencé à tester quelques outils, avec prudence</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="exploration" value="1">
+                            <span>Je pose des questions aux collègues qui utilisent l'IA</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="exploration" value="1">
+                            <span>Je vois des apports potentiels mais je tâtonne encore</span>
+                        </label>
+                    </div>
+
+                    <div class="zone-section">
+                        <h2 class="zone-title zone-action">Zone d'action</h2>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="action" value="1">
+                            <span>J'utilise l'IA régulièrement pour préparer mes cours</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="action" value="1">
+                            <span>J'ai un avis éclairé sur les avantages et les limites</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="action" value="1">
+                            <span>Je partage mes découvertes avec mes collègues</span>
+                        </label>
+                    </div>
+                </form>
+
+                <div id="result" class="result hidden">
+                    <h3>Votre profil dominant</h3>
+                    <div id="resultContent" class="result-content"></div>
+                    <button id="resetBtn" class="reset-btn">Recommencer le quiz</button>
+                </div>
+
+                <div id="emptyMessage" class="empty-message hidden">
+                    Cochez au moins une case pour voir votre résultat
+                </div>
+            </div>
+         </section>
+
     </main>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
