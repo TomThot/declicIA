@@ -78,128 +78,131 @@ function closeMenu() {
   });
 }
 
-
 //---------------------------------------------------------------------------------------------//
 //-----------------------Quizz-----------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------//
 // Profils avec leurs descriptions
 const profiles = {
-    confort: {
-        title: "Le Spectateur",
-        description: "Vous observez de loin. Vos méthodes fonctionnent, l'IA vous semble floue ou pas indispensable. C'est une posture légitime qui préserve votre énergie et vos acquis pédagogiques.",
-        color: "#3498db"
-    },
-    resistance: {
-        title: "La Résistance",
-        description: "Vous avez des doutes, voire des réticences. C'est souvent la porte d'entrée vers l'exploration, si elle est reconnue et accompagnée. Identifiez UNE peur précise et cherchez UNE réponse factuelle.",
-        color: "#e74c3c"
-    },
-    exploration: {
-        title: "L'Explorateur",
-        description: "Vous osez. Vous vous autorisez à ne pas tout comprendre, à tâtonner. C'est là que les premiers apports deviennent visibles et que naît le sentiment de fierté qui nourrit la motivation.",
-        color: "#f39c12"
-    },
-    action: {
-        title: "L'Acteur",
-        description: "L'IA devient un levier pédagogique, intégré avec sens et recul. Vous ne la subissez plus, vous l'utilisez à bon escient. Vous inspirez vos pairs et participez à la réflexion collective.",
-        color: "#27ae60"
-    }
+  confort: {
+    title: "Le Spectateur",
+    description:
+      "Vous observez de loin. Vos méthodes fonctionnent, l'IA vous semble floue ou pas indispensable. C'est une posture légitime qui préserve votre énergie et vos acquis pédagogiques.",
+    color: "#3498db",
+  },
+  resistance: {
+    title: "La Résistance",
+    description:
+      "Vous avez des doutes, voire des réticences. C'est souvent la porte d'entrée vers l'exploration, si elle est reconnue et accompagnée. Identifiez UNE peur précise et cherchez UNE réponse factuelle.",
+    color: "#e74c3c",
+  },
+  exploration: {
+    title: "L'Explorateur",
+    description:
+      "Vous osez. Vous vous autorisez à ne pas tout comprendre, à tâtonner. C'est là que les premiers apports deviennent visibles et que naît le sentiment de fierté qui nourrit la motivation.",
+    color: "#f39c12",
+  },
+  action: {
+    title: "L'Acteur",
+    description:
+      "L'IA devient un levier pédagogique, intégré avec, probablement sens et recul. Vous ne la subissez plus, vous l'utilisez à bon escient. Vous pouvez inspirer vos pairs et participer à la réflexion collective.",
+    color: "#27ae60",
+  },
 };
 
 // Récupérer les éléments du DOM
-const form = document.getElementById('quizForm');
-const resultDiv = document.getElementById('result');
-const resultContent = document.getElementById('resultContent');
-const resetBtn = document.getElementById('resetBtn');
-const emptyMessage = document.getElementById('emptyMessage');
+const form = document.getElementById("quizForm");
+const resultDiv = document.getElementById("result");
+const resultContent = document.getElementById("resultContent");
+const resetBtn = document.getElementById("resetBtn");
+const emptyMessage = document.getElementById("emptyMessage");
 
 // Fonction pour calculer les scores
 function calculateScores() {
-    const scores = {
-        confort: 0,
-        resistance: 0,
-        exploration: 0,
-        action: 0
-    };
+  const scores = {
+    confort: 0,
+    resistance: 0,
+    exploration: 0,
+    action: 0,
+  };
 
-    // Parcourir toutes les cases cochées
-    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-            const zoneName = checkbox.name;
-            scores[zoneName]++;
-        }
-    });
+  // Parcourir toutes les cases cochées
+  const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      const zoneName = checkbox.name;
+      scores[zoneName]++;
+    }
+  });
 
-    return scores;
+  return scores;
 }
 
 // Fonction pour trouver le profil dominant
 function getDominantProfile(scores) {
-    let maxScore = 0;
-    let dominantProfile = null;
-    let totalChecked = 0;
+  let maxScore = 0;
+  let dominantProfile = null;
+  let totalChecked = 0;
 
-    for (const [profile, score] of Object.entries(scores)) {
-        totalChecked += score;
-        if (score > maxScore) {
-            maxScore = score;
-            dominantProfile = profile;
-        }
+  for (const [profile, score] of Object.entries(scores)) {
+    totalChecked += score;
+    if (score > maxScore) {
+      maxScore = score;
+      dominantProfile = profile;
     }
+  }
 
-    return { profile: dominantProfile, total: totalChecked };
+  return { profile: dominantProfile, total: totalChecked };
 }
 
 // Fonction pour afficher le résultat
 function displayResult() {
-    const scores = calculateScores();
-    const { profile, total } = getDominantProfile(scores);
+  const scores = calculateScores();
+  const { profile, total } = getDominantProfile(scores);
 
-    // Si aucune case n'est cochée
-    if (total === 0) {
-        emptyMessage.classList.remove('hidden');
-        resultDiv.classList.add('hidden');
-        return;
-    }
+  // Si aucune case n'est cochée
+  if (total === 0) {
+    emptyMessage.classList.remove("hidden");
+    resultDiv.classList.add("hidden");
+    return;
+  }
 
-    emptyMessage.classList.add('hidden');
+  emptyMessage.classList.add("hidden");
 
-    // Afficher le résultat
-    const profileData = profiles[profile];
-    resultContent.innerHTML = `
+  // Afficher le résultat
+  const profileData = profiles[profile];
+  resultContent.innerHTML = `
         <strong>${profileData.title}</strong>
         <p>${profileData.description}</p>
     `;
-    
-    resultDiv.style.background = `linear-gradient(135deg, ${profileData.color} 0%, ${adjustColor(profileData.color, -30)} 100%)`;
-    resultDiv.classList.remove('hidden');
 
-    // Scroll vers le résultat
-    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  resultDiv.style.background = `linear-gradient(135deg, ${profileData.color} 0%, ${adjustColor(profileData.color, -30)} 100%)`;
+  resultDiv.classList.remove("hidden");
+
+  // Scroll vers le résultat
+  resultDiv.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 // Fonction pour ajuster la couleur (rendre plus sombre)
 function adjustColor(color, amount) {
-    const num = parseInt(color.replace("#", ""), 16);
-    const r = Math.max(0, (num >> 16) + amount);
-    const g = Math.max(0, ((num >> 8) & 0x00FF) + amount);
-    const b = Math.max(0, (num & 0x0000FF) + amount);
-    return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+  const num = parseInt(color.replace("#", ""), 16);
+  const r = Math.max(0, (num >> 16) + amount);
+  const g = Math.max(0, ((num >> 8) & 0x00ff) + amount);
+  const b = Math.max(0, (num & 0x0000ff) + amount);
+  return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, "0");
 }
 
 // Fonction pour réinitialiser le quiz
 function resetQuiz() {
-    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    });
-    resultDiv.classList.add('hidden');
-    emptyMessage.classList.add('hidden');
+  const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+  resultDiv.classList.add("hidden");
+  emptyMessage.classList.add("hidden");
 }
 
 // Écouter les changements sur les checkboxes
-form.addEventListener('change', displayResult);
+form.addEventListener("change", displayResult);
 
 // Écouter le clic sur le bouton reset
-resetBtn.addEventListener('click', resetQuiz);
+resetBtn.addEventListener("click", resetQuiz);
