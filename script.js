@@ -80,7 +80,43 @@ function closeMenu() {
 
 
 
+/*popup*/
+// Récupérer tous les messages
+const messages = document.querySelectorAll('.message');
 
+// Ajouter un écouteur d'événement à chaque message
+messages.forEach(function(message) {
+    message.addEventListener('click', function() {
+        const popupId = this.getAttribute('data-popup');
+        const popup = document.getElementById(popupId);
+        popup.style.display = 'block';
+    });
+});
+
+// Récupérer tous les boutons de fermeture
+const boutonsFermer = document.querySelectorAll('.fermer');
+
+boutonsFermer.forEach(function(bouton) {
+    bouton.addEventListener('click', function() {
+        this.closest('.popup').style.display = 'none';
+    });
+});
+
+// Fermer le popup au clic en dehors du contenu
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('popup')) {
+        event.target.style.display = 'none';
+    }
+});
+
+// Fermer avec la touche Échap
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.style.display = 'none';
+        });
+    }
+});
 
 
 //---------------------------------------------------------------------------------------------//
