@@ -1,3 +1,8 @@
+/**
+ * DéclicIA - Script principal optimisé
+ * Gestion du nuage de mots interactif, des modales et du quiz
+ */
+
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const overlay = document.getElementById("overlay");

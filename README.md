@@ -1,6 +1,6 @@
 # DéclicIA
 
-![Logo DéclicIA](Images/logo_noir_50px.png)
+![Logo DéclicIA](Images/logo_blanc.png)
 
 > Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.
 

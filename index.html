@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Images/icons/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>DéclicIA - IA et pédagogie</title>
+
+     <!-- SEO et métadonnées -->
+    <title>DéclicIA - L'Intelligence Artificielle dans l'éducation</title>
+    <meta name="description" content="DéclicIA aide les enseignants à comprendre et utiliser l'IA dans leurs pratiques pédagogiques. Découvrez des outils, des ressources et des formations adaptées.">
+    <meta name="keywords" content="IA, intelligence artificielle, éducation, enseignement, pédagogie, outils IA, formation enseignants">
+    <meta name="Thomas BROUILLET" content="DéclicIA">
+
+        <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- Skip to main content pour accessibilité -->
+    <a href="#main-content" class="sr-only">Aller au contenu principal</a>
+
+
     <div class="overlay" id="overlay"></div>
 
+    <!-- Header avec navigation -->
     <header class="header">
         <div class="containerHeader">
             <div class="logo">
@@ -352,7 +370,6 @@
 
 
 
-
 <!-- lien pour masquer le bandeau --> 
  <a id="toggleLink">Cliquez ici pour afficher/masquer le bandeau</a>
 
@@ -370,6 +387,7 @@
         </div>
     </section>
 
+     <!-- Contenu principal -->
     <main>
         <!-- section intro -->
         <section class="intro">
@@ -606,7 +624,7 @@
 
     </main>
 
-
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-content">
@@ -661,7 +679,7 @@
         </div>
     </footer>
 
-
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
