@@ -1,12 +1,15 @@
 /**
  * DéclicIA - Script principal optimisé
- * Gestion du nuage de mots interactif, des modales et du quiz
+ * Gestion du menu, des popups dynamiques et du quiz
  */
+
+// ========================================================================
+// MENU BURGER & NAVIGATION
+// ========================================================================
 
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const overlay = document.getElementById("overlay");
-const navLinks = document.querySelectorAll(".nav-list a");
 const menuItems = document.querySelectorAll(".menu-item");
 
 // Toggle menu burger
@@ -20,9 +23,7 @@ burger.addEventListener("click", () => {
 });
 
 // Fermer le menu en cliquant sur l'overlay
-overlay.addEventListener("click", () => {
-  closeMenu();
-});
+overlay.addEventListener("click", closeMenu);
 
 // Gestion des sous-menus
 menuItems.forEach((item) => {
@@ -30,9 +31,8 @@ menuItems.forEach((item) => {
 
   menuLink.addEventListener("click", (e) => {
     e.preventDefault();
-    e.stopPropagation(); // Empêche la propagation pour éviter la fermeture immédiate
+    e.stopPropagation();
 
-    // En mode desktop, fermer les autres sous-menus
     if (window.innerWidth > 768) {
       menuItems.forEach((otherItem) => {
         if (otherItem !== item) {
@@ -41,23 +41,16 @@ menuItems.forEach((item) => {
       });
     }
 
-    // Toggle le sous-menu
     item.classList.toggle("active");
   });
 });
 
 // Fermer les sous-menus en cliquant ailleurs
 document.addEventListener("click", (e) => {
-  // Si on clique en dehors du menu et du burger
   if (!e.target.closest(".nav") && !e.target.closest(".burger")) {
-    // En mode desktop, fermer uniquement les sous-menus
     if (window.innerWidth > 768) {
-      menuItems.forEach((item) => {
-        item.classList.remove("active");
-      });
-    }
-    // En mode mobile, fermer tout le menu burger
-    else if (nav.classList.contains("active")) {
+      menuItems.forEach((item) => item.classList.remove("active"));
+    } else if (nav.classList.contains("active")) {
       closeMenu();
     }
   }
@@ -65,137 +58,179 @@ document.addEventListener("click", (e) => {
 
 // Fermer le menu en cliquant sur un lien de sous-menu
 document.querySelectorAll(".submenu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    closeMenu();
-  });
+  link.addEventListener("click", closeMenu);
 });
 
-// Fonction pour fermer le menu
 function closeMenu() {
   burger.classList.remove("active");
   nav.classList.remove("active");
   overlay.classList.remove("active");
   document.body.style.overflow = "auto";
-
-  // Fermer tous les sous-menus
-  menuItems.forEach((item) => {
-    item.classList.remove("active");
-  });
+  menuItems.forEach((item) => item.classList.remove("active"));
 }
 
-//---------------------------------------------------------------------------------------------//
-//---------------------------------------------Popup-------------------------------------------//
-//---------------------------------------------------------------------------------------------//
+// ========================================================================
+// GÉNÉRATION DYNAMIQUE DES POPUPS
+// ========================================================================
 
-// Récupérer tous les messages
-const messages = document.querySelectorAll('.message');
+// Données des popups qui vient depuis data-popups.js. Ce fichier est chargé avant script.js pour pouvoir manipuler popupsData ici.
 
-// Ajouter un écouteur d'événement à chaque message
-messages.forEach(function(message) {
-    message.addEventListener('click', function() {
-        const popupId = this.getAttribute('data-popup');
-        const popup = document.getElementById(popupId);
-        popup.style.display = 'block';
-    });
+// Créer un conteneur pour toutes les popups
+const popupsContainer = document.createElement("div");
+popupsContainer.id = "popups-container";
+
+// Générer les popups dynamiquement
+popupsData.forEach((popup) => {
+  const popupElement = document.createElement("div");
+  popupElement.id = `popup${popup.id}`;
+  popupElement.className = "popup";
+  popupElement.setAttribute("role", "dialog");
+  popupElement.setAttribute("aria-modal", "true");
+  popupElement.setAttribute("aria-labelledby", `popup${popup.id}-title`);
+
+  popupElement.innerHTML = `
+    <div class="popup-contenu">
+      <button class="fermer" aria-label="Fermer la modal">&times;</button>
+      <h2 id="popup${popup.id}-title">${popup.title}</h2>
+      <p>${popup.content}</p>
+    </div>
+  `;
+
+  popupsContainer.appendChild(popupElement);
 });
 
-// Récupérer tous les boutons de fermeture
-const boutonsFermer = document.querySelectorAll('.fermer');
+// Ajouter toutes les popups au body
+document.body.appendChild(popupsContainer);
 
-boutonsFermer.forEach(function(bouton) {
-    bouton.addEventListener('click', function() {
-        this.closest('.popup').style.display = 'none';
-    });
-});
+// ========================================================================
+// GESTION DES POPUPS - Délégation d'événements
+// ========================================================================
 
-// Fermer le popup au clic en dehors du contenu
-window.addEventListener('click', function(event) {
-    if (event.target.classList.contains('popup')) {
-        event.target.style.display = 'none';
+let currentPopup = null;
+
+// Ouvrir popup au clic sur un message
+document.addEventListener("click", (e) => {
+  const message = e.target.closest(".message");
+  if (message) {
+    const popupId = message.getAttribute("data-popup");
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      openPopup(popup);
     }
+  }
+
+  // Fermer popup au clic sur le bouton fermer
+  const fermer = e.target.closest(".fermer");
+  if (fermer) {
+    const popup = fermer.closest(".popup");
+    if (popup) {
+      closePopup(popup);
+    }
+  }
+
+  // Fermer popup au clic en dehors du contenu
+  if (e.target.classList.contains("popup")) {
+    closePopup(e.target);
+  }
 });
 
 // Fermer avec la touche Échap
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        document.querySelectorAll('.popup').forEach(popup => {
-            popup.style.display = 'none';
-        });
-    }
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && currentPopup) {
+    closePopup(currentPopup);
+  }
 });
 
-//---------------------------------------------------------------------------------------------//
-//-----------------------Afficher/masquer le bandeau-------------------------------------------//
-//---------------------------------------------------------------------------------------------//
+function openPopup(popup) {
+  popup.style.display = "block";
+  currentPopup = popup;
+  // Focus sur le bouton fermer pour l'accessibilité
+  const closeBtn = popup.querySelector(".fermer");
+  if (closeBtn) {
+    setTimeout(() => closeBtn.focus(), 100);
+  }
+}
 
-const lien = document.getElementById('toggleLink');
-const div = document.getElementById('maDiv');
-        
-        lien.addEventListener('click', function(e) {
-            e.preventDefault();
-            div.classList.toggle('cache');
-        });
+function closePopup(popup) {
+  popup.style.display = "none";
+  currentPopup = null;
+}
 
-//---------------------------------------------------------------------------------------------//
-//-----------------------Quizz-----------------------------------------------------------------//
-//---------------------------------------------------------------------------------------------//
-// Profils avec leurs descriptions
+// ========================================================================
+// AFFICHER/MASQUER LE BANDEAU
+// ========================================================================
+
+const lien = document.getElementById("toggleLink");
+const div = document.getElementById("maDiv");
+
+if (lien && div) {
+  lien.addEventListener("click", (e) => {
+    e.preventDefault();
+    div.classList.toggle("cache");
+  });
+}
+
+// ========================================================================
+// QUIZ
+// ========================================================================
+
+// ========================================================================
+// QUIZ
+// ========================================================================
+
 const profiles = {
   confort: {
-    title: "Le Spectateur",
+    title: "Le Spectateur 👀",
+    icon: "🛋️",
     description:
       "Vous observez de loin. Vos méthodes fonctionnent, l'IA vous semble floue ou pas indispensable. C'est une posture légitime qui préserve votre énergie et vos acquis pédagogiques.",
     color: "#3498db",
   },
   resistance: {
-    title: "La Résistance",
+    title: "La Résistance 🛡️",
+    icon: "🛑",
     description:
       "Vous avez des doutes, voire des réticences. C'est souvent la porte d'entrée vers l'exploration, si elle est reconnue et accompagnée. Identifiez UNE peur précise et cherchez UNE réponse factuelle.",
     color: "#e74c3c",
   },
   exploration: {
-    title: "L'Explorateur",
+    title: "L'Explorateur 🧭",
+    icon: "🔍",
     description:
       "Vous osez. Vous vous autorisez à ne pas tout comprendre, à tâtonner. C'est là que les premiers apports deviennent visibles et que naît le sentiment de fierté qui nourrit la motivation.",
     color: "#f39c12",
   },
   action: {
-    title: "L'Acteur",
+    title: "L'Acteur 🎬",
+    icon: "⚡",
     description:
-      "L'IA devient un levier pédagogique, intégré avec, probablement sens et recul. Vous ne la subissez plus, vous l'utilisez à bon escient. Vous pouvez inspirer vos pairs et participer à la réflexion collective.",
+      "L'IA devient un levier pédagogique, intégré avec sens et recul. Vous ne la subissez plus, vous l'utilisez à bon escient. Vous pouvez inspirer vos pairs et participer à la réflexion collective.",
     color: "#27ae60",
   },
 };
 
-// Récupérer les éléments du DOM
 const form = document.getElementById("quizForm");
 const resultDiv = document.getElementById("result");
 const resultContent = document.getElementById("resultContent");
 const resetBtn = document.getElementById("resetBtn");
 const emptyMessage = document.getElementById("emptyMessage");
 
-// Fonction pour calculer les scores
-function calculateScores() {
-  const scores = {
-    confort: 0,
-    resistance: 0,
-    exploration: 0,
-    action: 0,
-  };
+// NOUVEAU : Éléments pour les barres de progression
+const resultContainer = document.getElementById("result");
 
-  // Parcourir toutes les cases cochées
+function calculateScores() {
+  const scores = { confort: 0, resistance: 0, exploration: 0, action: 0 };
   const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
-      const zoneName = checkbox.name;
-      scores[zoneName]++;
+      scores[checkbox.name]++;
     }
   });
 
   return scores;
 }
 
-// Fonction pour trouver le profil dominant
 function getDominantProfile(scores) {
   let maxScore = 0;
   let dominantProfile = null;
@@ -212,35 +247,104 @@ function getDominantProfile(scores) {
   return { profile: dominantProfile, total: totalChecked };
 }
 
-// Fonction pour afficher le résultat
 function displayResult() {
   const scores = calculateScores();
   const { profile, total } = getDominantProfile(scores);
 
   // Si aucune case n'est cochée
+  // Récupérer l'élément des barres
+  const scoreBars = document.getElementById("scoreBars");
+
   if (total === 0) {
     emptyMessage.classList.remove("hidden");
-    resultDiv.classList.add("hidden");
+    if (resultDiv) {
+      resultDiv.classList.remove("visible");
+    }
+    if (resetBtn) {
+      resetBtn.style.display = "none";
+    }
+    if (scoreBars) {
+      scoreBars.classList.remove("visible");
+    }
     return;
   }
 
   emptyMessage.classList.add("hidden");
 
-  // Afficher le résultat
+  if (scoreBars) {
+    scoreBars.classList.add("visible");
+  }
+
+  if (resetBtn) {
+    resetBtn.style.display = "block";
+  }
+
+  // NOUVEAU : Mettre à jour les barres de progression
+  updateScoreBars(scores, profile);
+
+  // Afficher le profil dominant dans la carte
   const profileData = profiles[profile];
+
+  // Créer l'icône si elle n'existe pas
+  let iconElement = resultContent.querySelector(".profile-icon");
+  if (!iconElement) {
+    iconElement = document.createElement("div");
+    iconElement.className = "profile-icon";
+    resultContent.insertBefore(iconElement, resultContent.firstChild);
+  }
+  iconElement.textContent = profileData.icon;
+
   resultContent.innerHTML = `
-        <strong>${profileData.title}</strong>
-        <p>${profileData.description}</p>
-    `;
+    <div class="profile-icon">${profileData.icon}</div>
+    <strong>${profileData.title}</strong>
+    <p>${profileData.description}</p>
+  `;
 
   resultDiv.style.background = `linear-gradient(135deg, ${profileData.color} 0%, ${adjustColor(profileData.color, -30)} 100%)`;
-  resultDiv.classList.remove("hidden");
+
+  // Ajouter la classe visible pour l'animation
+  if (resultDiv) {
+    resultDiv.classList.add("visible");
+    resultDiv.classList.remove("hidden");
+  }
 
   // Scroll vers le résultat
   resultDiv.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
-// Fonction pour ajuster la couleur (rendre plus sombre)
+// NOUVEAU : Fonction pour mettre à jour les barres
+function updateScoreBars(scores, dominantProfile) {
+  Object.keys(scores).forEach((zone) => {
+    const percentage = (scores[zone] / 3) * 100;
+    const capitalizedZone = zone.charAt(0).toUpperCase() + zone.slice(1);
+
+    // Mettre à jour le label du score
+    const scoreLabel = document.getElementById(`score${capitalizedZone}`);
+    if (scoreLabel) {
+      scoreLabel.textContent = `${scores[zone]}/3`;
+    }
+
+    // Mettre à jour la barre
+    const bar = document.getElementById(`bar${capitalizedZone}`);
+    if (bar) {
+      // Retirer la classe winner de toutes les barres
+      bar.classList.remove("winner");
+
+      // Animer la barre
+      setTimeout(() => {
+        bar.style.width = percentage + "%";
+      }, 100);
+
+      // Ajouter la classe winner à la barre dominante
+      if (zone === dominantProfile) {
+        setTimeout(() => {
+          bar.classList.add("winner");
+        }, 1100); // Après l'animation de la barre
+      }
+    }
+  });
+}
+
 function adjustColor(color, amount) {
   const num = parseInt(color.replace("#", ""), 16);
   const r = Math.max(0, (num >> 16) + amount);
@@ -249,18 +353,43 @@ function adjustColor(color, amount) {
   return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, "0");
 }
 
-// Fonction pour réinitialiser le quiz
 function resetQuiz() {
   const checkboxes = form.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
-  resultDiv.classList.add("hidden");
+
+  if (resultDiv) {
+    resultDiv.classList.add("hidden");
+    resultDiv.classList.remove("visible");
+  }
   emptyMessage.classList.add("hidden");
+
+  if (resetBtn) {
+    resetBtn.style.display = "none";
+  }
+
+  const scoreBars = document.getElementById("scoreBars");
+  if (scoreBars) {
+    scoreBars.classList.remove("visible");
+  }
+
+  // Réinitialiser les barres
+  Object.keys(profiles).forEach((zone) => {
+    const capitalizedZone = zone.charAt(0).toUpperCase() + zone.slice(1);
+    const bar = document.getElementById(`bar${capitalizedZone}`);
+    if (bar) {
+      bar.style.width = "0%";
+      bar.classList.remove("winner");
+    }
+  });
 }
 
-// Écouter les changements sur les checkboxes
-form.addEventListener("change", displayResult);
+// Event listeners pour le quiz
+if (form) {
+  form.addEventListener("change", displayResult);
+}
 
-// Écouter le clic sur le bouton reset
-resetBtn.addEventListener("click", resetQuiz);
+if (resetBtn) {
+  resetBtn.addEventListener("click", resetQuiz);
+}
