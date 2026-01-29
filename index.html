@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Images/icons/favicon-16x16.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- SEO et métadonnées -->
     <title>DéclicIA - L'Intelligence Artificielle dans l'éducation</title>
@@ -75,7 +75,7 @@
                         <ul class="submenu">
                             <li><a href="LIA_cest_quoi/indexIA.html#Definition">Définition</a></li>
                             <li><a href="LIA_cest_quoi/indexIA.html#Fonctionnement">Fonctionnement</a></li>
-                            <li><a href="LIA_cest_quoi/indexIA.html#Types">Type d'IA</a></li>
+                            <li><a href="LIA_cest_quoi/indexIA.html#Type">Type d'IA</a></li>
                             <li><a href="LIA_cest_quoi/indexIA.html#Localisation">L'IA au quotidien</a></li>
                         </ul>
                     </li>
@@ -106,6 +106,8 @@
             </nav>
         </div>
     </header>
+
+
 
 
     <!--messages défilants-->
@@ -168,10 +170,14 @@
 
 
 
+    <!--apparition au scroll-->
+    <section id="myDivToAnimate"class="reveal">
+        <h2>Entre innovation et danger</h2>
+    </section>
 
-
-    <!-- lien pour masquer le bandeau -->
+        <!-- lien pour masquer le bandeau -->
     <a id="toggleLink">Cliquez ici pour afficher/masquer le bandeau</a>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -226,7 +232,7 @@
                     </div>
                 </div>
 
-                <div class="containerAxe">
+                <div class="containerAxe" onclick="window.open('Cadre_et_défit/IndexCadreDefi.html', 'blank')">
                     <div class="cardImage">
                         <img src="Images/cadre_légal_.webp" alt="cadre légal">
                     </div>
@@ -420,60 +426,60 @@
                 </form>
 
                 <!-- Graphique à barres -->
-<div class="score-bars"id="scoreBars">
-    <h3>📊 Répartition de vos réponses</h3>
+                <div class="score-bars" id="scoreBars">
+                    <h3>📊 Répartition de vos réponses</h3>
 
-    <div class="score-bar">
-        <div class="score-label">
-            <span>🛋️ Zone de confort</span>
-            <span id="scoreConfort">0/3</span>
-        </div>
-        <div class="score-track">
-            <div class="score-fill confort" id="barConfort"></div>
-        </div>
-    </div>
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🛋️ Zone de confort</span>
+                            <span id="scoreConfort">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill confort" id="barConfort"></div>
+                        </div>
+                    </div>
 
-    <div class="score-bar">
-        <div class="score-label">
-            <span>🛑 Zone de résistance</span>
-            <span id="scoreResistance">0/3</span>
-        </div>
-        <div class="score-track">
-            <div class="score-fill resistance" id="barResistance"></div>
-        </div>
-    </div>
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🛑 Zone de résistance</span>
+                            <span id="scoreResistance">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill resistance" id="barResistance"></div>
+                        </div>
+                    </div>
 
-    <div class="score-bar">
-        <div class="score-label">
-            <span>🔍 Zone d'exploration</span>
-            <span id="scoreExploration">0/3</span>
-        </div>
-        <div class="score-track">
-            <div class="score-fill exploration" id="barExploration"></div>
-        </div>
-    </div>
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🔍 Zone d'exploration</span>
+                            <span id="scoreExploration">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill exploration" id="barExploration"></div>
+                        </div>
+                    </div>
 
-    <div class="score-bar">
-        <div class="score-label">
-            <span>⚡ Zone d'action</span>
-            <span id="scoreAction">0/3</span>
-        </div>
-        <div class="score-track">
-            <div class="score-fill action" id="barAction"></div>
-        </div>
-    </div>
-</div>
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>⚡ Zone d'action</span>
+                            <span id="scoreAction">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill action" id="barAction"></div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Carte du profil dominant -->
-<div id="result" class="result hidden">
-    <h3>Votre profil dominant</h3>
-    <div id="resultContent" class="result-content"></div>
-</div>
+                <!-- Carte du profil dominant -->
+                <div id="result" class="result hidden">
+                    <h3>Votre profil dominant</h3>
+                    <div id="resultContent" class="result-content"></div>
+                </div>
 
-<!-- Bouton reset en dehors pour qu'il soit toujours accessible -->
-<button id="resetBtn" class="reset-btn" style="display: none; margin: 20px auto;">
-    🔄 Recommencer le quiz
-</button>
+                <!-- Bouton reset en dehors pour qu'il soit toujours accessible -->
+                <button id="resetBtn" class="reset-btn" style="display: none; margin: 20px auto;">
+                    🔄 Recommencer le quiz
+                </button>
 
                 <div id="emptyMessage" class="empty-message hidden">
                     Cochez au moins une case pour voir votre résultat
@@ -525,7 +531,7 @@
                     <div class="social-links">
                         <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
                         <a href="https://github.com/" class="social-link" title="GitHub">
-                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                            <i style="font-size:24px" class="fab fa-github"></i>
                         </a>
                         <a href="#" class="social-link" title="Twitter">🐦</a>
                     </div>

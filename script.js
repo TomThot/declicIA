@@ -162,17 +162,31 @@ function closePopup(popup) {
 
 const lien = document.getElementById("toggleLink");
 const div = document.getElementById("maDiv");
+const reveal = document.getElementById("myDivToAnimate");
 
 if (lien && div) {
   lien.addEventListener("click", (e) => {
     e.preventDefault();
     div.classList.toggle("cache");
+    if (reveal) {
+      reveal.classList.toggle("cache");
+    }
   });
 }
 
 // ========================================================================
-// QUIZ
+// apparition au scroll
 // ========================================================================
+const target = document.getElementById("myDivToAnimate");
+let revealed = false;
+
+window.addEventListener("scroll", () => {
+  if (!revealed && window.scrollY > 10) {
+    // seuil de scroll pour déclencher
+    target.classList.add("is-visible");
+    revealed = true; // une seule fois
+  }
+});
 
 // ========================================================================
 // QUIZ
