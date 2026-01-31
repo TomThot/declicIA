@@ -298,8 +298,6 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 80px;
-  margin-bottom: 15px;
-
   border-radius: 10px;
   padding: 10px;
 }
@@ -322,8 +320,15 @@ h2 {
 
 .containerChiffre .carte h3 {
   margin-bottom: 10px;
+  margin: 10px;
   color: #3498db;
   text-decoration: underline;
+}
+
+.carte .title{
+  display: flex;
+  align-items: center;
+  
 }
 
 .carte .chiffre {
@@ -331,12 +336,12 @@ h2 {
 }
 
 
-
-
 /*Téléchargement de l'infographie de l'étude du MIT*/
-.containerInfo{
-  display: flex;
+.containerInfo {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
   justify-content: center;
+  align-items: center;
 }
 
 .image-card {
@@ -349,8 +354,8 @@ h2 {
 
 .image-card img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -392,29 +397,6 @@ h2 {
   width: 20px;
   height: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*----------------------Footer---------------------------------------*/
@@ -544,5 +526,11 @@ footer {
   .containerChiffre .carte {
     padding: 20px;
     min-height: 150px;
+  }
+
+  .containerInfo {
+    display: block;
+    justify-content: center;
+    align-items: center;
   }
 }
