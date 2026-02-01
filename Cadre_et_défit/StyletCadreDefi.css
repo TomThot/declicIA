@@ -219,6 +219,7 @@ header p {
   max-width: 800px;
   margin: 15px auto 0;
   font-size: 1.1rem;
+  color: var(--white);
 }
 
 /*------------------------------------------------------*/
@@ -230,9 +231,7 @@ main {
   padding: 0 20px;
 }
 
-section {
-  margin-bottom: 60px;
-}
+
 
 h2 {
   margin-bottom: 30px;
@@ -242,14 +241,21 @@ h2 {
   padding-left: 10px;
 }
 
+p{
+  line-height: 1.7;
+  margin-bottom: 1em;
+  color: var(--text-color);
+}
+
 .intro {
   max-width: 1200px;
   /*Espace de la colonne centrale pour plus de visibilité*/
-  margin: 30px auto;
+  margin: 40px auto;
   /*centre horizontalement dans son conteneur.*/
   padding: 10px 20px 20px 20px;
   /*marge interne de 40 en haut et bas et 20 sur les cotés*/
   background-color: var(--background-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
 
@@ -264,10 +270,10 @@ h2 {
 
 .card {
   background: var(--background-color);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  margin: 0px auto;
+  margin: 30px auto;
   border-left: 3px solid transparent;
   line-height: 1.7;
 }
@@ -397,6 +403,97 @@ h2 {
   width: 20px;
   height: 20px;
 }
+
+/*----------------------Pourquoi l'IA dans l'éducation----------------------*/
+
+.pourquoi{
+   line-height: 1.7;
+  /* Interligne confortable */
+  margin-bottom: 1em;
+  /* Espace entre les paragraphes */
+  
+  max-width: 1200px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  /*Espace de la colonne centrale pour plus de visibilité*/
+  margin: 30px auto;
+  /*centre horizontalement dans son conteneur.*/
+  padding: 10px 20px 20px 20px;
+  /*marge interne de 40 en haut et bas et 20 sur les cotés*/
+
+}
+/* info bulle au survol*/
+.collapsible-section h2 {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.collapsible-section h2::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7374df;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  margin-bottom: 5px;
+}
+
+.collapsible-section h2:hover::after {
+  opacity: 1;
+}
+
+.toggle-arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  margin-left: 10px;
+  transform: rotate(-180deg);
+}
+
+.toggle-arrow.collapsed {
+  transform: rotate(0deg);
+}
+
+.section-content {
+  max-height: 5000px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.section-content.hidden {
+  max-height: 0;
+}
+.pourquoi ul{
+  line-height: 1.7;
+  margin-left: 30px;
+  margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*----------------------Footer---------------------------------------*/
