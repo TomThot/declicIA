@@ -91,9 +91,11 @@ body {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
   transition:
     width 0.6s ease,
@@ -183,7 +185,7 @@ body {
   background-color: #00bcd4;
 }
 
-.menu.active+.sidebar {
+.menu.active + .sidebar {
   left: 0;
 }
 
@@ -231,8 +233,6 @@ main {
   padding: 0 20px;
 }
 
-
-
 h2 {
   margin-bottom: 30px;
   font-size: clamp(1.6rem, 4vw, 2.2rem);
@@ -241,7 +241,7 @@ h2 {
   padding-left: 10px;
 }
 
-p{
+p {
   line-height: 1.7;
   margin-bottom: 1em;
   color: var(--text-color);
@@ -331,16 +331,14 @@ p{
   text-decoration: underline;
 }
 
-.carte .title{
+.carte .title {
   display: flex;
   align-items: center;
-  
 }
 
 .carte .chiffre {
   line-height: 1.7;
 }
-
 
 /*Téléchargement de l'infographie de l'étude du MIT*/
 .containerInfo {
@@ -404,17 +402,45 @@ p{
   height: 20px;
 }
 
+.containerOCDE {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.containerOCDE .image-ocde {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerOCDE .image-ocde img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: scale 0.3s;
+}
+
+.containerOCDE .image-ocde img:hover{
+  scale: 1.1;
+}
+
+
 /*----------------------Pourquoi l'IA dans l'éducation----------------------*/
 
-.pourquoi{
-   line-height: 1.7;
+.pourquoi {
+  line-height: 1.7;
   /* Interligne confortable */
   margin-bottom: 1em;
   /* Espace entre les paragraphes */
-  
+
   max-width: 1200px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   /*Espace de la colonne centrale pour plus de visibilité*/
@@ -422,7 +448,6 @@ p{
   /*centre horizontalement dans son conteneur.*/
   padding: 10px 20px 20px 20px;
   /*marge interne de 40 en haut et bas et 20 sur les cotés*/
-
 }
 /* info bulle au survol*/
 .collapsible-section h2 {
@@ -476,25 +501,11 @@ p{
 .section-content.hidden {
   max-height: 0;
 }
-.pourquoi ul{
+.pourquoi ul {
   line-height: 1.7;
   margin-left: 30px;
   margin-bottom: 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*----------------------Footer---------------------------------------*/
 footer {
@@ -610,11 +621,7 @@ footer {
   transform: translateY(-3px);
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
   .containerChiffre {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -629,5 +636,20 @@ footer {
     display: block;
     justify-content: center;
     align-items: center;
+  }
+
+   .containerOCDE {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .containerOCDE .image-ocde {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .containerOCDE .image-ocde img {
+    width: 45%;
+    max-width: 220px;
   }
 }

@@ -9,7 +9,10 @@
       type="image/x-icon"
       href="../Images/icons/favicon-16x16.png"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>L'IA c'est quoi ?</title>
     <link rel="stylesheet" href="StyleIA.css" />
   </head>
@@ -53,9 +56,15 @@
       </div>
 
       <!-- SECTION 1 : définition -->
-      <section>
-        <h2 id="Definition">Définition</h2>
-        <div class="card">
+      <section class="definition collapsible-section">
+        <h2
+          id="Definition"
+          data-tooltip="Cliquez pour replier/déplier le contenu"
+        >
+          Définition
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <p>
             Une <strong>intelligence artificielle (IA)</strong> est un programme
             informatique capable d'imiter certaines capacités humaines comme :
@@ -78,9 +87,15 @@
       </section>
 
       <!-- SECTION 2 :Fonctionnement -->
-      <section>
-        <h2 id="Fonctionnement">Comment fonctionne une IA ?</h2>
-        <div class="card">
+      <section class="fonctionnement collapsible-section">
+        <h2
+          id="Fonctionnement"
+          data-tooltip="Cliquez pour replier/déplier le contenu"
+        >
+          Comment fonctionne une IA ?
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <p>
             Les intelligences artificielles modernes comme ChatGPT reposent sur
             des <strong>LLM</strong> (Large Language Models), c’est-à-dire de
@@ -186,9 +201,12 @@
       </section>
 
       <!-- SECTION 3 : exemple -->
-      <section>
-        <h2 id="Exemple">Exemple : reconnaissance d'images</h2>
-        <div class="card">
+      <section class="exemple MIT collapsible-section">
+        <h2 id="Exemple" data-tooltip="Cliquez pour replier/déplier le contenu">
+          Exemple : reconnaissance d'images
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <p>
             Pour apprendre à reconnaître un chat, une IA analyse des milliers
             d'images annotées.
@@ -207,9 +225,12 @@
       </section>
 
       <!-- SECTION : Types d'intelligence artificielle -->
-      <section>
-        <h2 id="Type">Les différents types d'intelligence artificielle</h2>
-        <div class="card">
+      <section class="type collapsible-section">
+        <h2 id="Type" data-tooltip="Cliquez pour replier/déplier le contenu">
+          Les différents types d'intelligence artificielle
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <p>
             Selon <strong> Stuart Russell</strong>, ingénieur et co-auteur du
             manuel de référence
@@ -390,9 +411,15 @@
       </section>
 
       <!-- SECTION 4 : Utilisation-->
-      <section>
-        <h2 id="Localisation">Où utilise-t-on l'IA ?</h2>
-        <div class="card">
+      <section class="utilisation collapsible-section">
+        <h2
+          id="Localisation"
+          data-tooltip="Cliquez pour replier/déplier le contenu"
+        >
+          Où utilise-t-on l'IA ?
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <ul>
             <li>Assistants vocaux (Siri, Alexa…)</li>
             <li>Recommandations (Netflix, YouTube)</li>
@@ -406,9 +433,12 @@
       </section>
 
       <!-- SECTION 5 : éthique -->
-      <section>
-        <h2 id="Ethique">Limites et questions éthiques</h2>
-        <div class="card">
+      <section class="ethique collapsible-section">
+        <h2 id="Ethique" data-tooltip="Cliquez pour replier/déplier le contenu">
+          Limites et questions éthiques
+          <span class="toggle-arrow">▼</span>
+        </h2>
+        <div class="section-content">
           <p>
             <em
               >Cette partie sera développée plus loguement dans le section
@@ -476,17 +506,28 @@
               Envie d'échanger, de contribuer ou de partager vos expériences ?
             </p>
             <div class="social-links">
-              <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
-              <a href="#" class="social-link" title="GitHub"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
+              <a
+                href="mailto:tom.thot@gmail.com"
+                class="social-link"
+                title="Email"
+                >✉</a
+              >
+              <a href="#" class="social-link" title="GitHub"
+                ><i style="font-size: 24px" class="fa">&#xf09b;</i></a
+              >
               <a href="#" class="social-link" title="Twitter">🐦</a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; <script>
-            document.write(new Date().getFullYear());
-          </script> DéclicIA - Tous droits réservés</p>
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            DéclicIA - Tous droits réservés
+          </p>
           <p class="footer-credits">
             Conçu avec passion pour l'éducation et l'innovation pédagogique
           </p>
