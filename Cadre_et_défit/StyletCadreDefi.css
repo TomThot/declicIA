@@ -276,6 +276,12 @@ p {
   margin: 30px auto;
   border-left: 3px solid transparent;
   line-height: 1.7;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.3s ease;
+}
+
+.card:hover {
+  border-left-color: #3498db;
 }
 
 .containerChiffre {
@@ -549,22 +555,21 @@ p {
 .etiquette-content {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 10px;
 }
 
 .etiquette span {
   font-size: 32px;
   font-weight: bold;
-  color: #ff0000;
+  color: #ff009d;
   display: inline-block;
   white-space: nowrap;
 }
 
 .etiquette div {
-text-align:justify;
+  text-align: justify;
 }
-
 
 .IGSERimg {
   display: flex;
@@ -578,6 +583,65 @@ text-align:justify;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+.containerPilier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pilier {
+  width: 280px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.pilierImage {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(0.7rem, 2vw + 0.5rem, 1rem);
+  border-radius: 10px 10px 0 0;
+  
+}
+
+.pilier1{
+  background: linear-gradient(90deg, #9293f0, rgb(126, 125, 194));
+}
+
+.pilier2{
+  background: linear-gradient(90deg, #92eaf0, rgb(125, 194, 125));
+}
+
+.pilier3{
+  background: linear-gradient(90deg, #f092f0, rgb(194, 125, 160));
+}
+
+.pilier4{
+  background: linear-gradient(90deg, #f09292, rgb(194, 125, 134));
+}
+
+.pilier:hover{
+  border:2px solid rgba(255, 0, 0, 0.616)
+}
+
+
+.pilierContent {
+  width: 95%;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
 /*----------------------Footer---------------------------------------*/
 footer {
   background: linear-gradient(135deg, #33405e 0%, #231549 100%);
@@ -692,6 +756,20 @@ footer {
   transform: translateY(-3px);
 }
 
+@media screen and (max-width: 1168px) {
+  .containerPilier{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    max-width: 1168px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+}
+
+
+
+
 @media screen and (max-width: 768px) {
   .containerChiffre {
     grid-template-columns: 1fr;
@@ -724,7 +802,7 @@ footer {
     max-width: 220px;
   }
 
-   .containerEtiquettes {
+  .containerEtiquettes {
     grid-template-columns: 1fr;
     gap: 12px;
   }
@@ -737,5 +815,13 @@ footer {
   .etiquette span {
     font-size: 28px;
   }
-}
 
+   .containerPilier{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    max-width: 1168px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+}
