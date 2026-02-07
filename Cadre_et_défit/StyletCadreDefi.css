@@ -632,7 +632,7 @@ p {
 }
 
 .pilier:hover{
-  border:2px solid rgba(255, 0, 0, 0.616)
+  border:2px solid rgba(0, 26, 255, 0.616)
 }
 
 
@@ -642,7 +642,48 @@ p {
   padding: 10px;
 }
 
-/*----------------------Footer---------------------------------------*/
+
+/*----------------------section défi-------------------------------*/
+.containerDefi{
+  padding:10px;
+  margin-bottom: 10px;
+  border-radius: 0px 50px 0px 50px;
+}
+
+.containerDefi:hover {
+  animation: swing 0.5s ease-in-out;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.defi1{
+  background-color: rgba(110, 54, 231, 0.300);
+}
+
+.defi2{
+  background-color: rgba(199, 54, 231, 0.3);
+}
+
+.defi3{
+  background-color: rgba(231, 54, 175, 0.3);
+}
+
+.defi4{
+  background-color: rgba(231, 54, 87, 0.3);
+}
+
+.containerDefi ul{
+    line-height: 1.7;
+  margin-left: 30px;
+  
+}
+
+
+/*--------------------------------footer---------------------------------*/
 footer {
   background: linear-gradient(135deg, #33405e 0%, #231549 100%);
   color: var(--white);
@@ -756,6 +797,10 @@ footer {
   transform: translateY(-3px);
 }
 
+/*--------------------------------------------------------------*/
+/*----------------------media Query-----------------------------*/
+/*--------------------------------------------------------------*/
+
 @media screen and (max-width: 1168px) {
   .containerPilier{
     display: grid;
@@ -766,9 +811,6 @@ footer {
     gap: 20px;
   }
 }
-
-
-
 
 @media screen and (max-width: 768px) {
   .containerChiffre {
