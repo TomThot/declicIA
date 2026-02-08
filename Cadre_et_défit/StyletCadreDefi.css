@@ -91,11 +91,9 @@ body {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 70%);
   transform: translate(-50%, -50%);
   transition:
     width 0.6s ease,
@@ -185,7 +183,7 @@ body {
   background-color: #00bcd4;
 }
 
-.menu.active + .sidebar {
+.menu.active+.sidebar {
   left: 0;
 }
 
@@ -440,6 +438,7 @@ p {
   color: #00bcd4;
   margin-top: 20px;
 }
+
 .pourquoi {
   line-height: 1.7;
   /* Interligne confortable */
@@ -456,6 +455,7 @@ p {
   padding: 10px 20px 20px 20px;
   /*marge interne de 40 en haut et bas et 20 sur les cotés*/
 }
+
 /* info bulle au survol*/
 .collapsible-section h2 {
   cursor: pointer;
@@ -508,6 +508,7 @@ p {
 .section-content.hidden {
   max-height: 0;
 }
+
 .pourquoi ul {
   line-height: 1.7;
   margin-left: 30px;
@@ -519,6 +520,23 @@ p {
   margin-left: 30px;
   margin-bottom: 1em;
 }
+
+.compIA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.compIA img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 .containerEtiquettes {
   display: grid;
@@ -595,11 +613,11 @@ p {
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   margin: 10px;
   border-radius: 10px;
   border: 2px solid transparent;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -612,29 +630,29 @@ p {
   color: white;
   font-size: clamp(0.7rem, 2vw + 0.5rem, 1rem);
   border-radius: 10px 10px 0 0;
-  
 }
 
-.pilier1{
+.pilier1 {
   background: linear-gradient(90deg, #9293f0, rgb(126, 125, 194));
 }
 
-.pilier2{
+.pilier2 {
   background: linear-gradient(90deg, #92eaf0, rgb(125, 194, 125));
 }
 
-.pilier3{
+.pilier3 {
   background: linear-gradient(90deg, #f092f0, rgb(194, 125, 160));
 }
 
-.pilier4{
+.pilier4 {
   background: linear-gradient(90deg, #f09292, rgb(194, 125, 134));
 }
 
-.pilier:hover{
-  border:2px solid rgba(0, 26, 255, 0.616)
+.pilier:hover {
+  border: 2px solid rgba(0, 26, 255, 0.616);
+  transform: translateY(-7px);
+  box-shadow: 0 5px 25px rgba(120, 142, 241, 0.644);
 }
-
 
 .pilierContent {
   width: 95%;
@@ -642,10 +660,42 @@ p {
   padding: 10px;
 }
 
+.conteneur {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.fleche {
+  width: 24px;
+  height: 24px;
+}
+
+.illustrationCadre {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.illustrationCadre img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.legende{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.legende span{
+  font-size: 0.6em;
+}
 /*----------------------section défi-------------------------------*/
-.containerDefi{
-  padding:10px;
+.containerDefi {
+  padding: 10px;
   margin-bottom: 10px;
   border-radius: 0px 50px 0px 50px;
 }
@@ -655,31 +705,56 @@ p {
 }
 
 @keyframes swing {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-3deg); }
-  75% { transform: rotate(3deg); }
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(3deg);
+  }
 }
 
-.defi1{
-  background-color: rgba(110, 54, 231, 0.300);
+.defi1 {
+  background-color: rgba(110, 54, 231, 0.3);
 }
 
-.defi2{
+.defi2 {
   background-color: rgba(199, 54, 231, 0.3);
 }
 
-.defi3{
+.defi3 {
   background-color: rgba(231, 54, 175, 0.3);
 }
 
-.defi4{
+.defi4 {
   background-color: rgba(231, 54, 87, 0.3);
 }
 
-.containerDefi ul{
-    line-height: 1.7;
+.containerDefi ul {
+  line-height: 1.7;
   margin-left: 30px;
-  
+}
+
+
+/*--------------------------------Charte---------------------------------*/
+
+.illustrationCharte {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.illustrationCharte img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -802,7 +877,7 @@ footer {
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 1168px) {
-  .containerPilier{
+  .containerPilier {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -858,7 +933,7 @@ footer {
     font-size: 28px;
   }
 
-   .containerPilier{
+  .containerPilier {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;

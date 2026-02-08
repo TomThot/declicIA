@@ -590,10 +590,10 @@ footer {
   text-align: center;
 }
 
-.footer-bottom p {
+.footer-bottom p, .footer-bottom div {
   color: #b8c1ec;
   font-size: 0.9em;
-  margin: 0px;
+  margin: 5px;
 }
 
 .footer-credits {

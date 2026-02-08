@@ -1120,6 +1120,7 @@ footer {
 .footer-bottom p {
   color: #b8c1ec;
   font-size: 0.9em;
+  margin: 5px;
 }
 
 .footer-credits {
