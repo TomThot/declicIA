@@ -414,7 +414,7 @@ body {
   margin-bottom: 20px;
   margin-left: 5px;
   color: rgb(76, 65, 236);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
 }
 
@@ -439,7 +439,7 @@ body {
 }
 
 .containerChiffre .carte::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -457,7 +457,7 @@ body {
 .containerChiffre .carte h3 {
   margin-bottom: 10px;
   color: #3498db;
-  transition: all 0.3S ease;
+  transition: all 0.3s ease;
 }
 
 .containerChiffre .carte:hover h3 {
@@ -467,17 +467,6 @@ body {
 .carte .chiffre {
   line-height: 1.7;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* L'IA en chiffre */
 /* ----------------------------------------------------------------------------------------- */
@@ -607,7 +596,9 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .reset-btn:hover {
@@ -641,26 +632,6 @@ body {
     transform: translateY(0);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------------------------------*/
 /* Footer*/
@@ -914,6 +885,10 @@ footer {
     min-height: 150px;
   }
 
+  #quizForm {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
   .footer-content {
     grid-template-columns: 1fr;
@@ -963,5 +938,4 @@ footer {
   .hero {
     height: 20vh;
   }
-
 }
