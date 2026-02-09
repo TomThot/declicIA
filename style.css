@@ -717,29 +717,15 @@ body {
 .containerChiffre .carte h3 {
   margin-bottom: 10px;
   color: #3498db;
-  transition: all 0.3S ease;
-}
-
-.containerChiffre .carte:hover h3 {
-  text-decoration: underline;
 }
 
 .carte .chiffre {
   line-height: 1.7;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* L'IA en chiffre */
+/* Quizz */
+/* ----------------------------------------------------------------------------------------- */
+/* Quizz */
 /* ----------------------------------------------------------------------------------------- */
 .containerQuizz {
   max-width: 1200px;
@@ -1018,7 +1004,10 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .reset-btn:hover {
