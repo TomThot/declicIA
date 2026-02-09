@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Images/icons/favicon-16x16.png">
-    <title>DéclicIA - IA et pédagogie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SEO et métadonnées -->
+    <title>DéclicIA - L'Intelligence Artificielle dans l'éducation</title>
+    <meta name="description"
+        content="DéclicIA aide les enseignants à comprendre et utiliser l'IA dans leurs pratiques pédagogiques. Découvrez des outils, des ressources et des formations adaptées.">
+    <meta name="keywords"
+        content="IA, intelligence artificielle, éducation, enseignement, pédagogie, outils IA, formation enseignants">
+    <meta name="autor" content="Thomas BROUILLET">
+    <link rel="canonical" href="https://tomthot.github.io/declicIA/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tomthot.github.io/declicIA/">
+    <meta property="og:title" content="DéclicIA - L'Intelligence Artificielle dans l'éducation">
+    <meta property="og:description"
+        content="DéclicIA aide les enseignants à comprendre et utiliser l'IA dans leurs pratiques pédagogiques. Découvrez des outils, des ressources et des formations adaptées.">
+    <meta property="og:image" content="https://tomthot.github.io/declicIA/Images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DéclicIA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@VotreCompteTwitter">
+    <meta name="twitter:creator" content="@VotreCompteTwitter">
+    <meta name="twitter:title" content="DéclicIA - L'Intelligence Artificielle dans l'éducation">
+    <meta name="twitter:description"
+        content="DéclicIA aide les enseignants à comprendre et utiliser l'IA dans leurs pratiques pédagogiques.">
+    <meta name="twitter:image" content="https://tomthot.github.io/declicIA/Images/og-image.png">
+
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!--assombrit l'arrière page en mode menu burger-->
     <div class="overlay" id="overlay"></div>
-    
+
+    <!-- Header avec navigation -->
     <header class="header">
         <div class="containerHeader">
             <div class="logo">
                 <img src="Images/logo_noir_50px.png" alt="Logo DéclicIA noir">
                 <h2>DéclicIA</h2>
             </div>
-            
+
             <div class="burger" id="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            
+
             <nav class="nav" id="nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Accueil</a></li>
@@ -32,10 +73,10 @@
                             <span class="arrow">▼</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="LIA_cest_quoi/indexIA.html">Définition</a></li>
-                            <li><a href="#fonctionnement">Fonctionnement</a></li>
-                            <li><a href="#Type">Type d'IA</a></li>
-                            <li><a href="#quotidien">L'IA au quotidien</a></li>
+                            <li><a href="LIA_cest_quoi/indexIA.html#Definition">Définition</a></li>
+                            <li><a href="LIA_cest_quoi/indexIA.html#Fonctionnement">Fonctionnement</a></li>
+                            <li><a href="LIA_cest_quoi/indexIA.html#Type">Type d'IA</a></li>
+                            <li><a href="LIA_cest_quoi/indexIA.html#Localisation">L'IA au quotidien</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -44,12 +85,14 @@
                             <span class="arrow">▼</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#institution">Que dit l'institution ?</a></li>
-                            <li><a href="#IGSER">Rapport IGSER</a></li>
+                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#dette">Vers une dette cognitive ?</a></li>
+                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#pourquoi">Pourquoi l'IA en classe ?</a></li>
+                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#cadre">Cadre d'usage de l'IA</a></li>
+                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#defi">Les défis à relever</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                       <a href="#Menu3" class="menu-link">
+                        <a href="#Menu3" class="menu-link">
                             Outils pour la classe
                             <span class="arrow">▼</span>
                         </a>
@@ -58,13 +101,16 @@
                             <li><a href="#standards">Des outils numériques standards</a></li>
                             <li><a href="#ressources">Ressources pour se former</a></li>
                         </ul>
-                    </li>        
-                    
+                    </li>
+
                     <li><a href="#Menu5">Menu 5</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- lien pour masquer le bandeau -->
+    <a id="toggleLink">Cliquez ici pour afficher/masquer le bandeau défilant</a>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -80,83 +126,174 @@
         </div>
     </section>
 
+
+    <!--messages défilants-->
+    <div id="maDiv" class="defil">
+        <div class="scroll-container">
+            <div class="scroll-line scroll-right">
+                <span class="message" data-popup="popup10"><span class="message__text">"L'intelligence artificielle est
+                        potentiellement <br> plus
+                        dangereuse que les armes nucléaires."</span></span>
+                <span class="message" data-popup="popup11"><span class="message__text">Claude AI</span></span>
+                <span class="message" data-popup="popup12"><span class="message__text">Mistral AI</span></span>
+                <span class="message" data-popup="popup13"><span class="message__text">"L'IA est comme avoir un couteau.
+                        <br> Vous pouvez l'utiliser
+                        pour couper du pain ou pour blesser quelqu'un. <br> C'est à nous de décider comment l'utiliser.
+                        "</span></span>
+                <span class="message" data-popup="popup14"><span class="message__text">"L'IA est la technologie la plus
+                        <br> transformatrice depuis
+                        l'invention de l'électricité."</span></span>
+                <span class="message" data-popup="popup15"><span class="message__text">"L'IA est un outil pour augmenter
+                        <br> nos capacités, pas
+                        pour nous remplacer."</span></span>
+                <span class="message" data-popup="popup16"><span class="message__text">Prompt</span></span>
+                <span class="message" data-popup="popup17"><span class="message__text">IA générative</span></span>
+                <span class="message" data-popup="popup18"><span class="message__text">Nano Banana Pro</span></span>
+                <span class="message" data-popup="popup19"><span class="message__text">Algorithme</span></span>
+                <span class="message" data-popup="popup1"><span class="message__text">Chat GPT</span></span>
+                <span class="message" data-popup="popup2"><span class="message__text">"L'IA rend les gens
+                        idiots"</span></span>
+                <span class="message" data-popup="popup3"><span class="message__text">L'IA est la technologie <br> la
+                        plus importante de notre
+                        génération.</span></span>
+            </div>
+        </div>
+
+        <div class="scroll-container">
+            <div class="scroll-line scroll-left">
+                <span class="message" data-popup="popup20"><span class="message__text">Deep Learning</span></span>
+                <span class="message" data-popup="popup21"><span class="message__text">Couche de neurones</span></span>
+                <span class="message" data-popup="popup22"><span class="message__text">Hallucinations de
+                        l'IA</span></span>
+                <span class="message" data-popup="popup23"><span class="message__text">"L'IA a fait mes
+                        devoirs"</span></span>
+                <span class="message" data-popup="popup24"><span class="message__text">"L'intelligence de la machine est
+                        la dernière invention
+                        <br>que l'humanité aura besoin de faire." </span></span>
+                <span class="message" data-popup="popup25"><span class="message__text">"Avec l'intelligence
+                        artificielle, <br> nous invoquons le
+                        démon." </span></span>
+                <span class="message" data-popup="popup26"><span class="message__text">"L'intelligence artificielle est
+                        la nouvelle électricité."
+                    </span></span>
+                <span class="message" data-popup="popup27"><span class="message__text">"Notre intelligence est ce qui
+                        nous rend humains, <br> et
+                        l'IA est une extension de cette qualité."</span></span>
+                <span class="message" data-popup="popup28"><span class="message__text">"Aucune intelligence artificielle
+                        ne sera <br> audacieuse à
+                        ta place."</span></span>
+                <span class="message" data-popup="popup29"><span class="message__text">Machine Learning</span></span>
+                <span class="message" data-popup="popup4"><span class="message__text">Microsoft Copilot</span></span>
+                <span class="message" data-popup="popup5"><span class="message__text">"L'IA est un danger pour les
+                        données personnelles"</span></span>
+                <span class="message" data-popup="popup6"><span class="message__text">"L'IA permet de gagner du
+                        temps"</span></span>
+                <span class="message" data-popup="popup7"><span class="message__text">Google Gemini</span></span>
+                <span class="message" data-popup="popup8"><span class="message__text">"L'IA va tout
+                        contrôler"</span></span>
+                <span class="message" data-popup="popup9"><span class="message__text">Il faut interdire l'IA aux
+                        élèves"</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!--apparition au scroll-->
+    <section id="myDivToAnimate" class="reveal">
+        <h2>Entre innovation et danger</h2>
+    </section>
+
+
+    <!-- Contenu principal -->
     <main>
-        <!-- section intro -->
+        <!------------------------------------------------------------------------->
+        <!-------------------------Introduction------------------------------------>
+        <!------------------------------------------------------------------------->
+
         <section class="intro">
-            <h2>L'IA en pédagogie</h2>
-            <p> L'intelligence artificielle transforme progressivement le paysage éducatif en offrant des opportunités inédites 
+            <p> L'intelligence artificielle transforme progressivement le paysage éducatif en offrant des opportunités
+                inédites
                 pour personnaliser l'apprentissage et repenser les méthodes pédagogiques traditionnelles. </p>
-            <p>Cette révolution technologique soulève aussi des questions essentielles sur l'équité d'accès, la 
-                protection des données personnelles des élèves, l'appropriation des outils numériques et la posture de l'enseignant. À l'heure où ces technologies 
-                s'intègrent de plus en plus dans les salles de classe, il devient crucial de réfléchir collectivement à la manière dont 
-                nous souhaitons les utiliser pour enrichir, et non remplacer, l'expérience éducative.  
+            <p>Cette révolution technologique soulève aussi des questions essentielles sur l'équité d'accès, la
+                protection des données personnelles des élèves, l'appropriation des outils numériques et la posture de
+                l'enseignant. À l'heure où ces technologies
+                s'intègrent de plus en plus dans les salles de classe, il devient crucial de réfléchir collectivement à
+                la manière dont
+                nous souhaitons les utiliser pour enrichir, l'expérience éducative.
             </p>
         </section>
 
-        <!--les grands axes du site-->
+        <!------------------------------------------------------------------------->
+        <!-------------------------Les grands axes du site------------------------->
+        <!------------------------------------------------------------------------->
+
         <section class="sommaire">
             <h2>Plan général du site</h2>
             <div class="axes">
-                <div class="containerAxe" onclick= "window.open('LIA_cest_quoi/indexIA.html', 'blank')">
+                <div class="containerAxe" onclick="window.open('LIA_cest_quoi/indexIA.html', 'blank')">
                     <div class="cardImage">
                         <img src="Images/IA_card_150px.webp" alt="Qu'est ce que l'IA">
                     </div>
                     <div class="cardContent">
                         <h3>L'IA c'est quoi ?</h3>
                         <p>
-                            Avec des mots simples : 
-                            <ul>
-                                <li>Définition</li>
-                                <li>Fonctionnement</li>
-                                <li>Type d'IA</li>
-                                <li>L'IA au quotidien</li>
-                            </ul>
+                            Avec des mots simples :
+                        <ul>
+                            <li>Définition</li>
+                            <li>Fonctionnement</li>
+                            <li>Type d'IA</li>
+                            <li>L'IA au quotidien</li>
+                        </ul>
                         </p>
-                        <div id="lien">Lire &rarr;</div>
+                        <div id="lien">Consulter &rarr;</div>
                     </div>
                 </div>
 
-                <div class="containerAxe">
+                <div class="containerAxe" onclick="window.open('Cadre_et_défit/IndexCadreDefi.html', 'blank')">
                     <div class="cardImage">
                         <img src="Images/cadre_légal_.webp" alt="cadre légal">
                     </div>
                     <div class="cardContent">
                         <h3>Cadre et défis</h3>
                         <p>
-                            <ul>
-                                <li>Cadre d'usage : Que dit l'institution ?</li>
-                                <li>Rapport IGSER</li>
-                                <li>Les différents enjeux et défis à relever</li>
-                            </ul>
+                        <ul>
+                            <li>Vers une dette cognitive ?</li>
+                            <li>Pourquoi utiliser l'IA en classe ?</li>
+                            <li>Cadre d'usage de l'IA</li>
+                            <li>les défis à relever</li>
+                        </ul>
                         </p>
-                        <div id="lien">Lire &rarr;</div>
+                        <div id="lien">Consulter &rarr;</div>
                     </div>
                 </div>
 
                 <div class="containerAxe">
                     <div class="cardImage">
-                         <img src="Images/Card_outils_140px.webp" alt="outils">
+                        <img src="Images/Card_outils_140px.webp" alt="outils">
                     </div>
                     <div class="cardContent">
                         <h3>Outils pour la classe</h3>
                         <p>
-                            <ul>
-                                <li>Des outils IA pour aider et simplifier</li>
-                                <li>Des outils numériques plus standards</li>
-                                <li>Ressources pour se former</li>
-                            </ul>
+                        <ul>
+                            <li>Des outils IA pour aider et simplifier</li>
+                            <li>Des outils numériques plus standards</li>
+                            <li>Ressources pour se former</li>
+                        </ul>
                         </p>
-                        <div id="lien">Lire &rarr;</div>
+                        <div id="lien">Consulter &rarr;</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- L'Ia en chiffre -->
+        <!------------------------------------------------------------------------->
+        <!-------------------------L'IA en chiffre--------------------------------->
+        <!------------------------------------------------------------------------->
         <section class="chiffreIA">
             <h2>L'IA en chiffre en 2025</h2>
-            <p> Il devient crucial de s’appuyer sur des données concrètes pour comprendre où nous en sommes et vers quoi nous allons.
-                Selon une étude pour Forbes de juin 2025, voici quelques satitistiques qui mettent en lumière le paysage de l'IA en 2025.
+            <p> Il devient crucial de s’appuyer sur des données concrètes pour comprendre où nous en sommes et vers quoi
+                nous allons.
+                Selon une étude pour Forbes de juin 2025, voici quelques statistiques qui mettent en lumière le paysage
+                de l'IA en 2025.
             </p>
             <div class="containerCarteChiffre">
                 <h3>Dans le monde :</h3>
@@ -177,13 +314,13 @@
                         <div class="chiffre">
                             <ul>
                                 <li>46 % des personnes dans le monde font confiance à l'IA</li>
-                                <li>+56,4 % de problèmes liés à l'IA</li>
+                                <li>+ 56,4 % de problèmes liés à l'IA</li>
                                 <li>54 % des consommateur consultent l'Ia avant un achat</li>
                                 <li>35 % de parents parlent de l'IA avec leurs enfants</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="carte"> 
+                    <div class="carte">
                         <h3>Emploi</h3>
                         <div class="chiffre">
                             <ul>
@@ -203,9 +340,9 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-            
-            
+            </div>
+
+
             <div class="containerCarteChiffre">
                 <h3>Dans l'éducation :</h3>
                 <div class="containerChiffre">
@@ -213,8 +350,10 @@
                         <h3>L'IA et les élèves</h3>
                         <div class="chiffre">
                             <ul>
-                                <li>90 % des élèves de seconde ont déjà utilisé l'IA pour faire leurs devoirs selon une étude du Sénat</li>
-                                <li>Seuls 24 % des élèves français ont accès à des outils IA à l'école (44 % en Italie, 36 % en Allemangne) </li>
+                                <li>90 % des élèves de seconde ont déjà utilisé l'IA pour faire leurs devoirs selon une
+                                    étude du Sénat</li>
+                                <li>Seuls 24 % des élèves français ont accès à des outils IA à l'école (44 % en Italie,
+                                    36 % en Allemangne) </li>
                             </ul>
                         </div>
                     </div>
@@ -222,24 +361,28 @@
                         <h3>L'IA et les enseignants</h3>
                         <div class="chiffre">
                             <ul>
-                                <li>80 % des enseignants n'ont reçu aucune formation à l'IA (62% en Allemangne et 88 % en Autriche)</li>
-                                <li>Moins de 20 % des enseignants utilisent l'IA dans leur pratique selon le Ministère</li>
+                                <li>80 % des enseignants n'ont reçu aucune formation à l'IA (62% en Allemangne et 88 %
+                                    en Autriche)</li>
+                                <li>Moins de 20 % des enseignants utilisent l'IA dans leur pratique selon le Ministère
+                                </li>
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </section>
 
-        <!-- Quiz -->
+        <!------------------------------------------------------------------------->
+        <!--------------------------------Quizz------------------------------------>
+        <!------------------------------------------------------------------------->
         <section class="quizz">
             <div class="containerQuizz">
-                <h1>Auto-diagnostic : où en êtes-vous ?</h1>
-                <p class="introQuizz">Cochez les affirmations qui vous correspondent. 
+                <h1 id="profil">Auto-diagnostic : où en êtes-vous avec l'IA ?</h1>
+                <p class="introQuizz">Cochez les affirmations qui vous correspondent.
                     Le quiz calculera automatiquement votre profil dominant.</p>
 
                 <form id="quizForm">
                     <div class="zone-section">
-                        <h2 class="zone-title zone-confort">Zone de confort</h2>
+                        <h2 class="zone-title zone-confort">🛋️ Zone de confort</h2>
                         <label class="checkbox-label">
                             <input type="checkbox" name="confort" value="1">
                             <span>Je préfère mes méthodes habituelles, elles fonctionnent bien</span>
@@ -255,7 +398,7 @@
                     </div>
 
                     <div class="zone-section">
-                        <h2 class="zone-title zone-resistance">Zone de résistance</h2>
+                        <h2 class="zone-title zone-resistance">🛑 Zone de résistance</h2>
                         <label class="checkbox-label">
                             <input type="checkbox" name="resistance" value="1">
                             <span>J'ai peur de mal faire ou de perdre le contrôle</span>
@@ -271,7 +414,7 @@
                     </div>
 
                     <div class="zone-section">
-                        <h2 class="zone-title zone-exploration">Zone d'exploration</h2>
+                        <h2 class="zone-title zone-exploration">🔍 Zone d'exploration</h2>
                         <label class="checkbox-label">
                             <input type="checkbox" name="exploration" value="1">
                             <span>J'ai commencé à tester quelques outils, avec prudence</span>
@@ -287,7 +430,7 @@
                     </div>
 
                     <div class="zone-section">
-                        <h2 class="zone-title zone-action">Zone d'action</h2>
+                        <h2 class="zone-title zone-action">⚡Zone d'action</h2>
                         <label class="checkbox-label">
                             <input type="checkbox" name="action" value="1">
                             <span>J'utilise l'IA régulièrement pour préparer mes cours</span>
@@ -303,36 +446,73 @@
                     </div>
                 </form>
 
+                <!-- Graphique à barres -->
+                <div class="score-bars" id="scoreBars">
+                    <h3>📊 Répartition de vos réponses</h3>
+
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🛋️ Zone de confort</span>
+                            <span id="scoreConfort">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill confort" id="barConfort"></div>
+                        </div>
+                    </div>
+
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🛑 Zone de résistance</span>
+                            <span id="scoreResistance">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill resistance" id="barResistance"></div>
+                        </div>
+                    </div>
+
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>🔍 Zone d'exploration</span>
+                            <span id="scoreExploration">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill exploration" id="barExploration"></div>
+                        </div>
+                    </div>
+
+                    <div class="score-bar">
+                        <div class="score-label">
+                            <span>⚡ Zone d'action</span>
+                            <span id="scoreAction">0/3</span>
+                        </div>
+                        <div class="score-track">
+                            <div class="score-fill action" id="barAction"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte du profil dominant -->
                 <div id="result" class="result hidden">
                     <h3>Votre profil dominant</h3>
                     <div id="resultContent" class="result-content"></div>
-                    <button id="resetBtn" class="reset-btn">Recommencer le quiz</button>
                 </div>
+
+                <!-- Bouton reset en dehors pour qu'il soit toujours accessible -->
+                <button id="resetBtn" class="reset-btn" style="display: none; margin: 20px auto;">
+                    🔄 Recommencer le quiz
+                </button>
 
                 <div id="emptyMessage" class="empty-message hidden">
                     Cochez au moins une case pour voir votre résultat
                 </div>
             </div>
-         </section>
+        </section>
 
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!------------------------------------------------------------------------->
+    <!-------------------------------Footer------------------------------------>
+    <!------------------------------------------------------------------------->
     <footer>
         <div class="footer-container">
             <div class="footer-content">
@@ -341,8 +521,9 @@
                     <div class="footer-logo">
                         <span class="footer-logo-text">DéclicIA</span>
                     </div>
-                    <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. 
-                        Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
+                    <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation.
+                        Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et
+                        responsable.</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -350,7 +531,7 @@
                     <h3>Navigation</h3>
                     <ul class="footer-links">
                         <li><a href="LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
-                        <li><a href="#Menu2">Cadre et défis</a></li>
+                        <li><a href="Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
                         <li><a href="#Menu3">Outils pour la classe</a></li>
                     </ul>
                 </div>
@@ -359,8 +540,9 @@
                 <div class="footer-section">
                     <h3>Ressources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Définitions IA</a></li>
-                        <li><a href="#">Cadre institutionnel</a></li>
+                        <li><a href="index.html#profil">Profil face à l'IA</a></li>
+                        <li><a href="LIA_cest_quoi/indexIA.html#Definition">Définitions IA</a></li>
+                        <li><a href="Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
                         <li><a href="#">Outils recommandés</a></li>
                         <li><a href="#">Formations</a></li>
                     </ul>
@@ -371,21 +553,29 @@
                     <h3>Contact & Communauté</h3>
                     <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" title="Email">✉</a>
-                        <a href="#" class="social-link" title="GitHub">⚡</a>
+                        <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+                        <a href="https://github.com/" class="social-link" title="GitHub">
+                            <i style="font-size:24px" class="fab fa-github"></i>
+                        </a>
                         <a href="#" class="social-link" title="Twitter">🐦</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 DéclicIA - Tous droits réservés</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> DéclicIA - Tous droits réservés
+                </p>
                 <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+                <p> @Thomas BROUILLET</p>
             </div>
         </div>
     </footer>
 
-
+    <!-- Scripts -->
+    <script src="data-popups.js"></script>
     <script src="script.js"></script>
+
 </body>
+
 </html>
