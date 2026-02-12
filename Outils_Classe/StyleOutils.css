@@ -344,7 +344,41 @@ p {
   margin-top: 20px;
 }
 
-/*-------------------------L'art du prompt-------------------------*/
+/*------------------------------------------------------*/
+/*-------------------------L'art du prompt--------------*/
+/*------------------------------------------------------*/
+
+/*-----------------------Méthode ACTIF-------------------*/
+.actif{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+.actif img{
+  width: 100%;
+}
+
+.containerExemple{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerExemple ul{
+ margin: 0 10em;
+}
+
+.containerRemarque{
+  background-color:#b9ace641;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+/*-----------------------Méthode CAFE-------------------*/
 .containerCafe {
   display: flex;
   flex-direction: row;
@@ -484,12 +518,12 @@ p {
   border-radius: 0 0 10px 10px;
 }
 
-
-
-
-
-
-
+.prompt ul{
+  line-height: 1.7;
+  margin-left: 30px;
+  margin-bottom: 1em;
+}
+/*-------------Fin CAFÉ--------------------*/
 
 
 

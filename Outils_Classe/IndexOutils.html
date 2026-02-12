@@ -70,11 +70,15 @@
       </p>
     </section>
 
+    <!------------------------------------------------------------------------->
+    <!-------------------------L'art du prompt--------------------------------->
+    <!------------------------------------------------------------------------->
     <section id="prompt" class="card prompt collapsible-section">
       <h2 data-tooltip="Cliquez pour replier/déplier le contenu">L'art du prompt
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
+
         <h3>C'est quoi un prompt ?</h3>
         <p>
           Si vous avez déjà interagi avec un ordinateur en tapant du texte au clavier, félicitations, vous avez
@@ -85,7 +89,8 @@
           sont précises et complètes, plus les suggestions et idées fournies seront pertinentes.
         </p>
         <p>
-          Oubliez la simple demande commençant pas "fais moi...", "dis moi..." etc. Il existe de nombreuses méthodes pour
+          Oubliez la simple demande commençant pas "fais moi...", "dis moi..." etc. Il existe de nombreuses méthodes
+          pour
           prompter efficacement et toutes incluent des protocoles éprouvés comme le le zero-shot, few-shot,
           chain-of-thought... Ne nous embêtons pas avec des termes techniques complexes, sachez simplement que ces
           protocoles visent à conduire l'IA vers des réponses plus précises et contextuelles. <br>
@@ -93,9 +98,94 @@
           pédagogique, ce sont celles qui donnent les meilleurs résultats toutes IA confondues. Evidemment, chacun y
           verra l'opportunité de tester et éprouver ses approches préférées.
         </p>
-        <h3 class="titleh3">1. La méthode CAFÉ</h3>
+
+        <h3 class="titleh3">1. La méthode ACTIF</h3>
         <p>
-          Il suffit de suivre ces 4 étapes pour stucturer son prompt :
+          La méthode ACTIF est un modèle simple et efficace permettant l'obtention d'une réponse claire. Elle est rapide
+          structurée et pédagogique. On la retient sour l'acronyme ACTIF mais on voit clairement grâce aux flèches que
+          l'acronyme ICATF serait plus logique mais moins facile à retenir.
+        </p>
+        <div class="actif">
+          <img src="../Images/1x/1x/ACTIF.png" alt="illsutration ACTIF">
+        </div>
+        <p>
+          Par exemple :
+        </p>
+        <p>
+          <strong>I : </strong> Agis en tant que professeur de mathématiques/physique-chimie en CAP.
+        </p>
+        <p>
+          <strong>C : </strong> Tu as en charge des élèves de la filière CAP logistique et transport. Le thème du
+          chapitre est
+          centré sur les pourcentages et plus précisemment le calcul d'une réduction commerciale.
+        </p>
+        <p>
+          <strong>A : </strong> Rédige l'énoncé d'un exercice d'application contextualisé à la filière en deux étapes :
+          "Calcul de réduction" et "calcul du prix soldé". Le prix initial est fixé et l'article est soldé avec une
+          remise indiquée dans l'énoncé. La question finale doit être exactement : "Le vendeur applique une remise
+          supplémentaire de 5% sur le prix soldé. Quel est le prix final que paiera le client ?" en la plaçant entre
+          guillemets.
+        </p>
+        <p>
+          <strong>T : </strong> Le ton doit être académique.
+        </p>
+        <p>
+          <strong>F : </strong> Fournis l'énoncé de l'exercice suivi d'une section "corrigé" détaillé.
+        </p>
+
+        <div class="containerRemarque">
+          <h4>Remarque :</h4>
+          <p>
+            Notez que la couleur n'a pas
+            d'importance puisque les IA traitent les prompts en texte brut.
+          </p>
+          <p>
+            Pour ce qui est de l'odre, les choses sont plus nuancées. En effet, une IA ne "lit pas dans l'ordre" comme
+            une
+            humain. Elle traite l'ensemble du prompt comme un bloc transformé en token. Tout est pris en compte. MAIS :
+            si sur des prompts très simples, l'ordre des élements n'est pas fondamental, pour les prompts plus complexes
+            en
+            revanche... Il faut être vigilant. <br>
+            <strong>Le début du prompt est une zone stratégique </strong> (les
+            informations peuvent avoir plus de poids), on fixe le cadre initial en définissant le contexte, les
+            objectifs... qui vont influencer toute la réponse dès le départ. si la contrainte arrive à la fin, elle peut
+            être moins bien respectée ou la réponse moins claire.
+          </p>
+          <p>
+            Exemple volontairement simpliste en informatique : <br>
+          </p>
+
+          <div class="containerExemple">
+            <ul>
+              Prompt A
+              <li>Fais une page HTML animée</li>
+              <li>Sans Javascript</li>
+            </ul>
+
+            <ul>
+              Prompt B
+              <li>Sans Javascript</li>
+              <li>Fais une page HTML animée</li>
+            </ul>
+          </div>
+
+          <p>
+            Le prompt B respecte presque toujours mieux la contrainte parce que celle-ci devient structurante au lieu
+            d'être corrective.
+          </p>
+          <p>
+            <strong>En conclusion : </strong> L'odre des éléments du prompt ne constitue pas une règle absolue, ce n'est
+            pas un "coefficient de priorité technique" mais dans la pratique, l'ordre influence la qualité et la
+            cohérence.
+          </p>
+        </div>
+
+
+        <h3 class="titleh3">2. La méthode CAFÉ</h3>
+        <p>
+          La méthode CAFÉ est orientée vers la précision et la qualité de sortie. L'ajout d'emples en est largement
+          responsable. <br>
+          Il suffit de suivre ces 4 étapes pour stucturer le prompt :
         </p>
         <div class="containerCafe">
           <div class="etape">
@@ -105,11 +195,11 @@
             <div class="mot mot1">CONTEXTE</div>
             <div class="etapeContent content1">
               <p>Fournir un cadre clair pour orienter la réponse de l'IA.
-                <ul>
-                  <li>Décrire la situation ou le rôle attendu.</li>
-                  <li>Préciser le domaine ou l'objectif général.</li>
-                  <li>Ajouter des précisions pour éviter les ambiguïtés.</li>
-                </ul>
+              <ul>
+                <li>Décrire la situation ou le rôle attendu.</li>
+                <li>Préciser le domaine ou l'objectif général.</li>
+                <li>Ajouter des précisions pour éviter les ambiguïtés.</li>
+              </ul>
               </p>
             </div>
           </div>
@@ -121,10 +211,10 @@
             <div class="mot mot2">ACTION</div>
             <div class="etapeContent content2">
               <p>Indiquer l'action attendue
-                <ul>
-                  <li>Utiliser des verbes d'action clair pour guider la réponse.</li>
-                  <li>Nommer le public cible pour ajuster le ton et le vocabulaire.</li>
-                </ul>
+              <ul>
+                <li>Utiliser des verbes d'action clair pour guider la réponse.</li>
+                <li>Nommer le public cible pour ajuster le ton et le vocabulaire.</li>
+              </ul>
               </p>
             </div>
           </div>
@@ -135,14 +225,14 @@
             </div>
             <div class="mot mot3">FORMAT ATTENDU</div>
             <div class="etapeContent content3">
-              <p>Définir clairement les paramètres de la production attendue. Indiquer par exemple : 
-                <ul>
-                  <li>Le nombre de mot,</li>
-                  <li>Le type de document,</li>
-                  <li>la stucture,</li>
-                  <li>le format numérique (markdown, python...),</li>
-                  <li>le style.</li>
-                </ul>
+              <p>Définir clairement les paramètres de la production attendue. Indiquer par exemple :
+              <ul>
+                <li>Le nombre de mot,</li>
+                <li>Le type de document,</li>
+                <li>la stucture,</li>
+                <li>le format numérique (markdown, python...),</li>
+                <li>le style.</li>
+              </ul>
               </p>
             </div>
           </div>
@@ -153,18 +243,63 @@
             </div>
             <div class="mot mot4">Échange -Évaluation</div>
             <div class="etapeContent content4">
-              <p>Réitérer pour affiner ou clarifier la réponse de l'IA. 
-                <ul>
-                  <li>Demander des explications.</li>
-                  <li>Vérifier les faits et demander des sources pour valider</li>
-                  <li>Exprimer des doutes ou proposer des alternative pour enrichir.</li>
-                </ul>
+              <p>Réitérer pour affiner ou clarifier la réponse de l'IA.
+              <ul>
+                <li>Demander des explications.</li>
+                <li>Vérifier les faits et demander des sources pour valider</li>
+                <li>Exprimer des doutes ou proposer des alternative pour enrichir.</li>
+              </ul>
               </p>
             </div>
           </div>
         </div>
 
-        <h3 class="titleh3">2. La méthode ACTIF</h3>
+        <div class="exemple">
+          <p>Par exemple : </p>
+          <p><strong>C : </strong> Tu es enseignant de français, expert en analyse littéraire pour des élèves de 6e. Ton
+            rôle est de m'aider à concevoir une activité interactive sur l'analyse des personnages dans <em>Le Petit
+              Prince.</em>
+          </p>
+          <p>
+            <strong>A :</strong> Crée une activité de groupe de 30 minutes où les élèves débatent des choix et de
+            l'évolution des personnages. Intègre une réflexion individuelle où chaque élève écrit une courte analyse sur
+            un personnage de leur choix. Ajoute des idées d'évaluation pour mesurer la compréhension des personnage et
+            les compétences de rédaction et de communication.
+          </p>
+          <p>
+            <strong>F : </strong> Structure l'activité en trois phases. Structure, débat de groupe et évaluation
+            individuelle. Présente les instruction sous forme de liste numéritée. Ajoute un format d'évaluation pour
+            chaque phrase.
+          </p>
+          <p>
+            <strong>É : </strong> Fournit d'abord une proposition initiale. Je te demanderai ensuite d'ajuster ou
+            d'améliorer certains élements si besoin, comme les critères d'évaluation pour le réflexion individuelle par
+            exemple.
+          </p>
+        </div>
+        <p> <strong>
+          Mon but étant de proposer des outils d'aide, j'ai réalisé, (sur une idée du site num.org) et enrichi un
+          assistant d'instructions génératives pour aider à apréhender
+          et maitriser ces deux méthodes. Vous pourrez choisir la méthode (CAFÉ ou ACTIF), vous pourrez choisir et
+          personnaliser un template prédéfini ou réaliser pas à pas votre propre prompt et le copier/coller dans l'IA de
+          votre choix. ENJOY ! <br>
+          <a href="../Assistant_prompt/IndexPrompt.html"><i class="fas fa-link"></i>Assistant d'instructions
+            génératives</a></strong>
+        </p>
+        <h3 class="titleh3">Les autres méthodes</h3>
+        <p>Vous l'avez compris, il existe de nombreuses méthodes permettant de "prompter". J'en évoque quelques unes qui
+          devraient s'auto-expliquer naturellement en développant leurs acronymes :
+        <ul>
+          <li><strong>RTF : </strong>(Role, Task, Format)</li>
+          <li><strong>TREF : </strong>(Task, Requirement, Expectation, Format)</li>
+          <li><strong>GRADE : </strong>(Goal, Request, Action, Detail, Example)</li>
+          <li><strong>RISE(N) : </strong>(Role, Input, Steps, Expectation,Narrowing)</li>
+          <li><strong>TAG : </strong>(Task, Action, Goal)</li>
+          <li><strong>BAB : </strong>(Before, After,Bridge)</li>
+          <li>... A vous de jouer !</li>
+        </ul>
+        </p>
+
       </div>
     </section>
 
