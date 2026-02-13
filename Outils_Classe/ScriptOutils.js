@@ -24,17 +24,13 @@ sidebar.addEventListener("click", (e) => {
 
 // fermeture de section par clic sur flèche
 document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionne toutes les sections avec la classe collapsible-section
   const sections = document.querySelectorAll('.collapsible-section');
   
   sections.forEach(section => {
     const h2 = section.querySelector('h2');
-    const content = section.querySelector('.section-content');
-    const arrow = section.querySelector('.toggle-arrow');
     
     h2.addEventListener('click', function() {
-      content.classList.toggle('hidden');
-      arrow.classList.toggle('collapsed');
+      section.classList.toggle('open');
     });
   });
 });

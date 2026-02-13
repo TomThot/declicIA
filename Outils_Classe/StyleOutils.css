@@ -229,27 +229,29 @@ body {
   opacity: 1;
 }
 
-.toggle-arrow {
-  transition: transform 0.3s ease;
-  font-size: 0.8em;
-  margin-left: 10px;
-  transform: rotate(-180deg);
+.section-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
 }
 
-.toggle-arrow.collapsed {
+.section-content .inner {
+  overflow: hidden;
+}
+
+.collapsible-section.open .section-content {
+  grid-template-rows: 1fr;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
   transform: rotate(0deg);
 }
 
-.section-content {
-  max-height: 5000px;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+.collapsible-section.open .toggle-arrow {
+  transform: rotate(180deg);
 }
-
-.section-content.hidden {
-  max-height: 0;
-}
-
 
 /*------------------------------------------------------*/
 /*-------------------------Header-------------------------*/
@@ -349,29 +351,29 @@ p {
 /*------------------------------------------------------*/
 
 /*-----------------------Méthode ACTIF-------------------*/
-.actif{
+.actif {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1.5em 0;
 }
 
-.actif img{
+.actif img {
   width: 100%;
 }
 
-.containerExemple{
+.containerExemple {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.containerExemple ul{
- margin: 0 10em;
+.containerExemple ul {
+  margin: 0 10em;
 }
 
-.containerRemarque{
-  background-color:#b9ace641;
+.containerRemarque {
+  background-color: #b9ace641;
   border-radius: 10px;
   padding: 10px;
 }
@@ -395,7 +397,7 @@ p {
   align-items: center;
   margin: 10px;
   border-radius: 10px;
- 
+
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
@@ -421,10 +423,10 @@ p {
   border-radius: 10px 10px 0 0;
 }
 
-.etapeContent{
- display: grid;
- align-items: center;
- 
+.etapeContent {
+  display: grid;
+  align-items: center;
+
 }
 
 .etapeContent p {
@@ -518,11 +520,108 @@ p {
   border-radius: 0 0 10px 10px;
 }
 
-.prompt ul{
+.prompt ul {
   line-height: 1.7;
   margin-left: 30px;
   margin-bottom: 1em;
 }
+
+
+
+
+
+
+
+ .containerAssistant {
+      text-align: center;
+    }
+
+
+
+    .assistant {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .assistant a {
+      background: linear-gradient(45deg, #4524ff, #9519e7);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      position: relative;
+      overflow: visible;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    i.fas {
+      margin-right: 0.3rem;
+    }
+
+    /* Animation Portail dimensionnel */
+    .portal::before,
+    .portal::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 2px solid;
+      opacity: 0;
+      animation: none;
+    }
+
+    .portal::before {
+      border-color: #ff00ff;
+      animation-delay: 0s;
+    }
+
+    .portal::after {
+      border-color: #00ffff;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes portalSpin {
+      0% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(360deg) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .portal:hover::before,
+    .portal:hover::after {
+      animation: portalSpin 1s ease infinite;
+    }
+
+    .portal:hover {
+      transform: scale(1.05);
+      filter: hue-rotate(360deg);
+      transition: filter 2s linear;
+    }
+
+    .portal:active {
+      transform: translate(3px, 3px) scale(1.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+
+
 /*-------------Fin CAFÉ--------------------*/
 
 
@@ -647,7 +746,7 @@ footer {
 /*--------------------------------------------------------------*/
 
 @media screen and (max-width: 850px) {
-  
+
   .containerCafe {
     display: grid;
     grid-template-columns: 1fr;

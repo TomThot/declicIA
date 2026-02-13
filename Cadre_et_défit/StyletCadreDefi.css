@@ -488,25 +488,28 @@ p {
   opacity: 1;
 }
 
-.toggle-arrow {
-  transition: transform 0.3s ease;
-  font-size: 0.8em;
-  margin-left: 10px;
-  transform: rotate(-180deg);
+.section-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
 }
 
-.toggle-arrow.collapsed {
+.section-content .inner {
+  overflow: hidden;
+}
+
+.collapsible-section.open .section-content {
+  grid-template-rows: 1fr;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
   transform: rotate(0deg);
 }
 
-.section-content {
-  max-height: 5000px;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.section-content.hidden {
-  max-height: 0;
+.collapsible-section.open .toggle-arrow {
+  transform: rotate(180deg);
 }
 
 .pourquoi ul {
@@ -534,9 +537,6 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 .containerEtiquettes {
   display: grid;
@@ -739,7 +739,6 @@ p {
 
 /*----------------------------------------------*/
 
-
 .fleche {
   width: 24px;
   height: 24px;
@@ -766,6 +765,43 @@ p {
 
 .legende span {
   font-size: 0.6em;
+}
+
+.containerIconTexte {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  background-color: #f2edff;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 15px 15px;
+}
+
+#remarque {
+  color: rgb(255, 0, 0)
+}
+
+.attention {
+  display: inline-flex;
+  margin-right: 15px;
+}
+
+.attention img {
+  width: 4vw;
+  height: 3.5vw;
+}
+
+.illustrationPix {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.illustrationPix img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /*----------------------section défi-------------------------------*/
@@ -816,8 +852,8 @@ p {
   margin-left: 30px;
 }
 
-.section-content ul{
-  
+.section-content ul {
+
   line-height: 1.7;
   margin-left: 30px;
   margin-bottom: 1em;
@@ -1020,21 +1056,38 @@ footer {
     place-items: center;
     max-width: 1168px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 10px;
   }
 
   .containerUsage {
     display: grid;
-    grid-template-columns: max-content;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    /* Au lieu de max-content */
     justify-content: center;
-    align-content: center;
+    gap: 15px;
+    /* Ajoutez un espace entre les tags */
+    padding: 10px;
+    /* Un peu de padding pour éviter que ça touche les bords */
+    width: 100%;
+    /* Assurez-vous que le container prend toute la largeur */
+    box-sizing: border-box;
+    /* Important pour inclure le padding dans la largeur */
   }
 
   .tag {
-    height: 100%;
     width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 10px;
+    /* Un peu plus de padding pour la lisibilité */
+    border-radius: 16px;
+    /* Gardez le border-radius */
   }
 
+  .tag p {
+    font-size: 14px;
+    /* Réduisez la taille de police si nécessaire */
+    margin: 5px 0;
+  }
 
 }
