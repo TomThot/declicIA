@@ -16,6 +16,13 @@
   --primary-blue: rgba(9, 31, 233, 0.25);
   --hover-blue: rgba(9, 80, 233, 0.35);
   --glow-blue: rgba(9, 80, 233, 0.2);
+  --bg: #0f172a;
+  --card: #7d86acfd;
+  --text: #f1f5f9;
+  --accent: #1846df;
+  --yes: #22c55e;
+  --no: #ef4444;
+  --border: #483861;
 }
 
 body {
@@ -366,10 +373,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .containerExemple ul {
-  margin: 0 10em;
+  padding: 0 1em;
 }
 
 .containerRemarque {
@@ -530,99 +538,201 @@ p {
 
 
 
+/* lien assistant prompt*/
 
+.containerAssistant {
+  text-align: center;
+}
 
- .containerAssistant {
-      text-align: center;
-    }
+.assistant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
 
+.assistant a {
+  background: linear-gradient(45deg, #4524ff, #9519e7);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
+i.fas {
+  margin-right: 0.3rem;
+}
 
-    .assistant {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      perspective: 1000px;
-    }
+/* Animation Portail dimensionnel */
+.portal::before,
+.portal::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 2px solid;
+  opacity: 0;
+  animation: none;
+}
 
-    .assistant a {
-      background: linear-gradient(45deg, #4524ff, #9519e7);
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      padding: 1.5rem 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      position: relative;
-      overflow: visible;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
+.portal::before {
+  border-color: #ff00ff;
+  animation-delay: 0s;
+}
 
-    i.fas {
-      margin-right: 0.3rem;
-    }
+.portal::after {
+  border-color: #00ffff;
+  animation-delay: 0.2s;
+}
 
-    /* Animation Portail dimensionnel */
-    .portal::before,
-    .portal::after {
-      content: '';
-      position: absolute;
-      inset: -20px;
-      border-radius: 50%;
-      border: 2px solid;
-      opacity: 0;
-      animation: none;
-    }
+@keyframes portalSpin {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
 
-    .portal::before {
-      border-color: #ff00ff;
-      animation-delay: 0s;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    .portal::after {
-      border-color: #00ffff;
-      animation-delay: 0.2s;
-    }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
 
-    @keyframes portalSpin {
-      0% {
-        transform: rotate(0deg) scale(0.5);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(360deg) scale(1.5);
-        opacity: 0;
-      }
-    }
+.portal:hover::before,
+.portal:hover::after {
+  animation: portalSpin 1s ease infinite;
+}
 
-    .portal:hover::before,
-    .portal:hover::after {
-      animation: portalSpin 1s ease infinite;
-    }
+.portal:hover {
+  transform: scale(1.05);
+  filter: hue-rotate(360deg);
+  transition: filter 2s linear;
+}
 
-    .portal:hover {
-      transform: scale(1.05);
-      filter: hue-rotate(360deg);
-      transition: filter 2s linear;
-    }
-
-    .portal:active {
-      transform: translate(3px, 3px) scale(1.05);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-
-
+.portal:active {
+  transform: translate(3px, 3px) scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
 
 
 /*-------------Fin CAFÉ--------------------*/
+
+
+
+
+/*------------------------------------------------------*/
+/*---------------Les IA conversationnelles--------------*/
+/*------------------------------------------------------*/
+
+.table-container {
+  max-width: 1400px;
+  margin: auto;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.IA table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  min-width: 1100px;
+}
+
+.IA thead {
+  background: #0e48e9;
+}
+
+.IA th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: white;
+}
+
+.IA th {
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.IA tr:hover {
+  background: #243447;
+  transition: 0.2s ease;
+}
+
+.IA .badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.IA .yes {
+  background: var(--yes);
+  color: #fff;
+}
+
+.IA .no {
+  background: var(--no);
+  color: #fff;
+}
+
+.IA .limit {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.IA .caption {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.containerMistral{
+   display: flex;
+  align-items: flex-end; /* aligne le texte en bas de l’icône */
+  gap: 12px; /* espace entre icône et texte */
+}
+
+.mistralIllsutration {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.mistralIllsutration img{
+  width: 15rem; /* adapte selon ton besoin */
+  height: auto;
+  display: block;
+}
+.ContainerMistral::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.textMistral {
+  font-size: 1rem;
+}
+
+
+
 
 
 
@@ -744,6 +854,19 @@ footer {
 /*--------------------------------------------------------------*/
 /*----------------------media Query-----------------------------*/
 /*--------------------------------------------------------------*/
+
+@media(max-width:768px) {
+
+  .IA table {
+    font-size: 0.8rem;
+  }
+
+  .IA th,
+  td {
+    padding: 10px;
+  }
+}
+
 
 @media screen and (max-width: 850px) {
 

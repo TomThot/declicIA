@@ -1,3 +1,9 @@
+
+
+
+
+
+
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

@@ -1,3 +1,9 @@
+
+ 
+ 
+ 
+ 
+ 
  // Current active method
         let currentMethod = 'actif';
 

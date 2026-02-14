@@ -16,10 +16,11 @@
 </head>
 
 <body>
+
   <header>
     <h1>Des outils pour la classe</h1>
     <p>
-      Quels sont les outils et ressources pratiques utilisant l'intelligence artificielle (IA) permettant un soutient
+      Quels sont les outils et ressources utilisant l'intelligence artificielle permettant un soutien
       pratique ?
     </p>
   </header>
@@ -34,8 +35,8 @@
         <img src="../Images/logo_blanc_150px.png" alt="logo" />
       </div>
       <a href="../index.html">Accueil</a>
-      <a href="#">L'IA c'est quoi ?</a>
-      <a href="#">Cadre et défis</a>
+      <a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
       <a href="#">Outils pour le classe</a>
       <a href="#">Menu 5</a>
     </div>
@@ -45,8 +46,8 @@
     <div class="containerNav">
       <div class="titreNav">Dans cet article</div>
       <div class="navigationPage">
-        <a href="#Definition">Définition</a>
-        <a href="#Fonctionnement">Fonctionnement</a>
+        <a href="#prompt">L'art du prompt</a>
+        <a href="#P2IA">Les outils P2IA</a>
         <a href="#Exemple">Exemple</a>
         <a href="#Types">Types d'IA</a>
         <a href="#Localisation">Utilisation de l'IA</a>
@@ -103,9 +104,9 @@
           <h3 class="titleh3">1. La méthode ACTIF</h3>
           <p>
             La méthode ACTIF est un modèle simple et efficace permettant l'obtention d'une réponse claire. Elle est
-            rapide
+            rapide,
             structurée et pédagogique. On la retient sour l'acronyme ACTIF mais on voit clairement grâce aux flèches que
-            l'acronyme ICATF serait plus logique mais moins facile à retenir.
+            l'acronyme ICATF serait plus logique et moins facile à retenir.
           </p>
           <div class="actif">
             <img src="../Images/1x/1x/ACTIF.png" alt="illsutration ACTIF">
@@ -139,21 +140,21 @@
           <div class="containerRemarque">
             <h4>Remarque :</h4>
             <p>
-              Notez que la couleur n'a pas
+              Notez que la couleur des élements n'a pas
               d'importance puisque les IA traitent les prompts en texte brut.
             </p>
             <p>
               Pour ce qui est de l'odre, les choses sont plus nuancées. En effet, une IA ne "lit pas dans l'ordre" comme
-              une
+              un
               humain. Elle traite l'ensemble du prompt comme un bloc transformé en token. Tout est pris en compte. MAIS
               :
               si sur des prompts très simples, l'ordre des élements n'est pas fondamental, pour les prompts plus
               complexes
               en
               revanche... Il faut être vigilant. <br>
-              <strong>Le début du prompt est une zone stratégique </strong> (les
-              informations peuvent avoir plus de poids), on fixe le cadre initial en définissant le contexte, les
-              objectifs... qui vont influencer toute la réponse dès le départ. si la contrainte arrive à la fin, elle
+              <strong>Le début du prompt est une zone stratégique </strong> (Ces
+              informations pourraient avoir plus de poids), on fixe le cadre initial en définissant le contexte, les
+              objectifs,etc, qui vont influencer toute la réponse dès le départ. Si la contrainte arrive à la fin, elle
               peut
               être moins bien respectée ou la réponse moins claire.
             </p>
@@ -190,7 +191,7 @@
 
           <h3 class="titleh3">2. La méthode CAFÉ</h3>
           <p>
-            La méthode CAFÉ est orientée vers la précision et la qualité de sortie. L'ajout d'emples en est largement
+            La méthode CAFÉ est orientée vers la précision et la qualité de sortie. L'ajout d'exemples en est largement
             responsable. <br>
             Il suffit de suivre ces 4 étapes pour stucturer le prompt :
           </p>
@@ -272,12 +273,13 @@
               <strong>A :</strong> Crée une activité de groupe de 30 minutes où les élèves débatent des choix et de
               l'évolution des personnages. Intègre une réflexion individuelle où chaque élève écrit une courte analyse
               sur
-              un personnage de leur choix. Ajoute des idées d'évaluation pour mesurer la compréhension des personnage et
+              un personnage de leur choix. Ajoute des idées d'évaluation pour mesurer la compréhension des personnages
+              et
               les compétences de rédaction et de communication.
             </p>
             <p>
               <strong>F : </strong> Structure l'activité en trois phases. Structure, débat de groupe et évaluation
-              individuelle. Présente les instruction sous forme de liste numéritée. Ajoute un format d'évaluation pour
+              individuelle. Présente les instructions sous forme de liste numérotée. Ajoute un format d'évaluation pour
               chaque phrase.
             </p>
             <p>
@@ -298,21 +300,21 @@
 
 
 
-       
 
-         
+
+
 
 
 
           <div class="containerAssistant">
-    
-    <div class="assistant">
-      <a href="../Assistant_prompt/IndexPrompt.html" class="portal">
-        <i class="fas fa-link"></i>
-        Assistant d'instructions génératives
-      </a>
-    </div>
-  </div>
+
+            <div class="assistant">
+              <a href="../Assistant_prompt/IndexPrompt.html" class="portal">
+                <i class="fas fa-link"></i>
+                Assistant d'instructions génératives
+              </a>
+            </div>
+          </div>
 
 
 
@@ -339,17 +341,236 @@
       </div>
     </section>
 
+    <!------------------------------------------------------------------------->
+    <!-------------------------et les IA dans tout ça ?------------------------>
+    <!------------------------------------------------------------------------->
+    <section id="typeIA" class="card IA collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Quelle IA choisir ?
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <h3 class="titleh3">Comparatif des IA – 2026</h3>
+          <p>
+            On pourrait simplifier le vaste mon des IA en distinguant l'IA conversationnlle de l'IA générative. la
+            première vise l'interaction pour comprendre le langage humain et y répondre, la deuxième vise la production
+            de contenus originaux (texte, image..). La vérité est que dans la pratique, cette distinction s'efface au
+            profit des <strong>agents IA</strong>. Ils sont en quelque sorte les deux à la fois. <br>
+
+            L'objectif n'étant pas de faire une liste exhaustive de toutes les IA conversationnelles et/ou génératives
+            qui existent mais
+            plutôt de se pencher sur les plus utilisées et d'en faire un rapide comparatif. <i>(Si vous souhaitez
+              d'autres critères de comparaison, n'hésitez pas à me le dire).</i>
+          </p>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>IA</th>
+                  <th>Gratuit</th>
+                  <th>Appli. mobile</th>
+                  <th>Compte</th>
+                  <th>Open Source</th>
+                  <th>Multimodalité</th>
+                  <th>Capacité Contexte</th>
+                  <th>Remarques</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>ChatGPT</td>
+                  <td><span class="badge limit">Freemium</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td><span class="badge no">Non</span></td>
+                  <td>Texte + Image + Audio*</td>
+                  <td>~400k tokens (~300k mots)</td>
+                  <td>Polyvalent, large écosystème</td>
+                </tr>
+
+                <tr>
+                  <td>Claude</td>
+                  <td><span class="badge limit">Limité</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td><span class="badge no">Non</span></td>
+                  <td>Texte + Image</td>
+                  <td>~200k tokens (~150k mots)</td>
+                  <td>Excellent pour textes longs</td>
+                </tr>
+
+                <tr>
+                  <td>Gemini</td>
+                  <td><span class="badge limit">Limité</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td><span class="badge no">Non</span></td>
+                  <td>Texte + Image + Audio + Vidéo</td>
+                  <td>~1M tokens (~750k mots)</td>
+                  <td>Très multimodal, intégré Google</td>
+                </tr>
+
+                <tr>
+                  <td>Mistral</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td>Web: Oui / Local: Non</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>Texte + Image*</td>
+                  <td>~256k tokens (~190k mots)</td>
+                  <td>Open-weight européen</td>
+                </tr>
+
+                <tr>
+                  <td>Copilot</td>
+                  <td><span class="badge limit">Version limitée</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td><span class="badge no">Non</span></td>
+                  <td>Texte + Fichiers + Image*</td>
+                  <td>~128k–200k tokens</td>
+                  <td>Intégré Microsoft 365 & GitHub</td>
+                </tr>
+
+                <tr>
+                  <td>DeepSeek</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td>Local: Non</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>Principalement texte</td>
+                  <td>~128k tokens (~95k mots)</td>
+                  <td>Bon en raisonnement</td>
+                </tr>
+
+                <tr>
+                  <td>Llama 4</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>
+                    <div class="badge yes">oui</div>
+                  </td>
+                  <td>Local: Non</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>Texte + Image*</td>
+                  <td>~10M tokens (~7.5M mots)</td>
+                  <td>Contexte extrêmement long</td>
+                </tr>
+
+                <tr>
+                  <td>DuckDuckGo AI**</td>
+                  <td><span class="badge yes">Oui</span></td>
+                  <td>
+                    <div class="badge no">non</div>
+                  </td>
+                  <td>
+                    <div class="badge no">non</div>
+                  </td>
+                  <td><span class="badge no">non</span></td>
+                  <td>Texte + Image</td>
+                  <td>~4k tokens (~3K mots)</td>
+                  <td>Confidentialité</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <p class="caption">
+            *Selon version / modèle. 1 token ≈ 0,75 mot (approximation).
+          </p>
+
+          <h4>Focus sur Mistral AI</h4>
+          <div class="ContainerMistral">
+            <div class="mistralIllsutration">
+              <img src="../Images/icons/Mistral-Ai--Streamline-Svg-Logos.svg" alt="logo Mistral AI">
+            </div>
+            <div class="textMistral">
+              <p>
+                Je passerai rapidement sur les IA mainstream comme ChatGPT, Claude, Gemini... Elles sont ce qu'elles
+                sont !
+                Elles possèdent des avantages incontestables comme la rapidité, le pertinence et la polyvalence. Elles
+                ont
+                malgré tout quelques inconvénients. Elles ne sont pas open-source et la gestion des données est parfois
+                contestée tant sur le plan du machine learning qui sert à entrainer le modèle que sur les données
+                utilisateurs.
+              </p>
+              <p>
+                A cette occasion, faisons un focus sur Mistral AI, l'entreprise française fondée en 2023. Ce LLM est
+                souvent mis
+                en avant par l'institution puisque dans un contexte mondial ou les souverainetés sont remises en cause,
+                l'entreprise française semble être une belle solution pour s'affranchir des géants américains sur le
+                plan de l'IA. <br>
+                Dans la pratique, les choses sont plus nuancées. Certes, l'entreprise a annoncé 1,2 milliards d'euros
+                d'investissement en Suède (pays stratégique pour l'IA) qui va dans le sens d'une IA européenne
+                indépendante
+                mais quand on regarde de plus prêt les services de Mistral AI, on trouve la trace d'un partenariat avec
+                Microsoft qui permet de rendre disponible son modèle sur le cloud Azure offrant un réseau mondial de
+                centres de données gérés par Microsoft. <br>
+                Depuis novembre 2024, Le Chat (nom de l'IA générative de Mistral AI) est capable de générer des images
+                grâce
+                à un
+                partenariat avec Black Forest Labs. Cette dernière possède un capital en partie américain et asiatique.
+                Pour finir, rappelons que lors de la panne du réseau CDN de Cloudflare (entreprise américaine), le Chat
+                ne
+                fonctionnait plus. Et alors me direz-vous ? Cloudflare est une entreprise américaine non soumise aux
+                lois
+                européennes
+                sur l'IA
+                mais au CLOUDAct qui autorise les Etas-Unis à consulter en clair les requêtes des utilisateurs (a priori
+                uniquement dans le cadre d'enquêtes judiciares).
+              <p>
+                J'arrête là ma demonstration, vous l'aurez compris, en matière d'IA, tout est interconnecté et difficile
+                d'être absolument souverain. Il n'en reste pas moins vrai que Mistral AI oeuvre dans la bonne direction
+                face aux enjeux du monde moderne.
+              </p>
+            </div>
+          </div>
+
+          <h4>**Focus sur DuckDuckGo AI</h4>
+          <p>
+            J'ai placé cette IA dans le tableau mais ce choix est discutable puisque DuckDuckGo AI n'est pas une IA à
+            part entière dans le sens où elle ne possède pas sa propre infrastructure ni son propre LLM indépendant.
+            Cette IA fonctionne en accord avec les principaux fournisseurs de LLM (Mistral AI, OpenAI...). DuckDuckGo AI
+            utilise des modèle de langages d'autres IA mais les accords incluent des mesures pour garantir la confidentialité et l'anonymat des
+            interactions. Rien de ce que vous lui fournirez ne sera utiliser pour entrainer la machine ni comuniqué aux
+            géants des IA. L'Education Nationale préconise l'utilisation de cette "IA".
+          </p>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------------------------------------->
+    <!---------------------------------Outils P2IA----------------------------->
+    <!------------------------------------------------------------------------->
+    <section id="P2IA" class="card P2IA collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Les outils P2IA
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <h3 class="titleh3">Solutions IA pour le cycle 2 et 3</h3>
 
 
 
 
-
-
-
-
-
-
-
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -421,6 +642,7 @@
     </div>
   </footer>
   <script src="ScriptOutils.js"></script>
+
 </body>
 
 </html>
