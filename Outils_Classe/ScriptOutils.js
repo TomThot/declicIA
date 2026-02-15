@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
@@ -40,3 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// rendre les liogne du tableau clickable
+document.querySelectorAll(".clickable-row").forEach(row => {
+  row.addEventListener("click", () => {
+  window.open(row.dataset.href, "_blank", "noopener,noreferrer");
+  });
+});
+
+

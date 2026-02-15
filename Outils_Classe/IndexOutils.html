@@ -47,11 +47,11 @@
       <div class="titreNav">Dans cet article</div>
       <div class="navigationPage">
         <a href="#prompt">L'art du prompt</a>
+        <a href="#typeIA">Quelle IA choisir ?</a>
         <a href="#P2IA">Les outils P2IA</a>
         <a href="#Exemple">Exemple</a>
         <a href="#Types">Types d'IA</a>
         <a href="#Localisation">Utilisation de l'IA</a>
-        <a href="#Ethique">Limites</a>
       </div>
     </div>
 
@@ -367,6 +367,7 @@
               <thead>
                 <tr>
                   <th>IA</th>
+                  <th>Société</th>
                   <th>Gratuit</th>
                   <th>Appli. mobile</th>
                   <th>Compte</th>
@@ -379,99 +380,107 @@
 
               <tbody>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://chatgpt.com/">
                   <td>ChatGPT</td>
+                  <td>Américaine</td>
                   <td><span class="badge limit">Freemium</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
                   <td><span class="badge yes">Oui</span></td>
                   <td><span class="badge no">Non</span></td>
-                  <td>Texte + Image + Audio*</td>
+                  <td>Texte + image + audio*</td>
                   <td>~400k tokens (~300k mots)</td>
                   <td>Polyvalent, large écosystème</td>
                 </tr>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://claude.ai">
                   <td>Claude</td>
+                  <td>Américaine</td>
                   <td><span class="badge limit">Limité</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
                   <td><span class="badge yes">Oui</span></td>
                   <td><span class="badge no">Non</span></td>
-                  <td>Texte + Image</td>
+                  <td>Texte + image</td>
                   <td>~200k tokens (~150k mots)</td>
                   <td>Excellent pour textes longs</td>
                 </tr>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://gemini.google.com">
                   <td>Gemini</td>
+                  <td>Américaine</td>
                   <td><span class="badge limit">Limité</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
                   <td><span class="badge yes">Oui</span></td>
                   <td><span class="badge no">Non</span></td>
-                  <td>Texte + Image + Audio + Vidéo</td>
+                  <td>Texte + image + audio + vidéo</td>
                   <td>~1M tokens (~750k mots)</td>
                   <td>Très multimodal, intégré Google</td>
                 </tr>
 
-                <tr>
-                  <td>Mistral</td>
+                <tr class="clickable-row" data-href="https://mistral.ai/products/le-chat">
+                  <td>Mistral**</td>
+                  <td>Française</td>
                   <td><span class="badge yes">Oui</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
-                  <td>Web: Oui / Local: Non</td>
+                  <td>Web : Oui / Local : Non</td>
                   <td><span class="badge yes">Oui</span></td>
-                  <td>Texte + Image*</td>
+                  <td>Texte + image*</td>
                   <td>~256k tokens (~190k mots)</td>
                   <td>Open-weight européen</td>
                 </tr>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://copilot.microsoft.com/">
                   <td>Copilot</td>
+                  <td>Américaine</td>
                   <td><span class="badge limit">Version limitée</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
                   <td><span class="badge yes">Oui</span></td>
                   <td><span class="badge no">Non</span></td>
-                  <td>Texte + Fichiers + Image*</td>
+                  <td>Texte + fichiers + image*</td>
                   <td>~128k–200k tokens</td>
                   <td>Intégré Microsoft 365 & GitHub</td>
                 </tr>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://www.deepseek.com/en/">
                   <td>DeepSeek</td>
+                  <td>Chinoise</td>
                   <td><span class="badge yes">Oui</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
-                  <td>Local: Non</td>
+                  <td>Local : Non</td>
                   <td><span class="badge yes">Oui</span></td>
                   <td>Principalement texte</td>
                   <td>~128k tokens (~95k mots)</td>
                   <td>Bon en raisonnement</td>
                 </tr>
 
-                <tr>
+                <tr class="clickable-row" data-href="https://llamaai.online/?utm_source=moge.ai">
                   <td>Llama 4</td>
+                  <td>Américaine</td>
                   <td><span class="badge yes">Oui</span></td>
                   <td>
                     <div class="badge yes">oui</div>
                   </td>
-                  <td>Local: Non</td>
+                  <td>Local : Non</td>
                   <td><span class="badge yes">Oui</span></td>
-                  <td>Texte + Image*</td>
+                  <td>Texte + image*</td>
                   <td>~10M tokens (~7.5M mots)</td>
                   <td>Contexte extrêmement long</td>
                 </tr>
 
-                <tr>
-                  <td>DuckDuckGo AI**</td>
+                <tr class="clickable-row" data-href="https://duck.ai/chat?ia=chat&duckai=1">
+                  <td>Duck AI**</td>
+                  <td>/////////</td>
                   <td><span class="badge yes">Oui</span></td>
                   <td>
                     <div class="badge no">non</div>
@@ -492,7 +501,7 @@
             *Selon version / modèle. 1 token ≈ 0,75 mot (approximation).
           </p>
 
-          <h4>Focus sur Mistral AI</h4>
+          <h4>**Focus sur Mistral AI</h4>
           <div class="ContainerMistral">
             <div class="mistralIllsutration">
               <img src="../Images/icons/Mistral-Ai--Streamline-Svg-Logos.svg" alt="logo Mistral AI">
@@ -539,17 +548,31 @@
             </div>
           </div>
 
-          <h4>**Focus sur DuckDuckGo AI</h4>
-          <p>
-            J'ai placé cette IA dans le tableau mais ce choix est discutable puisque DuckDuckGo AI n'est pas une IA à
-            part entière dans le sens où elle ne possède pas sa propre infrastructure ni son propre LLM indépendant.
-            Cette IA fonctionne en accord avec les principaux fournisseurs de LLM (Mistral AI, OpenAI...). DuckDuckGo AI
-            utilise des modèle de langages d'autres IA mais les accords incluent des mesures pour garantir la confidentialité et l'anonymat des
-            interactions. Rien de ce que vous lui fournirez ne sera utiliser pour entrainer la machine ni comuniqué aux
-            géants des IA. L'Education Nationale préconise l'utilisation de cette "IA".
-          </p>
+          <h4>**Focus sur Duck AI</h4>
+          <div class="ContainerDuck">
+            <div class="duckIllsutration">
+              <img src="../Images/icons/duckduckgo.svg" alt="logo DuckDuckGo AI">
+            </div>
+            <div class="textDuck">
+              <p>
+                J'ai placé cette IA dans le tableau mais ce choix est discutable puisque Duck AI n'est pas une IA à
+                part entière dans le sens où elle ne possède pas sa propre infrastructure ni son propre LLM indépendant.
+                <br>
+                Cette IA fonctionne en accord avec les principaux fournisseurs de LLM (Mistral AI, OpenAI...). Duck AI
+                utilise des modèles de langages empruntés à d'autres IA mais les accords incluent des mesures pour
+                garantir la confidentialité et l'anonymat des
+                interactions. Rien de ce que vous lui fournirez ne sera utilisé pour entrainer la machine ni comuniqué
+                aux
+                géants des IA.
+              <p>Voyez Duck AI comme une surcouche de confidentialité à certaines IA. On retrouve cette
+                solution recommandée sur les sites de nombreuses DRANE (Direction de Région Académique du Numérique pour
+                l'Éducation).
+              </p>
 
+              </p>
 
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -563,10 +586,168 @@
       </h2>
       <div class="section-content">
         <div class="inner">
-          <h3 class="titleh3">Solutions IA pour le cycle 2 et 3</h3>
+          <h3 class="titleh3">Solutions IA pour le cycle 3</h3>
+
+          <p>
+            <Strong>Le Partenariat d'innovation et d'intelligence artificielle (P2IA)</Strong>, permet dejà
+            d'accompagner les professeurs
+            dans les apprentissages fondamentaux en français et mathématiques au cycle 2 (CP, CE1 et CE2) grâce à des
+            outils gratuits et conformes RGPD. Il s'agit en réalité d'IA adaptatives (et pas génératives) qui suivent le
+            parcours de l'élève mais sans générer de contenu. Plus d'un millions d'elèves les ont déjà utilisés.
+          </p>
+          <p>
+            Depuis janvier 2026, six outils supplémentaires sont expérimentés durant la phase de recherche et
+            développement pour le cycle 3 (CM1, CM2, 6e).
+            Je précise ici la présentation de chaque service (consultable également sur le site <a
+              href="https://eduscol.education.fr/4289/l-intelligence-artificielle-au-service-des-apprentissages-au-cycle-3">eduscol</a>
+            ).
+          </p>
+          <h4>Français :</h4>
+          <p>
+            <a href="https://expliq.fr/">Expliq</a> repose sur le principe qu’expliciter un concept permet d’en
+            renforcer la maîtrise. L’élève joue le rôle de tuteur auprès d’avatars désireux d’apprendre et les aide à
+            progresser via un chat augmenté. Il collabore, exerce son esprit critique, ose s’exprimer, tout en
+            s’exerçant de manière interactive et personnalisée.
+            Le service Expliq est réalisé par Edinnov, Mathena, Scopeo et l’IRIT – équipe SAMoVa (Université de
+            Toulouse).
+          </p>
+          <p>
+            <a href="https://www.edumalin.fr/">Edumalin</a> aide l’élève à s’approprier les stratégies d’apprentissage
+            grâce à des activités explicitées avec un pas à pas méthodologique dont le guidage est paramétrable par
+            l’enseignant, et enrichies de feedbacks en temps réel permettant d’adapter le parcours. L’outil soutient la
+            différenciation et le progrès de la classe.
+            Le service Edumalin est réalisé par MFB.
+          </p>
+
+          <div class="video">
+            <div class="titreVideo">
+              <h3>Expliq</h3>
+              <iframe title="Educatech Expo 2025 - Présentation de la ressource Expliq" width="445" height="260"
+                src="https://tube-numerique-educatif.apps.education.fr/videos/embed/3xRag1qDDCgDBMkVpJdFcS"
+                style="border: 0px;" allow="fullscreen"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            </div>
+
+            <div class="titreVideo">
+              <h3>Edumalin</h3>
+              <iframe title="Educatech Expo 2025 - Présentation de la ressource Edumalin" width="445" height="260"
+                src="https://tube-numerique-educatif.apps.education.fr/videos/embed/1NtavGFmZA5ekENT4Ls7aZ"
+                style="border: 0px;" allow="fullscreen"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+              </iframe>
+            </div>
+          </div>
+
+
+          <h4>Mathématiques :</h4>
+          <p>
+            <a href="https://mathia.education/cycle-3/">MathIA-C3</a> permet à l’élève d’explorer les concepts
+            mathématiques par la manipulation et la visualisation 3D, en interagissant avec un compagnon numérique. Par
+            tâtonnement, essais- erreurs et résolution de problèmes, il construit ses raisonnements tout en recevant un
+            feedback immédiat, tandis que l’enseignant peut suivre ses progrès, créer des activités et accéder à des
+            bilans complets.
+            Le service Mathia-C3 est réalisé par Prof en Poche et Tralalere.
+          </p>
+          <p>
+            <a href="https://origamia.fr/">OrigamIA</a> vise à rendre les mathématiques plus accessibles et engageantes.
+            Cette solution hybride unique combine des activités sur papier avec une plateforme numérique interactive.
+            Pensée comme une extension de la feuille, la plateforme ouvre un champ infini d'expérimentation ludique et
+            intuitif pour les élèves. Au cœur du système, l'intelligence artificielle propose un apprentissage grâce à
+            des parcours adaptés sur mesure. Pour les enseignants, c'est l'assurance de pouvoir individualiser leur
+            pédagogie et de suivre précisément les acquis de chacun.
+            Le service Origamia est réalisé par Cabrilog, l’université de Grenoble Alpes, Cantoo, Le Livre scolaire et
+            Vittascience.
+          </p>
+
+          <div class="video">
+            <div class="titreVideo">
+              <h3>MathIA</h3>
+            <iframe title="Educatech Expo 2025 - Présentation de la ressource MathIA" width="445" height="260"
+              src="https://tube-numerique-educatif.apps.education.fr/videos/embed/jCCN7Cy3TX24qba1LMFaFV"
+              style="border: 0px;" allow="fullscreen"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              </div>
+
+              <div class="titreVideo">
+                <h3>OrigamIA</h3>
+            <iframe title="Educatech Expo 2025 - Présentation de la ressource Origamia" width="445" height="260"
+              src="https://tube-numerique-educatif.apps.education.fr/videos/embed/8fpTqrkBxRf68fB1MhEngP"
+              style="border: 0px;" allow="fullscreen"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+              </div>
+          </div>
+
+
+          <h4>Langues vivantes : :</h4>
+          <p>
+            <a href="https://cards.beneylu.com/">Cards,</a> repose sur un jeu de cartes de compétences à collectionner
+            pour progresser en langues : l’élève s’entraîne, relève des défis linguistiques et affronte des bots à
+            l’aide des cartes obtenues. L’assistant intelligent lui fournit un feedback immédiat. L’enseignant peut
+            activer les cartes de son choix et suivre les progrès de chacun. L’outil allie interactivité, motivation et
+            personnalisation, offrant un apprentissage dynamique et engageant.
+            Le service Cards est réalisé par Beneylu.
+          </p>
+          <p>
+            <a href="https://ylang.education/">Ylang</a></li> différencie les apprentissages grâce à la reconnaissance
+            vocale, améliorant l'expression orale et la prononciation des élèves. L’enseignant peut créer des activités
+            adaptées à l’aide d’outils et de ressources interactives, brutes ou prêtes à l'emploi. Un bot
+            conversationnel accompagne l’enseignant dans sa démarche tout au long de la préparation des séances.
+            Le service yLANG est réalisé par Neuronys Nolej.
+          </p>
+
+          <div class="video">
+            <div class="titreVideo">
+              <h3>Cards</h3>
+            <iframe title="Educatech Expo 2025 - Présentation de la ressource BeneyluCards" width="445" height="260"
+              src="https://tube-numerique-educatif.apps.education.fr/videos/embed/cgiMjRDyupWeuHJsetEoQE"
+              style="border: 0px;" allow="fullscreen"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+</div>
+            <div class="titreVideo">
+              <h3>Ylang</h3>
+            <iframe title="Educatech Expo 2025 - Présentation de la ressource Ylang" width="445" height="260"
+              src="https://tube-numerique-educatif.apps.education.fr/videos/embed/iZQnrWoQwwHGupf2das4CU"
+              style="border: 0px;" allow="fullscreen"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+          </div>
+          </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
 
         </div>
       </div>

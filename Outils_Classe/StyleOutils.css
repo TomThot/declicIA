@@ -670,10 +670,16 @@ td {
   top: 0;
 }
 
-.IA tr:hover {
-  background: #243447;
+.IA .clickable-row {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.IA .clickable-row:hover {
+  background-color: #243447;
   transition: 0.2s ease;
 }
+
 
 .IA .badge {
   padding: 4px 8px;
@@ -705,13 +711,8 @@ td {
   opacity: 0.7;
 }
 
-.containerMistral{
-   display: flex;
-  align-items: flex-end; /* aligne le texte en bas de l’icône */
-  gap: 12px; /* espace entre icône et texte */
-}
-
-.mistralIllsutration {
+/*permet d'écrire en dessous et à côté de l'icone*/
+.mistralIllsutration, .duckIllsutration {
   float: left;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -722,20 +723,40 @@ td {
   height: auto;
   display: block;
 }
-.ContainerMistral::after {
+.duckIllsutration img{
+  width: 10rem; /* adapte selon ton besoin */
+  height: auto;
+  display: block;
+}
+
+.ContainerMistral::after, .ContainerDuck::after {
   content: "";
   display: block;
   clear: both;
 }
-.textMistral {
-  font-size: 1rem;
+
+.P2IA ul {
+  line-height: 1.7;
+  margin-left: 30px;
+  margin-bottom: 1em;
 }
 
+.video{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 
+.titreVideo{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 15px;
+  }
 
-
-
-
+.titreVideo h3{
+  display: flex;
+  justify-content: center;
+}
 
 /*----------------------Footer---------------------------------------*/
 footer {
