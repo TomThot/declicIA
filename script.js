@@ -12,6 +12,58 @@ const nav = document.getElementById("nav");
 const overlay = document.getElementById("overlay");
 const menuItems = document.querySelectorAll(".menu-item");
 
+// BEGIN DARK THEME
+const themeToggle = document.getElementById("themeToggle");
+const rootElement = document.documentElement;
+const headerLogoImg = document.querySelector(".logo img");
+const THEME_KEY = "declicia-theme";
+const LIGHT_LOGO_SRC = "Images/logo_noir_50px.png";
+const DARK_LOGO_SRC = "Images/logo_blanc_50.png";
+
+function getPreferredTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === "light" || savedTheme === "dark") {
+    return savedTheme;
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  rootElement.dataset.theme = theme;
+
+  if (headerLogoImg) {
+    headerLogoImg.src = isDark ? DARK_LOGO_SRC : LIGHT_LOGO_SRC;
+  }
+
+  if (themeToggle) {
+    const label = themeToggle.querySelector(".theme-toggle__label");
+    themeToggle.setAttribute("aria-checked", String(isDark));
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark
+        ? "Basculer vers le thème clair"
+        : "Basculer vers le thème sombre"
+    );
+    if (label) {
+      label.textContent = isDark ? "Clair" : "Sombre";
+    }
+  }
+}
+
+if (themeToggle) {
+  applyTheme(getPreferredTheme());
+  themeToggle.addEventListener("click", () => {
+    const nextTheme =
+      rootElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
+  });
+}
+// END DARK THEME
+
 // Toggle menu burger
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
