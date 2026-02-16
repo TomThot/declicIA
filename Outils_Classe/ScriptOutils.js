@@ -35,11 +35,33 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// rendre les liogne du tableau clickable
+// rendre les ligne lien chatMD clickable
 document.querySelectorAll(".clickable-row").forEach(row => {
   row.addEventListener("click", () => {
   window.open(row.dataset.href, "_blank", "noopener,noreferrer");
   });
 });
+
+const chatmdUrlInput = document.querySelector("#chatmd-url-input");
+const chatmdOpenBtn = document.querySelector("#chatmd-open-btn");
+
+if (chatmdUrlInput && chatmdOpenBtn) {
+  const openChatMdFromInput = () => {
+    const rawUrl = chatmdUrlInput.value.trim();
+    if (!rawUrl) return;
+    //Attention à encoder l'url correctement
+    const cleanedUrl = rawUrl.replace(/^#/, "");
+    const targetUrl = `https://chatmd.forge.apps.education.fr/#${cleanedUrl}`;
+    window.open(targetUrl, "_blank", "noopener,noreferrer");
+  };
+
+  chatmdOpenBtn.addEventListener("click", openChatMdFromInput);
+  chatmdUrlInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      openChatMdFromInput();
+    }
+  });
+}
 
 
