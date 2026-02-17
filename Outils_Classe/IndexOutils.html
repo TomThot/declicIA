@@ -49,7 +49,7 @@
         <a href="#prompt">L'art du prompt</a>
         <a href="#typeIA">Quelle IA choisir ?</a>
         <a href="#P2IA">Les outils P2IA</a>
-        <a href="#Exemple">Exemple</a>
+        <a href="#chat">ChatMD</a>
         <a href="#Types">Types d'IA</a>
         <a href="#Localisation">Utilisation de l'IA</a>
       </div>
@@ -779,7 +779,7 @@
     <!------------------------------------------------------------------------->
     <!---------------------------------ChatMD---------------------------------->
     <!------------------------------------------------------------------------->
-    <section id="P2IA" class="card Chat collapsible-section open">
+    <section id="chat" class="card Chat collapsible-section open">
       <h2 data-tooltip="Cliquez pour replier/déplier le contenu">ChatMD : Un chatbot polyvalent
         <span class="toggle-arrow">▼</span>
       </h2>
@@ -896,35 +896,55 @@
             Je mettrai en téléchargement mon fichier de configuration du chatbot pour que vous puissiez l'adapter.
           </div>
           <div class="containerChatbot">
+            <div class="texteChatbot">
+              <p>
+                Pour moins de blabla, j'ai choisi de créer un chatbot répondant au doux nom de Frigondule, dédié à la
+                présentation de <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a>. Il ne s'agit pas de
+                montrer toutes les
+                possibilités de l'outil mais les fonctionalités abordées peuvent vous inspirer et le fichier Markdown
+                vous
+                faciliter la vie dans la prise en main de ce chatbot. <br>
+              </p>
+
+              <p>Il faut respecter 3 etapes :</p>
+              <ul class="liste">
+                <li>Créez un fichier en Markdown accessible en ligne (sur <a
+                    href="https://codimd.apps.education.fr/">CodiMD</a> par exemple ).</li>
+                <li>Respectez la syntaxe pour ChatMD du fichier Markdown définissant votre chatbot.</li>
+                <li>Votre chatbot est alors accessible à l'adresse suivante : <br>
+                  https://chatmd.forge.apps.education.fr/#URL</li>
+              </ul>
+
+              <div class="chatmd-launcher">
+                <label for="chatmd-url-input">Ou collez l'URL de votre document Markdown :</label>
+                <div class="chatmd-launcher-row">
+                  <input id="chatmd-url-input" type="url" placeholder="https://codimd.apps.education.fr/s/..." />
+                  <button id="chatmd-open-btn" type="button">OK</button>
+                </div>
+              </div>
+
+              <p>
+                Vous aurez donc 3 façons de consulter votre bot :
+              </p>
+              <ul class="liste">
+                <li><strong>Dans un nouvel onglet</strong> de votre navigateur grâce au champ précédent (solution qui conviendra à la
+                  plupart des gens).</li>
+                <li><strong>Grâce à une iFrame </strong> si par exemple, vous souhaitez l'intégrer à une page web comme dans l'exemple ici.</li>
+                <li><strong>Grâce à un widget</strong>. Si vous cliquez sur le bouton ci-dessous, une bulle devrait s'ouvrir en bas, à
+                  droite de l'écran. Un clic dessus et vous ouvrez ou fermer votre bot qui apparait dans une fenêtre dédiée au dessus de
+                  votre page.</li>
+              </ul>
+              <!-- Bouton pour lancer le chatbot -->
+               <div class="btn">
+              <button id="btnChatbot" onclick="toggleChatbot()">💬 Ouvrir le widget</button>
+              </div>
+              <!-- iFrame du bot -->
+            </div>
             <div class="chatbot">
               <iframe src="https://chatmd.forge.apps.education.fr//#https://codimd.apps.education.fr/s/imCNpLNcc"
-                style="border:0; width:100%; height:700px"></iframe>
+                style="border:0; width:100%; height:800px"></iframe>
             </div>
-            <div class="texteChatbot">
-            <p>
-              Pour moins de blabla, j'ai choisi de créer un chatbot répondant au doux nom de Frigondule, dédié à la présentation de <a
-                href="https://chatmd.forge.apps.education.fr/">ChatMD</a>. Il ne s'agit pas de montrer toutes les
-              possibilités de l'outil mais les fonctionalités abordées peuvent vous inspirer et le fichier Markdown vous
-              faciliter la vie dans la prise en main de ce chatbot. <br>
-            </p>
-            
-            <p>Il faut respecter 3 etapes :</p>
-            <ul>
-              <li>Créez un fichier en Markdown accessible en ligne (sur <a
-                  href="https://codimd.apps.education.fr/">CodiMD</a> par exemple ).</li>
-              <li>Respectez la syntaxe pour ChatMD du fichier Markdown définissant votre chatbot.</li> 
-              <li>Votre chatbot est alors accessible à l'adresse suivante : <br> https://chatmd.forge.apps.education.fr/#URL</li>   
-            </ul>
-            
-            <div class="chatmd-launcher">
-              <label for="chatmd-url-input">Ou collez l'URL de votre document :</label>
-              <div class="chatmd-launcher-row">
-                <input id="chatmd-url-input" type="url" placeholder="https://codimd.apps.education.fr/s/..." />
-                <button id="chatmd-open-btn" type="button">OK</button>
-              </div>
-            </div>
-             
-          </div>
+
 
           </div>
         </div>
@@ -1000,6 +1020,8 @@
     </div>
   </footer>
   <script src="ScriptOutils.js"></script>
+
+
 
 </body>
 
