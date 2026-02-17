@@ -891,22 +891,31 @@ td {
 
 .containerChatbot {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  overflow: hidden;
 }
 
 .containerChatbot .texteChatbot {
   width: 45%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .chatbot {
   width: 50%;
+  min-width: 0;
   box-shadow: 0 5px 20px rgb(54, 66, 109);
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .chatbot iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   border-radius: 15px;
 }
 
@@ -1164,6 +1173,7 @@ footer {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 15px;
+    overflow: visible;
   }
 
   .containerChatbot .texteChatbot {
@@ -1175,5 +1185,12 @@ footer {
     box-shadow: 0 5px 20px rgb(54, 66, 109);
     border-radius: 15px;
   }
-
+  .chatmd-launcher-row{
+     display: grid;
+    grid-template-columns: 1fr;
+  }
+  .chatbot iframe {
+    width: 100%;
+  border-radius: 15px;
+}
 }
