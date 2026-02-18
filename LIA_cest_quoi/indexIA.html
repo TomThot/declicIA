@@ -9,6 +9,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../Images/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../Images/icons/favicon_color-16x16.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- katex -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}] });"></script>
+
   <title>L'IA c'est quoi ?</title>
   <link rel="stylesheet" href="StyleIA.css" />
 </head>
@@ -53,123 +59,127 @@
     </div>
 
     <!-- SECTION 1 : définition -->
-    <section class="definition collapsible-section">
+    <section class="definition collapsible-section open">
       <h2 id="Definition" data-tooltip="Cliquez pour replier/déplier le contenu">
         Définition
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <p>
-          Une <strong>intelligence artificielle (IA)</strong> est un programme
-          informatique capable d'imiter certaines capacités humaines comme :
-        </p>
-        <ul>
-          <li>apprendre à partir de données</li>
-          <li>reconnaître des images ou des sons</li>
-          <li>comprendre et produire du langage</li>
-          <li>prendre des décisions</li>
-        </ul>
-        <p>
-          Contrairement à un humain, une IA ne pense pas : elle applique des
-          <strong>algorithmes</strong> et des
-          <strong>modèles mathématiques</strong>.
-        </p>
-        <div class="illustration">
-          <img src="../Images/historique.png" alt="historique" />
+        <div class="inner">
+          <p>
+            Une <strong>intelligence artificielle (IA)</strong> est un programme
+            informatique capable d'imiter certaines capacités humaines comme :
+          </p>
+          <ul>
+            <li>apprendre à partir de données</li>
+            <li>reconnaître des images ou des sons</li>
+            <li>comprendre et produire du langage</li>
+            <li>prendre des décisions</li>
+          </ul>
+          <p>
+            Contrairement à un humain, une IA ne pense pas : elle applique des
+            <strong>algorithmes</strong> et des
+            <strong>modèles mathématiques</strong>.
+          </p>
+          <div class="illustration">
+            <img src="../Images/historique.png" alt="historique" />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 2 :Fonctionnement -->
-    <section class="fonctionnement collapsible-section">
+    <section class="fonctionnement collapsible-section open">
       <h2 id="Fonctionnement" data-tooltip="Cliquez pour replier/déplier le contenu">
         Comment fonctionne une IA ?
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <p>
-          Les intelligences artificielles modernes comme ChatGPT reposent sur
-          des <strong>LLM</strong> (Large Language Models), c’est-à-dire de
-          grands modèles de langage entraînés sur d’immenses quantités de
-          textes.
-        </p>
+        <div class="inner">
+          <p>
+            Les intelligences artificielles modernes comme ChatGPT reposent sur
+            des <strong>LLM</strong> (Large Language Models), c’est-à-dire de
+            grands modèles de langage entraînés sur d’immenses quantités de
+            textes.
+          </p>
 
-        <p>
-          Un LLM fonctionne en découpant le texte en
-          <strong>tokens</strong> (mots, parties de mots ou signes), puis en
-          prévoyant le token suivant le plus probable selon le contexte. Cette
-          prédiction est répétée des milliers de fois pour produire une
-          réponse complète.
-        </p>
+          <p>
+            Un LLM fonctionne en découpant le texte en
+            <strong>tokens</strong> (mots, parties de mots ou signes), puis en
+            prévoyant le token suivant le plus probable selon le contexte. Cette
+            prédiction est répétée des milliers de fois pour produire une
+            réponse complète.
+          </p>
 
-        <p>
-          Grâce à un mécanisme appelé attention, le modèle repère les éléments
-          importants d’une phrase et maintient la cohérence du discours.
-          Cependant, <strong>l’IA ne pense pas et ne comprend pas </strong> :
-          elle génère du texte à partir de statistiques apprises lors de son
-          entraînement.
-        </p>
-        <div class="image">
-          <img src="../Images/token.webp" alt="token" />
-        </div>
-        <div class="resume">Pour faire simple :</div>
-        <div class="bilan">
-          <div class="axes">
-            <div class="containerAxe">
-              <div class="cardImage">
-                <h3>
-                  <img src="../Images/icons/icons8-puzzle-100.png" alt="icon" class="icon" />
-                  Qu'est ce qu'un token ?
-                </h3>
-              </div>
-              <div class="cardContent">
-                <div class="sousTitre">Un token est un morceau mot.</div>
-                <div class="texte">
-                  Les LLM ne lisent pas les phrases : Ils lisent (prédisent)
-                  une suite de tokens.
+          <p>
+            Grâce à un mécanisme appelé attention, le modèle repère les éléments
+            importants d’une phrase et maintient la cohérence du discours.
+            Cependant, <strong>l’IA ne pense pas et ne comprend pas </strong> :
+            elle génère du texte à partir de statistiques apprises lors de son
+            entraînement.
+          </p>
+          <div class="image">
+            <img src="../Images/token.webp" alt="token" />
+          </div>
+          <div class="resume">Pour faire simple :</div>
+          <div class="bilan">
+            <div class="axes">
+              <div class="containerAxe">
+                <div class="cardImage">
+                  <h3>
+                    <img src="../Images/icons/icons8-puzzle-100.png" alt="icon" class="icon" />
+                    Qu'est ce qu'un token ?
+                  </h3>
                 </div>
-                <div class="centrage">
-                  <div class="exemple">Intelligence : intel-lig-ence</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="containerAxe">
-              <div class="cardImage">
-                <h3>
-                  <img src="../Images/icons/icons8-game-die-100.png" alt="icon" class="icon" />
-                  Leur travail : <br />
-                  prédire le token suivant
-                </h3>
-              </div>
-              <div class="cardContent">
-                <div class="sousTitre">Le LLM ne réfléchit pas.</div>
-                <div class="texte">
-                  L'IA calcule et fait des choix : Quel token à la plus forte
-                  probabilité ?
-                </div>
-                <div class="centrage">
-                  <div class="exemple">
-                    le ciel est... Bleu (90%) / Gris (10%)
+                <div class="cardContent">
+                  <div class="sousTitre">Un token est un morceau mot.</div>
+                  <div class="texte">
+                    Les LLM ne lisent pas les phrases : Ils lisent (prédisent)
+                    une suite de tokens.
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">Intelligence : intel-lig-ence</div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="containerAxe">
-              <div class="cardImage">
-                <h3>
-                  <img src="../Images/icons/icons8-box-important-100.png" alt="icon" class="icon" />
-                  Pourquoi elle hallucine ?
-                </h3>
+              <div class="containerAxe">
+                <div class="cardImage">
+                  <h3>
+                    <img src="../Images/icons/icons8-game-die-100.png" alt="icon" class="icon" />
+                    Leur travail : <br />
+                    prédire le token suivant
+                  </h3>
+                </div>
+                <div class="cardContent">
+                  <div class="sousTitre">Le LLM ne réfléchit pas.</div>
+                  <div class="texte">
+                    L'IA calcule et fait des choix : Quel token à la plus forte
+                    probabilité ?
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      le ciel est... Bleu (90%) / Gris (10%)
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="cardContent">
-                <div class="sousTitre">Le LLM prédit.</div>
-                <div class="texte">Même sans assez d'informations</div>
-                <div class="centrage">
-                  <div class="exemple">
-                    Manque de contexte : <br />
-                    inventions, imprécisions, réponses trompeuses
+
+              <div class="containerAxe">
+                <div class="cardImage">
+                  <h3>
+                    <img src="../Images/icons/icons8-box-important-100.png" alt="icon" class="icon" />
+                    Pourquoi elle hallucine ?
+                  </h3>
+                </div>
+                <div class="cardContent">
+                  <div class="sousTitre">Le LLM prédit.</div>
+                  <div class="texte">Même sans assez d'informations</div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      Manque de contexte : <br />
+                      inventions, imprécisions, réponses trompeuses
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,244 +190,432 @@
     </section>
 
     <!-- SECTION 3 : exemple -->
-    <section class="exemple MIT collapsible-section">
+    <section class="exemple MIT collapsible-section open">
       <h2 id="Exemple" data-tooltip="Cliquez pour replier/déplier le contenu">
         Exemple : reconnaissance d'images
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <p>
-          Pour apprendre à reconnaître un chat, une IA analyse des milliers
-          d'images annotées.
-        </p>
+        <div class="inner">
+          <p>
+            Pour apprendre à reconnaître un chat, une IA analyse des milliers
+            d'images annotées.
+          </p>
 
-        <div class="schema">
-          <div class="box">Images de chats<br />et non-chats</div>
-          <div class="arrow">➡</div>
-          <div class="box">Analyse des formes<br />et couleurs</div>
-          <div class="arrow">➡</div>
-          <div class="box">Apprentissage</div>
-          <div class="arrow">➡</div>
-          <div class="box">"Ceci est un chat"</div>
+          <div class="schema">
+            <div class="box">Images de chats<br />et non-chats</div>
+            <div class="arrow">➡</div>
+            <div class="box">Analyse des formes<br />et couleurs</div>
+            <div class="arrow">➡</div>
+            <div class="box">Apprentissage</div>
+            <div class="arrow">➡</div>
+            <div class="box">"Ceci est un chat"</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION : Types d'intelligence artificielle -->
-    <section class="type collapsible-section">
+    <!-- SECTION 4 : Types d'intelligence artificielle -->
+    <section class="type collapsible-section open">
       <h2 id="Type" data-tooltip="Cliquez pour replier/déplier le contenu">
         Les différents types d'intelligence artificielle
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <p>
-          Selon <strong> Stuart Russell</strong>, ingénieur et co-auteur du
-          manuel de référence
-          <em>Artificial Intelligence: A Modern Approach</em>, il existe
-          <strong>cinq niveaux d'IA</strong> classés selon leurs capacités et
-          leur niveau d’autonomie.
-        </p>
+        <div class="inner">
+          <p>
+            Selon <strong> Stuart Russell</strong>, ingénieur et co-auteur du
+            manuel de référence
+            <em>Artificial Intelligence: A Modern Approach</em>, il existe
+            <strong>cinq niveaux d'IA</strong> classés selon leurs capacités et
+            leur niveau d’autonomie.
+          </p>
 
-        <h3>Niveau 1 : IA faible (ou IA réactive)</h3>
-        <p>
-          L’<strong>IA faible</strong> est conçue pour accomplir une seule
-          tâche précise. Elle ne comprend pas ce qu’elle fait et ne peut pas
-          sortir de son domaine. Elle ne possède aucune mémoire et ne peut pas
-          apprendre de ses expériences passées. Elle se contente de réagir à
-          des situations précises, selon des règles programmées à l’avance.
-          Deep Blue, l’ordinateur d’IBM qui a battu le champion d’échecs Garry
-          Kasparov en 1997, est un exemple d’IA réactive, qui analysait chaque
-          situation en temps réel, sans rien retenir des parties précédentes.
-        </p>
-        <ul>
-          <li>assistants vocaux</li>
-          <li>reconnaissance d’images</li>
-          <li>traduction automatique</li>
-        </ul>
+          <h3>Niveau 1 : IA faible (ou IA réactive)</h3>
+          <p>
+            L’<strong>IA faible</strong> est conçue pour accomplir une seule
+            tâche précise. Elle ne comprend pas ce qu’elle fait et ne peut pas
+            sortir de son domaine. Elle ne possède aucune mémoire et ne peut pas
+            apprendre de ses expériences passées. Elle se contente de réagir à
+            des situations précises, selon des règles programmées à l’avance.
+            Deep Blue, l’ordinateur d’IBM qui a battu le champion d’échecs Garry
+            Kasparov en 1997, est un exemple d’IA réactive, qui analysait chaque
+            situation en temps réel, sans rien retenir des parties précédentes.
+          </p>
+          <ul>
+            <li>assistants vocaux</li>
+            <li>reconnaissance d’images</li>
+            <li>traduction automatique</li>
+          </ul>
 
-        <h3>Niveau 2 : L’IA à mémoire limitée</h3>
-        <p>
-          <strong>L'IA à mémoire limitée</strong> fonctionne en analysant de
-          grandes quantités de données afin de repérer des motifs (patterns).
-        </p>
-        <p>
-          Contrairement à l’IA réactive, l’IA à mémoire limitée peut apprendre
-          à partir de données passées. Elle s’appuie sur ce qu’on appelle le
-          machine learning, ou apprentissage automatique, pour améliorer ses
-          performances au fil du temps.
-        </p>
-        <ul>
-          <li>voitures autonomes</li>
-          <li>les recommandations Netflix</li>
-          <li>les algorithmes prédictifs utilisés en marketing</li>
-        </ul>
-        <p>
-          Les outils d’IA les plus populaires comme Midjourney, Dall-E ou
-          ChatGPT sont des IA à mémoire limitée, entrainées à partir de
-          millions de textes ou d’images. Il s’agit toujours d’une IA faible,
-          car ses capacités restent limitées à des tâches bien précises. Mais
-          ses applications IA sont déjà très puissantes et en constante
-          évolution.
-        </p>
-        <div class="resume">Pour faire simple :</div>
-        <div class="bilan">
-          <div class="axes">
-            <div class="containerAxeType">
-              <div class="cardImageType">
-                <h3>
-                  <img src="../Images/icons/icon_number_one.svg" alt="icon" class="icon" />
-                  Les données
-                </h3>
-              </div>
-              <div class="cardContent">
-                <div class="sousTitre">Nourrir l'IA</div>
-                <div class="texte">
-                  Textes, images, sons, vidéos... L'IA a besoin de données
-                  pour apprendre. Les données doivent être variées et de
-                  qualité pour que l'IA deviennent performantes.
+          <h3>Niveau 2 : L’IA à mémoire limitée</h3>
+          <p>
+            <strong>L'IA à mémoire limitée</strong> fonctionne en analysant de
+            grandes quantités de données afin de repérer des motifs (patterns).
+          </p>
+          <p>
+            Contrairement à l’IA réactive, l’IA à mémoire limitée peut apprendre
+            à partir de données passées. Elle s’appuie sur ce qu’on appelle le
+            machine learning, ou apprentissage automatique, pour améliorer ses
+            performances au fil du temps.
+          </p>
+          <ul>
+            <li>voitures autonomes</li>
+            <li>les recommandations Netflix</li>
+            <li>les algorithmes prédictifs utilisés en marketing</li>
+          </ul>
+          <p>
+            Les outils d’IA les plus populaires comme Midjourney, Dall-E ou
+            ChatGPT sont des IA à mémoire limitée, entrainées à partir de
+            millions de textes ou d’images. Il s’agit toujours d’une IA faible,
+            car ses capacités restent limitées à des tâches bien précises. Mais
+            ses applications IA sont déjà très puissantes et en constante
+            évolution.
+          </p>
+          <div class="resume">Pour faire simple :</div>
+          <div class="bilan">
+            <div class="axes">
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img src="../Images/icons/icon_number_one.svg" alt="icon" class="icon" />
+                    Les données
+                  </h3>
                 </div>
-                <div class="centrage">
-                  <div class="exemple">
-                    Pour reconnaitre un chat, l'IA est entrainée avec des
-                    millions de photos de chat.
+                <div class="cardContent">
+                  <div class="sousTitre">Nourrir l'IA</div>
+                  <div class="texte">
+                    Textes, images, sons, vidéos... L'IA a besoin de données
+                    pour apprendre. Les données doivent être variées et de
+                    qualité pour que l'IA deviennent performantes.
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      Pour reconnaitre un chat, l'IA est entrainée avec des
+                      millions de photos de chat.
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="containerAxeType">
-              <div class="cardImageType">
-                <h3>
-                  <img src="../Images/icons/icon_number_two.svg" alt="icon" class="icon" />
-                  Les algorithmes
-                </h3>
-              </div>
-              <div class="cardContent">
-                <div class="sousTitre">Analyser et trouver des patterns</div>
-                <div class="texte">
-                  Programmes qui recherchent les occurences dans les données
-                  et en tirent des règles.
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img src="../Images/icons/icon_number_two.svg" alt="icon" class="icon" />
+                    Les algorithmes
+                  </h3>
                 </div>
-                <div class="centrage">
-                  <div class="exemple">
-                    L'algorithme finit par comprendre que 2 "oreilles
-                    pointues", des "moustaches" + "fourrure" est sans doute un
-                    chat.
+                <div class="cardContent">
+                  <div class="sousTitre">Analyser et trouver des patterns</div>
+                  <div class="texte">
+                    Programmes qui recherchent les occurences dans les données
+                    et en tirent des règles.
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      L'algorithme finit par comprendre que 2 "oreilles
+                      pointues", des "moustaches" + "fourrure" est sans doute un
+                      chat.
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="containerAxeType">
-              <div class="cardImageType">
-                <h3>
-                  <img src="../Images/icons/icon_number_three.svg" alt="icon" class="icon" />
-                  L'apprentissage
-                </h3>
-              </div>
-              <div class="cardContent">
-                <div class="sousTitre">S'améliorer avec le temps</div>
-                <div class="texte">
-                  Plus l'IA s'entraine plus elle améliore et affine ses
-                  réponses. C'est le "Machine Learning".
+              <div class="containerAxeType">
+                <div class="cardImageType">
+                  <h3>
+                    <img src="../Images/icons/icon_number_three.svg" alt="icon" class="icon" />
+                    L'apprentissage
+                  </h3>
                 </div>
-                <div class="centrage">
-                  <div class="exemple">
-                    Au fil du temps, les porpositions de votre plateforme
-                    vidéo sont de plus en plus pertinentes et vous
-                    correspondent.
+                <div class="cardContent">
+                  <div class="sousTitre">S'améliorer avec le temps</div>
+                  <div class="texte">
+                    Plus l'IA s'entraine plus elle améliore et affine ses
+                    réponses. C'est le "Machine Learning".
+                  </div>
+                  <div class="centrage">
+                    <div class="exemple">
+                      Au fil du temps, les porpositions de votre plateforme
+                      vidéo sont de plus en plus pertinentes et vous
+                      correspondent.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <h3>Niveau 3 : La "théorie de l'esprit"</h3>
-        <p>
-          L'IA <strong>avec théorie de l'esprit</strong> serait capable de
-          comprendre les émotions, les croyances, les intentions et les désirs
-          d’autrui. Elle pourrait raisonner sur la façon dont les autres
-          voient le monde et adapter son comportement en conséquence. Ce
-          niveau représente une avancée majeure vers une véritable
-          intelligence sociale et émotionnelle. Des études rigoureuses
-          montrent que même les modèles les plus avancés restent en retrait de
-          la performance humaine.
-        </p>
-        <h3>Niveau 4 : L'IA consciente de soi <em>(Self-Aware AI)</em></h3>
-        <p>
-          👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
-        </p>
-        <p>
-          <strong>L’IA consciente de soi</strong> posséderait une conscience,
-          une identité propre, des désirs et une capacité à ressentir. Elle
-          serait consciente de sa propre existence et aurait ses propres
-          expériences subjectives. Ce niveau représente l’étape ultime de la
-          conscience artificielle, un concept qui se situe bien au-delà de la
-          simple imitation du comportement humain.
-        </p>
-        <h3>Niveau 5 : L’IA superintelligente (ASI) et l’AGI</h3>
-        <p>
-          👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
-        </p>
-        <p>
-          Ce niveau englobe l’AGI (IA générale, capable de résoudre toute
-          tâche intellectuelle humaine) et l’ASI ( IA superintelligente, qui
-          dépasserait l’intelligence humaine dans tous les domaines). En 2026,
-          ces concepts sont purement spéculatifs. L’émergence de l’ASI soulève
-          des questions fondamentales sur le contrôle, la sécurité et l’impact
-          sur l’humanité.
-        </p>
-        <div class="illustration">
-          <img src="../Images/Les 5 Niveaux d'Intelligence Artificielle _ Un Schéma Explicatif - visual selection.svg"
-            alt="5 niveaux d'IA" />
+          <h3>Niveau 3 : La "théorie de l'esprit"</h3>
+          <p>
+            L'IA <strong>avec théorie de l'esprit</strong> serait capable de
+            comprendre les émotions, les croyances, les intentions et les désirs
+            d’autrui. Elle pourrait raisonner sur la façon dont les autres
+            voient le monde et adapter son comportement en conséquence. Ce
+            niveau représente une avancée majeure vers une véritable
+            intelligence sociale et émotionnelle. Des études rigoureuses
+            montrent que même les modèles les plus avancés restent en retrait de
+            la performance humaine.
+          </p>
+          <h3>Niveau 4 : L'IA consciente de soi <em>(Self-Aware AI)</em></h3>
+          <p>
+            👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
+          </p>
+          <p>
+            <strong>L’IA consciente de soi</strong> posséderait une conscience,
+            une identité propre, des désirs et une capacité à ressentir. Elle
+            serait consciente de sa propre existence et aurait ses propres
+            expériences subjectives. Ce niveau représente l’étape ultime de la
+            conscience artificielle, un concept qui se situe bien au-delà de la
+            simple imitation du comportement humain.
+          </p>
+          <h3>Niveau 5 : L’IA superintelligente (ASI) et l’AGI</h3>
+          <p>
+            👉 Ce type d’IA <strong>n’existe pas encore</strong> aujourd’hui.
+          </p>
+          <p>
+            Ce niveau englobe l’AGI (IA générale, capable de résoudre toute
+            tâche intellectuelle humaine) et l’ASI ( IA superintelligente, qui
+            dépasserait l’intelligence humaine dans tous les domaines). En 2026,
+            ces concepts sont purement spéculatifs. L’émergence de l’ASI soulève
+            des questions fondamentales sur le contrôle, la sécurité et l’impact
+            sur l’humanité.
+          </p>
+          <div class="illustration">
+            <img src="../Images/Les 5 Niveaux d'Intelligence Artificielle _ Un Schéma Explicatif - visual selection.svg"
+              alt="5 niveaux d'IA" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Pour aller plus loin -->
+    <section class="utilisation collapsible-section open">
+      <h2 id="Localisation" data-tooltip="Cliquez pour replier/déplier le contenu">
+        Pour aller plus loin
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <h3>Vous avez dit réseau de neuronnes ?</h3>
+          <h4>Cas d'un seul neuronne</h4>
+          <p>
+            On va prendre un seul fil conducteur : Prédire si un étudiant va réussir un examen (Oui / Non). Pour cela,
+            définition simplement un réseau de neurones : <br>
+            Une machine qui apprend à faire une prédiction à partir d’exemples. <br>
+            Exemple : <br>
+            On donne au modèle des données d'entrée que nous appellerons $x$ :
+          </p>
+          <ul>
+            <li>heures de travail</li>
+            <li> moyenne annuelle</li>
+            <li> taux de présence</li>
+          </ul>
+          <p>Et on veut qu’il prédise la valeur de $y$ : </p>
+          <ul>
+            <li>1 = réussite</li>
+            <li>0 = échec</li>
+          </ul>
+          <p>Le réseau va apprendre à transformer ces informations en une décision. Il va donc apprendre à passer de
+            l'espace des $x$ à celui des $y$ grâce à une fonction de passage. On veut donc apprendre :
+            $$y=f(x)$$
+            Cela étant dit, il ne suffit pas d'être présent en classe pour avoir l'examen. Le travail va donc être plus
+            important que le taux de présence (même si ce dernier n'est pas négligeable). <br>
+          </p>
+          <p>Un neuronne fait donc 3 choses : </p>
+          <ol>
+            <li>Multiplie chaque entrée $x_i$ par un poids $\omega_i$ et ajoute un biais $b$
+              $$z = \omega_1x_1 + \omega_2x_2 +\omega_3x_3 +b$$
+            </li>
+            <li>Additionne le tout</li>
+            <li>Applique une petite transformation : fonction activation $\sigma$ qui transforme le résultat en
+              probabilité (ex : sigmoïde)</li>
+          </ol>
+
+
+          <!-- Sigmoïde -->
+          <div class="containerSigma">
+            <div class="sigmaGraph">
+              <div class="titreSigma">
+                <h4 class="sigma-title">Fonction Sigmoïde</h4>
+                <p class="formula">σ(z) = 1 / (1 + e<sup>−<span>k</span>(z − <span>z₀</span>)</sup>)</p>
+              </div>
+              <canvas id="c" width="560" height="320"></canvas>
+
+              <div class="controls">
+                <div class="control-group">
+                  <label>Pente (k)</label>
+                  <div style="display:flex;align-items:center;gap:0.6rem">
+                    <input type="range" id="k" min="0.1" max="5" step="0.1" value="1">
+                    <span class="val" id="kVal">1.0</span>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label>Décalage (x₀)</label>
+                  <div style="display:flex;align-items:center;gap:0.6rem">
+                    <input type="range" id="x0" min="-4" max="4" step="0.1" value="0">
+                    <span class="val" id="x0Val">0.0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paraSigma">
+              <p>
+                On peut donc noter $$\hat{y} = \sigma(z)$$
+                donc en composant avec la fonction $z$, on a une forme compacte : $$\hat{y} = \sigma(\omega^Tx+b)$$
+                Soyons concret et reprenons notre exemple de notre étudiant :
+              </p>
+              <ul>
+                <li>10h de travail</li>
+                <li>moyenne 14</li>
+                <li>présence 90%</li>
+              </ul>
+              <p>donc : </p>
+              <ul>
+                <li>Les entrées : $x (10,14,90)$</li>
+                <li>Le poids de chaque entrée : $\omega(0.2,0.5,0.01)$</li>
+
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="tooltip" id="tip">x=<span id="tx"></span> σ=<span id="ty"></span></div>
+          <p>
+            Le neuronne pourrait donc calculer : $$z=(10\times0.2)+(14\times0.5)+(90\times0.01)$$
+            👉Les coefficients de pondération (poids) sont choisis arbitrairement ici. Si la moyenne compte plus que la
+            présence, son poids sera plus grand.
+          </p>
+          <p>Ensuite on applique la fonction d'activation $\sigma$ qui transforme le résultat en probabilité entre 0 et
+            1. <br>
+            $$\hat{y} = \sigma(z)$$
+            Par exemple : 0.82 → 82% de chance de réussir. Le neuronne artificiel à fait son travail ! Limpide non ? 😎
+          </p>
+
+          <h4>Pourquoi plusieurs neuronnes ?</h4>
+          <p>
+            Un seul neurone est limité : Il fait une seule combinaison des données. La réussite peut dépendre de choses
+            plus complexes :
+          </p>
+          <ul>
+            <li>"travaille beaucoup MAIS mauvaise moyenne"</li>
+            <li>"moyenne "bof" MAIS très assidu"</li>
+            <li>profil irrégulier</li>
+          </ul>
+          <p>Mathématiquement, un seul neuronne correspond à un modèle linéaire
+            $$\hat{y} = \sigma(\omega^Tx+b)$$
+            Cela revient à tracer une frontière de décision dans l'espace des données : une droite si on a 2 variables,
+            un plan (3 variables), un hyperplan en dimension $n$. <br>
+            La relation réelle (et au réel) est plus complexe. Notre modèle n'est pas faux mais incomplet, il faut donc
+            rajouter une couche !
+          </p>
+
+          <h4>La couche cachée</h4>
+          <p>Imaginons donc un neuronne caché (suppleméntaire) qui va donc calculer :
+            $$h = \sigma(W_1x+b1)$$
+            où :
+          </p>
+          <ul>
+            <li>$W_1$ est donc une matrice </li>
+            <li>$h$ est un vecteur de nouvelles représentation</li>
+          </ul>
+          <p>Si on généralise, chaque neuronne caché va calculer : <br>
+            $$h_j = \sigma(w_j^Tx+b_j)$$
+            donc la couche entière :
+            $$h = \sigma(W_x+b)$$
+            Exemple :
+          </p>
+          <ul>
+            <li>neurone 1 pourrait calculer $h_1$ : détecte "travail intense"</li>
+            <li>Neurone 2 pourrait calculer $h_2$ : détecte "profil régulier"</li>
+            <li>Neurone 3 pourrait calculer $h_3$ : détecte "profil fragile"</li>
+          </ul>
+          <p>
+            Ces neuronnes ne donnent pas la décision finale, ils constituent des "résumés pertinents" des données. Le
+            réseau de neuronnes formé construit donc une nouvelle variable :
+            $$x → h(x)$$
+            Une autre couche combienra ces résumés pour produire la prédiction finale.
+          </p>
+
+          <h4>Non linéarité</h4>
+          <p>Nous l'avons vu, le réel est complexe et une simple relation de linéarité constitue un frein à une
+            description pertinente.
+            On peut imaginer ceci :
+          </p>
+          <ul>
+            <li>Travailler peu → échec</li>
+            <li>Travailler beaucoup → réussite</li>
+            <li>MAIS travailler énormément sans comprendre → échec</li>
+          </ul>
+          <p>La relation ne peut donc en aucun cas être linéaire, un modèle trop simple ne peut pas gérer ce genre de
+            chose. Comment peut-on alors transposer cela mathématiquement et s'en sortir ?
+          </p>
+          <p>Notre salut viendra de la fonction d'activation $\sigma$. Imaginons un cas sans activation : $$Wx+b$$
+            Cette transformation reste linéaire. Même si on empile plusieurs couches linéaire avec ce type de
+            transformation : 
+            $$W_2(W_1x)$$
+            reste équivalent à une seule matrice qui, par exetnsion, reste une transformation linéaire. <br>
+            Mais si on introduit subtilment une activation : 
+            $$\sigma(W_2(\sigma(W_1x)))$$
+            aboutit à une fonction non linéaire ! On peut donc gérer des cas complexes ! 😎
+
+          </p>
+
+
+
+
+
         </div>
       </div>
     </section>
 
     <!-- SECTION 4 : Utilisation-->
-    <section class="utilisation collapsible-section">
+    <section class="utilisation collapsible-section open">
       <h2 id="Localisation" data-tooltip="Cliquez pour replier/déplier le contenu">
         Où utilise-t-on l'IA ?
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <ul>
-          <li>Assistants vocaux (Siri, Alexa…)</li>
-          <li>Recommandations (Netflix, YouTube)</li>
-          <li>Reconnaissance faciale</li>
-          <li>Traduction automatique</li>
-          <li>Voitures autonomes</li>
-          <li>Interprétation des images médicales</li>
-          <li>Éducation et aide à l'apprentissage</li>
-        </ul>
+        <div class="inner">
+          <ul>
+            <li>Assistants vocaux (Siri, Alexa…)</li>
+            <li>Recommandations (Netflix, YouTube)</li>
+            <li>Reconnaissance faciale</li>
+            <li>Traduction automatique</li>
+            <li>Voitures autonomes</li>
+            <li>Interprétation des images médicales</li>
+            <li>Éducation et aide à l'apprentissage</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- SECTION 5 : éthique -->
-    <section class="ethique collapsible-section">
+    <section class="ethique collapsible-section open">
       <h2 id="Ethique" data-tooltip="Cliquez pour replier/déplier le contenu">
         Limites et questions éthiques
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
-        <p>
-          <em>Cette partie sera développée plus loguement dans le section
-            <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></em>
-        </p>
-        <p>
-          L'intelligence artificielle pose aussi des questions importantes :
-        </p>
-        <ul>
-          <li>biais dans les données</li>
-          <li>respect de la vie privée</li>
-          <li>dépendance aux technologies</li>
-          <li>impact sur l'emploi et l'environnement</li>
-        </ul>
-        <p>
-          L'IA est un outil puissant, mais elle doit être utilisée de manière
-          responsable.
-        </p>
+        <div class="inner">
+          <p>
+            <em>Cette partie sera développée plus loguement dans le section
+              <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></em>
+          </p>
+          <p>
+            L'intelligence artificielle pose aussi des questions importantes :
+          </p>
+          <ul>
+            <li>biais dans les données</li>
+            <li>respect de la vie privée</li>
+            <li>dépendance aux technologies</li>
+            <li>impact sur l'emploi et l'environnement</li>
+          </ul>
+          <p>
+            L'IA est un outil puissant, mais elle doit être utilisée de manière
+            responsable.
+          </p>
+        </div>
       </div>
     </section>
   </main>
