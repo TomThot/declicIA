@@ -670,12 +670,28 @@ input[type=range]::-webkit-slider-thumb {
 /* ====== Fin Sigmoïde ====== */
 
 
+.containerImageNeuronne{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageNeurone{
+  margin :0 20px;
+  width: auto;
+  height: auto;
+  transition: all 0.3s ease;
+} 
+
+.imageNeurone img{
+  max-width: 200px;
+  max-height: 250px;
+}
 
 
-
-
-
-
+.imageNeurone:hover{
+transform: scale(1.2);
+}
 
 
 

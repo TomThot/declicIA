@@ -60,8 +60,8 @@ function updateNeurone() {
     }
 
     // Affichage des équations
-    equationZ.innerHTML = `Z = (${x1} &times; ${w1}) + (${x2} &times; ${w2}) + (${bias.toFixed(1)}) = ${z.toFixed(2)}`;
-    equationSigmoid.innerHTML = `&sigma;(Z) = 1 / (1 + e<sup>-${z.toFixed(2)}</sup>) = ${probability.toFixed(4)}`;
+    equationZ.innerHTML = `z = (${x1} &times; ${w1}) + (${x2} &times; ${w2}) + (${bias.toFixed(1)}) = ${z.toFixed(2)}`;
+    equationSigmoid.innerHTML = `&sigma;(z) = 1 / (1 + e<sup>-${z.toFixed(2)}</sup>) = ${probability.toFixed(4)}`;
 }
 
 // Écouteurs d'événements pour mettre à jour le neurone en temps réel
