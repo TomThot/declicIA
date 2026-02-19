@@ -398,12 +398,19 @@
       <div class="section-content">
         <div class="inner">
           <h3>Vous avez dit réseau de neuronnes ?</h3>
+          <p>
+            C'est le coeur de la révvolution actuelle en IA. Pour faire simple, un réseau de neurones artificiels est un
+            modèle mathématique inspiré (très librement) du fonctionnement des neurones biologiques de notre cerveau.
+            Leur but ? Apprendre à transformer une entrée (une image, un texte, un son) en une sortie cohérente (une
+            prédiction, une traduction, une catégorie). <br>
+            Je passerai rapidement sur les terme technique (Input Layer, Hidden Layers, Output Layer) pour mattarder sur
+            la transposition d'un cas concret en écriture mathématique. Le but ?
+          </p>
+          <p>Montrer que la machine n'apprend pas ! Elle calcule !</p>
           <h4>Cas d'un seul neuronne</h4>
           <p>
-            On va prendre un seul fil conducteur : Prédire si un étudiant va réussir un examen (Oui / Non). Pour cela,
-            définition simplement un réseau de neurones : <br>
-            Une machine qui apprend à faire une prédiction à partir d’exemples. <br>
-            Exemple : <br>
+            On va prendre un seul fil conducteur : <strong>Prédire si un étudiant va réussir un examen (Oui /
+              Non)</strong>. <br>
             On donne au modèle des données d'entrée que nous appellerons $x$ :
           </p>
           <ul>
@@ -416,7 +423,8 @@
             <li>1 = réussite</li>
             <li>0 = échec</li>
           </ul>
-          <p>Le réseau va apprendre à transformer ces informations en une décision. Il va donc apprendre à passer de
+          <p>Le neuronne artificiel va apprendre à transformer ces informations en une décision. Il va donc apprendre à
+            passer de
             l'espace des $x$ à celui des $y$ grâce à une fonction de passage. On veut donc apprendre :
             $$y=f(x)$$
             Cela étant dit, il ne suffit pas d'être présent en classe pour avoir l'examen. Le travail va donc être plus
@@ -424,11 +432,11 @@
           </p>
           <p>Un neuronne fait donc 3 choses : </p>
           <ol>
-            <li>Multiplie chaque entrée $x_i$ par un poids $\omega_i$ et ajoute un biais $b$
+            <li>Il multiplie chaque entrée $x_i$ par un poids $\omega_i$ et ajoute un biais $b$
               $$z = \omega_1x_1 + \omega_2x_2 +\omega_3x_3 +b$$
             </li>
-            <li>Additionne le tout</li>
-            <li>Applique une petite transformation : fonction activation $\sigma$ qui transforme le résultat en
+            <li>Il additionne le tout</li>
+            <li>Il applique une petite transformation : fonction activation $\sigma$ qui transforme le résultat en
               probabilité (ex : sigmoïde)</li>
           </ol>
 
@@ -463,7 +471,7 @@
               <p>
                 On peut donc noter $$\hat{y} = \sigma(z)$$
                 donc en composant avec la fonction $z$, on a une forme compacte : $$\hat{y} = \sigma(\omega^Tx+b)$$
-                Soyons concret et reprenons notre exemple de notre étudiant :
+                Soyons concret et reprenons l'exemple de notre étudiant :
               </p>
               <ul>
                 <li>10h de travail</li>
@@ -482,7 +490,8 @@
 
           <div class="tooltip" id="tip">x=<span id="tx"></span> σ=<span id="ty"></span></div>
           <p>
-            Le neuronne pourrait donc calculer : $$z=(10\times0.2)+(14\times0.5)+(90\times0.01)$$
+            Le neuronne pourrait donc calculer :
+            $$z=(10 \times 0.2)+(14 \times 0.5)+(90 \times 0.01)$$
             👉Les coefficients de pondération (poids) sont choisis arbitrairement ici. Si la moyenne compte plus que la
             présence, son poids sera plus grand.
           </p>
@@ -506,7 +515,8 @@
             $$\hat{y} = \sigma(\omega^Tx+b)$$
             Cela revient à tracer une frontière de décision dans l'espace des données : une droite si on a 2 variables,
             un plan (3 variables), un hyperplan en dimension $n$. <br>
-            La relation réelle (et au réel) est plus complexe. Notre modèle n'est pas faux mais incomplet, il faut donc
+            La relation réelle (et au réel) est plus complexe. Notre modèle n'est pas faux mais simpliste et donc
+            incomplet, il faut alors
             rajouter une couche !
           </p>
 
@@ -517,7 +527,7 @@
           </p>
           <ul>
             <li>$W_1$ est donc une matrice </li>
-            <li>$h$ est un vecteur de nouvelles représentation</li>
+            <li>$h$ est un vecteur des nouvelles représentations</li>
           </ul>
           <p>Si on généralise, chaque neuronne caché va calculer : <br>
             $$h_j = \sigma(w_j^Tx+b_j)$$
@@ -551,18 +561,74 @@
             chose. Comment peut-on alors transposer cela mathématiquement et s'en sortir ?
           </p>
           <p>Notre salut viendra de la fonction d'activation $\sigma$. Imaginons un cas sans activation : $$Wx+b$$
-            Cette transformation reste linéaire. Même si on empile plusieurs couches linéaire avec ce type de
-            transformation : 
+            Cette transformation reste linéaire. Même si on compose, si on empile plusieurs couches linéaire avec ce
+            type de
+            transformation :
             $$W_2(W_1x)$$
-            reste équivalent à une seule matrice qui, par exetnsion, reste une transformation linéaire. <br>
-            Mais si on introduit subtilment une activation : 
+            reste équivalent à une seule matrice qui, par extension, reste une transformation linéaire. <br>
+            Mais si on introduit subtilment une activation :
             $$\sigma(W_2(\sigma(W_1x)))$$
-            aboutit à une fonction non linéaire ! On peut donc gérer des cas complexes ! 😎
-
+            aboutit à une fonction non linéaire (d'où l'intérêt d'une fonction d'activation sigmoïde par exemple) ! On
+            peut donc
+            gérer des cas complexes ! 😎
           </p>
 
+          <h4>Apprentissage du réseau</h4>
+          <p>
+            Au départ, les coefficients de pondération (poids) sont choisis au hasard. Il en découle logiquement de
+            mauvaises prédictions. <br>
+            Exemple : Le modèle prédit 30 % de réussite alors que l'étudiant "mauvais" a réussi. <br>
+            On va donc donc mesurer l'erreur puis ajuster les coefficients pour réduire cette erreur. Si on imagine ce
+            processus répété des milliers de fois... Petit à petit, les coefficients corrects apparaissent et les
+            mauvais
+            disparaissent. Le réglage fait, Le réseau neuronnal parvient à gérer une situation complexe.
+          </p>
+          <p>
+            Transposition au formalisme mathématique : <br>
+            Les $N$ neuronnes du réseau nous fournissent un ensemble de données :
+            $${\{(x_i,y_i)\}}_{i=1}^N$$
+            On définit alors une fonction de perte (par exemple une classification binaire) :
+            $$L = - \frac{1}{N} \sum_{i=1}^{N} [y_ilog(\hat{y_i})]$$
+            Donc plus la prédiction est mauvaise, plus la perte est grande. <br>
+            Il va donc falloir mettre à jour les paramètres du système c'est à dire poids et biais pour chaque couche !
+            En gros, on ajuste la valeur des éléments des matrices "poids" et "biais".
+            $$\omega_{ij} \leftarrow \omega_{ij}-\eta \frac{\partial L}{\partial \omega_{ij}}$$
+            $$b_k \leftarrow b_k-\eta \frac{\partial L}{\partial b_k}$$
+            Disons que pour simplifier les écritures précédentes, on notera $\theta$ l'ensemble des paramètres à ajuster
+            tel que :
+            $$\theta = \{W_1,b_1,W_2,b_2...\}$$
+            Il vient donc :
+            $$\theta \leftarrow \theta -\eta \nabla_\theta L$$
+            avec :
+          </p>
+          <ul>
+            <li>$\eta$ = taux d'apprentissage</li>
+            <li>$\nabla_\theta L$ = direction d'augmentation de l'erreur</li>
+          </ul>
+          <p>
+            On touche ici au coeur du problème... En machine learning, dire que le réseau neuronnal apprend revient,
+            pour
+            la machine, à trouver les $\omega$ et $b$ les plus adaptés tels que :
+            $$\omega_{nouveau} \leftarrow \omega_{ancien}-\eta \frac{\partial L}{\partial \omega}$$
+            $$b_{nouveau} \leftarrow b_{ancien}-\eta \frac{\partial L}{\partial b}$$
+            par itération successives... La machine n'apprend pas, elle calcule ! CQFD... <br>
+            Plus le nombre d'itération est important, plus la prédiction est fine. <br> En résumé, un réseau de neuronnes :
+          </p>
+          <ul>
+            <li>Calcule une combinaison linéaire $$Wx=b$$</li>
+            <li>Applique une non-linéarité $$\sigma(.)$$</li>
+            <li>Répète cela sur plusieurs couches</li>
+            <li>Ajuste ses paramètres pour minimiser $$L(\theta)$$</li>
+          </ul>
 
-
+          <p>Reprenons pour finir l'exemple de notre étudiant et supposons un seul facteur : heures de travail donc un seul neuronne :
+          </p>
+          <ul>
+            <li>Au début, le poids est de 0,1 pour 10h : prédiction faible </li>
+            <li>Mais on observe que les étudiants qui travaillent 10h réussissent souvent. </li>
+            <li>Le modèle augmente progressivement le poids : 0,1 → 0,2 → 0,4 → 0,6 </li>
+            <li>Ainsi, plus d’heures = plus forte probabilité de réussite.</li>
+          </ul>
 
 
         </div>
