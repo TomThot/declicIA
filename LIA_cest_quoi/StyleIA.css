@@ -625,7 +625,7 @@ label {
 }
 
 input[type=range] {
-  -webkit-appearance: none;
+  
   width: 160px;
   height: 4px;
   background: rgba(148, 163, 184, 0.35);
