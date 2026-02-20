@@ -56,14 +56,14 @@
                     + travail fini) pour se convaincre de bouger.</li>
             </ul>
 
-            <h3>3. Le score final (z) et la probabilité</h3>
+            <h3>3. Le résultat final (z) et la probabilité</h3>
             <p>Le neurone fait la somme :</p>
             <p class="formula">z = (Météo × Poids) + (Travail × Poids) + Biais</p>
-            <p>Ensuite, il passe ce score dans la moulinette Sigmoïde.</p>
+            <p>Ensuite, il passe ce résultat dans la "moulinette" de la fonction d'activation (sigmoïde).</p>
             <ul>
-                <li>Si le score z est très grand (ex: +5), la probabilité sera proche de 100%.</li>
-                <li>Si le score z est très bas (ex: -5), la probabilité sera proche de 0%.</li>
-                <li>Si le score est de 0, il y a exactement 50% de chances de sortir (hésitation !).</li>
+                <li>Si le résultat $z$ est très grand (ex: +5), la probabilité sera proche de 1 (donc le pourcentage de change proche de 100 %).</li>
+                <li>Si le résultat $z$ est très bas (ex: -5), la probabilité sera proche de 0.</li>
+                <li>Si le résultat est de 0, il y a exactement 50% de chances de sortir (Il y a de l'hésitation !).</li>
             </ul>
         </aside>
 

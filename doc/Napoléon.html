@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Napoléon Bonaparte : de la Corse à l'Empire</title>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <style>
+        body, html { height: 100%; margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; overflow: hidden; }
+        #timeline-embed { width: 100%; height: 100vh; }
+
+        /* --- AJUSTEMENTS POUR ÉVITER LE SCROLL --- */
+        
+        /* Réduction de la zone média (images) */
+        .tl-media-image { max-height: 220px !important; width: auto !important; }
+        .tl-media-content { max-height: 220px !important; margin-bottom: 5px !important; }
+        
+        /* Ajustement du titre principal (Page 1) pour éviter le débordement */
+        .tl-slide-titleslide .tl-headline { 
+            font-size: 28px !important; 
+            line-height: 1.2 !important;
+            padding: 0 20px !important; /* Marge interne pour décoller des bords */
+            box-sizing: border-box;
+        }
+
+        /* Réduction des titres des événements suivants */
+        .tl-slide .tl-headline { 
+            font-size: 22px !important; 
+            line-height: 26px !important; 
+            margin-bottom: 8px !important;
+        }
+
+        /* Optimisation de l'espace texte */
+        .tl-text-content p {
+            font-size: 15px !important;
+            line-height: 20px !important;
+        }
+
+        /* Suppression des marges inutiles qui causent du scroll */
+        .tl-storyslider { margin-bottom: 0 !important; }
+    </style>
+</head>
+<body>
+
+    <div id="timeline-embed"></div>
+
+    <script type="text/javascript">
+        const timelineData = {
+            "title": {
+                "text": {
+                    "headline": "Napoléon Bonaparte : de la Corse à l'Empire",
+                    "text": "Partez à la découverte des <strong>événements majeurs</strong> de la vie de Napoléon Bonaparte, de sa naissance sur l'île de Corse à son exil sur l'île de Sainte-Hélène. Cette frise permet de situer chaque moment clé dans le contexte plus large des <strong>Révolutions</strong> et de l'<strong>Empire</strong>."
+                },
+                "media": {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Napoleon_Bonaparte_by_Joseph_Duplessis.jpg",
+                    "caption": "Portrait de Napoléon Bonaparte (1808) - Joseph Duplessis",
+                    "credit": "Wikimedia Commons / Domaine public"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {"year": "1769", "month": "08", "day": "15"},
+                    "text": {
+                        "headline": "Naissance à Ajaccio",
+                        "text": "Napoléon naît le <strong>15 août 1769</strong> à Ajaccio, en Corse, alors récemment annexée à la France."
+                    },
+                    "group": "Naissance",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Ajaccio_map_1769.png",
+                        "caption": "Cartes d'Ajaccio au XVIIIe siècle",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1785", "month": "07", "day": "15"},
+                    "text": {
+                        "headline": "Diplômé de l'École Militaire",
+                        "text": "Après des études à Brienne, Napoléon intègre l'<strong>École Militaire</strong> de Paris et en sort diplômé d'artillerie en 1785."
+                    },
+                    "group": "Formation",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ecole_militaire_de_Paris.jpg",
+                        "caption": "L'École Militaire de Paris",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1792", "month": "09", "day": "01"},
+                    "text": {
+                        "headline": "Commission en tant qu'officier d'artillerie",
+                        "text": "Au seuil de la Révolution, il obtient son <strong>grade d'officier d'artillerie</strong> et participe aux premières campagnes de la République."
+                    },
+                    "group": "Militaire",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Artillery_cannon_1792.jpg",
+                        "caption": "Canon d'artillerie, 1792",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1793", "month": "12", "day": "19"},
+                    "text": {
+                        "headline": "Siège de Toulon",
+                        "text": "Le <strong>19 décembre 1793</strong>, Napoléon joue un rôle décisif dans la reprise de Toulon, ce qui lui vaut la promotion au grade de <strong>général de brigade</strong>."
+                    },
+                    "group": "Victoire",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Siege_of_Toulon_by_Gervais.jpg",
+                        "caption": "Reprise de Toulon, 1793",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1796", "month": "03", "day": "29"},
+                    "text": {
+                        "headline": "Campagne d'Italie",
+                        "text": "Le 29 mars 1796, Napoléon traverse les Alpes et commence une <strong>campagne d'Italie</strong> qui le couronne de victoires (Lodi, Arcole, Rivoli)."
+                    },
+                    "group": "Campagne",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Italian_campaign_1796-1797.png",
+                        "caption": "Carte de la campagne d'Italie",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1798", "month": "07", "day": "21"},
+                    "text": {
+                        "headline": "Bataille des Pyramides",
+                        "text": "Le <strong>21 juillet 1798</strong>, Napoléon remporte la <strong>Bataille des Pyramides</strong> lors de la campagne d'Égypte."
+                    },
+                    "group": "Campagne",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Battle_of_the_Pyramids_1798_by_Droste.png",
+                        "caption": "Bataille des Pyramides, 1798",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1799", "month": "11", "day": "09"},
+                    "text": {
+                        "headline": "Coup d'État du 18 Brumaire",
+                        "text": "Le <strong>9 novembre 1799</strong>, Napoléon renverse le Directoire et devient <strong>Premier Consul</strong>."
+                    },
+                    "group": "Politique",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/18_Brumaire.jpg",
+                        "caption": "Le 18 Brumaire, 1799",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1804", "month": "12", "day": "02"},
+                    "text": {
+                        "headline": "Couronnement à l'Empire",
+                        "text": "Le <strong>2 décembre 1804</strong>, Napoléon est sacré <strong>Empereur des Français</strong> à Notre-Dame de Paris."
+                    },
+                    "group": "Couronnement",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Coronation_of_Napoleon_1804.jpg",
+                        "caption": "Le sacre, 1804 - David",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1805", "month": "12", "day": "02"},
+                    "text": {
+                        "headline": "Bataille d'Austerlitz",
+                        "text": "Le <strong>2 décembre 1805</strong>, Napoléon triomphe à <strong>Austerlitz</strong> face aux Russes et aux Autrichiens."
+                    },
+                    "group": "Bataille",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Battle_of_Austerlitz_1805.jpg",
+                        "caption": "Austerlitz, 1805",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {"year": "1815", "month": "10", "day": "15"},
+                    "text": {
+                        "headline": "Exil à Sainte-Hélène",
+                        "text": "Après Waterloo, Napoléon est exilé sur l'île de <strong>Sainte-Hélène</strong> où il finit ses jours."
+                    },
+                    "group": "Exil",
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Saint_Helena_island.jpg",
+                        "caption": "L'île de Sainte-Hélène",
+                        "credit": "Wikimedia Commons"
+                    }
+                }
+            ],
+            "eras": [
+                {
+                    "start_date": {"year": "1789"},
+                    "end_date": {"year": "1799"},
+                    "text": {"headline": "Révolution française"}
+                },
+                {
+                    "start_date": {"year": "1800"},
+                    "end_date": {"year": "1815"},
+                    "text": {"headline": "L'Empire napoléonien"}
+                }
+            ]
+        };
+
+        window.onload = function() {
+            new TL.Timeline('timeline-embed', timelineData, {
+                language: "fr",
+                initial_zoom: 1,
+                is_embed: true
+            });
+        };
+    </script>
+</body>
+</html>

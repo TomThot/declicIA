@@ -997,10 +997,28 @@ td {
 }
 
 
+/*------------------------------------------------------*/
+/*-------------------------Caramel-----------------------*/
+/*------------------------------------------------------*/
 
+.containerCaramelImage{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+}
 
+.containerImageActivite span{
+  display: flex;  
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
-
+.containerImageActivite img{
+  width: 100%;
+  padding: 0 10px;
+}
 
 
 
