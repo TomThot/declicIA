@@ -1001,34 +1001,44 @@ td {
 /*-------------------------Caramel-----------------------*/
 /*------------------------------------------------------*/
 
-.containerCaramelImage{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  
+.h5p{
+  background-color:  #0d46b18c;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.containerImageActivite span{
-  display: flex;  
-  justify-content: center;
-  margin-bottom: 10px;
-  font-weight: bold;
+.h5p p{
+  color: var(--white);
+  margin-bottom: 0px;
 }
 
-.containerImageActivite img{
-  width: 100%;
-  padding: 0 10px;
+.caramel iframe{
+  margin-bottom: 20px;
 }
 
+/*------------------------------------------------------*/
+/*-------------------------DysFacile--------------------*/
+/*------------------------------------------------------*/
+.containerDys{
+  display: flex;
+}
 
+.rmqDys{
+   background-color: #0d46b18c;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-
-
-
-
-
-
-
+.rmqDys p {
+   color: var(--white);
+  margin-bottom: 0px;
+}
 
 
 
