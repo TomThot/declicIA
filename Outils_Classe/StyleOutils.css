@@ -1001,8 +1001,8 @@ td {
 /*-------------------------Caramel-----------------------*/
 /*------------------------------------------------------*/
 
-.h5p{
-  background-color:  #0d46b18c;
+.h5p {
+  background-color: #0d46b18c;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -1010,24 +1010,46 @@ td {
   margin-bottom: 15px;
 }
 
-.h5p p{
+.h5p p {
   color: var(--white);
   margin-bottom: 0px;
 }
 
-.caramel iframe{
-  margin-bottom: 20px;
+.containerCaramel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.containerElea {
+  margin: 0 10px 0 10px;
+}
+
+.containerElea span {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.containerCaramel img {
+  width: 100%;
+
 }
 
 /*------------------------------------------------------*/
 /*-------------------------DysFacile--------------------*/
 /*------------------------------------------------------*/
-.containerDys{
+
+.containerDys {
   display: flex;
 }
 
-.rmqDys{
-   background-color: #0d46b18c;
+.containerDys img {
+  width: 100%;
+}
+
+.rmqDys {
+  background-color: #0d46b18c;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -1036,11 +1058,35 @@ td {
 }
 
 .rmqDys p {
-   color: var(--white);
+  color: var(--white);
   margin-bottom: 0px;
 }
 
+/*------------------------------------------------------*/
+/*------------------------NotbeookLM--------------------*/
+/*------------------------------------------------------*/
 
+.containerNotebookLM img {
+  width: 100%;
+}
+
+.rot {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rot img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rot figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+}
 
 
 /*----------------------Footer---------------------------------------*/
@@ -1172,13 +1218,30 @@ footer {
     padding: 10px;
   }
 
-
   .containerchatMD {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 1rem;
 
+  }
+
+    .rot {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .rot img {
+    max-width: 100%;
+    justify-content: center;
+    height: auto;
+  }
+
+  .rot figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
   }
 }
 
@@ -1225,12 +1288,16 @@ footer {
     box-shadow: 0 5px 20px rgb(54, 66, 109);
     border-radius: 15px;
   }
-  .chatmd-launcher-row{
-     display: grid;
+
+  .chatmd-launcher-row {
+    display: grid;
     grid-template-columns: 1fr;
   }
+
   .chatbot iframe {
     width: 100%;
-  border-radius: 15px;
-}
+    border-radius: 15px;
+  }
+
+
 }
