@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Theme Sync -->
+    <script src="../../theme-sync.js"></script>
+  <meta name="description" content="NotebookLM : comprendre l'outil, ses usages et les précautions à prendre en contexte éducatif." />
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>NotebookLM</title>
+  <link rel="stylesheet" href="style_notebookLM.css" />
+
+    <link rel="stylesheet" href="../../theme-sync.css" />
+</head>
+
+<body>
+  <header>
+    <h1>NotebookLM</h1>
+    <p>Un carnet de notes IA centré sur vos sources pour synthétiser, structurer et produire des contenus.</p>
+  </header>
+
+  <main>
+    <nav class="menu">
+      <div class="menu-toggle">☰</div>
+    </nav>
+    <div class="sidebar">
+      <div class="icone">
+        <img src="../../Images/logo_blanc_150px.png" alt="logo" />
+      </div>
+      <a href="../../index.html">Accueil</a>
+      <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
+      <a href="../Carousel_index.html">Outils pour la classe</a>
+    </div>
+
+    <div class="containerNav">
+      <div class="titreNav">Dans cet article</div>
+      <div class="navigationPage">
+        <a href="#notebookLM">Présentation</a>
+        <a href="#studio">Studio</a>
+        <a href="#pieges">Pièges à éviter</a>
+      </div>
+    </div>
+
+    <section id="notebookLM" class="card notebook collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">NotebookLM
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <p>
+            Une fois n'est pas coutume, je vous présente ici un produit de chez Google Labs. Qui dit Google dit
+            nécessité d'avoir un compte chez eux. Vous pourrez donc l'utiliser gratuitement mais en aucun cas avec vos
+            élèves. Quoiqu'il en soit, Attention aux informations transmises. <br />
+            Un outil Google est souvent synonyme de puissance et là... Nous ne sommes pas déçus.
+          </p>
+          <p><a href="https://notebooklm.google.com/">NotebookLM</a> est un "carnet de notes" expérimental qui utilise
+            l'intelligence artificielle (notamment le modèle Gemini 2.0) pour vous aider à comprendre et à interagir
+            avec vos propres documents. Contrairement aux chatbots génériques, NotebookLM se base uniquement sur les
+            sources que vous lui fournissez, devenant ainsi un expert de vos données.</p>
+
+          <h3 class="titleh3">L'interface intuitive</h3>
+          <p>L'interface est conçue pour être intuitive et centrée sur vos documents. Comme vous pouvez le voir
+            ci-dessous, elle vous permet d'importer facilement diverses sources et d'interagir avec elles via une
+            fenêtre de chat.</p>
+
+          <div class="containerNotebookLM">
+            <img src="../../Images/NotebookLM_interface.png" alt="Interface NotbooLM" />
+          </div>
+
+          <ul class="liste">
+            <li><strong>Sources (à gauche) : </strong>Les documents que vous pouvez importer sont de toutes sortes.
+              Google Docs, des PDF, des fichiers texte, des présentations Google Slides et même des URL de sites web.</li>
+            <li><strong>Chat (au centre)</strong>Posez des questions sur vos documents, demandez des résumés, des
+              synthèses ou des idées créatives. L'IA répond en citant les sources exactes dans vos documents.</li>
+            <li><strong>Le studio : </strong> Le Studio n'est plus seulement une aide à la lecture, c'est l'endroit où
+              vous pouvez générez des contenus à forte valeur ajoutée à partir de vos sources.</li>
+          </ul>
+
+          <h3 id="studio" class="titleh3">Studio, la boite à outils magiques</h3>
+          <p>C'est bien grâce à ces outils que <a href="https://notebooklm.google.com/">NotebookLM</a> se distingue
+            d'une simple IA traditionnelle comme ChatGPT ou Gemini. NotebookLM peut transformer tes sources en formats
+            multiples.</p>
+          <ul class="liste">
+            <li><strong>Résumés audio :</strong>des podcasts conversationnels entre deux voix IA très réalistes</li>
+            <li><strong>Résumés vidéos : </strong> Une vidéo résume à l'aide d'illustrations votre document. Vous
+              choisissez même le style.</li>
+            <li><strong>Présentations </strong>visuelles avec texte et images</li>
+            <li><strong>Rapports : </strong>des documents textuels structurés</li>
+            <li><strong>Mind maps : </strong>des cartes mentales pour voir les lien entre concepts et notions</li>
+            <li><strong>Quizz : </strong>des questionnaires à choix multiples</li>
+            <li><strong>Flashcards : </strong>des cartes mémoires pour réviser par exemple</li>
+            <li><strong>Tableaux : </strong>pour rassembler les données éparpillées des sources dans un document bien
+              rangé.</li>
+            <li><strong>Infographie : </strong>Résumé très visuel de vos sources.</li>
+          </ul>
+
+          <div class="ex">exemple</div>
+
+          <h3 id="pieges" class="titleh3">Quelques pièges à éviter</h3>
+          <p>
+            Vous l'aurez compris, <a href="https://notebooklm.google.com/">NotebookLM</a> possède beaucoup d'avantages
+            puisqu'il fait peu d'erreurs sachant que vous lui apportez les données nécessaires. Peu d'ereurs certes,
+            mais ce n'est pas zéro ! Alors qu'en est-il vraiment ?
+          </p>
+
+          <p>Essayons de ne pas être trop technique. Comme <a href="https://notebooklm.google.com/">NotebookLM</a>
+            utilise une IA (Gemini), il peut se produire le phénomène de <strong>"context rot"</strong> (pourriture du
+            contexte). Pour faire simple, plus les documents sont longs et nombreux, plus les performances se dégradent.</p>
+
+          <fig class="rot">
+            <img src="../../Images/rot.png" alt="context rot" />
+            <figcaption><a href="https://research.trychroma.com/context-rot?utm_source=generationia.flint.media&utm_medium=referral&utm_campaign=notebooklm-le-guide-complet-de-l-ia-la-plus-fiable-du-moment">Ananlyse
+                par Chroma</a></figcaption>
+          </fig>
+
+          <p>
+            Pour rassurer tout le monde, Gemini 2.0 monte jusqu'à 2 millions de tokens. Le test "Lost in the Middle"
+            (perte d'attention pour les infos situées au milieu du texte) a été fait et rien n'a été constaté de
+            problématique : réussite 100 %.
+          </p>
+          <p>
+            Le problème est que le risque n'est pas nul mais pour d'autres raisons. Même si l'IA ne "pourrit" pas au
+            sens strict, elle peut être victime de <strong>saturation</strong>
+          </p>
+          <ul class="liste">
+            <li><strong>Contraction : </strong>Si vous chargez 50 sources et que 3 d'entre elles disent le contraire des
+              autres, l'IA peut avoir du mal à trancher, ce qui peut ressembler à une perte de performance.</li>
+            <li><strong>Le "bruit" : </strong>Plus vous ajoutez de documents inutiles, plus vous augmentez les chances
+              que l'IA fasse des liens hors de propos (corrélations illusoires).</li>
+          </ul>
+
+          <p>
+            <strong>Bilan : </strong> Pour un usage normal (quelques dizaines de PDF), <a
+              href="https://notebooklm.google.com/">NotebookLM</a> reste d'une précision chirurgicale, pas infaillible
+            mais chirurgicale. Si vous commencez à charger 50 livres entiers dans un seul notebook, vous pourriez
+            observer une lenteur ou des réponses un peu plus génériques, mais on est loin du "crash" cognitif des
+            modèles d'il y a deux ans.
+          </p>
+
+          <p>
+            <strong>Conseils pour minimiser les risques : </strong> <br />
+            Si vous voulez minimiser les risques de dérapages, il faut donner des sources claires, structurées et fiables.
+          </p>
+          <p>
+            <strong>1) Privilégiez la qualité à la quantité.</strong> C'est un conseil simple et de bon sens mais l'IA
+            n'est pas une poubelle qui sélectionne les bonnes et les mauvaises sources. Vous devez lui fournir des
+            sources "propres" si vous voulez un résultat pertinent.
+          </p>
+          <p>
+            <strong>2) Évitez de mettre des liens web.</strong> Oui, <a
+              href="https://notebooklm.google.com/">NotebookLM</a> est capable de gérer les liens web MAIS... <br />
+            Quand vous consultez une page web, il y a un certain nombre d'informations qui n'ont pas de lien direct
+            avec le contenu et qui peuvent parasiter <a href="https://notebooklm.google.com/">NotebookLM</a>, footer
+            (pied de page), header (menu), script, nav...
+          </p>
+
+          <div class="truc">
+            <p>
+              <strong>Mon truc ? J'utilise un petit script que j'ai modifié et transformé en extension pour votre navigateur.
+                Grâce à cette extension, vous pourrez transformer le contenu de n'importe quelle page web en fichier
+                markdown (.md) complet. Vous pourrez l'utiliser comme source "propre" en lieu et place de l'url de la page.</strong> <br />
+              Je mets les liens de téléchargement à disposition pour Firefox et Chrome. L'installation prend 1 minute en lisant le fichier read_me.txt <br />
+              <a href="../../doc/url_markdown/chrome-extension.zip">Chrome-extension.zip</a><br />
+              <a href="../../doc/url_markdown/firefox-extension.zip">Firefox-extension.zip</a>
+            </p>
+            <p>
+              Note : ces extensions disparaissent au redémarrage de votre navigateur puisqu'elles ne sont pas "signées" par Firefox ou Google. Autrement dit, elles ne sont pas officielles. Chose parfaitement normale puisqu'elles sont "faites maison". Cela étant, pas de panique, il n'y a pas de virus, le code est sûr. Vous devrez simplement recharger ces extensions si vous redémarrez votre navigateur selon la procédure indiquée.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><span class="footer-logo-text">DéclicIA</span></div>
+          <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+            <li><a href="../Carousel_index.html">Outils pour la classe</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+            <li><a href="../Carousel_index.html">Outils recommandés</a></li>
+            <li><a href="#">Formations</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact & Communauté</h3>
+          <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
+          <div class="social-links">
+            <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+            <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px" class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> DéclicIA - Tous droits réservés</p>
+        <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+        <p>@Thomas BROUILLET</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script_notebookLM.js"></script>
+</body>
+
+</html>
+
+
+

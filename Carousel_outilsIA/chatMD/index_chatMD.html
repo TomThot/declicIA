@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Theme Sync -->
+    <script src="../../theme-sync.js"></script>
+  <meta name="description" content="ChatMD : un chatbot polyvalent pour créer des parcours conversationnels pédagogiques avec ou sans IA." />
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <title>ChatMD</title>
+  <link rel="stylesheet" href="style_chatMD.css" />
+
+    <link rel="stylesheet" href="../../theme-sync.css" />
+</head>
+
+<body>
+  <header>
+    <h1>ChatMD : Un chatbot polyvalent</h1>
+    <p>Créer un chatbot éducatif configurable, avec ou sans IA, en restant maître du contenu.</p>
+  </header>
+
+  <main>
+    <nav class="menu">
+      <div class="menu-toggle">☰</div>
+    </nav>
+    <div class="sidebar">
+      <div class="icone">
+        <img src="../../Images/logo_blanc_150px.png" alt="logo" />
+      </div>
+      <a href="../../index.html">Accueil</a>
+      <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
+      <a href="../Carousel_index.html">Outils pour la classe</a>
+    </div>
+
+    <div class="containerNav">
+      <div class="titreNav">Dans cet article</div>
+      <div class="navigationPage">
+        <a href="#chat">Réponse à un besoin</a>
+        <a href="#tuto">Tutoriel</a>
+        <a href="#usage-ia">Utilisation de l'IA</a>
+      </div>
+    </div>
+
+    <section id="chat" class="card Chat collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">ChatMD : Un chatbot polyvalent
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <h3 class="titleh3">Réponse à un besoin</h3>
+          <p>
+            De tous les outils que je peux présenter ou faire, celui-là est un de mes préférés... Ce n'est pas le plus
+            puissant mais il est configurable à souhait ! Nous l'avons vu :
+          </p>
+          <ul class="liste">
+            <li>les IA peuvent halluciner et nous ne sommes donc pas maitre des réponses fournies.</li>
+            <li>La question des données est toujours un sujet.</li>
+            <li>Il faut souvent un compte utilisateur ce qui rend certaines solution inutilisables avec les élèves.</li>
+            <li>Les solutions pour créer des chatbot contrôlés sont souvent payantes et complexes.</li>
+          </ul>
+          <p>
+            Pas de panique ! <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> est là ! En ligne, libre et
+            gratuit, connecté à l'IA ou non, developpé par Cédric Eysette qui est chargé de projet à la Drane de Lyon.
+            Cette solution est hébergée sur <a href="https://cartographie.forge.apps.education.fr/">la Forge des communs
+              numériques éducatifs.</a> <br />
+            <strong>Les avantages :</strong>
+          </p>
+          <ul class="liste">
+            <li>On peut l’utiliser directement sans installation : c’est une solution en ligne qui ne nécessite pas la
+              mise en place d’un serveur et qui n’utilise pas de base de données.</li>
+            <li>On peut créer facilement un chatbot à partir d’un fichier texte en respectant une syntaxe particulière
+              (issue de Markdown).</li>
+            <li>Pas besoin de créer un compte spécifique pour cela : on peut utiliser <a
+                href="https://codimd.apps.education.fr/">codiMD</a> ou bien un autre service libre du même type
+              (Digipage, Hedgedoc ...)</li>
+            <li>Les utilisateurs n’auront également pas besoin de compte et il n’y a aucune collecte de données et pas
+              de cookies : le fonctionnement de <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> est
+              totalement compatible RGPD.</li>
+          </ul>
+
+          <p>J'y reviens juste après dans le tutoriel mais le principe est simple :</p>
+
+          <div class="containerchatMD">
+            <div class="etapeIA">
+              <div class="front avecIA">
+                <span class="chat-illustration" role="img" aria-label="Sans IA">
+                  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <rect x="18" y="16" width="28" height="24" rx="6" fill="#ffffff" />
+                    <circle cx="27" cy="28" r="3" fill="#0a2463" />
+                    <circle cx="37" cy="28" r="3" fill="#0a2463" />
+                    <rect x="27" y="34" width="10" height="2.5" rx="1.2" fill="#0a2463" />
+                    <line x1="32" y1="16" x2="32" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="32" cy="8" r="2.5" fill="#ffffff" />
+                    <circle cx="32" cy="32" r="25" fill="none" stroke="#ff6b6b" stroke-width="4.5" />
+                    <line x1="17" y1="47" x2="47" y2="17" stroke="#ff6b6b" stroke-width="5" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </div>
+              <div class="mot motIA1">SANS IA</div>
+              <div class="etapeContent content1">
+                <p>On va créer un parcours libre ou scénarisé qui va guider l'utilisateur, lui poser des questions,
+                  vérifier ses connaissances ou compétences. <br />
+                  Nous devons donc prévoir à l'avance un fichier contenant les questions et réponses possibles.
+                  L'algorithme principal de ChatMd va calculer, sans IA, la réponse la plus pertinente mais tout est géré
+                  depuis le fichier de l'enseignant.
+                </p>
+              </div>
+            </div>
+
+            <div class="etapeIA">
+              <div class="front sansIA">
+                <span class="chat-illustration" role="img" aria-label="Avec IA">
+                  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <rect x="16" y="18" width="32" height="24" rx="7" fill="#ffffff" />
+                    <circle cx="27" cy="30" r="3" fill="#005f5d" />
+                    <circle cx="37" cy="30" r="3" fill="#005f5d" />
+                    <rect x="26" y="35" width="12" height="2.5" rx="1.2" fill="#005f5d" />
+                    <line x1="32" y1="18" x2="32" y2="12" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="32" cy="10" r="2.5" fill="#ffffff" />
+                    <path d="M50 14l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#ffd166" />
+                    <path d="M13 40l1.4 3.3 3.3 1.4-3.3 1.4-1.4 3.3-1.4-3.3-3.3-1.4 3.3-1.4z" fill="#ffd166" />
+                  </svg>
+                </span>
+              </div>
+              <div class="mot motIA2">AVEC IA</div>
+              <div class="etapeContent content2">
+                <p><a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> peut cependant se connecter à une IA
+                  générative (locale ou en ligne) avec votre accord. L'idée est de la solliciter de manière ciblée et
+                  contrôlée pour compléter une information ou répondre à une question imprévue. <br />
+                  On peut aussi avoir recourt à l'IA pour évaluer la pertinence d'une réponse avec une grille
+                  d'évaluation, un prompt précis et dédié à chaque question.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            De nombreux usages sont possibles... À vous les tutoriels, les FAQ, les guides méthodologiques, les
+            conversations avec des personnages historiques, les outils de révision,etc. <br />
+            Pour en savoir plus et solliciter de l'aide pour tout problème, vous pouvez, comme moi, rejoindre le salon <a
+              href="https://www.tchap.gouv.fr/#/welcome">Tchap</a> dédié à l'aide et à l'utilisation de cet outil.
+          </p>
+
+          <h3 id="tuto" class="titleh3">Tutoriel d'utilisation</h3>
+          <p>
+            Avant toute chose, signalons la documentation officielle de l'outil sur le site officiel de <a
+              href="https://chatmd.forge.apps.education.fr/">ChatMD</a>. Je vais tenter de décrire quelques
+            fonctionnalités.
+          </p>
+
+          <div class="preambule">
+            <strong>En préambule : </strong> J'ai choisi de travailler sans IA pour le moment. Pour réaliser le fichier
+            Markdown, j'utilise <a href="https://codimd.apps.education.fr/">CodiMD</a>. Un des nombreux outils proposés
+            sur <a href="https://portail.apps.education.fr">apps.education.fr</a>. Il suffit d'avoir une adresse
+            professionnel académique pour se connecter facilement. Ce logiciel en ligne est un éditeur de texte amélioré
+            collaboratif permettant de générer des documents au format Markdown. C'est une sorte de langage de balisage des documents
+            texte. Un seul inconvénient... Markdown n'a jamais été standardisé donc il existe des variantes de ce
+            langage. Il faut donc trouver la bonne... <br />
+            Je mettrai en téléchargement mon fichier de configuration du chatbot pour que vous puissiez l'adapter.
+          </div>
+
+          <div class="containerChatbot">
+            <div class="texteChatbot">
+              <p>
+                Pour moins de blabla, j'ai choisi de créer un chatbot répondant au doux nom de Frigondule, dédié à la
+                présentation de <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a>. Il ne s'agit pas de
+                montrer toutes les possibilités de l'outil mais les fonctionnalités abordées peuvent vous inspirer et le
+                fichier Markdown vous faciliter la vie dans la prise en main de ce chatbot.
+              </p>
+
+              <p>Il faut respecter 3 étapes :</p>
+              <ul class="liste">
+                <li>Créez un fichier en Markdown accessible en ligne (sur <a
+                    href="https://codimd.apps.education.fr/">CodiMD</a> par exemple).</li>
+                <li>Respectez la syntaxe pour ChatMD du fichier Markdown définissant votre chatbot.</li>
+                <li>Votre chatbot est alors accessible à l'adresse suivante : <br />
+                  https://chatmd.forge.apps.education.fr/#URL</li>
+              </ul>
+
+              <div class="chatmd-launcher">
+                <label for="chatmd-url-input">🌐 Ou collez l'URL de votre document Markdown :</label>
+                <div class="chatmd-launcher-row">
+                  <input id="chatmd-url-input" type="url" placeholder="https://codimd.apps.education.fr/s/..." />
+                  <button id="chatmd-open-btn" type="button">OK</button>
+                </div>
+              </div>
+
+              <p>Vous aurez donc 3 façons de consulter votre bot :</p>
+              <ul class="liste">
+                <li><strong>Dans un nouvel onglet</strong> de votre navigateur grâce au champ précédent (solution qui
+                  conviendra à la plupart des gens).</li>
+                <li><strong>Grâce à une iFrame</strong> si par exemple, vous souhaitez l'intégrer à une page web comme
+                  dans l'exemple ici.</li>
+                <li><strong>Grâce à un widget</strong>. Si vous cliquez sur le bouton ci-dessous, une bulle devrait
+                  s'ouvrir en bas, à droite de l'écran. Un clic dessus et vous ouvrez ou fermer votre bot qui apparait
+                  dans une fenêtre dédiée au dessus de votre page.</li>
+              </ul>
+
+              <div class="btn">
+                <button id="btnChatbot" onclick="toggleChatbot()">💬 Ouvrir le widget</button>
+              </div>
+            </div>
+
+            <div class="chatbot">
+              <iframe src="https://chatmd.forge.apps.education.fr//#https://codimd.apps.education.fr/s/imCNpLNcc"
+                style="border:0; width:100%; height:800px"></iframe>
+            </div>
+
+            <div class="remarque">
+              <h4>Remarque importante pour l'utilisation</h4>
+              <ul class="liste">
+                <li>Vous pouvez donc tester ChatMD avec le bot présent ici ou avec le widget.</li>
+                <li><strong>La fausse bonne idée est de demander à une IA de rédiger le fichier Markdown à votre
+                    place...</strong> Comme Markdown est une sorte de langage non standardisé, l'IA ne saura pas quelle
+                  variante adopter. Il y a donc des chances que certaines choses ne s'affichent pas comme vous le voulez
+                  ou pas du tout. Il faut respecter certaines contraintes pour que ChatMD puisse lire votre document.
+                </li>
+                <li>Je mets en téléchargement mon fichier Markdown pour que vous puissiez le modifier selon vos besoins.
+                  <br />
+                  <a href="../../doc/Frigondule.md" download="../../doc/Frigondule.md">Frigondule.md</a> <br />
+                  (Télécharger le fichier et faites un glissé/déposé dans "une nouvelle note" sur codiMD pour l'ouvrir)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 id="usage-ia">Utilisation de l'IA</h4>
+          <p>À venir...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="footer-logo-text">DéclicIA</span>
+          </div>
+          <p>
+            Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants
+            pour comprendre et intégrer l'IA de manière réfléchie et responsable.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+            <li><a href="../Carousel_index.html">Outils pour la classe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+            <li><a href="../Carousel_index.html">Outils recommandés</a></li>
+            <li><a href="#">Formations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact & Communauté</h3>
+          <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
+          <div class="social-links">
+            <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+            <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px" class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script> DéclicIA - Tous droits réservés
+        </p>
+        <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+        <p>@Thomas BROUILLET</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script_chatMD.js"></script>
+</body>
+
+</html>
+
+
+

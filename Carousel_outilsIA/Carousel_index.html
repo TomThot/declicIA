@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Theme Sync -->
+    <script src="../theme-sync.js"></script>
+  <meta name="description"
+    content="Galerie carrousel 3D d'outils IA pour la classe avec navigation, mise en page harmonisée et expérience interactive." />
+  <!-- Favicon -->
+  <link rel="icon" href="../Images/icons/favicon-big.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Images/icons/favicon_color-16x16.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <title>Outils IA - Galerie</title>
+  <link rel="stylesheet" href="Carousel_style.css" />
+
+    <link rel="stylesheet" href="../theme-sync.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Des outils pour la classe</h1>
+    <p>
+      Une galerie interactive pour parcourir des idées d'usages et de ressources autour de l'intelligence artificielle.
+    </p>
+  </header>
+
+  <main>
+    <!-- Navigation latérale-->
+    <nav class="menu">
+      <div class="menu-toggle">☰</div>
+    </nav>
+    <div class="sidebar">
+      <div class="icone">
+        <img src="../Images/logo_blanc_150px.png" alt="logo" />
+      </div>
+      <a href="../index.html">Accueil</a>
+      <a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
+      <a href="#">Outils pour la classe</a>
+    </div>
+    <!-- Fin de navigation latérale-->
+
+    <!-- Navigation interne article-->
+    <div class="containerNav">
+      <div class="titreNav">Dans cet article</div>
+      <div class="navigationPage">
+        <a href="#intro">Présentation</a>
+        <a href="#galerie">Galerie 3D</a>
+        <a href="#usage">Utilisation</a>
+      </div>
+    </div>
+
+    <section id="intro" class="intro">
+      <p>
+        Dans une ère où les mises à jour de l'IA sont incessantes, je ne prétends pas
+        donner les outils indispensables à la conquête de l'IA en pédagogie.
+        Il n'en reste pas moins vrai que si nous postulons que ces outils peuvent aider l'enseignant ou l'apprenant, si
+        nous défions également notre crainte irrationnelle à l'égard de la technologie,
+        alors certains dispositifs informatiques (avec ou sans IA) peuvent se montrer pertinents. Voilà ce que je me
+        propose de démontrer. Je donne à voir certaines ressources, libre à chacun de s'en emparer pour faire évoluer sa
+        pratique.
+      </p>
+    </section>
+
+    <section id="galerie" class=" collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <div class="scene-wrapper">
+            <div class="scene">
+              <div class="carousel-3d" id="carousel">
+
+                <article class="carousel-card">
+                  <div class="card-image icon-prompt">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône rédaction de prompt">
+                      <path d="M20 14h24a8 8 0 0 1 8 8v13a8 8 0 0 1-8 8H30l-10 7v-7a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z"
+                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M28 26h16M28 32h10M44 10l1.6 3.4L49 15l-3.4 1.6L44 20l-1.6-3.4L39 15l3.4-1.6z"
+                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Outil maison</span>
+                    <div class="card-title">L'art du prompt</div>
+                    <div class="card-desc">Deux méthodes efficaces pour rédiger vos prompts grâce à un outil efficace et
+                      des templates adaptés.</div>
+                    <a class="card-tag" href="lart_du_prompt/index_art_du_prompt.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-compare">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône comparaison IA">
+                      <path d="M14 46h36M20 46V24M32 46V18M44 46V30" fill="none" stroke="currentColor"
+                        stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                      <circle cx="20" cy="24" r="3.5" fill="currentColor" />
+                      <circle cx="32" cy="18" r="3.5" fill="currentColor" />
+                      <circle cx="44" cy="30" r="3.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Comparaison des IA en 2026</span>
+                    <div class="card-title">Quelle IA choisir ?</div>
+                    <div class="card-desc">Un tableau comparatif des IA en 2026 pour choisir de manière éclairée.</div>
+                    <a class="card-tag" href="quelle_IA_choisir/index_quelle_IA_choisir.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-school">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône outils pour l'école">
+                      <path d="M10 24l22-10 22 10-22 10-22-10zM18 29v12c0 6 28 6 28 0V29" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M54 24v11" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Les outils P2IA</span>
+                    <div class="card-title">L'IA pour le cycle 3</div>
+                    <div class="card-desc">Six outils IA innovants pour le français, les mathématiques et les langues
+                      vivantes en cycle 3.
+                    </div>
+                    <a class="card-tag" href="P2IA/index_P2IA.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-chatbot">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône chatbot">
+                      <rect x="14" y="16" width="36" height="30" rx="10" fill="none" stroke="currentColor"
+                        stroke-width="3" />
+                      <circle cx="26" cy="31" r="3" fill="currentColor" />
+                      <circle cx="38" cy="31" r="3" fill="currentColor" />
+                      <path d="M25 39h14M24 16l2-6M40 16l2-6" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Chatbot</span>
+                    <div class="card-title">ChatMD</div>
+                    <div class="card-desc">Pour la création de chatbots polyvalents, performants, éthiques et infiniment
+                      paramétrables.
+                    </div>
+                    <a class="card-tag" href="chatMD/index_chatMD.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-interactive">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône contenu interactif">
+                      <path d="M20 14h24a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z" fill="none"
+                        stroke="currentColor" stroke-width="3" />
+                      <path d="M24 24h16M24 32h10M24 40h16" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" />
+                      <path d="M43 22l9 3-5 4 2 8-6-4-6 4 2-8-5-4z" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Contenu interactif</span>
+                    <div class="card-title">Caramel</div>
+                    <div class="card-desc">Des outils de création .h5p pour Moodle, Eléa et Magistere.
+                    </div>
+                    <a class="card-tag" href="caramel/index_caramel.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-dys">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône aide dyslexie">
+                      <path
+                        d="M16 18h14a10 10 0 0 1 10 10v18H26a10 10 0 0 0-10 10V18zM48 18H34a10 10 0 0 0-10 10v18h14a10 10 0 0 1 10 10V18z"
+                        fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                      <path d="M30 30h4M30 36h4" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Dyslexie et IA</span>
+                    <div class="card-title">DysFacile</div>
+                    <div class="card-desc">L'intelligence artificielle au service des troubles de l'apprentissage.
+                    </div>
+                    <a class="card-tag" href="dysfacile/index_dysfacile.html">Explorer →</a>
+                  </div>
+                </article>
+
+                <article class="carousel-card">
+                  <div class="card-image icon-energy">
+                    <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône notebook et création de contenu">
+                  <rect x="16" y="12" width="32" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linejoin="round" />
+                  <path d="M24 22h16M24 30h16M24 38h10" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" />
+                  <path d="M46 16l1.4 2.8L50 20l-2.6 1.2L46 24l-1.2-2.8L42 20l2.8-1.2z" fill="none"
+                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                  </div>
+                  <div class="card-body">
+                    <span class="card-label">Création de contenu</span>
+                    <div class="card-title">NotebookLM</div>
+                    <div class="card-desc">Transformer vos documents de cours en podcasts captivants,
+                      en vidéos explicatives ou en quiz interactifs rapidement </div>
+                    <a class="card-tag" href="notebookLM/index_notebookLM.html">Explorer →</a>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="btn" id="prevBtn" aria-label="Carte précédente">&#8249;</button>
+            <button class="btn btn-pause" id="pauseBtn" aria-label="Pause lecture automatique">⏸</button>
+            <button class="btn" id="nextBtn" aria-label="Carte suivante">&#8250;</button>
+          </div>
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="listeCarte" class="gallerie card collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Galerie
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+
+          <article class="liste-card">
+            <div class="card-image icon-prompt">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône rédaction de prompt">
+                <path d="M20 14h24a8 8 0 0 1 8 8v13a8 8 0 0 1-8 8H30l-10 7v-7a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z"
+                  fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M28 26h16M28 32h10M44 10l1.6 3.4L49 15l-3.4 1.6L44 20l-1.6-3.4L39 15l3.4-1.6z" fill="none"
+                  stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Outil maison</span>
+              <div class="card-title">L'art du prompt</div>
+              <div class="card-desc">Deux méthodes efficaces pour rédiger vos prompts grâce à un outil efficace et
+                des templates adaptés.</div>
+              <a class="card-tag" href="lart_du_prompt/index_art_du_prompt.html">Explorer →</a>
+            </div>
+          </article>
+
+          <article class="liste-card">
+            <div class="card-image icon-compare">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône comparaison IA">
+                <path d="M14 46h36M20 46V24M32 46V18M44 46V30" fill="none" stroke="currentColor" stroke-width="3.2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="20" cy="24" r="3.5" fill="currentColor" />
+                <circle cx="32" cy="18" r="3.5" fill="currentColor" />
+                <circle cx="44" cy="30" r="3.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Comparaison des IA en 2026</span>
+              <div class="card-title">Quelle IA choisir ?</div>
+              <div class="card-desc">Un tableau comparatif des IA en 2026 pour choisir de manière éclairée.</div>
+              <a class="card-tag" href="quelle_IA_choisir/index_quelle_IA_choisir.html">Explorer →</a>
+            </div>
+          </article>
+
+          <article class="liste-card">
+            <div class="card-image icon-school">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône outils pour l'école">
+                <path d="M10 24l22-10 22 10-22 10-22-10zM18 29v12c0 6 28 6 28 0V29" fill="none" stroke="currentColor"
+                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M54 24v11" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Les outils P2IA</span>
+              <div class="card-title">L'IA pour le cycle 3</div>
+              <div class="card-desc">Six outils IA innovants pour le français, les mathématiques et les langues
+                vivantes en cycle 3.</div>
+              <a class="card-tag" href="P2IA/index_P2IA.html">Explorer →</a>
+            </div>
+          </article>
+
+          <article class="liste-card">
+            <div class="card-image icon-chatbot">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône chatbot">
+                <rect x="14" y="16" width="36" height="30" rx="10" fill="none" stroke="currentColor" stroke-width="3" />
+                <circle cx="26" cy="31" r="3" fill="currentColor" />
+                <circle cx="38" cy="31" r="3" fill="currentColor" />
+                <path d="M25 39h14M24 16l2-6M40 16l2-6" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Chatbot</span>
+              <div class="card-title">ChatMD</div>
+              <div class="card-desc">Pour la création de chatbots polyvalents, performants, éthiques et infiniment
+                paramétrables.</div>
+              <a class="card-tag" href="chatMD/index_chatMD.html">Explorer →</a>
+            </div>
+          </article>
+
+          <article class="liste-card">
+            <div class="card-image icon-interactive">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône contenu interactif">
+                <path d="M20 14h24a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z" fill="none"
+                  stroke="currentColor" stroke-width="3" />
+                <path d="M24 24h16M24 32h10M24 40h16" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" />
+                <path d="M43 22l9 3-5 4 2 8-6-4-6 4 2-8-5-4z" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Contenu interactif</span>
+              <div class="card-title">Caramel</div>
+              <div class="card-desc">Des outils de création .h5p pour Moodle, Eléa et Magistere.</div>
+              <a class="card-tag" href="caramel/index_caramel.html">Explorer →</a>
+            </div>
+          </article>
+
+          <article class="liste-card">
+            <div class="card-image icon-dys">
+              <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône aide dyslexie">
+                <path
+                  d="M16 18h14a10 10 0 0 1 10 10v18H26a10 10 0 0 0-10 10V18zM48 18H34a10 10 0 0 0-10 10v18h14a10 10 0 0 1 10 10V18z"
+                  fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                <path d="M30 30h4M30 36h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="card-label">Dyslexie et IA</span>
+              <div class="card-title">DysFacile</div>
+              <div class="card-desc">L'intelligence artificielle au service des troubles de l'apprentissage.</div>
+              <a class="card-tag" href="dysfacile/index_dysfacile.html">Explorer →</a>
+            </div>
+          </article>
+
+            <article class="liste-card">
+              <div class="card-image icon-energy">
+                <svg class="card-icon" viewBox="0 0 64 64" role="img" aria-label="Icône notebook et création de contenu">
+                  <rect x="16" y="12" width="32" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linejoin="round" />
+                  <path d="M24 22h16M24 30h16M24 38h10" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" />
+                  <path d="M46 16l1.4 2.8L50 20l-2.6 1.2L46 24l-1.2-2.8L42 20l2.8-1.2z" fill="none"
+                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            <div class="card-body">
+              <span class="card-label">Création de contenu</span>
+              <div class="card-title">NotebookLM</div>
+              <div class="card-desc">Transformer vos documents en podcasts captivants, en vidéos explicatives
+                ou en quiz interactifs rapidement</div>
+              <a class="card-tag" href="notebookLM/index_notebookLM.html">Explorer →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Section À propos -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="footer-logo-text">DéclicIA</span>
+          </div>
+          <p>
+            Des notions et des outils sur l'intelligence artificielle dans
+            l'éducation. Un site dédié aux enseignants pour comprendre et
+            intégrer l'IA de manière réfléchie et responsable.
+          </p>
+        </div>
+
+        <!-- Section Navigation -->
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+            <li><a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+            <li><a href="../Outils_Classe/IndexOutils.html">Outils pour la classe</a></li>
+          </ul>
+        </div>
+
+        <!-- Section Ressources -->
+        <div class="footer-section">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html#profil">Profil face à l'IA</a></li>
+            <li><a href="../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
+            <li><a href="../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+            <li><a href="#">Outils recommandés</a></li>
+            <li><a href="#">Formations</a></li>
+          </ul>
+        </div>
+
+        <!-- Section Contact -->
+        <div class="footer-section">
+          <h3>Contact & Communauté</h3>
+          <p>
+            Envie d'échanger, de contribuer ou de partager vos expériences ?
+          </p>
+          <div class="social-links">
+            <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+            <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px"
+                class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script> DéclicIA - Tous droits réservés
+        </p>
+        <p class="footer-credits">
+          Conçu avec passion pour l'éducation et l'innovation pédagogique
+        </p>
+        <p>@Thomas BROUILLET</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Carousel_script.js"></script>
+</body>
+
+</html>
+
+
+
+

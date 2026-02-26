@@ -1,0 +1,71 @@
+:root {
+  --page-bg: #ffffff;
+  --surface-bg: #ffffff;
+  --surface-bg-soft: #f0f0f0;
+  --link-color: #0066cc;
+}
+
+html[data-theme="dark"] {
+  --text-color: #e6ebf5;
+  --light-bg: #171c26;
+  --background-color: rgba(97, 111, 153, 0.2);
+  --white: #11161f;
+  --border-color: #2c3445;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --titre-color: #8fb6ff;
+  --page-bg: #0b0f17;
+  --surface-bg: #11161f;
+  --surface-bg-soft: #171c26;
+  --link-color: #89b4ff;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+html[data-theme="dark"] a {
+  color: var(--link-color);
+}
+
+/* Garder les composants "menu" lisibles sans modifier l'identité visuelle des cartes */
+html[data-theme="dark"] .submenu {
+  background-color: var(--surface-bg);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] #toggleLink {
+  color: var(--link-color);
+  background: var(--surface-bg-soft);
+}
+
+html[data-theme="dark"] #toggleLink:hover,
+html[data-theme="dark"] .submenu a:hover,
+html[data-theme="dark"] .nav-list a:hover,
+html[data-theme="dark"] .checkbox-label:hover {
+  background: #212838;
+}
+
+/* Evite le noir sur noir pour les composants "carte" avec texte forcé sombre */
+html[data-theme="dark"] .carte,
+html[data-theme="dark"] .carte p,
+html[data-theme="dark"] .carte li,
+html[data-theme="dark"] .etiquette,
+html[data-theme="dark"] .etiquette div {
+  color: var(--text-color);
+}
+
+/* Correctif ciblé Cadre et défis -> section "Vers une dette cognitive" */
+html[data-theme="dark"] #dette .containerChiffre .carte {
+  background-color: rgba(164, 179, 221, 0.2);
+  border: 1px solid rgba(164, 179, 221, 0.35);
+}
+
+html[data-theme="dark"] #dette .containerChiffre .carte .chiffre p {
+  color: var(--text-color);
+}
+
+html[data-theme="dark"] .containerNav,
+html[data-theme="dark"] footer {
+  box-shadow: var(--shadow);
+}

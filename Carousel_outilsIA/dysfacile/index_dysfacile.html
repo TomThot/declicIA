@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Theme Sync -->
+  <script src="../../theme-sync.js"></script>
+  <meta name="description" content="DysFacile : adaptation de textes pour les élèves dyslexiques avec assistance IA." />
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>DysFacile</title>
+  <link rel="stylesheet" href="style_dysfacile.css" />
+  <link rel="stylesheet" href="../../theme-sync.css" />
+</head>
+
+<body>
+  <header>
+    <h1>DysFacile</h1>
+    <p>Adapter rapidement des textes pour les rendre plus accessibles aux élèves dyslexiques.</p>
+  </header>
+
+  <main>
+    <nav class="menu">
+      <div class="menu-toggle">☰</div>
+    </nav>
+    <div class="sidebar">
+      <div class="icone">
+        <img src="../../Images/logo_blanc_150px.png" alt="logo" />
+      </div>
+      <a href="../../index.html">Accueil</a>
+      <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
+      <a href="../Carousel_index.html">Outils pour la classe</a>
+    </div>
+
+    <div class="containerNav">
+      <div class="titreNav">Dans cet article</div>
+      <div class="navigationPage">
+        <a href="#dys">Présentation</a>
+        <a href="#sources">Sources</a>
+        <a href="#mise-en-forme">Mise en forme</a>
+      </div>
+    </div>
+
+    <section id="dys" class="card dys collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">DysFacile
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <p>
+            <a href="https://dysfacile.lovable.app/">DysFacile</a> est une application web développée par Ronan TREVIEN
+            (ERUN et directeur d'école en Haute-Savoie) qui permet d'adapter facilement la mise en forme de textes pour les
+            rendre plus accessibles, notamment pour les élèves dyslexiques. L'application génère des documents PDF
+            personnalisés avec des polices et des espacements adaptés. Aucune installation n'est nécessaire et les données
+            ne seront jamais stockées par l'application. <br />
+            Envie de tester ?
+          </p>
+
+          <div class="containerDys">
+            <img src="../../Images/DysFacile.png" alt="banner DysFacile" />
+          </div>
+
+          <h3 id="sources" class="titleh3">Les sources</h3>
+          <ul class="liste">
+            <li><strong>Saisie manuelle :</strong> C'est votre première option. Vous tapez votre texte au clavier ou faites
+              un copier/coller dans la fenêtre de gauche et la transcription se fait instantanément dans la fenêtre de droite.
+              Jusque-là, pas besoin d'IA me direz-vous ! Vous auriez raison mais...</li>
+            <li><strong>Prendre une photo :</strong> Là où l'IA va entrer en jeu, c'est qu'il est possible de prendre une
+              photo et de l'importer directement dans la fenêtre de gauche ! Si vous possédez un smartphone, une caméra,
+              un visualiseur, aucun problème. Il suffit de sélectionner la zone à transformer et l'intelligence artificielle
+              va se charger de reconnaître les caractères et intégrer le texte dans la zone idoine.</li>
+            <li><strong>Uploader des images :</strong> Votre visualiseur n'est pas reconnu ? Vous ne voulez pas utiliser
+              <a href="https://dysfacile.lovable.app/">DysFacile</a> sur votre téléphone ? Aucun problème ! Grâce à l'IA,
+              l'application permet d'opérer une océrisation (reconnaissance des caractères). Il vous suffit pour cela
+              d'importer une ou plusieurs photos (jusqu'à 5), l'IA traite toutes les images et combine le texte extrait
+              dans le même document (et c'est épatant ! 😎).
+            </li>
+          </ul>
+
+          <h3 id="mise-en-forme" class="titleh3">La mise en forme</h3>
+          <p>Qu'importe la solution choisie, vous pouvez ajouter, enlever, modifier le texte de départ selon votre
+            volonté. <br />
+            Dans tous les cas, vous pouvez :</p>
+          <ul class="liste">
+            <li><strong>Changer la police : Choisissez parmi 4 polices adaptées.</strong>
+              <ul class="liste">
+                <li>Andika : police sans-serif claire et lisible</li>
+                <li>Arial : police classique universelle</li>
+                <li>OpenDyslexic : police spécialement conçue pour la dyslexie</li>
+                <li>Verdana : police large et espacée (par défaut)</li>
+              </ul>
+            </li>
+            <li><strong>Modifier la taille de la police : 4 tailles disponibles</strong>
+              <ul class="liste">
+                <li>12 pt : compact</li>
+                <li>14 pt : standard (par défaut)</li>
+                <li>16 pt : large</li>
+                <li>18 pt : très large</li>
+              </ul>
+            </li>
+            <li><strong>Modifier l'interligne : 4 espacements possibles</strong>
+              <ul class="liste">
+                <li>1 : serré</li>
+                <li>1,5 : confortable (par défaut)</li>
+                <li>2 : espacé</li>
+                <li>3 : très espacé</li>
+              </ul>
+            </li>
+            <li><strong>Changer l'alignement : 4 options.</strong>
+              <ul class="liste">
+                <li>Gauche : texte aligné à gauche (par défaut).</li>
+                <li>Gauche et titre centré : première ligne centrée, le reste du texte est à gauche.</li>
+                <li>Justifié : texte justifié des deux côtés.</li>
+                <li>Justifié et titre centré : première ligne centrée, le reste du texte est justifié.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>Voici un exemple de texte adapté
+            <a href="../../doc/Texte-adapte-OpenDyslexic-14pt-13-56-06.pdf">Texte-adapte-OpenDyslexic-14pt-interligne-1.5</a>
+          </p>
+
+          <div class="rmqDys">
+            <p>
+              <strong>Remarque sur les données : </strong> <br />
+              Compte tenu du fait que <a href="https://dysfacile.lovable.app/">DysFacile</a> utilise une IA grand public
+              (Google Gemini 2.5) pour l'OCR, <strong>NE METTEZ JAMAIS AUCUNE DONNEE PERSONNELLE </strong> dans les documents
+              envoyés pour l'extraction, respectez les droits d'auteur et soyez critique quant au résultat de l'IA.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><span class="footer-logo-text">DéclicIA</span></div>
+          <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+            <li><a href="../Carousel_index.html">Outils pour la classe</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
+            <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
+            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+            <li><a href="../Carousel_index.html">Outils recommandés</a></li>
+            <li><a href="#">Formations</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact & Communauté</h3>
+          <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
+          <div class="social-links">
+            <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+            <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px" class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> DéclicIA - Tous droits réservés</p>
+        <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
+        <p>@Thomas BROUILLET</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script_dysfacile.js"></script>
+</body>
+
+</html>

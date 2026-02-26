@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Theme Sync -->
+    <script src="../../theme-sync.js"></script>
+    <meta name="description"
+        content="Galerie carrousel 3D d'outils IA pour la classe avec navigation, mise en page harmonisée et expérience interactive." />
+    <!-- Favicon -->
+    <link rel="icon" href="../Images/icons/favicon-big.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Images/icons/favicon_color-16x16.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <title>Outils IA - Galerie</title>
+    <link rel="stylesheet" href="style_art_du_prompt.css" />
+    <title>L'art du prompt</title>
+
+    <link rel="stylesheet" href="../../theme-sync.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Le prompt</h1>
+        <p>
+            Un savoir faire indispensable pour un résultat pertienent.
+        </p>
+    </header>
+
+    <main>
+        <!-- Navigation latérale-->
+        <nav class="menu">
+            <div class="menu-toggle">☰</div>
+        </nav>
+        <div class="sidebar">
+            <div class="icone">
+                <img src="../../Images/logo_blanc_150px.png" alt="logo" />
+            </div>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+            <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
+            <a href="../Carousel_index.html">Outils pour la classe</a>
+        </div>
+        <!-- Fin de navigation latérale-->
+
+        <!-- Navigation interne article-->
+        <div class="containerNav">
+            <div class="titreNav">Dans cet article</div>
+            <div class="navigationPage">
+                <a href="#prompt">C'est quoi un prompt</a>
+                <a href="#actif">La méthode ACTIF</a>
+                <a href="#café">LA méthode CAFÉ</a>
+                <a href="#autre">Les autres méthodes</a>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------------->
+        <!-------------------------L'art du prompt--------------------------------->
+        <!------------------------------------------------------------------------->
+
+        <section id="prompt" class="card prompt collapsible-section open">
+            <h2 data-tooltip="Cliquez pour replier/déplier le contenu">L'art du prompt
+                <span class="toggle-arrow">▼</span>
+            </h2>
+            <div class="section-content">
+                <div class="inner">
+                    <h3>C'est quoi un prompt ?</h3>
+                    <p>
+                        Si vous avez déjà interagi avec un ordinateur en tapant du texte au clavier, félicitations, vous
+                        avez
+                        "prompter" ! <br>
+                        Loin d'être une insulte, le “prompt” est un mot tiré du domaine informatique qui désigne
+                        l’invite de
+                        commande
+                        envoyée à un système. La formulation de ce prompt, aussi appelée “requête” en français,
+                        conditionne la réponse fournie par l'IA. Plus les instructions données dans le prompt
+                        sont précises et complètes, plus les suggestions et idées fournies seront pertinentes.
+                    </p>
+                    <p>
+                        Oubliez la simple demande commençant par "fais moi...", "dis moi..." etc. Il existe de
+                        nombreuses méthodes
+                        pour
+                        prompter efficacement et toutes incluent des protocoles éprouvés comme le zero-shot, few-shot,
+                        chain-of-thought... Ne nous embêtons pas avec des termes techniques complexes, sachez simplement
+                        que ces
+                        protocoles visent à conduire l'IA vers des réponses plus précises et contextuelles. <br>
+                        De toutes les techniques existantes (CQQCOQP, RISPO...), j'en ai retenu deux. Il me semble que
+                        sur le plan
+                        pédagogique, ce sont celles qui donnent les meilleurs résultats toutes IA confondues.
+                        Évidemment, chacun y
+                        verra l'opportunité de tester et éprouver ses approches préférées.
+                    </p>
+
+                    <h3 id="actif" class="titleh3">1. La méthode ACTIF</h3>
+                    <p>
+                        La méthode ACTIF est un modèle simple et efficace permettant l'obtention d'une réponse claire.
+                        Elle est
+                        rapide,
+                        structurée et pédagogique. On la retient sous l'acronyme ACTIF mais on voit clairement grâce aux
+                        flèches que
+                        l'acronyme ICATF serait plus logique et moins facile à retenir.
+                    </p>
+                    <div class="actif">
+                        <img src="../../Images/1x/1x/ACTIF.png" alt="illustration ACTIF">
+                    </div>
+                    <p>
+                        Par exemple :
+                    </p>
+                    <p>
+                        <strong>I : </strong> Agis en tant que professeur de mathématiques/physique-chimie en CAP.
+                    </p>
+                    <p>
+                        <strong>C : </strong> Tu as en charge des élèves de la filière CAP logistique et transport. Le
+                        thème du
+                        chapitre est
+                        centré sur les pourcentages et plus précisément le calcul d'une réduction commerciale.
+                    </p>
+                    <p>
+                        <strong>A : </strong> Rédige l'énoncé d'un exercice d'application contextualisé à la filière en
+                        deux étapes
+                        :
+                        "Calcul de réduction" et "calcul du prix soldé". Le prix initial est fixé et l'article est soldé
+                        avec une
+                        remise indiquée dans l'énoncé. La question finale doit être exactement : "Le vendeur applique
+                        une remise
+                        supplémentaire de 5% sur le prix soldé. Quel est le prix final que paiera le client ?" en la
+                        plaçant entre
+                        guillemets.
+                    </p>
+                    <p>
+                        <strong>T : </strong> Le ton doit être académique.
+                    </p>
+                    <p>
+                        <strong>F : </strong> Fournis l'énoncé de l'exercice suivi d'une section "corrigé" détaillé.
+                    </p>
+
+                    <div class="containerRemarque">
+                        <h4>Remarque :</h4>
+                        <p>
+                            Notez que la couleur des éléments n'a pas
+                            d'importance puisque les IA traitent les prompts en texte brut.
+                        </p>
+                        <p>
+                            Pour ce qui est de l'ordre, les choses sont plus nuancées. En effet, une IA ne "lit pas dans
+                            l'ordre"
+                            comme
+                            un
+                            humain. Elle traite l'ensemble du prompt comme un bloc transformé en token. Tout est pris en
+                            compte. MAIS
+                            :
+                            si sur des prompts très simples, l'ordre des éléments n'est pas fondamental, pour les
+                            prompts plus
+                            complexes
+                            en
+                            revanche... Il faut être vigilant. <br>
+                            <strong>Le début du prompt est une zone stratégique </strong> (Ces
+                            informations pourraient avoir plus de poids), on fixe le cadre initial en définissant le
+                            contexte, les
+                            objectifs,etc, qui vont influencer toute la réponse dès le départ. Si la contrainte arrive à
+                            la fin, elle
+                            peut
+                            être moins bien respectée ou la réponse moins claire.
+                        </p>
+                        <p>
+                            Exemple volontairement simpliste en informatique : <br>
+                        </p>
+
+                        <div class="containerExemple">
+                            <ul>
+                                Prompt A
+                                <li>Fais une page HTML animée</li>
+                                <li>Sans Javascript</li>
+                            </ul>
+
+                            <ul>
+                                Prompt B
+                                <li>Sans Javascript</li>
+                                <li>Fais une page HTML animée</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            Le prompt B respecte presque toujours mieux la contrainte parce que celle-ci devient
+                            structurante au lieu
+                            d'être corrective.
+                        </p>
+                        <p>
+                            <strong>En conclusion : </strong> L'ordre des éléments du prompt ne constitue pas une règle
+                            absolue, ce
+                            n'est
+                            pas un "coefficient de priorité technique" mais dans la pratique, l'ordre influence la
+                            qualité et la
+                            cohérence.
+                        </p>
+                    </div>
+
+
+                    <h3 id="café" class="titleh3">2. La méthode CAFÉ</h3>
+                    <p>
+                        La méthode CAFÉ est orientée vers la précision et la qualité de sortie. L'ajout d'exemples en
+                        est largement
+                        responsable. <br>
+                        Il suffit de suivre ces 4 étapes pour structurer le prompt :
+                    </p>
+                    <div class="containerCafe">
+                        <div class="etape">
+                            <div class="lettre lettre1">
+                                <span>C</span>
+                            </div>
+                            <div class="mot mot1">CONTEXTE</div>
+                            <div class="etapeContent content1">
+                                <p>Fournir un cadre clair pour orienter la réponse de l'IA.
+                                <ul>
+                                    <li>Décrire la situation ou le rôle attendu.</li>
+                                    <li>Préciser le domaine ou l'objectif général.</li>
+                                    <li>Ajouter des précisions pour éviter les ambiguïtés.</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etape">
+                            <div class="lettre lettre2">
+                                <span>A</span>
+                            </div>
+                            <div class="mot mot2">ACTION</div>
+                            <div class="etapeContent content2">
+                                <p>Indiquer l'action attendue
+                                <ul>
+                                    <li>Utiliser des verbes d'action clairs pour guider la réponse.</li>
+                                    <li>Nommer le public cible pour ajuster le ton et le vocabulaire.</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etape">
+                            <div class="lettre lettre3">
+                                <span>F</span>
+                            </div>
+                            <div class="mot mot3">FORMAT ATTENDU</div>
+                            <div class="etapeContent content3">
+                                <p>Définir clairement les paramètres de la production attendue. Indiquer par exemple :
+                                <ul>
+                                    <li>Le nombre de mots,</li>
+                                    <li>Le type de document,</li>
+                                    <li>la structure,</li>
+                                    <li>le format numérique (markdown, python...),</li>
+                                    <li>le style.</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="etape">
+                            <div class="lettre lettre4">
+                                <span>É</span>
+                            </div>
+                            <div class="mot mot4">Échange -Évaluation</div>
+                            <div class="etapeContent content4">
+                                <p>Réitérer pour affiner ou clarifier la réponse de l'IA.
+                                <ul>
+                                    <li>Demander des explications.</li>
+                                    <li>Vérifier les faits et demander des sources pour valider</li>
+                                    <li>Exprimer des doutes ou proposer des alternatives pour enrichir.</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exemple">
+                        <p>Par exemple : </p>
+                        <p><strong>C : </strong> Tu es enseignant de français, expert en analyse littéraire pour des
+                            élèves de 6e.
+                            Ton
+                            rôle est de m'aider à concevoir une activité interactive sur l'analyse des personnages dans
+                            <em>Le Petit
+                                Prince.</em>
+                        </p>
+                        <p>
+                            <strong>A :</strong> Crée une activité de groupe de 30 minutes où les élèves débattent des
+                            choix et de
+                            l'évolution des personnages. Intègre une réflexion individuelle où chaque élève écrit une
+                            courte analyse
+                            sur
+                            un personnage de leur choix. Ajoute des idées d'évaluation pour mesurer la compréhension des
+                            personnages
+                            et
+                            les compétences de rédaction et de communication.
+                        </p>
+                        <p>
+                            <strong>F : </strong> Structure l'activité en trois phases. Structure, débat de groupe et
+                            évaluation
+                            individuelle. Présente les instructions sous forme de liste numérotée. Ajoute un format
+                            d'évaluation pour
+                            chaque phase.
+                        </p>
+                        <p>
+                            <strong>É : </strong> Fournis d'abord une proposition initiale. Je te demanderai ensuite
+                            d'ajuster ou
+                            d'améliorer certains éléments si besoin, comme les critères d'évaluation pour la réflexion
+                            individuelle
+                            par
+                            exemple.
+                        </p>
+                    </div>
+                    <p> <strong>
+                            Mon but étant de proposer des outils d'aide, j'ai réalisé (sur une idée du site num.org) et
+                            enrichi un
+                            assistant d'instructions génératives pour aider à appréhender
+                            et maîtriser ces deux méthodes. Il existe des sites qui proposent déjà ce genre d'outils
+                            mais en plus,
+                            ici : vous pourrez choisir la méthode (CAFÉ ou ACTIF), vous pourrez choisir et
+                            personnaliser un template prédéfini ou réaliser pas à pas votre propre prompt et le
+                            copier/coller dans
+                            l'IA de
+                            votre choix. ENJOY ! </strong>
+
+                    <div class="containerAssistant">
+
+                        <div class="assistant">
+                            <a href="../../Assistant_prompt/IndexPrompt.html" class="portal" target="_blank">
+                                <i class="fas fa-link"></i>
+                                Assistant d'instructions génératives
+                            </a>
+                        </div>
+                    </div>
+
+
+                    </p>
+                    <h3 id="autre" class="titleh3">Les autres méthodes</h3>
+                    <p>Vous l'avez compris, il existe de nombreuses méthodes permettant de "prompter". J'en évoque
+                        quelques-unes
+                        qui
+                        devraient s'auto-expliquer naturellement en développant leurs acronymes :
+                    <ul>
+                        <li><strong>RTF : </strong>(Role, Task, Format)</li>
+                        <li><strong>TREF : </strong>(Task, Requirement, Expectation, Format)</li>
+                        <li><strong>GRADE : </strong>(Goal, Request, Action, Detail, Example)</li>
+                        <li><strong>RISE(N) : </strong>(Role, Input, Steps, Expectation,Narrowing)</li>
+                        <li><strong>TAG : </strong>(Task, Action, Goal)</li>
+                        <li><strong>BAB : </strong>(Before, After,Bridge)</li>
+                        <li>... À vous de jouer !</li>
+                    </ul>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Section À propos -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">DéclicIA</span>
+                    </div>
+                    <p>
+                        Des notions et des outils sur l'intelligence artificielle dans
+                        l'éducation. Un site dédié aux enseignants pour comprendre et
+                        intégrer l'IA de manière réfléchie et responsable.
+                    </p>
+                </div>
+
+                <!-- Section Navigation -->
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Accueil</a></li>
+                        <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+                        <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+                        <li><a href="../../Carousel_outilsIA/Carousel_index.html">Outils pour la classe</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Ressources -->
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
+                        <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
+                        <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+                        <li><a href="../Carousel_index.html">Outils recommandés</a></li>
+                        <li><a href="#">Formations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Contact -->
+                <div class="footer-section">
+                    <h3>Contact & Communauté</h3>
+                    <p>
+                        Envie d'échanger, de contribuer ou de partager vos expériences ?
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
+                        <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px"
+                                class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" title="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> DéclicIA - Tous droits réservés
+                </p>
+                <p class="footer-credits">
+                    Conçu avec passion pour l'éducation et l'innovation pédagogique
+                </p>
+                <p>@Thomas BROUILLET</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script_art_du_prompt.js"></script>
+</body>
+
+</html>
+
+

@@ -1,5 +1,5 @@
 /**
- * DéclicIA - Script principal optimisé
+ * DéclicIA - Script principal 
  * Gestion du menu, des popups dynamiques et du quiz
  */
 

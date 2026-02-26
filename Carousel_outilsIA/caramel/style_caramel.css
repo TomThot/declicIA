@@ -1,0 +1,42 @@
+@import "../lart_du_prompt/style_art_du_prompt.css";
+
+.h5p {
+  background-color: #0d46b18c;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.h5p p {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.containerCaramel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.containerElea {
+  margin: 0 10px;
+}
+
+.containerElea span {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.containerCaramel img {
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .containerCaramel {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
