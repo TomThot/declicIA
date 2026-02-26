@@ -97,9 +97,11 @@ body {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
   transition:
     width 0.6s ease,
@@ -189,7 +191,7 @@ body {
   background-color: #00bcd4;
 }
 
-.menu.active+.sidebar {
+.menu.active + .sidebar {
   left: 0;
 }
 
@@ -386,8 +388,6 @@ p {
   padding: 10px;
 }
 
-
-
 /*-----------------------Méthode CAFE-------------------*/
 .containerCafe {
   display: flex;
@@ -411,7 +411,6 @@ p {
 }
 
 .etape:hover {
-
   transform: translateY(-7px);
   box-shadow: 0 5px 25px rgba(120, 142, 241, 0.644);
 }
@@ -434,7 +433,6 @@ p {
 .etapeContent {
   display: grid;
   align-items: center;
-
 }
 
 .etapeContent p {
@@ -534,10 +532,6 @@ p {
   margin-bottom: 1em;
 }
 
-
-
-
-
 /* lien assistant prompt*/
 
 .containerAssistant {
@@ -575,7 +569,7 @@ i.fas {
 /* Animation Portail dimensionnel */
 .portal::before,
 .portal::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: -20px;
   border-radius: 50%;
@@ -626,11 +620,7 @@ i.fas {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 /*-------------Fin CAFÉ--------------------*/
-
-
-
 
 /*------------------------------------------------------*/
 /*---------------Les IA conversationnelles--------------*/
@@ -679,7 +669,6 @@ td {
   background-color: #243447;
   transition: 0.2s ease;
 }
-
 
 .IA .badge {
   padding: 4px 8px;
@@ -820,7 +809,11 @@ td {
   margin: 10px;
   border-radius: 10px;
   border: 1px solid rgba(27, 39, 59, 0.2);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(15, 23, 42, 0.06));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.68),
+    rgba(15, 23, 42, 0.06)
+  );
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
@@ -839,7 +832,6 @@ td {
   height: 70px;
   display: block;
 }
-
 
 .front {
   width: 100%;
@@ -989,13 +981,12 @@ td {
 }
 
 #btnChatbot:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
 #btnChatbot:active {
-  transform: translate(3px, 3px)
+  transform: translate(3px, 3px);
 }
-
 
 /*------------------------------------------------------*/
 /*-------------------------Caramel-----------------------*/
@@ -1033,7 +1024,6 @@ td {
 
 .containerCaramel img {
   width: 100%;
-
 }
 
 /*------------------------------------------------------*/
@@ -1088,6 +1078,15 @@ td {
   margin-top: 8px;
 }
 
+.truc {
+  background-color: #0d46b18c;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.truc p {
+  color: var(--white);
+}
 
 /*----------------------Footer---------------------------------------*/
 footer {
@@ -1207,8 +1206,7 @@ footer {
 /*----------------------media Query-----------------------------*/
 /*--------------------------------------------------------------*/
 
-@media(max-width:768px) {
-
+@media (max-width: 768px) {
   .IA table {
     font-size: 0.8rem;
   }
@@ -1223,10 +1221,9 @@ footer {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 1rem;
-
   }
 
-    .rot {
+  .rot {
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -1245,9 +1242,7 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 850px) {
-
   .containerCafe {
     display: grid;
     grid-template-columns: 1fr;
@@ -1298,6 +1293,4 @@ footer {
     width: 100%;
     border-radius: 15px;
   }
-
-
 }
