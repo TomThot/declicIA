@@ -1,3 +1,9 @@
+/**
+ * Cadre et défis - Script de page
+ * Gère:
+ * - le menu latéral
+ * - les sections repliables de l'article
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

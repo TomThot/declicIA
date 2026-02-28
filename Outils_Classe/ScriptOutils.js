@@ -1,3 +1,10 @@
+/**
+ * Outils Classe - Script de page
+ * Gère:
+ * - la navigation latérale (menu burger + fermeture externe)
+ * - l'ouverture/fermeture des sections repliables
+ * - les interactions spécifiques (liens cliquables, outils externes)
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

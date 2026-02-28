@@ -1,3 +1,10 @@
+/**
+ * Quelle IA choisir - Script de page
+ * Gère:
+ * - menu latéral
+ * - sections repliables
+ * - lignes de tableau cliquables (ouverture nouvelle fenêtre)
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

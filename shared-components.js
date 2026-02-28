@@ -1,4 +1,15 @@
+/**
+ * Shared Components
+ * Injecte les blocs communs via placeholders HTML:
+ * - sidebar (menu + liens + toggle thème)
+ * - footer standard
+ *
+ * Utilisation côté HTML:
+ * <div data-shared-sidebar data-base="../" data-current="lia"></div>
+ * <div data-shared-footer data-base="../" data-current="lia"></div>
+ */
 (function () {
+  // Crée un lien de navigation et marque la page courante.
   function createNavLink(base, current, key, label, path) {
     if (current === key) {
       return '<a href="#" aria-current="page">' + label + "</a>";
@@ -6,6 +17,7 @@
     return '<a href="' + base + path + '">' + label + "</a>";
   }
 
+  // Remplace le placeholder sidebar par le HTML final.
   function renderSidebar(placeholder) {
     const base = placeholder.dataset.base || "./";
     const current = placeholder.dataset.current || "";
@@ -31,6 +43,7 @@
     placeholder.outerHTML = sidebarHtml;
   }
 
+  // Remplace le placeholder footer par le HTML final.
   function renderFooter(placeholder) {
     const base = placeholder.dataset.base || "./";
     const year = new Date().getFullYear();
@@ -83,11 +96,13 @@
     placeholder.outerHTML = footerHtml;
   }
 
+  // Monte tous les composants partagés présents sur la page.
   function mountSharedComponents() {
     document.querySelectorAll("[data-shared-sidebar]").forEach(renderSidebar);
     document.querySelectorAll("[data-shared-footer]").forEach(renderFooter);
   }
 
+  // Évite les doubles montages en cas de chargements multiples.
   let mounted = false;
   function safeMount() {
     if (mounted) return;

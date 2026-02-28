@@ -1,4 +1,14 @@
+/**
+ * Moteur de recherche local (front-only)
+ * - index statique de pages/sections/outils
+ * - recherche instantanée avec scoring simple
+ * - insertion contextuelle:
+ *   - header desktop
+ *   - menu burger mobile (home)
+ *   - sidebar (pages article)
+ */
 (function () {
+  // Garde-fou: empêche le montage multiple du même composant.
   if (window.__decliciaLocalSearchMounted) {
     return;
   }
@@ -34,6 +44,7 @@
     { title: "Assistant Prompt", path: "Assistant_prompt/IndexPrompt.html", keywords: "assistant prompt actif" }
   ];
 
+  // Normalise les chaînes (accents, casse, espaces) pour une recherche robuste.
   function normalize(value) {
     return String(value || "")
       .normalize("NFD")
@@ -42,10 +53,12 @@
       .trim();
   }
 
+  // Convertit un chemin projet en URL absolue.
   function absoluteHref(path) {
     return new URL(path, appBase).href;
   }
 
+  // Scoring simple par pertinence (titre > mots-clés > chemin).
   function scoreEntry(entry, query) {
     const text = normalize(entry.title + " " + entry.keywords + " " + entry.path);
     if (!text.includes(query)) return -1;
@@ -57,6 +70,7 @@
     return score;
   }
 
+  // Fabrique le DOM du composant de recherche.
   function createSearchUi() {
     const container = document.createElement("div");
     container.className = "local-search";
@@ -67,15 +81,18 @@
     return container;
   }
 
+  // Attache tous les comportements d'interaction (input, escape, clic externe).
   function bindSearch(container) {
     const input = container.querySelector(".local-search__input");
     const results = container.querySelector(".local-search__results");
 
+    // Masque et vide la liste de résultats.
     function closeResults() {
       results.hidden = true;
       results.innerHTML = "";
     }
 
+    // Affiche les résultats classés (ou message vide).
     function openResults(items) {
       if (!items.length) {
         results.innerHTML = '<p class="local-search__empty">Aucun resultat.</p>';
@@ -136,6 +153,7 @@
     });
   }
 
+  // Détermine où monter la recherche selon le contexte de page.
   function mountSearch() {
     const targetHeader = document.querySelector(".containerHeader");
     const targetSidebar = document.querySelector(".sidebar");
@@ -146,14 +164,17 @@
       const search = createSearchUi();
       const mobileMq = window.matchMedia("(max-width: 768px)");
 
+      // Home: bascule dynamique entre header (desktop) et menu burger (mobile).
       function placeSearch() {
         const isMobile = mobileMq.matches;
 
+        // Ne conserve qu'une seule instance visible du composant.
         document.querySelectorAll(".local-search").forEach(function (node) {
           if (node !== search) node.remove();
         });
         search.classList.remove("local-search--header", "local-search--navdrawer");
 
+        // Mobile: la recherche reste dans le panneau de navigation.
         if (isMobile) {
           document.body.classList.add("search-mobile-nav");
           search.classList.add("local-search--navdrawer");
@@ -166,6 +187,7 @@
           return;
         }
 
+        // Desktop: la recherche reste dans le header.
         document.body.classList.remove("search-mobile-nav");
         search.classList.add("local-search--header");
         targetHeader.appendChild(search);

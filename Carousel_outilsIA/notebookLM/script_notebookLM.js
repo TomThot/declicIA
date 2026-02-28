@@ -1,3 +1,7 @@
+/**
+ * NotebookLM - Script de page
+ * Gère le menu latéral et les sections repliables.
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

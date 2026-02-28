@@ -1,3 +1,11 @@
+/**
+ * ChatMD - Script de page
+ * Gère:
+ * - le menu latéral
+ * - les sections repliables
+ * - l'ouverture de liens d'outils externes
+ * - le chargement/affichage du widget ChatMD
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");

@@ -1,4 +1,12 @@
-// Fonction Sigmoïde
+/**
+ * Neurone interactif - Script pédagogique
+ * Simule un neurone artificiel simple:
+ * - réglage des poids et du biais via sliders
+ * - calcul de la sortie sigmoïde
+ * - mise à jour en temps réel de l'affichage
+ */
+
+// Fonction sigmoïde utilisée comme activation.
 function sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
 }

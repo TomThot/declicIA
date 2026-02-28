@@ -1,13 +1,15 @@
+/**
+ * Assistant Prompt - Script principal
+ * Objectif:
+ * - piloter les deux méthodes de génération de prompt (ACTIF / CAFÉ)
+ * - charger des templates pédagogiques prédéfinis
+ * - construire le prompt final, l'afficher, le copier et réinitialiser le formulaire
+ */
 
- 
- 
- 
- 
- 
- // Current active method
+// Méthode active courante ("actif" ou "cafe").
         let currentMethod = 'actif';
 
-        // Toggle method switch
+        // Bascule visuelle et fonctionnelle entre les deux méthodes.
         document.getElementById('methodSwitch').addEventListener('change', function() {
             if (this.checked) {
                 // Switch to CAFé
@@ -34,7 +36,7 @@
             }
         });
 
-        // Templates prédéfinis ACTIF
+        // Bibliothèque de templates ACTIF (chargement rapide par cas d'usage).
         const templates = {
             quiz: {
                 identity: 'Tu es un professeur de sciences',
@@ -94,7 +96,7 @@
             }
         };
 
-        // Templates prédéfinis CAFé
+        // Bibliothèque de templates CAFÉ.
         const cafeTemplates = {
             planCours: {
                 context: 'Tu es enseignant de [MATIÈRE] pour des élèves de [NIVEAU]. Tu prépares une séquence sur [THÈME].',
@@ -146,6 +148,7 @@
             }
         };
 
+        // Charge un template CAFÉ dans le formulaire.
         function loadCafeTemplate(templateName) {
             const template = cafeTemplates[templateName];
             if (!template) return;
@@ -163,6 +166,7 @@
             showNotification('✅ Template CAFÉ chargé ! Personnalisez-le selon vos besoins.');
         }
 
+        // Charge un template ACTIF dans le formulaire.
         function loadTemplate(templateName) {
             const template = templates[templateName];
             if (!template) return;
@@ -184,6 +188,7 @@
             showNotification('✅ Template chargé ! Personnalisez-le selon vos besoins.');
         }
 
+        // Notification toast temporaire en haut à droite.
         function showNotification(message) {
             // Créer une notification temporaire
             const notification = document.createElement('div');
@@ -208,6 +213,7 @@
             }, 3000);
         }
 
+        // Active les boutons préréglés correspondant aux valeurs saisies.
         function activateMatchingButtons() {
             // Désactiver tous les boutons d'abord
             document.querySelectorAll('.preset-btn').forEach(btn => {
@@ -229,7 +235,7 @@
             });
         }
 
-        // Gestion des boutons préréglés
+        // Branche les boutons préréglés sur un textarea donné.
         function setupPresetButtons(containerId, textareaId) {
             const container = document.getElementById(containerId);
             const textarea = document.getElementById(textareaId);
@@ -258,6 +264,7 @@
             });
         }
 
+        // Indique si une valeur correspond déjà à un preset du groupe.
         function isPresetValue(value, containerId) {
             const container = document.getElementById(containerId);
             const buttons = container.querySelectorAll('.preset-btn');
@@ -271,6 +278,7 @@
             return false;
         }
 
+        // Formate la valeur choisie selon le champ (préfixes de phrase).
         function getFormattedValue(textareaId, value) {
             const prefixes = {
                 'identity': 'Tu es un ',
@@ -283,24 +291,25 @@
             return prefix + value;
         }
 
-        // Initialiser les boutons préréglés
+        // Initialisation des groupes de presets ACTIF.
         setupPresetButtons('identityButtons', 'identity');
         setupPresetButtons('contextButtons', 'context');
         setupPresetButtons('toneButtons', 'tone');
         setupPresetButtons('formatButtons', 'format');
 
-        // Gestion de la soumission du formulaire ACTIF
+        // Soumission ACTIF -> génération du prompt.
         document.getElementById('actifForm').addEventListener('submit', function(e) {
             e.preventDefault();
             generatePrompt();
         });
 
-        // Gestion de la soumission du formulaire CAFé
+        // Soumission CAFÉ -> génération du prompt.
         document.getElementById('cafeForm').addEventListener('submit', function(e) {
             e.preventDefault();
             generateCafePrompt();
         });
 
+        // Construit le prompt ACTIF à partir des champs utilisateur.
         function generatePrompt() {
             const identity = document.getElementById('identity').value.trim();
             const context = document.getElementById('context').value.trim();
@@ -342,6 +351,7 @@
             document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
+        // Construit le prompt CAFÉ à partir des champs utilisateur.
         function generateCafePrompt() {
             const context = document.getElementById('cafe_context').value.trim();
             const action = document.getElementById('cafe_action').value.trim();
@@ -372,6 +382,7 @@
             document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
+        // Copie le prompt généré dans le presse-papiers.
         function copyPrompt() {
             const promptText = document.getElementById('promptOutput').textContent;
             const copyBtn = event.target;
@@ -390,6 +401,7 @@
             });
         }
 
+        // Réinitialise le formulaire courant et l'état visuel.
         function resetForm() {
             if (confirm('Voulez-vous vraiment effacer tous les champs ?')) {
                 if (currentMethod === 'actif') {

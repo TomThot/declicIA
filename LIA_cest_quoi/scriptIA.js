@@ -1,3 +1,10 @@
+/**
+ * L'IA c'est quoi - Script de page
+ * Gère:
+ * - le menu latéral
+ * - les sections repliables
+ * - les widgets visuels (sigmoïde / interactions pédagogiques)
+ */
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
