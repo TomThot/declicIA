@@ -132,8 +132,6 @@ html[data-theme="dark"] .submenu a:hover {
 
 html[data-theme="dark"] .cardContent,
 html[data-theme="dark"] .containerQuizz,
-
-
 html[data-theme="dark"] .score-track {
   background: var(--surface-bg);
   border-color: var(--border-color);
