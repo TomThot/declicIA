@@ -733,6 +733,10 @@ main {
 }
 
 @media (max-width: 768px) {
+
+  #galerie{
+    display: none;
+  }
   .scene {
     height: 500px;
   }

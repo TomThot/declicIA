@@ -1,4 +1,10 @@
-// Gestion du menu burger + fermeture en cliquant hors de la sidebar.
+// ------------------------------------------------------------
+// Navigation principale (menu burger)
+// ------------------------------------------------------------
+// Ce bloc gère l'ouverture/fermeture du menu latéral.
+// - clic sur le bouton burger: toggle des classes "active"
+// - clic en dehors de la sidebar: fermeture automatique
+// - clic dans la sidebar: empêche la fermeture (stopPropagation)
 const menuToggle = document.querySelector(".menu-toggle");
 const menuBar = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
@@ -22,34 +28,60 @@ if (menuToggle && menuBar && sidebar) {
   });
 }
 
-// Sections repliables (meme comportement que la page Outils)
+// ------------------------------------------------------------
+// Sections repliables
+// ------------------------------------------------------------
+// Chaque <h2> d'une section repliable bascule la classe "open"
+// sur son parent ".collapsible-section".
+// Le CSS se charge ensuite de l'animation d'ouverture/fermeture.
 document.querySelectorAll(".collapsible-section > h2").forEach((title) => {
   title.addEventListener("click", () => {
     title.parentElement.classList.toggle("open");
   });
 });
 
-// Recuperation du carrousel principal.
+// ------------------------------------------------------------
+// Carousel 3D: point d'entree
+// ------------------------------------------------------------
+// On récupère l'élément principal. S'il est absent, on ne bloque
+// pas la page: on avertit juste dans la console.
 const carousel = document.getElementById("carousel");
 if (!carousel) {
-  throw new Error("Element #carousel introuvable.");
-}
+  console.warn("Element #carousel introuvable.");
+} else {
+  // Sur petits écrans, le carousel 3D est désactivé pour éviter
+  // les sauts de rendu/jank. Les contrôles associés sont cachés.
+  const disableCarouselMq = window.matchMedia("(max-width: 768px)");
+  if (disableCarouselMq.matches) {
+    const controls = document.querySelector("#galerie .controls");
+    const dots = document.getElementById("dots");
 
-const cards = Array.from(carousel.querySelectorAll(".carousel-card"));
-const N = cards.length;
+    if (controls) controls.style.display = "none";
+    if (dots) dots.style.display = "none";
+  } else {
+
+// Dimensions de référence utilisées pour calculer le rayon de l'orbite.
+// CARD_W doit rester cohérent avec la largeur CSS des cartes.
 const CARD_W = 240;
 const ORBIT_OFFSET = 200;
 
-// Rayon du carrousel 3D : derive de la largeur carte + un decalage visuel.
+// Rayon de l'orbite 3D:
+// formule géométrique d'un polygone régulier + offset visuel.
+// Plus N est grand, plus le rayon augmente pour éviter le chevauchement.
 const radius = Math.round(CARD_W / 2 / Math.tan(Math.PI / N)) + ORBIT_OFFSET;
 
-// Positionne chaque carte autour de l'axe Y.
+// Position initiale de chaque carte autour de l'axe Y.
+// Exemple: N=8 => 0deg, 45deg, 90deg, ...
+const cards = Array.from(carousel.querySelectorAll(".carousel-card"));
+const N = cards.length;
 cards.forEach((card, i) => {
   const angle = 360 / N * i;
   card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
 });
 
-// Cree les points de navigation (dots) et lie chaque point a goTo(i).
+// Dots de navigation:
+// - 1 dot par carte
+// - clic sur un dot => rotation vers la carte ciblée
 const dotsEl = document.getElementById("dots");
 const dotEls = [];
 for (let i = 0; i < N; i++) {
@@ -70,10 +102,17 @@ let dragStartAngle = 0;
 let currentIndex = 0;
 let lastTime = null;
 
-// Reglages visuels des cartes selon leur angle.
+// Réglages d'affichage selon l'angle relatif à la face avant.
+// Au-delà de HIDE_DEG, la carte est masquée pour éviter de voir son "dos".
 const HIDE_DEG = 70;
 const BLUR_START = 20;
 
+// Met à jour chaque carte en fonction de la rotation globale du carousel:
+// - visibilité
+// - opacité
+// - blur progressif
+// - scale léger
+// - z-index pour une superposition propre
 function updateCards(globalRot) {
   cards.forEach((card, i) => {
     const cardAngle = 360 / N * i;
@@ -82,7 +121,7 @@ function updateCards(globalRot) {
 
     const absA = Math.abs(a);
 
-    // Masque complet au-dela d'un angle limite pour eviter le "dos" des cartes.
+    // Carte trop latérale/arrière: on masque complètement.
     if (absA >= HIDE_DEG) {
       card.style.opacity = "0";
       card.style.visibility = "hidden";
@@ -92,7 +131,9 @@ function updateCards(globalRot) {
 
     card.style.visibility = "visible";
 
-    // Blur progressif + leger scale down quand la carte s'eloigne du centre.
+    // Plus la carte s'éloigne de l'avant:
+    // - blur croissant (non linéaire)
+    // - légère réduction d'échelle
     const blurT = Math.max(0, (absA - BLUR_START) / (HIDE_DEG - BLUR_START));
     const blur = blurT * blurT * 12;
 
@@ -109,15 +150,21 @@ function updateCards(globalRot) {
   });
 }
 
-// Boucle d'animation principale (requestAnimationFrame).
+// Boucle d'animation principale (RAF):
+// - calcule dt pour une vitesse stable
+// - applique l'autoplay si non pausé
+// - interpole currentAngle vers targetAngle pour lisser la rotation
+// - met à jour les cartes et le dot actif
 function tick(ts) {
   if (!lastTime) lastTime = ts;
+  // Cap du delta time pour limiter les écarts après un onglet inactif.
   const dt = Math.min((ts - lastTime) / 1000, 0.05);
   lastTime = ts;
 
   // Rotation auto + interpolation douce vers la cible.
   if (!isDragging) {
     if (!paused) {
+      // Vitesse de l'autoplay: 10 deg/s.
       autoAngle += 10 * dt;
       targetAngle = autoAngle;
     }
@@ -128,6 +175,7 @@ function tick(ts) {
   updateCards(currentAngle);
 
   // Synchronise le dot actif avec la carte la plus proche de la face avant.
+  // On convertit l'angle courant en index de carte via un pas angulaire.
   const step = 360 / N;
   const idx = ((Math.round(-currentAngle / step) % N) + N) % N;
   if (idx !== currentIndex) {
@@ -140,7 +188,8 @@ function tick(ts) {
 }
 requestAnimationFrame(tick);
 
-// Va a une carte donnee en prenant le plus court chemin angulaire.
+// Rotation vers une carte donnée en prenant le plus court chemin angulaire.
+// Cela évite de faire presque un tour complet quand un petit déplacement suffit.
 function goTo(index) {
   const step = 360 / N;
   const target = -index * step;
@@ -153,7 +202,7 @@ const pauseBtn = document.getElementById("pauseBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-// Pause/reprise de l'autoplay.
+// Bouton pause/reprise de l'autoplay.
 if (pauseBtn) {
   pauseBtn.addEventListener("click", () => {
     paused = !paused;
@@ -162,7 +211,7 @@ if (pauseBtn) {
   });
 }
 
-// Navigation precedente/suivante par pas d'une carte.
+// Navigation précédente/suivante par pas d'une carte.
 if (prevBtn) {
   prevBtn.addEventListener("click", () => {
     targetAngle += 360 / N;
@@ -177,7 +226,11 @@ if (nextBtn) {
   });
 }
 
-// Drag souris : suit le deplacement horizontal et recale la cible.
+// Drag souris:
+// - mousedown: début du drag
+// - mousemove: l'angle suit le déplacement horizontal
+// - mouseup: fin du drag
+// Le coefficient 0.3 contrôle la sensibilité.
 carousel.addEventListener("mousedown", (e) => {
   isDragging = true;
   dragStartX = e.clientX;
@@ -196,7 +249,10 @@ window.addEventListener("mouseup", () => {
   isDragging = false;
 });
 
-// Equivalent tactile (mobile/tablette).
+// Équivalent tactile (mobile/tablette).
+// Remarque: touchmove est passif ici pour les performances de scroll.
+// Comme le carousel est désactivé sous 768px, ce code ne s'exécute
+// que sur écrans plus larges.
 carousel.addEventListener("touchstart", (e) => {
   isDragging = true;
   dragStartX = e.touches[0].clientX;
@@ -213,3 +269,5 @@ window.addEventListener("touchmove", (e) => {
 window.addEventListener("touchend", () => {
   isDragging = false;
 });
+  }
+}
