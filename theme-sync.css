@@ -28,6 +28,14 @@ html[data-theme="dark"] a {
   color: var(--link-color);
 }
 
+html[data-theme="dark"] header p {
+  color: var(--text-color);
+}
+
+html[data-theme="dark"] .sidebar a {
+  color: var(--text-color);
+}
+
 /* Garder les composants "menu" lisibles sans modifier l'identité visuelle des cartes */
 html[data-theme="dark"] .submenu {
   background-color: var(--surface-bg);
@@ -61,11 +69,31 @@ html[data-theme="dark"] #dette .containerChiffre .carte {
   border: 1px solid rgba(164, 179, 221, 0.35);
 }
 
-html[data-theme="dark"] #dette .containerChiffre .carte .chiffre p {
+html[data-theme="dark"] #dette .containerChiffre .carte  .chiffre p {
   color: var(--text-color);
 }
 
 html[data-theme="dark"] .containerNav,
 html[data-theme="dark"] footer {
   box-shadow: var(--shadow);
+}
+
+html[data-theme="dark"] .containerNav a, .containerNav .titreNav, .construction, .h5p p, .rmqDys p, .truc p {
+  color: var(--text-color);
+}
+html[data-theme="dark"] .cardContent, .pilierContent {
+  background-color: var(--surface-bg);
+}
+
+html[data-theme="dark"] .exemple, .box {
+  background-color: var(--surface-bg-soft);
+  border : 1px solid rgba(164, 179, 221, 0.35);
+}
+
+html[data-theme="dark"] .compIA{
+  background-color: rgb(215, 215, 245);
+}
+
+html[data-theme="dark"] .containerIconTexte{
+  color:var(--white);
 }

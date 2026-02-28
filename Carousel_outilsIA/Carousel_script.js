@@ -60,6 +60,11 @@ if (!carousel) {
     if (dots) dots.style.display = "none";
   } else {
 
+// Position initiale de chaque carte autour de l'axe Y.
+// Exemple: N=8 => 0deg, 45deg, 90deg, ...
+const cards = Array.from(carousel.querySelectorAll(".carousel-card"));
+const N = cards.length;
+
 // Dimensions de référence utilisées pour calculer le rayon de l'orbite.
 // CARD_W doit rester cohérent avec la largeur CSS des cartes.
 const CARD_W = 240;
@@ -69,11 +74,6 @@ const ORBIT_OFFSET = 200;
 // formule géométrique d'un polygone régulier + offset visuel.
 // Plus N est grand, plus le rayon augmente pour éviter le chevauchement.
 const radius = Math.round(CARD_W / 2 / Math.tan(Math.PI / N)) + ORBIT_OFFSET;
-
-// Position initiale de chaque carte autour de l'axe Y.
-// Exemple: N=8 => 0deg, 45deg, 90deg, ...
-const cards = Array.from(carousel.querySelectorAll(".carousel-card"));
-const N = cards.length;
 cards.forEach((card, i) => {
   const angle = 360 / N * i;
   card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;

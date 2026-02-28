@@ -39,7 +39,6 @@ function applyTheme(theme) {
   }
 
   if (themeToggle) {
-    const label = themeToggle.querySelector(".theme-toggle__label");
     themeToggle.setAttribute("aria-checked", String(isDark));
     themeToggle.setAttribute(
       "aria-label",
@@ -47,9 +46,6 @@ function applyTheme(theme) {
         ? "Basculer vers le thème clair"
         : "Basculer vers le thème sombre"
     );
-    if (label) {
-      label.textContent = isDark ? "Clair" : "Sombre";
-    }
   }
 }
 

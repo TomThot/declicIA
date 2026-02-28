@@ -1,203 +1,136 @@
 # DéclicIA
 
-![Logo DéclicIA](Images/logo_blanc_150px.png)
+Site web éducatif sur l'intelligence artificielle en contexte scolaire.
 
-> Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.
+Site en ligne: https://tomthot.github.io/declicIA/
 
-🌐 **Site en ligne** : [https://tomthot.github.io/declicIA/](https://tomthot.github.io/declicIA/)
+## Objectif
 
----
+DéclicIA propose:
+- des contenus de vulgarisation sur l'IA
+- un cadre institutionnel et des enjeux
+- des outils concrets pour la classe
+- des interactions front-end (menu, popups, quiz, thème clair/sombre)
 
-## 📖 À propos
+## Stack
 
-DéclicIA est un site web éducatif conçu pour accompagner les enseignants dans la découverte et l'utilisation de l'intelligence artificielle dans leurs pratiques pédagogiques. 
+- HTML5
+- CSS3
+- JavaScript vanilla (pas de framework)
+- Déploiement statique (GitHub Pages)
 
-L'intelligence artificielle transforme progressivement le paysage éducatif en offrant des opportunités inédites pour personnaliser l'apprentissage et repenser les méthodes pédagogiques traditionnelles. Ce projet vise à démystifier l'IA et à proposer des ressources concrètes pour une intégration éclairée dans l'enseignement.
+## Architecture du projet
 
----
+```text
+Mon site IA/
+├─ index.html
+├─ style.css
+├─ script.js
+├─ theme-sync.css
+├─ theme-sync.js
+├─ data-popups.js
+├─ README.md
+├─ .gitignore
+├─ Images/
+├─ LIA_cest_quoi/
+│  ├─ indexIA.html
+│  ├─ StyleIA.css
+│  └─ scriptIA.js
+├─ Cadre_et_défit/
+│  ├─ IndexCadreDefi.html
+│  ├─ StyletCadreDefi.css
+│  └─ ScriptCadreDefi.js
+├─ Outils_Classe/
+│  ├─ IndexOutils.html
+│  ├─ StyleOutils.css
+│  └─ ScriptOutils.js
+├─ Carousel_outilsIA/
+│  ├─ Carousel_index.html
+│  ├─ Carousel_style.css
+│  ├─ Carousel_script.js
+│  ├─ lart_du_prompt/
+│  ├─ quelle_IA_choisir/
+│  ├─ P2IA/
+│  ├─ chatMD/
+│  ├─ caramel/
+│  ├─ dysfacile/
+│  └─ notebookLM/
+├─ Assistant_prompt/
+├─ ContactFooter/
+├─ doc/
+├─ assets/
+├─ tramePagesIndex.html
+├─ tramePagesStyle.css
+└─ tramePagesScript.js
+```
 
-## ✨ Fonctionnalités principales
+## Pages principales
 
-### 🎯 Interface interactive
-- **Nuage de mots dynamique** : Exploration interactive des concepts clés liés à l'IA (ChatGPT, Machine Learning, Deep Learning, algorithmes, etc.)
-- **Modales informatives** : Définitions et explications contextuelles au clic
-- **Design responsive** : Adapté à tous les écrans (desktop, tablette, mobile)
+- Accueil: `index.html`
+- L'IA c'est quoi: `LIA_cest_quoi/indexIA.html`
+- Cadre et défis: `Cadre_et_défit/IndexCadreDefi.html`
+- Outils pour la classe: `Outils_Classe/IndexOutils.html`
+- Carousel outils: `Carousel_outilsIA/Carousel_index.html`
 
-### 📚 Contenu structuré en 3 sections
+## Fonctionnement du thème
 
-1. **L'IA c'est quoi ?**
-   - Définition accessible
-   - Fonctionnement expliqué simplement
-   - Types d'IA
-   - L'IA dans la vie quotidienne
+- Le thème est piloté par `data-theme` sur `<html>`.
+- Persistance utilisateur via `localStorage` (`declicia-theme`).
+- Scripts concernés:
+  - `theme-sync.js` (pages secondaires)
+  - `script.js` (page d'accueil)
+- Styles globaux de thème: `theme-sync.css`.
 
-2. **Cadre et défis**
-   - Cadre institutionnel (textes officiels)
-   - Rapport de l'IGSER
-   - Enjeux éthiques et pratiques
+## Développement local
 
-3. **Outils pour la classe**
-   - Outils IA recommandés
-   - Outils numériques standards
-   - Ressources de formation
-
-### 📊 Auto-diagnostic interactif
-
-Un quiz permettant aux enseignants d'identifier leur profil d'adoption de l'IA :
-- **Zone de confort** : Pas encore engagé
-- **Zone de résistance** : Réticences et questionnements
-- **Zone d'exploration** : Premiers pas
-- **Zone d'action** : Utilisation régulière
-
-### 📈 Statistiques 2025
-
-Données chiffrées sur l'adoption de l'IA dans le monde et dans l'éducation :
-- Utilisation mondiale et en entreprise
-- Impact sur l'emploi
-- Données environnementales
-- Usage par les élèves et enseignants en France
-
----
-
-## 🛠️ Technologies utilisées
-
-- **HTML5** : Structure sémantique
-- **CSS3** : Animations, flexbox, design moderne
-- **JavaScript vanilla** : Interactivité sans framework
-- **GitHub Pages** : Hébergement gratuit
-
----
-
-## 🚀 Installation et déploiement
-
-### Prérequis
-- Un navigateur web moderne
-- Git (pour cloner le repository)
-
-### Installation locale
+1. Cloner le dépôt:
 
 ```bash
-# Cloner le repository
 git clone https://github.com/TomThot/declicIA.git
-
-# Accéder au dossier
 cd declicIA
-
-# Ouvrir index.html dans votre navigateur
-# Ou utiliser un serveur local (ex: Live Server avec VS Code)
 ```
 
-### Déploiement
+2. Ouvrir `index.html` dans le navigateur, ou lancer un serveur local (Live Server par exemple).
 
-Le site est automatiquement déployé sur GitHub Pages à chaque push sur la branche `main`.
+## Fichier .gitignore (état actuel)
 
----
+Entrées présentes:
 
-## 📁 Structure du projet
-
-```
-declicIA/
-├── index.html                    # Page d'accueil
-├── style.css                     # Styles principaux
-├── script.js                     # Scripts interactifs
-├── .gitignore                    # Fichiers ignorés par Git
-├── Images/                       # Ressources visuelles
-│   ├── logo_noir_50px.png
-│   ├── logo_blanc_150px.png
-│   ├── IA_card_150px.webp
-│   ├── cadre_légal_.webp
-│   └── Card_outils_140px.webp
-├── LIA_cest_quoi/               # Section "L'IA c'est quoi ?"
-│   └── indexIA.html
-├── Cadre et défis/              # Section cadre et défis
-└── ContactFooter/               # Composants footer
+```gitignore
+tramePagesIndex.html
+tramePagesScript.js
+tramePagesStyle.css
+/ContactFooter
+/assets
+neurone.py
+/Outils_classe
 ```
 
----
+Notes importantes:
+- Le dossier réel est `Outils_Classe` (majuscule `C`), pas `Outils_classe`.
+- `neurone.py` est actuellement dans `doc/neurone.py` (pas à la racine).
 
-## 🎨 Fonctionnalités techniques
+## Contribution
 
-### Nuage de mots interactif
-- Animation de flottement aléatoire
-- Positionnement distribué sur toute la page
-- Modales dynamiques avec informations contextuelles
-- Gestion des événements au clic
+1. Créer une branche:
 
-### Quiz auto-diagnostic
-- Calcul en temps réel du profil dominant
-- Affichage conditionnel des résultats
-- Réinitialisation possible
+```bash
+git checkout -b feature/ma-modif
+```
 
-### Navigation
-- Menu responsive avec sous-menus déroulants
-- Liens d'ancrage pour navigation fluide
-- Footer informatif avec liens sociaux
+2. Committer:
 
----
+```bash
+git commit -m "Description claire"
+```
 
-## 🎯 Public cible
+3. Ouvrir une Pull Request.
 
-- **Enseignants du primaire et secondaire**
-- **Formateurs et conseillers pédagogiques**
-- **Étudiants en sciences de l'éducation**
-- **Toute personne intéressée par l'IA en éducation**
+## Contact
 
----
+- Email: `tom.thot@gmail.com`
+- GitHub: https://github.com/TomThot
 
-## 📊 Données et statistiques
+## Licence
 
-Le site présente des données actualisées (2025) provenant d'études de Forbes et du Ministère de l'Éducation, notamment :
-- 92% des étudiants utilisent l'IA générative
-- 80% des enseignants français n'ont reçu aucune formation à l'IA
-- Moins de 20% des enseignants utilisent l'IA dans leur pratique
-
----
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Forkez le projet
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmeliorationXYZ`)
-3. Committez vos changements (`git commit -m 'Ajout de XYZ'`)
-4. Poussez vers la branche (`git push origin feature/AmeliorationXYZ`)
-5. Ouvrez une Pull Request
-
----
-
-## 📧 Contact
-
-Pour toute question, suggestion ou collaboration :
-
-- **Email** : tom.thot@gmail.com
-- **GitHub** : [@TomThot](https://github.com/TomThot)
-
----
-
-## 📝 Licence
-
-© 2026 DéclicIA - Tous droits réservés
-
-Conçu avec passion pour l'éducation et l'innovation pédagogique.
-
----
-
-## 🙏 Remerciements
-
-- Anthropic (Claude AI), OpenAI (ChatGPT), Google (Gemini), Microsoft (Copilot), Mistral AI pour l'inspiration des citations
-- La communauté éducative pour les retours et suggestions
-- Tous les enseignants qui explorent l'IA avec leurs élèves
-
----
-
-## 🔮 Roadmap
-
-- [ ] Ajout de tutoriels vidéo
-- [ ] Section blog avec actualités IA éducation
-- [ ] Espace communautaire pour partager des pratiques
-- [ ] Version multilingue (anglais, espagnol)
-- [ ] Base de données d'outils IA annotés et testés
-
----
-
-**Fait avec ❤️ pour l'éducation**
+© 2026 DéclicIA - Tous droits réservés.
