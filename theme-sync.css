@@ -3,6 +3,7 @@
   --surface-bg: #ffffff;
   --surface-bg-soft: #f0f0f0;
   --link-color: #0066cc;
+  --focus-ring-color: #2f6df6;
 }
 
 html[data-theme="dark"] {
@@ -17,11 +18,70 @@ html[data-theme="dark"] {
   --surface-bg: #11161f;
   --surface-bg-soft: #171c26;
   --link-color: #89b4ff;
+  --focus-ring-color: #89b4ff;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 2px;
 }
 
 body {
   background: var(--page-bg);
   color: var(--text-color);
+}
+
+.theme-toggle {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.theme-toggle__track {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: #c9d0db;
+  position: relative;
+  transition: background-color 0.25s ease;
+}
+
+.theme-toggle__thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.theme-toggle__label {
+  font-weight: 600;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle__track {
+  background: #4d7cff;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle__thumb {
+  transform: translateX(20px);
 }
 
 html[data-theme="dark"] a {
@@ -33,7 +93,170 @@ html[data-theme="dark"] header p {
 }
 
 html[data-theme="dark"] .sidebar a {
+  color: #fff;
+}
+
+.sidebar .sidebar-theme-toggle {
+  margin: 10px auto 0;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar .sidebar-theme-toggle .theme-toggle__track {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.sidebar .sidebar-theme-toggle[aria-checked="true"] .theme-toggle__track {
+  background: #4d7cff;
+}
+
+.sidebar {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+}
+
+.local-search {
+  position: relative;
+  min-width: 0;
+}
+
+.local-search__label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.local-search__input {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg);
   color: var(--text-color);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.local-search__results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-height: 300px;
+  overflow: auto;
+  z-index: 1200;
+}
+
+.local-search__item {
+  display: block;
+  padding: 9px 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+}
+
+.local-search__item:last-child {
+  border-bottom: 0;
+}
+
+.local-search__item:hover,
+.local-search__item:focus-visible {
+  background: var(--surface-bg-soft);
+  outline: none;
+}
+
+.local-search__path {
+  display: block;
+  font-size: 11px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.local-search__empty {
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.local-search--header {
+  margin-left: 16px;
+  width: min(260px, 26vw);
+}
+
+.local-search--header .local-search__label {
+  display: none;
+}
+
+.local-search--navdrawer {
+  width: calc(100% - 32px);
+  margin: 12px 16px;
+}
+
+body.search-mobile-nav .containerHeader > .local-search--header {
+  display: none !important;
+}
+
+.local-search--sidebar {
+  width: calc(100% - 28px);
+  margin: 12px 14px 0;
+}
+
+.local-search--sidebar .local-search__results {
+  position: static;
+  margin-top: 8px;
+  max-height: 42vh;
+}
+
+.sidebar .local-search__label {
+  color: #fff;
+}
+
+.sidebar .local-search__input {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.sidebar .local-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1100px) {
+  .local-search--header {
+    width: min(210px, 23vw);
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .local-search--header {
+    margin-left: 10px;
+    width: min(170px, 42vw);
+  }
+
+  .local-search__results {
+    max-height: 44vh;
+  }
+
+  .nav .local-search--navdrawer {
+    display: none;
+  }
+
+  .nav.active .local-search--navdrawer {
+    display: block;
+  }
+
+  .local-search--navdrawer .local-search__results {
+    position: static;
+    margin-top: 8px;
+    max-height: 42vh;
+  }
 }
 
 /* Garder les composants "menu" lisibles sans modifier l'identité visuelle des cartes */

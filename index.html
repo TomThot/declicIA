@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="theme-sync.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Images/icons/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -44,9 +45,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-sync.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <!--assombrit l'arrière page en mode menu burger-->
     <div class="overlay" id="overlay"></div>
 
@@ -68,11 +71,12 @@
             </button>
             <!-- END DARK THEME -->
 
-            <div class="burger" id="burger">
+            <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-controls="nav"
+                aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
             <nav class="nav" id="nav">
                 <ul class="nav-list">
@@ -121,7 +125,8 @@
     </header>
 
     <!-- lien pour masquer le bandeau -->
-    <a id="toggleLink">Cliquez ici pour afficher/masquer le bandeau défilant</a>
+    <a id="toggleLink" href="#" aria-controls="maDiv" aria-expanded="true">Cliquez ici pour afficher/masquer le bandeau
+        défilant</a>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -215,7 +220,7 @@
 
 
     <!-- Contenu principal -->
-    <main>
+    <main id="main-content" tabindex="-1">
         <!------------------------------------------------------------------------->
         <!-------------------------Introduction------------------------------------>
         <!------------------------------------------------------------------------->
@@ -242,7 +247,7 @@
             <div class="axes">
                 <div class="containerAxe" onclick="window.open('LIA_cest_quoi/indexIA.html', 'blank')">
                     <div class="cardImage">
-                        <img src="Images/IA_card_150px.webp" alt="Qu'est ce que l'IA">
+                        <img src="Images/IA_card_150px.webp" alt="Qu'est ce que l'IA" loading="lazy" decoding="async">
                     </div>
                     <div class="cardContent">
                         <h3>L'IA c'est quoi ?</h3>
@@ -261,7 +266,7 @@
 
                 <div class="containerAxe" onclick="window.open('Cadre_et_défit/IndexCadreDefi.html', 'blank')">
                     <div class="cardImage">
-                        <img src="Images/cadre_légal_.webp" alt="cadre légal">
+                        <img src="Images/cadre_légal_.webp" alt="cadre légal" loading="lazy" decoding="async">
                     </div>
                     <div class="cardContent">
                         <h3>Cadre et défis</h3>
@@ -279,7 +284,7 @@
 
                 <div class="containerAxe" onclick="window.open('Carousel_outilsIA/Carousel_index.html', 'blank')">
                     <div class="cardImage">
-                        <img src="Images/Card_outils_140px.webp" alt="outils">
+                        <img src="Images/Card_outils_140px.webp" alt="outils" loading="lazy" decoding="async">
                     </div>
                     <div class="cardContent">
                         <h3>Outils pour la classe</h3>
@@ -585,6 +590,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="search-local.js"></script>
     <script src="data-popups.js"></script>
     <script src="script.js"></script>
 

@@ -34,21 +34,15 @@
     // Récupère la source actuelle du logo.
     const currentSrc = headerLogoImg.getAttribute("src") || "";
 
-    // Si le logo clair est détecté dans l'URL, bascule vers le logo sombre.
-    if (currentSrc.includes("logo_noir_50px.png")) {
-      headerLogoImg.setAttribute(
-        "src",
-        currentSrc.replace("logo_noir_50px.png", "logo_blanc_50.png")
-      );
-      return;
-    }
-
-    // Si le logo sombre est détecté dans l'URL, bascule vers le logo clair.
-    if (currentSrc.includes("logo_blanc_50.png")) {
-      headerLogoImg.setAttribute(
-        "src",
-        currentSrc.replace("logo_blanc_50.png", "logo_noir_50px.png")
-      );
+    // Fixe explicitement le bon logo selon le thème:
+    // - sombre => logo blanc
+    // - clair => logo noir
+    if (currentSrc.includes("logo_noir_50px.png") || currentSrc.includes("logo_blanc_50.png")) {
+      const nextName = isDark ? "logo_blanc_50.png" : "logo_noir_50px.png";
+      const nextSrc = currentSrc
+        .replace("logo_noir_50px.png", nextName)
+        .replace("logo_blanc_50.png", nextName);
+      headerLogoImg.setAttribute("src", nextSrc);
       return;
     }
 
@@ -101,6 +95,10 @@
 
   // Une fois le DOM prêt, branche les interactions utilisateur.
   window.addEventListener("DOMContentLoaded", function () {
+    // Réapplique le thème après construction du DOM pour synchroniser
+    // les éléments ajoutés plus tard (logo, switch, labels ARIA).
+    applyTheme(root.dataset.theme || getPreferredTheme());
+
     const themeToggle = document.getElementById("themeToggle");
     if (!themeToggle) return;
 

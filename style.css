@@ -23,6 +23,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  background: #0b5fff;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
 /* BEGIN DARK THEME */
 :root {
   --page-bg: #ffffff;
@@ -108,6 +124,14 @@ body {
   outline-offset: 2px;
 }
 
+a:focus-visible,
+button:focus-visible,
+#toggleLink:focus-visible,
+.message:focus-visible {
+  outline: 3px solid #4d7cff;
+  outline-offset: 2px;
+}
+
 html[data-theme="dark"] .scroll-container {
   background: var(--surface-bg);
 }
@@ -168,6 +192,22 @@ html[data-theme="dark"] .nav-list a:hover {
   background-color: var(--surface-bg-soft);
 }
 /* END DARK THEME */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-left,
+  .scroll-right {
+    animation: none !important;
+  }
+}
 
 /*messages défilants*/
 .defil {
@@ -269,6 +309,10 @@ html[data-theme="dark"] .nav-list a:hover {
 .message:hover {
   cursor: pointer;
   transform: translateY(-4px) scale(1.03);
+}
+
+.message:focus-visible {
+  transform: translateY(-2px) scale(1.01);
 }
 
 .message:hover::before {
@@ -470,6 +514,9 @@ html[data-theme="dark"] .nav-list a:hover {
   cursor: pointer;
   gap: 5px;
   z-index: 1001;
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .burger span {
@@ -520,6 +567,11 @@ html[data-theme="dark"] .nav-list a:hover {
   color: var(--secondary-color);
 }
 
+.nav-list a:focus-visible {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
 /* Position relative pour le menu item */
 .menu-item {
   position: relative;
@@ -565,6 +617,11 @@ html[data-theme="dark"] .nav-list a:hover {
 
 .submenu a:hover {
   background: #f0f0f0;
+}
+
+.submenu a:focus-visible {
+  background: #f0f0f0;
+  text-decoration: underline;
 }
 
 /* Afficher le sous-menu quand actif */
@@ -1352,6 +1409,9 @@ footer {
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     padding-top: 80px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav.active {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page introuvable | DéclicIA</title>
+  <script src="theme-sync.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme-sync.css">
+  <style>
+    main.error-page {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .error-card {
+      max-width: 680px;
+      width: 100%;
+      background: var(--surface-bg, #fff);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: var(--shadow, 0 8px 24px rgba(0, 0, 0, 0.1));
+      padding: 32px 24px;
+    }
+
+    .error-code {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1;
+      margin-bottom: 12px;
+      color: #4f7cff;
+      font-weight: 800;
+    }
+
+    .error-title {
+      font-size: clamp(1.2rem, 3.4vw, 2rem);
+      margin-bottom: 8px;
+    }
+
+    .error-text {
+      margin-bottom: 20px;
+      color: var(--text-color, #333);
+    }
+
+    .error-link {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(79, 124, 255, 0.4);
+      background: rgba(79, 124, 255, 0.12);
+      color: inherit;
+      font-weight: 600;
+    }
+
+    .error-link:hover,
+    .error-link:focus-visible {
+      background: rgba(79, 124, 255, 0.22);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <section class="error-card" aria-labelledby="error-title">
+      <p class="error-code">404</p>
+      <h1 id="error-title" class="error-title">Page introuvable</h1>
+      <p class="error-text">Le lien est peut-être incorrect ou la page a été déplacée.</p>
+      <a class="error-link" href="index.html">Retour à l'accueil</a>
+    </section>
+  </main>
+</body>
+</html>

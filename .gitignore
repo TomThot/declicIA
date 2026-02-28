@@ -1,7 +1,7 @@
 tramePagesIndex.html
 tramePagesScript.js
 tramePagesStyle.css
-/ContactFooter
-/assets
-neurone.py
-/Outils_classe
+ContactFooter/
+assets/
+doc/neurone.py
+.vscode/

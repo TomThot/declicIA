@@ -12,66 +12,24 @@ const nav = document.getElementById("nav");
 const overlay = document.getElementById("overlay");
 const menuItems = document.querySelectorAll(".menu-item");
 
-// BEGIN DARK THEME
-const themeToggle = document.getElementById("themeToggle");
-const rootElement = document.documentElement;
-const headerLogoImg = document.querySelector(".logo img");
-const THEME_KEY = "declicia-theme";
-const LIGHT_LOGO_SRC = "Images/logo_noir_50px.png";
-const DARK_LOGO_SRC = "Images/logo_blanc_50.png";
-
-function getPreferredTheme() {
-  const savedTheme = localStorage.getItem(THEME_KEY);
-  if (savedTheme === "light" || savedTheme === "dark") {
-    return savedTheme;
-  }
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+function setMenuState(isOpen) {
+  if (!burger || !nav || !overlay) return;
+  burger.classList.toggle("active", isOpen);
+  nav.classList.toggle("active", isOpen);
+  overlay.classList.toggle("active", isOpen);
+  burger.setAttribute("aria-expanded", String(isOpen));
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
 }
 
-function applyTheme(theme) {
-  const isDark = theme === "dark";
-  rootElement.dataset.theme = theme;
-
-  if (headerLogoImg) {
-    headerLogoImg.src = isDark ? DARK_LOGO_SRC : LIGHT_LOGO_SRC;
-  }
-
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-checked", String(isDark));
-    themeToggle.setAttribute(
-      "aria-label",
-      isDark
-        ? "Basculer vers le thème clair"
-        : "Basculer vers le thème sombre"
-    );
-  }
-}
-
-if (themeToggle) {
-  applyTheme(getPreferredTheme());
-  themeToggle.addEventListener("click", () => {
-    const nextTheme =
-      rootElement.dataset.theme === "dark" ? "light" : "dark";
-    applyTheme(nextTheme);
-    localStorage.setItem(THEME_KEY, nextTheme);
+if (burger && nav && overlay) {
+  // Toggle menu burger
+  burger.addEventListener("click", () => {
+    setMenuState(!nav.classList.contains("active"));
   });
+
+  // Fermer le menu en cliquant sur l'overlay
+  overlay.addEventListener("click", closeMenu);
 }
-// END DARK THEME
-
-// Toggle menu burger
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  nav.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.style.overflow = nav.classList.contains("active")
-    ? "hidden"
-    : "auto";
-});
-
-// Fermer le menu en cliquant sur l'overlay
-overlay.addEventListener("click", closeMenu);
 
 // Gestion des sous-menus
 menuItems.forEach((item) => {
@@ -110,10 +68,7 @@ document.querySelectorAll(".submenu a").forEach((link) => {
 });
 
 function closeMenu() {
-  burger.classList.remove("active");
-  nav.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.style.overflow = "auto";
+  setMenuState(false);
   menuItems.forEach((item) => item.classList.remove("active"));
 }
 
@@ -150,6 +105,17 @@ popupsData.forEach((popup) => {
 // Ajouter toutes les popups au body
 document.body.appendChild(popupsContainer);
 
+// Rend les messages interactifs accessibles au clavier.
+document.querySelectorAll(".message").forEach((message) => {
+  message.setAttribute("role", "button");
+  message.setAttribute("tabindex", "0");
+  message.setAttribute("aria-haspopup", "dialog");
+  const popupId = message.getAttribute("data-popup");
+  if (popupId) {
+    message.setAttribute("aria-controls", popupId);
+  }
+});
+
 // ========================================================================
 // GESTION DES POPUPS - Délégation d'événements
 // ========================================================================
@@ -184,6 +150,30 @@ document.addEventListener("click", (e) => {
 
 // Fermer avec la touche Échap
 document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "Escape" &&
+    nav &&
+    nav.classList.contains("active")
+  ) {
+    closeMenu();
+    return;
+  }
+
+  if (
+    (e.key === "Enter" || e.key === " ") &&
+    e.target &&
+    e.target.classList &&
+    e.target.classList.contains("message")
+  ) {
+    e.preventDefault();
+    const popupId = e.target.getAttribute("data-popup");
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      openPopup(popup);
+    }
+    return;
+  }
+
   if (e.key === "Escape" && currentPopup) {
     closePopup(currentPopup);
   }
@@ -213,9 +203,11 @@ const div = document.getElementById("maDiv");
 const reveal = document.getElementById("myDivToAnimate");
 
 if (lien && div) {
+  lien.setAttribute("aria-expanded", String(!div.classList.contains("cache")));
   lien.addEventListener("click", (e) => {
     e.preventDefault();
     div.classList.toggle("cache");
+    lien.setAttribute("aria-expanded", String(!div.classList.contains("cache")));
     if (reveal) {
       reveal.classList.toggle("cache");
     }
@@ -229,7 +221,7 @@ const target = document.getElementById("myDivToAnimate");
 let revealed = false;
 
 window.addEventListener("scroll", () => {
-  if (!revealed && window.scrollY > 10) {
+  if (target && !revealed && window.scrollY > 10) {
     // seuil de scroll pour déclencher
     target.classList.add("is-visible");
     revealed = true; // une seule fois
