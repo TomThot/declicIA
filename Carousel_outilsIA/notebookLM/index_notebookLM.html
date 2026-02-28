@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Theme Sync -->
-    <script src="../../theme-sync.js"></script>
-  <meta name="description" content="NotebookLM : comprendre l'outil, ses usages et les précautions à prendre en contexte éducatif." />
+  <!-- Theme Sync -->
+  <script src="../../theme-sync.js"></script>
+  <meta name="description"
+    content="NotebookLM : comprendre l'outil, ses usages et les précautions à prendre en contexte éducatif." />
   <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
@@ -14,7 +15,7 @@
   <title>NotebookLM</title>
   <link rel="stylesheet" href="style_notebookLM.css" />
 
-    <link rel="stylesheet" href="../../theme-sync.css" />
+  <link rel="stylesheet" href="../../theme-sync.css" />
 </head>
 
 <body>
@@ -24,18 +25,7 @@
   </header>
 
   <main>
-    <nav class="menu">
-      <div class="menu-toggle">☰</div>
-    </nav>
-    <div class="sidebar">
-      <div class="icone">
-        <img src="../../Images/logo_blanc_150px.png" alt="logo" />
-      </div>
-      <a href="../../index.html">Accueil</a>
-      <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
-      <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
-      <a href="../Carousel_index.html">Outils pour la classe</a>
-    </div>
+    <div data-shared-sidebar data-base="../../" data-current="outils"></div>
 
     <div class="containerNav">
       <div class="titreNav">Dans cet article</div>
@@ -43,6 +33,7 @@
         <a href="#notebookLM">Présentation</a>
         <a href="#studio">Studio</a>
         <a href="#pieges">Pièges à éviter</a>
+        <a href="#evolution">Les nouveautés</a>
       </div>
     </div>
 
@@ -74,14 +65,15 @@
 
           <ul class="liste">
             <li><strong>Sources (à gauche) : </strong>Les documents que vous pouvez importer sont de toutes sortes.
-              Google Docs, des PDF, des fichiers texte, des présentations Google Slides et même des URL de sites web.</li>
+              Google Docs, des PDF, des fichiers texte, des présentations Google Slides et même des URL de sites web.
+            </li>
             <li><strong>Chat (au centre)</strong>Posez des questions sur vos documents, demandez des résumés, des
               synthèses ou des idées créatives. L'IA répond en citant les sources exactes dans vos documents.</li>
             <li><strong>Le studio : </strong> Le Studio n'est plus seulement une aide à la lecture, c'est l'endroit où
               vous pouvez générez des contenus à forte valeur ajoutée à partir de vos sources.</li>
           </ul>
 
-          <h3 id="studio" class="titleh3">Studio, la boite à outils magiques</h3>
+          <h3 id="studio" class="titleh3">🧙🏼‍♂️ Studio, la boite à outils magiques</h3>
           <p>C'est bien grâce à ces outils que <a href="https://notebooklm.google.com/">NotebookLM</a> se distingue
             d'une simple IA traditionnelle comme ChatGPT ou Gemini. NotebookLM peut transformer tes sources en formats
             multiples.</p>
@@ -99,9 +91,9 @@
             <li><strong>Infographie : </strong>Résumé très visuel de vos sources.</li>
           </ul>
 
-          <div class="ex">exemple</div>
+          <div class="ex">exemple à venir</div>
 
-          <h3 id="pieges" class="titleh3">Quelques pièges à éviter</h3>
+          <h3 id="pieges" class="titleh3">⚠️ Quelques pièges à éviter</h3>
           <p>
             Vous l'aurez compris, <a href="https://notebooklm.google.com/">NotebookLM</a> possède beaucoup d'avantages
             puisqu'il fait peu d'erreurs sachant que vous lui apportez les données nécessaires. Peu d'ereurs certes,
@@ -110,11 +102,13 @@
 
           <p>Essayons de ne pas être trop technique. Comme <a href="https://notebooklm.google.com/">NotebookLM</a>
             utilise une IA (Gemini), il peut se produire le phénomène de <strong>"context rot"</strong> (pourriture du
-            contexte). Pour faire simple, plus les documents sont longs et nombreux, plus les performances se dégradent.</p>
+            contexte). Pour faire simple, plus les documents sont longs et nombreux, plus les performances se dégradent.
+          </p>
 
           <fig class="rot">
             <img src="../../Images/rot.png" alt="context rot" />
-            <figcaption><a href="https://research.trychroma.com/context-rot?utm_source=generationia.flint.media&utm_medium=referral&utm_campaign=notebooklm-le-guide-complet-de-l-ia-la-plus-fiable-du-moment">Ananlyse
+            <figcaption><a
+                href="https://research.trychroma.com/context-rot?utm_source=generationia.flint.media&utm_medium=referral&utm_campaign=notebooklm-le-guide-complet-de-l-ia-la-plus-fiable-du-moment">Ananlyse
                 par Chroma</a></figcaption>
           </fig>
 
@@ -144,7 +138,8 @@
 
           <p>
             <strong>Conseils pour minimiser les risques : </strong> <br />
-            Si vous voulez minimiser les risques de dérapages, il faut donner des sources claires, structurées et fiables.
+            Si vous voulez minimiser les risques de dérapages, il faut donner des sources claires, structurées et
+            fiables.
           </p>
           <p>
             <strong>1) Privilégiez la qualité à la quantité.</strong> C'est un conseil simple et de bon sens mais l'IA
@@ -161,70 +156,137 @@
 
           <div class="truc">
             <p>
-              <strong>Mon truc ? J'utilise un petit script que j'ai modifié et transformé en extension pour votre navigateur.
+              <strong>Mon truc ? J'utilise un petit script que j'ai modifié et transformé en extension pour votre
+                navigateur.
                 Grâce à cette extension, vous pourrez transformer le contenu de n'importe quelle page web en fichier
-                markdown (.md) complet. Vous pourrez l'utiliser comme source "propre" en lieu et place de l'url de la page.</strong> <br />
-              Je mets les liens de téléchargement à disposition pour Firefox et Chrome. L'installation prend 1 minute en lisant le fichier read_me.txt <br />
+                markdown (.md) complet. Vous pourrez l'utiliser comme source "propre" en lieu et place de l'url de la
+                page.</strong> <br />
+              Je mets les liens de téléchargement à disposition pour Firefox et Chrome. L'installation prend 1 minute en
+              lisant le fichier read_me.txt <br />
               <a href="../../doc/url_markdown/chrome-extension.zip">Chrome-extension.zip</a><br />
               <a href="../../doc/url_markdown/firefox-extension.zip">Firefox-extension.zip</a>
             </p>
             <p>
-              Note : ces extensions disparaissent au redémarrage de votre navigateur puisqu'elles ne sont pas "signées" par Firefox ou Google. Autrement dit, elles ne sont pas officielles. Chose parfaitement normale puisqu'elles sont "faites maison". Cela étant, pas de panique, il n'y a pas de virus, le code est sûr. Vous devrez simplement recharger ces extensions si vous redémarrez votre navigateur selon la procédure indiquée.
+              Note : ces extensions disparaissent au redémarrage de votre navigateur puisqu'elles ne sont pas "signées"
+              par Firefox ou Google. Autrement dit, elles ne sont pas officielles. Chose parfaitement normale
+              puisqu'elles sont "faites maison". Cela étant, pas de panique, il n'y a pas de virus, le code est sûr.
+              Vous devrez simplement recharger ces extensions si vous redémarrez votre navigateur selon la procédure
+              indiquée.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="evolution" class="card notebook collapsible-section open">
+      <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Les dernières évolutions
+        <span class="toggle-arrow">▼</span>
+      </h2>
+      <div class="section-content">
+        <div class="inner">
+          <h3 class="titleh3">Juin 2025 : possibilité de partage</h3>
+          <ul class="liste">
+            <li><strong>Partage public de notebooks : </strong>possibilité de partager vos carnets de notes via un
+              simple lien (comptes personnels uniquement, restreint aux mêmes domaines pour Workspace et Éducation)</li>
+          </ul>
+
+          <h3 class="titleh3">🎥 Juillet 2025 : L'arrivée du Multimodal (Vidéo et Visuel)</h3>
+          <ul class="liste">
+            <li><strong>Video Overviews :</strong> transformation de vos notebooks en présentations vidéo avec voix off,
+              visuels générés automatiquement (citations, diagrammes, images, frises temporelles) et mise en scène
+              professionnelle</li>
+            <li><strong>Mind Maps (cartes mentales) :</strong> visualisation interactive des concepts et connexions
+              entre les idées de vos sources</li>
+            <li><strong>Interface Studio repensée :</strong> nouvelle organisation avec accès direct aux différents
+              formats (Audio Overviews, Video Overviews, Mind Maps, Reports)</li>
+            <li><strong>Multitâche :</strong> possibilité d’écouter un audio tout en explorant une carte mentale</li>
+          </ul>
+
+          <h3 class="titleh3">🌍 Août 2025 : Internationalisation</h3>
+          <ul class="liste">
+            <li><strong>Video Overviews en français :</strong> les résumés vidéo deviennent disponibles en français et
+              dans plus de 80 langues</li>
+            <li><strong>Audio Overviews multilingues améliorés :</strong> résumés audio disponibles dans plus de 80
+              langues avec qualité vocale améliorée</li>
+          </ul>
+
+          <h3 class="titleh3">🎓 Septembre 2025 : Un assistant d'apprentissage complet</h3>
+          <ul class="liste">
+            <li><strong>Quiz interactifs automatiques :</strong> génération instantanée de questionnaires à choix
+              multiples à partir de vos documents, avec option “Expliquer” pour approfondir en cas d’erreur</li>
+            <li><strong>Flashcards (cartes de mémorisation) :</strong> création automatique de supports de révision
+              basés sur les concepts clés de vos sources</li>
+            <li><strong>Mode Learning Guide :</strong> un tuteur IA qui pose des questions ouvertes et guide la
+              réflexion plutôt que de livrer des réponses toutes faites, favorisant l’apprentissage actif</li>
+            <li><strong>Nouveaux formats de résumés audio :</strong> quatre types différents disponibles (Analyse
+              approfondie, Briefing, Critique, Débat) avec possibilité de personnalisation via un prompt</li>
+            <li><strong>Nouveaux formats de rapports :</strong> suggestions dynamiques selon le thème (glossaire,
+              article de blog, analyse de personnages, guides d’étude, FAQ…)</li>
+            <li><strong>Partage facilité :</strong> possibilité de partager directement quiz et flashcards via un simple
+              lien (Attention : partage restreint en France pour le milieu scolaire/RGPD ; utilisation conseillée de
+              l’application Mémotest pour contourner cette contrainte de manière sécurisée)</li>
+          </ul>
+
+          <h3 class="titleh3">⚡ Octobre et Novembre 2025 : Puissance et Capacité accrues</h3>
+          <ul class="liste">
+            <li><strong>Deep Research :</strong> compilation de rapports détaillés via des recherches approfondies sur
+              des centaines de pages web, avec plan de recherche préalable</li>
+            <li><strong>Nouveaux types de sources acceptés :</strong>
+              <ul class="liste">
+                <li><strong>Images : </strong> notes manuscrites, schémas</li>
+                <li><strong>Google Sheets : </strong> notes manuscrites, schémas, statistiques</li>
+                <li><strong>fichiers .docx : </strong> analyse de document Microsoft Word</li>
+                <li><strong>PDFs/URLs depuis Google Drive : </strong> ajout direct sans téléchargement/re-upload</li>
+                <li><strong>URLs Google Drive : </strong> ajout de fichiers Drive par simple copier-coller d’URL
+                  (possibilité d’ajouter plusieurs liens séparés par des virgules)</li>
+
+              </ul>
+            </li>
+            <li><strong>Limite de sources augmentée :</strong> passage à 300 sources par notebook (environ 150 millions
+              de mots)</li>
+            <li><strong>Intégration Gemini :</strong> possibilité d'importer les notebooks dans les conversations Gemini
+            </li>
+            <li><strong>Historique de Chat :</strong> conservation des sessions (effaçable et non visible lors d'un
+              partage de notebook)</li>
+            <li><strong>Sauvegarde des Prompts :</strong> les instructions utilisées pour générer des ressources (Audio,
+              Vidéo, Quiz) sont désormais accessibles via le menu contextuel</li>
+            <li><strong>Styles personnalisés :</strong> personnalisation du style graphique des résumés vidéo</li>
+          </ul>
+
+          <h3 class="titleh3">💎 NotebookLM Plus (version payante)</h3>
+          <ul class="liste">
+            <li><strong>Quotas augmentés :</strong> capacités multipliées par cinq pour les générations audio et vidéo
+            </li>
+            <li><strong>Personnalisation Audio :</strong> contrôle du style narratif, du rythme et de la longueur</li>
+            <li><strong>Interaction en temps réel :</strong> possibilité d'interagir pendant l’écoute des podcasts</li>
+            <li><strong>Collaboration :</strong> notebooks collaboratifs avec partage en temps réel et sécurité
+              renforcée</li>
+          </ul>
+
+          <div class="truc">
+            <p>
+              <strong>Limites de la version gratuite : </strong> <br />
+              <ul class="liste">
+                <li>3 générations maximum par jour pour les résumés audio et vidéo</li>
+                <li>100 notebooks maximum (mais vous pouvez les télécharger et les archiver ensuite)</li>
+                <li>50 sources par notebook : chaque carnet peut contenir jusqu’à 50 documents sources</li>
+                <li>50 requêtes de chat par jour : vous pouvez poser jusqu’à 50 questions à l’IA par jour</li>
+              </ul>
+
+            </p>
+
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <div class="footer-logo"><span class="footer-logo-text">DéclicIA</span></div>
-          <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants pour comprendre et intégrer l'IA de manière réfléchie et responsable.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Navigation</h3>
-          <ul class="footer-links">
-            <li><a href="../../index.html">Accueil</a></li>
-            <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
-            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
-            <li><a href="../Carousel_index.html">Outils pour la classe</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Ressources</h3>
-          <ul class="footer-links">
-            <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
-            <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
-            <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
-            <li><a href="../Carousel_index.html">Outils recommandés</a></li>
-            <li><a href="#">Formations</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact & Communauté</h3>
-          <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>
-          <div class="social-links">
-            <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>
-            <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px" class="fab fa-github"></i></a>
-            <a href="#" class="social-link" title="Twitter">🐦</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> DéclicIA - Tous droits réservés</p>
-        <p class="footer-credits">Conçu avec passion pour l'éducation et l'innovation pédagogique</p>
-        <p>@Thomas BROUILLET</p>
-      </div>
-    </div>
-  </footer>
 
+  <div data-shared-footer data-base="../../" data-current="outils"></div>
+  <script src="../../search-local.js"></script>
+  <script src="../../shared-components.js"></script>
   <script src="script_notebookLM.js"></script>
 </body>
 
 </html>
-
-
-

@@ -33,7 +33,7 @@
       createNavLink(base, current, "home", "Accueil", "index.html") +
       createNavLink(base, current, "lia", "L'IA c'est quoi ?", "LIA_cest_quoi/indexIA.html") +
       createNavLink(base, current, "cadre", "Cadre et défis", "Cadre_et_défit/IndexCadreDefi.html") +
-      createNavLink(base, current, "outils", "Outils pour la classe", "Outils_Classe/IndexOutils.html") +
+      createNavLink(base, current, "outils", "Outils pour la classe", "Carousel_outilsIA/Carousel_index.html") +
       '  <button id="themeToggle" class="theme-toggle sidebar-theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Basculer le thème" title="Basculer le thème">' +
       '    <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__thumb"></span></span>' +
       '    <span class="theme-toggle__label">Thème</span>' +
@@ -62,7 +62,7 @@
       '          <li><a href="' + base + 'index.html">Accueil</a></li>' +
       '          <li><a href="' + base + 'LIA_cest_quoi/indexIA.html">L\'IA c\'est quoi ?</a></li>' +
       '          <li><a href="' + base + 'Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>' +
-      '          <li><a href="' + base + 'Outils_Classe/IndexOutils.html">Outils pour la classe</a></li>' +
+      '          <li><a href="' + base + 'Carousel_outilsIA/Carousel_index.html">Outils pour la classe</a></li>' +
       "        </ul>" +
       "      </div>" +
       '      <div class="footer-section">' +
@@ -80,7 +80,11 @@
       "        <p>Envie d'échanger, de contribuer ou de partager vos expériences ?</p>" +
       '        <div class="social-links">' +
       '          <a href="mailto:tom.thot@gmail.com" class="social-link" title="Email">✉</a>' +
-      '          <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px" class="fa fa-github"></i></a>' +
+      '          <a href="https://github.com/" class="social-link" title="GitHub" aria-label="GitHub">' +
+      '            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">' +
+      '              <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.72.08-.72 1.2.08 1.83 1.22 1.83 1.22 1.08 1.82 2.83 1.3 3.52.99.11-.77.42-1.3.77-1.6-2.67-.3-5.47-1.32-5.47-5.89 0-1.3.47-2.36 1.23-3.2-.12-.3-.53-1.53.12-3.19 0 0 1.01-.32 3.3 1.22a11.6 11.6 0 0 1 6 0c2.29-1.54 3.29-1.22 3.29-1.22.66 1.66.25 2.89.13 3.19.77.84 1.23 1.9 1.23 3.2 0 4.58-2.8 5.59-5.48 5.89.43.37.82 1.1.82 2.23v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/>' +
+      "            </svg>" +
+      "          </a>" +
       '          <a href="#" class="social-link" title="Twitter">🐦</a>' +
       "        </div>" +
       "      </div>" +
