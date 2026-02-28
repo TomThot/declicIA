@@ -106,6 +106,9 @@ neurone.py
 /Outils_classe
 ```
 
+Notes importantes:
+- Le dossier réel est `Outils_Classe` (majuscule `C`), pas `Outils_classe`.
+- `neurone.py` est actuellement dans `doc/neurone.py` (pas à la racine).
 
 ## Contribution
 
