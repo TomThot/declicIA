@@ -320,3 +320,17 @@ html[data-theme="dark"] .compIA{
 html[data-theme="dark"] .containerIconTexte{
   color:var(--white);
 }
+
+
+
+
+
+
+
+
+html[data-theme="dark"] .prompt-output, .subtitle{
+  color:var(--white);
+}
+html[data-theme="dark"] .subtitle{
+  color:var(--white);
+}
