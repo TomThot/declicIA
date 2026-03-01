@@ -689,8 +689,12 @@ input[type=range]::-webkit-slider-thumb {
 transform: scale(1.2);
 }
 
-
-
+/* ====== utilisation de l'IA ====== */
+.santé{
+  border-radius: 10px;
+  background-color: #5235f733;
+  padding: 10px;
+}
 
 
 
