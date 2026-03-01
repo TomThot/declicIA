@@ -690,12 +690,19 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 320px;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transform: perspective(1000px) rotateY(-20deg) translate3d(0, 0, -40px);
+  transition:  all 0.22s ease;
 }
 
 #listeCarte .liste-card:hover {
-  transform: translateY(-4px);
+ transform: perspective(1000px) rotateY(0deg) translate3d(0, 0, -40px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+#listeCarte .liste-card:hover .card-tag{
+  transform: translateX(20px);
+  background-color: #00bcd4;
+  color: white;
 }
 
 #listeCarte .liste-card .card-image {
@@ -725,6 +732,7 @@ main {
 #listeCarte .liste-card .card-tag {
   font-size: 10px;
   padding: 5px 12px;
+  transition: all 0.22s;
 }
 
 #listeCarte .liste-card .card-icon {
