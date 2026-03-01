@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Page introuvable | DéclicIA</title>
-  <script src="/declicIA/theme-sync.js"></script>
-  <link rel="stylesheet" href="/declicIA/style.css">
-  <link rel="stylesheet" href="/declicIA/theme-sync.css">
+  <script>
+    (function () {
+      var isGitHubProjectPath = window.location.pathname.indexOf("/declicIA/") === 0;
+      var basePath = isGitHubProjectPath ? "/declicIA/" : "/";
+
+      var themeScript = document.createElement("script");
+      themeScript.src = basePath + "theme-sync.js";
+      document.head.appendChild(themeScript);
+
+      var mainCss = document.createElement("link");
+      mainCss.rel = "stylesheet";
+      mainCss.href = basePath + "style.css";
+      document.head.appendChild(mainCss);
+
+      var themeCss = document.createElement("link");
+      themeCss.rel = "stylesheet";
+      themeCss.href = basePath + "theme-sync.css";
+      document.head.appendChild(themeCss);
+
+      window.__DECILICIA_HOME_PATH__ = basePath;
+    })();
+  </script>
   <style>
     main.error-page {
       min-height: 70vh;
@@ -68,8 +87,16 @@
       <p class="error-code">404</p>
       <h1 id="error-title" class="error-title">Page introuvable</h1>
       <p class="error-text">Le lien est peut-être incorrect ou la page a été déplacée.</p>
-      <a class="error-link" href="/declicIA/">Retour à l'accueil</a>
+      <a id="error-home-link" class="error-link" href="/">Retour à l'accueil</a>
     </section>
   </main>
+  <script>
+    (function () {
+      var homeLink = document.getElementById("error-home-link");
+      if (homeLink && window.__DECILICIA_HOME_PATH__) {
+        homeLink.href = window.__DECILICIA_HOME_PATH__;
+      }
+    })();
+  </script>
 </body>
 </html>
