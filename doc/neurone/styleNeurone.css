@@ -17,6 +17,15 @@ body {
     background-color: var(--white);
 }
 
+.neurone-theme-toggle {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+}
+
 .page-layout {
     width: 100%;
     max-width: 1250px;
@@ -112,7 +121,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #444;
+    color: var(--text-color);
 }
 
 input[type="range"] {
@@ -187,6 +196,29 @@ input[type="checkbox"] {
     border-radius: 8px;
     font-family: 'Courier New', monospace;
     overflow-x: auto;
+}
+
+html[data-theme="dark"] .neurone-theme-toggle {
+    background: rgba(17, 22, 31, 0.9);
+}
+
+html[data-theme="dark"] .formula,
+html[data-theme="dark"] .equation p {
+    background: #1a2233;
+    border-left-color: #6c8be6;
+}
+
+html[data-theme="dark"] .progress-bar-container {
+    background-color: #243047;
+}
+
+html[data-theme="dark"] input[type="range"] {
+    background: rgba(143, 182, 255, 0.35);
+}
+
+html[data-theme="dark"] input[type="range"]::-webkit-slider-thumb {
+    background: #8fb6ff;
+    box-shadow: 0 0 0 2px rgba(143, 182, 255, 0.25);
 }
 
 /*---------------------------------------------*/
