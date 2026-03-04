@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../theme-sync.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>DéclicIA - Lexique</title>
+  <link rel="stylesheet" href="../../theme-sync.css">
+  <link rel="stylesheet" href="styleLexique.css">
+</head>
+<body>
+  <div data-shared-sidebar data-base="../../" data-current="lia"></div>
+
+  <header class="page-header">
+    <span class="tag">Référence <script>document.write(new Date().getFullYear())</script></span>
+    <h1>Lexique Intelligence Artificielle</h1>
+    <p class="subtitleLexique">30 termes essentiels pour comprendre et naviguer dans l'univers de l'IA moderne.</p>
+  </header>
+
+  <main class="container">
+
+    <div class="search-wrap">
+      <input type="search" id="searchInput" placeholder="Rechercher un terme..." autocomplete="off"/>
+    </div>
+
+    <div class="filters">
+      <button class="pill active" data-cat="all">Tous</button>
+      <button class="pill" data-cat="fondamental">Fondamentaux</button>
+      <button class="pill" data-cat="modele">Modèles</button>
+      <button class="pill" data-cat="entrainement">Entraînement</button>
+      <button class="pill" data-cat="application">Applications</button>
+      <button class="pill" data-cat="ethique">Éthique</button>
+    </div>
+
+    <div class="count" id="count">30 termes</div>
+    <div class="terms" id="termsList"></div>
+
+    <div class="lexique-meta">
+      <span>Lexique IA — <script>document.write(new Date().getFullYear())</script></span>
+      <span>30 définitions</span>
+    </div>
+  </main>
+
+  <div data-shared-footer data-base="../../" data-current="lia"></div>
+
+  <script src="../../shared-components.js"></script>
+  <script src="../../search-local.js"></script>
+  <script src="scriptLexique.js"></script>
+</body>
+</html>

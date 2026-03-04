@@ -1,0 +1,490 @@
+/* ================================================================
+   POLICES GOOGLE FONTS — importées depuis le HTML via <link>
+   - Syne             : titres courts, étiquettes, navigation
+   - DM Serif Display : grands titres et textes de cartes
+   - DM Sans          : texte courant (corps, détails)
+================================================================ */
+
+/* ================================================================
+   RESET GLOBAL
+   On neutralise les marges/paddings par défaut du navigateur
+   et on active box-sizing: border-box sur tout le document
+   (la largeur inclut padding et border, pas de surprise de débordement).
+================================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================================================
+   VARIABLES CSS (custom properties)
+   Toutes les couleurs et dimensions clés sont centralisées ici.
+   Pour modifier la charte graphique, il suffit de changer ces valeurs.
+   - --mythe          : fond sombre bleu nuit des cartes recto (mythe)
+   - --mythe-accent   : rouge vif de l'étiquette "Mythe"
+   - --realite        : fond vert forêt des cartes verso (réalité)
+   - --realite-accent : vert clair de l'étiquette "Réalité"
+   - --cream          : couleur de fond de la page, ivoire chaud
+   - --text-dark      : couleur du texte principal sur fond clair
+   - --card-w         : largeur minimale d'une carte (grille responsive)
+   - --card-h         : hauteur fixe des cartes
+================================================================ */
+:root {
+  --mythe:          #1a1a2e;
+  --mythe-accent:   #e63946;
+  --realite:        #0d3b2e;
+  --realite-accent: #2dc653;
+  --cream:          #f5f0e8;
+  --text-dark:      #1a1a1a;
+  --card-w:         340px;
+  --card-h:         440px;
+}
+
+/* ================================================================
+   BODY — mise en page globale
+================================================================ */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden; /* évite le scroll horizontal sur mobiles */
+}
+
+/* ================================================================
+   TEXTURE GRAIN (pseudo-élément ::before sur body)
+   Un filtre SVG fractalNoise est encodé en base64 et superposé
+   en position fixed sur toute la page via un pseudo-élément.
+   pointer-events: none → n'interfère pas avec les clics.
+   z-index: 1000 → au-dessus de tout sauf les modales.
+   Donne un effet papier/grain subtil au fond.
+================================================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0; /* équivalent de top/right/bottom/left: 0 */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.5;
+}
+
+/* ================================================================
+   EN-TÊTE DE SECTION
+================================================================ */
+.section-header {
+  text-align: center;
+  padding: 80px 24px 48px;
+}
+
+/* Sur-titre avec tirets décoratifs générés via ::before et ::after */
+.section-eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mythe-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--mythe-accent);
+}
+
+/* Titre principal — taille fluide avec clamp() :
+   jamais < 42px, idéalement 6vw, jamais > 72px */
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  color: var(--text-dark);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--mythe-accent); /* "Réalités" en rouge */
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 520px;
+  margin: 0 auto 16px;
+  line-height: 1.6;
+}
+
+/* Pastille d'instruction avec icône animée */
+.instruction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1a2e;
+  color: var(--cream);
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* L'icône SVG dans la pastille effectue un retournement en boucle
+   pour indiquer visuellement l'interaction possible */
+.instruction svg {
+  animation: flipHint 2s ease-in-out infinite;
+}
+@keyframes flipHint {
+  0%, 100% { transform: rotateY(0deg); }
+  50%       { transform: rotateY(180deg); }
+}
+
+/* ================================================================
+   BARRE DE FILTRES
+   Boutons pill permettant de filtrer les cartes par catégorie.
+   La classe .active est ajoutée via JS au bouton sélectionné.
+================================================================ */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 24px 48px;
+  flex-wrap: wrap; /* retour à la ligne sur petit écran */
+}
+.filter-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 40px;
+  border: 2px solid #1a1a2e;
+  background: transparent;
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: #1a1a2e;
+  color: var(--cream);
+}
+
+/* ================================================================
+   COMPTEURS
+   Affichent le nombre total de cartes visibles et le nombre
+   de cartes déjà retournées, mis à jour dynamiquement par JS.
+================================================================ */
+.counter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 24px 56px;
+}
+.counter-item { text-align: center; }
+.counter-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  color: var(--text-dark);
+}
+.counter-label {
+  font-size: 12px;
+  font-family: 'Syne', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+}
+
+/* ================================================================
+   GRILLE DE CARTES
+   CSS Grid auto-fill : remplit les colonnes avec des cartes d'au
+   moins --card-w de large. La grille s'adapte automatiquement
+   au nombre de cartes visibles (1, 2 ou 3 colonnes selon l'écran).
+================================================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-w), 1fr));
+  gap: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+/* ================================================================
+   ANIMATION D'ENTRÉE DES CARTES (fadeUp)
+   Chaque carte apparaît en glissant du bas avec un délai échelonné
+   pour un effet en cascade au chargement de la page.
+   "both" dans animation-fill-mode applique l'état initial dès le
+   départ (évite un flash de la carte visible avant l'animation).
+================================================================ */
+.card-wrapper {
+  width: 100%;
+  height: var(--card-h);
+  cursor: pointer;
+  animation: fadeUp 0.6s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Délais en cascade : chaque carte attend un peu plus que la précédente */
+.card-wrapper:nth-child(1)  { animation-delay: 0.05s; }
+.card-wrapper:nth-child(2)  { animation-delay: 0.10s; }
+.card-wrapper:nth-child(3)  { animation-delay: 0.15s; }
+.card-wrapper:nth-child(4)  { animation-delay: 0.20s; }
+.card-wrapper:nth-child(5)  { animation-delay: 0.25s; }
+.card-wrapper:nth-child(6)  { animation-delay: 0.30s; }
+.card-wrapper:nth-child(7)  { animation-delay: 0.35s; }
+.card-wrapper:nth-child(8)  { animation-delay: 0.40s; }
+.card-wrapper:nth-child(9)  { animation-delay: 0.45s; }
+.card-wrapper:nth-child(10) { animation-delay: 0.50s; }
+.card-wrapper:nth-child(11) { animation-delay: 0.55s; }
+.card-wrapper:nth-child(12) { animation-delay: 0.60s; }
+.card-wrapper:nth-child(13) { animation-delay: 0.65s; }
+.card-wrapper:nth-child(14) { animation-delay: 0.70s; }
+.card-wrapper:nth-child(15) { animation-delay: 0.75s; }
+.card-wrapper:nth-child(16) { animation-delay: 0.80s; }
+
+/* ================================================================
+   ARCHITECTURE DU FLIP 3D — 3 couches imbriquées :
+
+   1. .card-wrapper   → conteneur dans la grille (dimensions fixes)
+   2. .card-scene     → porte la perspective (profondeur 3D)
+   3. .card-inner     → l'élément qui tourne sur lui-même
+      ├── .card-front → face visible par défaut (recto = mythe)
+      └── .card-back  → face cachée (verso = réalité)
+
+   POURQUOI séparer .card-wrapper et .card-scene ?
+   CSS Grid génère des contextes de rendu qui peuvent "aplatir"
+   la perspective. En isolant la perspective dans un enfant direct
+   (.card-scene), on évite ce conflit.
+
+   PRINCIPE DU FLIP :
+   - Les deux faces sont superposées (position: absolute, inset: 0).
+   - backface-visibility: hidden sur chaque face : quand une face
+     est "retournée" (angle > 90°), elle devient invisible.
+   - .card-back est pré-retournée à rotateY(180deg) : au repos,
+     elle est dos à la caméra donc invisible.
+   - Au clic, .card-inner pivote à rotateY(180deg) :
+     → .card-front passe dos à la caméra (disparaît)
+     → .card-back revient face à la caméra (apparaît)
+================================================================ */
+
+/* Scène : porte uniquement la perspective, pas de transform propre */
+.card-scene {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* plus la valeur est basse, plus l'effet 3D est prononcé */
+}
+
+/* Inner : c'est lui qui tourne. transform-style: preserve-3d est
+   indispensable pour que les enfants soient rendus en 3D et non
+   aplatis sur un plan 2D (comportement par défaut). */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  /* cubic-bezier(0.4, 0.2, 0.2, 1) : départ rapide, fin douce
+     — donne un effet de "lancer" réaliste à la carte */
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform; /* hint au navigateur pour l'optimisation GPU */
+}
+
+/* État retourné : appliqué sur .card-wrapper via JS (classList.toggle) */
+.card-wrapper.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Propriétés communes aux deux faces */
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* CLEF DU FLIP : cache la face quand elle est dos à la caméra (> 90°) */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* préfixe Safari */
+}
+
+/* Face RECTO (mythe) — orientée normalement, visible au départ */
+.card-front {
+  background: var(--mythe);
+  color: white;
+  transform: rotateY(0deg); /* face caméra */
+}
+
+/* Face VERSO (réalité) — pré-retournée, invisible jusqu'au flip */
+.card-back {
+  background: var(--realite);
+  color: white;
+  transform: rotateY(180deg); /* dos à la caméra au départ */
+}
+
+/* ================================================================
+   DÉCORATIONS DES CARTES
+   Cercles en position absolue (pseudo-éléments) pour créer de la
+   profondeur visuelle sans alourdir le DOM HTML.
+================================================================ */
+
+/* Cercle rouge en haut à droite du recto */
+.card-front::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.15);
+}
+/* Petit cercle blanc en bas à gauche du recto */
+.card-front::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+/* Cercle vert en haut à gauche du verso */
+.card-back::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: rgba(45, 198, 83, 0.10);
+}
+
+/* ================================================================
+   CONTENU DES CARTES
+================================================================ */
+
+/* Étiquette colorée "Mythe" ou "Réalité" */
+.card-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 40px;
+  margin-bottom: 24px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+.card-front .card-tag { background: var(--mythe-accent); color: white; }
+.card-back  .card-tag { background: var(--realite-accent); color: #0d3b2e; }
+
+/* Sous-catégorie (Enseignant, Élève, etc.) */
+.card-category {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Texte principal de la carte
+   flex: 1 → occupe tout l'espace vertical disponible,
+   poussant les éléments suivants (source, indice) vers le bas */
+.card-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.3;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+/* Le mythe est en italique pour renforcer son caractère "citation" */
+.card-front .card-text { font-style: italic; }
+
+/* Texte explicatif au verso */
+.card-detail {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+}
+
+/* Référence bibliographique */
+.card-source {
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.45;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Invitation au retournement, visible au survol */
+.card-flip-hint {
+  margin-top: 20px;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.2s;
+}
+/* Au survol de la carte, le hint devient plus visible */
+.card-wrapper:hover .card-flip-hint { opacity: 0.8; }
+
+/* Numéro décoratif en filigrane, en bas à droite */
+.card-number {
+  position: absolute;
+  bottom: 24px; right: 24px;
+  font-family: 'Syne', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  opacity: 0.06; /* très transparent : effet watermark */
+  line-height: 1;
+  z-index: 0; /* derrière le contenu */
+}
+
+/* ================================================================
+   UTILITAIRE : masquage lors du filtrage
+   .hidden est ajouté/retiré par JS selon le filtre actif.
+   display: none retire complètement la carte du flux (la grille
+   se recalcule automatiquement).
+================================================================ */
+.card-wrapper.hidden { display: none; }
+
+/* ================================================================
+   RESPONSIVE
+   Sur petit écran, on réduit la largeur et hauteur des cartes
+   et le padding de la grille.
+================================================================ */
+@media (max-width: 600px) {
+  :root {
+    --card-w: 280px;
+    --card-h: 420px;
+  }
+  .cards-grid { padding: 0 16px 60px; gap: 20px; }
+  .card-text  { font-size: 18px; }
+}
