@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – DéclicIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contactStyle.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="../index.html" class="logo">DéclicIA</a>
+    <nav>
+      <a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
+      <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre & défis</a>
+      <a href="../Carousel_outilsIA/Carousel_index.html">Outils</a>
+      <a href="contact.html" class="active">Contact</a>
+      <button class="btn-theme" onclick="toggleTheme()" id="themeBtn">Sombre</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero-strip">
+    <h1>Contactez-nous</h1>
+    <p>Une question, une suggestion, envie de contribuer ? Écrivez-nous, nous vous répondrons rapidement.</p>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Info -->
+    <div class="info-panel">
+      <h2>Échangeons ensemble</h2>
+      <p>DéclicIA est un projet dédié aux enseignants qui souhaitent comprendre et intégrer l'IA de manière réfléchie et responsable. Votre retour est précieux.</p>
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-icon">💡</div>
+          <div class="info-item-text">
+            <strong>Suggestions de contenu</strong>
+            <span>Proposez un outil, un article ou une ressource à intégrer.</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🤝</div>
+          <div class="info-item-text">
+            <strong>Contribuer au projet</strong>
+            <span>Enseignant, chercheur ou développeur ? Rejoignez l'aventure.</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🐛</div>
+          <div class="info-item-text">
+            <strong>Signaler une erreur</strong>
+            <span>Un contenu inexact ou un lien cassé ? Dites-le nous.</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-item-text">
+            <strong>Contact direct</strong>
+            <span>tom.thot@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="card">
+      <form id="contactForm" novalidate>
+
+        <!-- ⚠️ Remplace la valeur ci-dessous par ta vraie clé Web3Forms -->
+        <input type="hidden" name="access_key" value="REMPLACE_PAR_TA_CLÉ_WEB3FORMS">
+        <input type="hidden" name="subject" value="Nouveau message depuis DéclicIA">
+        <input type="hidden" name="from_name" value="DéclicIA – Formulaire contact">
+        <!-- Anti-spam honeypot -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-group">
+          <label for="name">Nom <span>*</span></label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse e-mail <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option value="">— Choisir un sujet —</option>
+            <option value="Suggestion de contenu">💡 Suggestion de contenu</option>
+            <option value="Contribuer au projet">🤝 Contribuer au projet</option>
+            <option value="Signaler une erreur">🐛 Signaler une erreur</option>
+            <option value="Autre">✉️ Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" name="message" placeholder="Votre message…" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="spinner"></span>
+          <span class="btn-label">Envoyer le message →</span>
+        </button>
+
+        <div class="feedback success" id="feedbackOk">
+          ✅ Message envoyé ! Nous vous répondrons très bientôt.
+        </div>
+        <div class="feedback error" id="feedbackErr">
+          ❌ Une erreur est survenue. Veuillez réessayer ou écrire directement à tom.thot@gmail.com
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4>DéclicIA</h4>
+        <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
+          <li><a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
+          <li><a href="../Carousel_outilsIA/Carousel_index.html">Outils pour la classe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="../index.html#profil">Profil face à l'IA</a></li>
+          <li><a href="../LIA_cest_quoi/indexIA.html#Definition">Définitions IA</a></li>
+          <li><a href="../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© DéclicIA – Tous droits réservés</span>
+      <span>@Thomas BROUILLET</span>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+
+</body>
+</html>
