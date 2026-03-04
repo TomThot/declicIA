@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="../theme-sync.js"></script>
   <title>Contact – DéclicIA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../theme-sync.css" />
   <link rel="stylesheet" href="contactStyle.css" />
 </head>
 <body>
@@ -17,15 +19,14 @@
       <a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
       <a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre & défis</a>
       <a href="../Carousel_outilsIA/Carousel_index.html">Outils</a>
-      <a href="contact.html" class="active">Contact</a>
-      <button class="btn-theme" onclick="toggleTheme()" id="themeBtn">Sombre</button>
+      <a href="contactIndex.html" class="active">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <div class="hero-strip">
-    <h1>Contactez-nous</h1>
-    <p>Une question, une suggestion, envie de contribuer ? Écrivez-nous, nous vous répondrons rapidement.</p>
+    <h1>Contactez-moi</h1>
+    <p>Une question, une suggestion, envie de contribuer ? Écrivez-moi, je vous répondrai rapidement.</p>
   </div>
 
   <!-- MAIN -->
@@ -54,7 +55,7 @@
           <div class="info-icon">🐛</div>
           <div class="info-item-text">
             <strong>Signaler une erreur</strong>
-            <span>Un contenu inexact ou un lien cassé ? Dites-le nous.</span>
+            <span>Un contenu inexact ou un lien cassé ? Dites-le moi.</span>
           </div>
         </div>
         <div class="info-item">
@@ -121,36 +122,10 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h4>DéclicIA</h4>
-        <p>Des notions et des outils sur l'intelligence artificielle dans l'éducation. Un site dédié aux enseignants.</p>
-      </div>
-      <div>
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
-          <li><a href="../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
-          <li><a href="../Carousel_outilsIA/Carousel_index.html">Outils pour la classe</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="../index.html#profil">Profil face à l'IA</a></li>
-          <li><a href="../LIA_cest_quoi/indexIA.html#Definition">Définitions IA</a></li>
-          <li><a href="../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© DéclicIA – Tous droits réservés</span>
-      <span>@Thomas BROUILLET</span>
-    </div>
-  </footer>
-
+<!--Injection du footer-->
+  <div data-shared-footer data-base="../"></div>
+  <script src="../shared-components.js"></script>
+  <script src="../search-local.js"></script>
   <script src="contactScript.js"></script>
 
 </body>

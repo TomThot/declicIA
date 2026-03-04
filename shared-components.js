@@ -71,7 +71,7 @@
       '          <li><a href="' + base + 'index.html#profil">Profil face à l\'IA</a></li>' +
       '          <li><a href="' + base + 'LIA_cest_quoi/indexIA.html#Definition">Définitions IA</a></li>' +
       '          <li><a href="' + base + 'Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>' +
-      "          <li><a href=\"#\">Outils recommandés</a></li>" +
+      '          <li><a href="' + base + 'Carousel_outilsIA/Carousel_index.html">Outils recommandés</a></li>' +
       "          <li><a href=\"#\">Formations</a></li>" +
       "        </ul>" +
       "      </div>" +

@@ -696,6 +696,53 @@ transform: scale(1.2);
   padding: 10px;
 }
 
+/* Bouton-lien vers le lexique */
+.btn-voir-lexique {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2a82fc 0%, #8d31b8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 6px 18px rgba(42, 130, 252, 0.25),
+    0 2px 8px rgba(141, 49, 184, 0.22);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.btn-voir-lexique::after {
+  content: " →";
+  font-weight: 700;
+  transform: translateX(5px);
+  transition: transform 0.2s ease;
+}
+
+.btn-voir-lexique:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.08);
+  box-shadow:
+    0 10px 24px rgba(42, 130, 252, 0.35),
+    0 4px 14px rgba(141, 49, 184, 0.28);
+}
+
+.btn-voir-lexique:hover::after {
+  transform: translateX(10px);
+}
+
+.btn-voir-lexique:focus-visible {
+  outline: 3px solid rgba(76, 201, 240, 0.7);
+  outline-offset: 2px;
+}
+
 
 
 

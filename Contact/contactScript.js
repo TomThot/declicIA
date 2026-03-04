@@ -1,21 +1,3 @@
-/* ── Dark mode ────────────────────────────────── */
-function toggleTheme() {
-  const html = document.documentElement;
-  const isDark = html.dataset.theme === 'dark';
-  html.dataset.theme = isDark ? 'light' : 'dark';
-  document.getElementById('themeBtn').textContent = isDark ? 'Sombre' : 'Clair';
-  localStorage.setItem('declicia-theme', html.dataset.theme);
-}
-
-(function () {
-  const saved = localStorage.getItem('declicia-theme');
-  if (saved) {
-    document.documentElement.dataset.theme = saved;
-    const btn = document.getElementById('themeBtn');
-    if (btn) btn.textContent = saved === 'dark' ? 'Clair' : 'Sombre';
-  }
-})();
-
 /* ── Formulaire AJAX Web3Forms ────────────────── */
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
