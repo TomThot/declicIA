@@ -611,12 +611,12 @@ p {
 }
 
 .pilier {
-  
+
   width: 280px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   margin: 10px;
   border-radius: 10px;
   border: 2px solid transparent;
@@ -662,7 +662,7 @@ p {
   border-radius: 0 0 10px 10px;
   padding: 10px;
   flex: 1;
-  
+
 }
 
 .conteneur {
@@ -878,6 +878,84 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+/*--------------------------------Mythes---------------------------------*/
+
+.containerMythe {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cardMythe {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardMythe-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.boxMythe {
+  padding: 20px;
+  background-color: var(--white)
+}
+
+.myth {
+  background-color: var(--white);
+  border-right: 1px solid #eee;
+}
+
+.research {
+  background-color: var(--white);
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.myth h3 {
+  color: #c53030;
+}
+
+.research h3 {
+  color: #2f855a;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myth {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}
+
 
 
 /*--------------------------------footer---------------------------------*/

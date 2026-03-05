@@ -339,3 +339,41 @@ html[data-theme="dark"] .prompt-output, .subtitle{
 html[data-theme="dark"] .subtitle{
   color:var(--white);
 }
+
+/* ===== BEGIN THEME-SYNC: MYTHES REALITE ===== */
+html[data-theme="dark"] {
+  --mythe: #1f2740;
+  --mythe-accent: #ff6b74;
+  --realite: #144232;
+  --realite-accent: #4fe27a;
+  --cream: #0f1522;
+  --text-dark: #e6ebf5;
+  --page-bg: #0b0f17;
+  --muted-text: #b9c4d6;
+  --nav-grad-1: #213a66;
+  --nav-grad-2: #182640;
+  --chip-bg: #213253;
+  --chip-text: #e6ebf5;
+}
+
+html[data-theme="dark"] body::before {
+  opacity: 0.22;
+}
+
+html[data-theme="dark"] .navigationPage a {
+  background: rgba(102, 154, 255, 0.2);
+  border-color: rgba(206, 224, 255, 0.3);
+}
+
+html[data-theme="dark"] .navigationPage a:hover {
+  background: rgba(124, 171, 255, 0.28);
+}
+
+html[data-theme="dark"] .card-front::after {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .card-source {
+  opacity: 0.62;
+}
+/* ===== END THEME-SYNC: MYTHES REALITE ===== */
