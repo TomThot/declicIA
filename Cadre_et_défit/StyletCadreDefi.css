@@ -213,6 +213,8 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.4rem;
+  font-family: 'Syne', sans-serif;
+  text-transform: none;
 }
 
 header p {

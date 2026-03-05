@@ -304,6 +304,11 @@ html[data-theme="dark"] footer {
 html[data-theme="dark"] .containerNav a, .containerNav .titreNav, .construction, .h5p p, .rmqDys p, .truc p {
   color: var(--text-color);
 }
+
+html[data-theme="dark"] .navigationPage a::after {
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
 html[data-theme="dark"] .cardContent, .pilierContent {
   background-color: var(--surface-bg);
 }
