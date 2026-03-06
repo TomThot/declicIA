@@ -945,6 +945,42 @@ h3 {
   margin-right: 8px;
 }
 
+.flipcards-cta-wrap {
+  text-align: center;
+  margin: 24px 0 8px;
+}
+
+.flipcards-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2a82fc 0%, #360143 100%);
+  box-shadow: 0 10px 24px rgba(54, 1, 67, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.flipcards-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 14px 30px rgba(42, 130, 252, 0.3);
+}
+
+.flipcards-cta:focus-visible {
+  outline: 3px solid rgba(42, 130, 252, 0.4);
+  outline-offset: 4px;
+}
+
+.flipcards-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(54, 1, 67, 0.22);
+}
+
 @media (max-width: 600px) {
   .content-grid {
     grid-template-columns: 1fr;
