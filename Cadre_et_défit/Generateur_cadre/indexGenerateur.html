@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Polices Google (identiques à IndexCadreDefi.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!--
+    theme-sync.js est chargé EN PREMIER et de façon SYNCHRONE (sans defer)
+    pour appliquer le thème avant que le navigateur peigne quoi que ce soit.
+    Cela évite le "flash" blanc→sombre au chargement en mode nuit.
+  -->
+  <script src="../../theme-sync.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png">
+
+  <!-- Icônes Font Awesome (ex: icônes dans les boutons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <title>Générateur de cadre d'usage IA — DéclicIA</title>
+
+  <!-- CSS de la page Cadre (typographie, variables, header, footer...) -->
+  <link rel="stylesheet" href="../StyletCadreDefi.css" />
+
+  <!-- CSS partagé (thème sombre, toggle, search...) -->
+  <link rel="stylesheet" href="../../theme-sync.css" />
+
+  <!-- CSS de la barre de progression de lecture -->
+  <link rel="stylesheet" href="../../reading-progress.css">
+
+  <!--
+    CSS propre au générateur.
+    POUR REVENIR EN ARRIÈRE : supprimer cette ligne et le dossier Generateur_cadre/
+  -->
+  <link rel="stylesheet" href="styleGenerateur.css" />
+</head>
+
+<body>
+
+  <!--
+    Header partagé injecté par shared-components.js.
+    data-base="../" indique le chemin racine depuis ce sous-dossier.
+    data-current="" : aucune page nav n'est "active" (ce n'est pas une page principale).
+  -->
+  <div data-shared-header data-base="../../" data-current=""></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EN-TÊTE DE PAGE
+       Style identique au header de IndexCadreDefi.html
+  ════════════════════════════════════════════════════════════ -->
+  <header>
+    <h1>Générateur de cadre d'usage</h1>
+    <p>Créez en quelques clics votre fiche personnalisée à afficher ou distribuer en classe.</p>
+  </header>
+
+  <main>
+
+    <!-- Lien de retour vers la page Cadre et défis -->
+    <p style="max-width:1200px; margin: 20px auto; padding: 0 20px;">
+      <a href="../IndexCadreDefi.html">← Retour à Cadre et défis</a>
+    </p>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION FORMULAIRE
+         id="section-generateur" ciblé par styleGenerateur.css
+         et masqué à l'impression par @media print
+    ════════════════════════════════════════════════════════════ -->
+    <section id="section-generateur" aria-labelledby="titre-generateur">
+
+      <h2 id="titre-generateur">Personnalisez votre cadre</h2>
+
+      <p class="gen-intro">
+        Remplissez les champs ci-dessous, cochez les usages adaptés à votre contexte,
+        puis cliquez sur <strong>Générer ma fiche</strong>. Vous pourrez ensuite
+        l'imprimer ou copier son contenu.
+      </p>
+
+      <!--
+        FORMULAIRE PRINCIPAL
+        action="#" et onsubmit géré en JS (e.preventDefault())
+        → pas de rechargement de page, pas d'envoi serveur
+      -->
+      <form id="generateur-form" novalidate>
+        <!--
+          novalidate : désactive la validation HTML5 native
+          (bulles de validation du navigateur), on gère ça nous-mêmes
+          si besoin dans scriptGenerateur.js
+        -->
+
+        <div class="gen-form-grid">
+
+          <!-- ── Discipline ── -->
+          <div class="gen-form-group">
+            <label for="select-discipline">📚 Discipline</label>
+            <!--
+              Le <select> est rempli dynamiquement par scriptGenerateur.js
+              à partir de DISCIPLINES dans data-cadre.js.
+              La première option est un placeholder non sélectionnable.
+            -->
+            <select id="select-discipline" required>
+              <option value="" disabled selected>Choisir une discipline…</option>
+              <!-- Options injectées par JS -->
+            </select>
+          </div>
+
+          <!-- ── Niveau de classe ── -->
+          <div class="gen-form-group">
+            <label for="select-niveau">🎓 Niveau de classe</label>
+            <select id="select-niveau" required>
+              <option value="" disabled selected>Choisir un niveau…</option>
+              <!-- Options injectées par JS -->
+            </select>
+          </div>
+
+          <!-- ── Nom de l'enseignant (optionnel) ── -->
+          <div class="gen-form-group">
+            <label for="input-nom">👤 Votre nom (optionnel)</label>
+            <input
+              type="text"
+              id="input-nom"
+              placeholder="ex : M. Brouillet"
+              autocomplete="name"
+            />
+          </div>
+
+          <!-- ── Usages autorisés ── -->
+          <div class="gen-form-group">
+            <label>✅ Usages autorisés</label>
+            <!--
+              div.gen-checkbox-container : scrollable si trop d'items.
+              Les cases sont injectées par buildCheckboxList() dans scriptGenerateur.js.
+            -->
+            <div class="gen-checkbox-container" id="liste-autorises">
+              <!-- Cases injectées par JS -->
+            </div>
+          </div>
+
+          <!-- ── Usages interdits ── -->
+          <div class="gen-form-group">
+            <label>❌ Usages interdits</label>
+            <div class="gen-checkbox-container" id="liste-interdits">
+              <!-- Cases injectées par JS -->
+            </div>
+          </div>
+
+          <!-- ── Outils autorisés ── -->
+          <div class="gen-form-group">
+            <label>🛠️ Outils IA autorisés</label>
+            <div class="gen-checkbox-container" id="liste-outils">
+              <!-- Cases injectées par JS -->
+            </div>
+          </div>
+
+          <!-- ── Mention personnalisée (pleine largeur) ── -->
+          <div class="gen-form-group full-width">
+            <label for="input-mention">📝 Mention personnalisée (optionnel)</label>
+            <input
+              type="text"
+              id="input-mention"
+              placeholder="ex : Tout usage doit être déclaré en début de séance."
+            />
+          </div>
+
+          <!-- ── Bouton de soumission (pleine largeur) ── -->
+          <div class="gen-form-group full-width" style="align-items: center;">
+            <button type="submit" class="gen-btn-submit">
+              ✨ Générer ma fiche
+            </button>
+          </div>
+
+        </div><!-- fin .gen-form-grid -->
+      </form>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION FICHE GÉNÉRÉE
+         Cachée par défaut (class="hidden"), révélée par JS
+         après soumission du formulaire.
+         Masquée à l'impression par @media print (sauf #fiche-content).
+    ════════════════════════════════════════════════════════════ -->
+    <div id="fiche-container" class="hidden">
+
+      <!-- Barre d'actions au-dessus de la fiche -->
+      <div class="fiche-actions">
+        <button id="btn-imprimer" class="gen-btn-action">
+          🖨️ Imprimer / Enregistrer en PDF
+        </button>
+        <button id="btn-copier" class="gen-btn-action">
+          📋 Copier le texte
+        </button>
+        <button id="btn-reset" class="gen-btn-action btn-reset">
+          🔄 Nouvelle fiche
+        </button>
+      </div>
+
+      <!--
+        La fiche elle-même.
+        Son contenu HTML est entièrement généré par scriptGenerateur.js
+        (ficheContent.innerHTML = ...).
+      -->
+      <div id="fiche-content">
+        <!-- Contenu injecté par JS -->
+      </div>
+
+    </div><!-- fin #fiche-container -->
+
+  </main>
+
+  <!-- Footer partagé injecté par shared-components.js -->
+  <div data-shared-footer data-base="../../" data-current=""></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCRIPTS
+       Ordre important :
+       1. search-local.js  → moteur de recherche global
+       2. shared-components.js → header + footer partagés
+       3. data-cadre.js    → données (DISCIPLINES, NIVEAUX, etc.)
+                             DOIT être chargé AVANT scriptGenerateur.js
+                             car ce dernier utilise ces variables
+       4. scriptGenerateur.js → logique du générateur
+       5. reading-progress.js → barre de lecture
+  ════════════════════════════════════════════════════════════ -->
+  <script src="../../search-local.js"></script>
+  <script src="../../shared-components.js"></script>
+  <script src="data-cadre.js"></script>
+  <script src="scriptGenerateur.js" defer></script>
+  <script src="../../reading-progress.js" defer></script>
+
+</body>
+
+</html>

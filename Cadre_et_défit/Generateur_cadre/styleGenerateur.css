@@ -1,0 +1,514 @@
+/* ============================================================
+   styleGenerateur.css
+   Styles du générateur de cadre d'usage — DéclicIA
+   
+   Cohérence visuelle : reprend les variables et conventions
+   de StyletCadreDefi.css (couleurs, ombres, border-radius).
+   
+   POUR REVENIR EN ARRIÈRE :
+   Supprimer ce fichier et le dossier Generateur_cadre/ entier.
+   ============================================================ */
+
+
+/* ─────────────────────────────────────────────────────────────
+   VARIABLES LOCALES
+   Reprises depuis StyletCadreDefi.css pour cohérence
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --gen-autorises-bg:   rgba(39, 174, 96,  0.12);
+  --gen-autorises-border: #27ae60;
+  --gen-interdits-bg:   rgba(231, 76,  60,  0.12);
+  --gen-interdits-border: #e74c3c;
+  --gen-accent:         #5542fd;
+  --gen-header-grad:    linear-gradient(180deg, #360143, #2a81fc);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   SECTION PRINCIPALE DU GÉNÉRATEUR
+   Même style que .intro et .card dans StyletCadreDefi.css
+   ───────────────────────────────────────────────────────────── */
+#section-generateur {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Intro explicative au-dessus du formulaire */
+#section-generateur .gen-intro {
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   GRILLE DU FORMULAIRE
+   Deux colonnes sur desktop, une seule sur mobile
+   ───────────────────────────────────────────────────────────── */
+.gen-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Un bloc du formulaire (label + champ) */
+.gen-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Bloc qui prend toute la largeur (ex: mentions, bouton) */
+.gen-form-group.full-width {
+  grid-column: 1 / -1;  /* s'étend de la 1ère à la dernière colonne */
+}
+
+/* Labels des champs */
+.gen-form-group label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* Champs <select> et <input> */
+.gen-form-group select,
+.gen-form-group input[type="text"] {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus sur les champs : anneau bleu cohérent avec le reste du site */
+.gen-form-group select:focus,
+.gen-form-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--gen-accent);
+  box-shadow: 0 0 0 3px rgba(85, 66, 253, 0.15);
+}
+
+/* Adaptation thème sombre */
+html[data-theme="dark"] .gen-form-group select,
+html[data-theme="dark"] .gen-form-group input[type="text"] {
+  background: var(--surface-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   LISTES DE CASES À COCHER
+   ───────────────────────────────────────────────────────────── */
+
+/* Conteneur scrollable si trop d'items */
+.gen-checkbox-container {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+  padding: 10px;
+  background: var(--white);
+}
+
+html[data-theme="dark"] .gen-checkbox-container {
+  background: var(--surface-bg);
+  border-color: var(--border-color);
+}
+
+/* Une case à cocher + son texte */
+.gen-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  transition: background 0.15s ease;
+}
+
+.gen-checkbox-label:hover {
+  background: var(--background-color2, rgba(200, 195, 255, 0.3));
+}
+
+/* La case elle-même */
+.gen-checkbox-label input[type="checkbox"] {
+  margin-top: 2px;      /* alignement vertical avec le texte */
+  flex-shrink: 0;       /* ne rétrécit pas si le texte est long */
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gen-accent);  /* couleur de la coche (CSS moderne) */
+  cursor: pointer;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   BOUTON "GÉNÉRER MA FICHE"
+   Style cohérent avec .flipcards-cta dans StyletCadreDefi.css
+   ───────────────────────────────────────────────────────────── */
+.gen-btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--gen-header-grad);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(54, 1, 67, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.gen-btn-submit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 14px 30px rgba(42, 130, 252, 0.3);
+}
+
+.gen-btn-submit:active {
+  transform: translateY(0);
+}
+
+.gen-btn-submit:focus-visible {
+  outline: 3px solid rgba(85, 66, 253, 0.5);
+  outline-offset: 4px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   ZONE DE LA FICHE GÉNÉRÉE
+   Cachée par défaut, révélée via JS (retrait de .hidden)
+   ───────────────────────────────────────────────────────────── */
+#fiche-container {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 0 20px;
+}
+
+/* Classe utilitaire : masque un élément */
+.hidden {
+  display: none !important;
+}
+
+/* Barre d'actions au-dessus de la fiche (Imprimer, Copier, Reset) */
+.fiche-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Boutons d'action secondaires */
+.gen-btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 2px solid var(--gen-accent);
+  background: transparent;
+  color: var(--gen-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.gen-btn-action:hover {
+  background: var(--gen-accent);
+  color: #ffffff;
+}
+
+.gen-btn-action:focus-visible {
+  outline: 3px solid rgba(85, 66, 253, 0.4);
+  outline-offset: 3px;
+}
+
+/* Bouton "Nouvelle fiche" : variante grise */
+.gen-btn-action.btn-reset {
+  border-color: #888;
+  color: #888;
+}
+
+.gen-btn-action.btn-reset:hover {
+  background: #888;
+  color: #fff;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   FICHE GÉNÉRÉE — MISE EN PAGE
+   ───────────────────────────────────────────────────────────── */
+#fiche-content {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;  /* pour que le header arrondi reste dans le cadre */
+}
+
+html[data-theme="dark"] #fiche-content {
+  background: var(--surface-bg);
+}
+
+/* En-tête de la fiche : dégradé identique au header de la page */
+.fiche-header {
+  background: var(--gen-header-grad);
+  color: #ffffff;
+  padding: 24px 28px;
+}
+
+/* Logo "DéclicIA" dans la fiche */
+.fiche-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+/* Titre de la fiche */
+.fiche-titre {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+  color: #ffffff;
+  border: none;           /* annule le style global h2 */
+  padding-left: 0;        /* annule le style global h2 */
+}
+
+/* Métadonnées : discipline, niveau, enseignant, date */
+.fiche-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fiche-meta span {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Corps de la fiche : grille 2 colonnes (autorisés / interdits) */
+.fiche-corps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* Bloc générique dans la fiche */
+.fiche-bloc {
+  padding: 20px 24px;
+}
+
+.fiche-bloc h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-transform: none;   /* annule le style global h3 */
+  letter-spacing: 0;      /* annule le style global h3 */
+  color: var(--text-color);
+}
+
+.fiche-bloc ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.fiche-bloc li {
+  margin-bottom: 4px;
+}
+
+/* Texte affiché si aucune case cochée */
+.fiche-vide {
+  font-style: italic;
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* Colonne "Autorisés" : fond vert clair */
+.fiche-autorises {
+  background: var(--gen-autorises-bg);
+  border-right: 1px solid rgba(0,0,0,0.06);
+  border-top: 3px solid var(--gen-autorises-border);
+}
+
+/* Colonne "Interdits" : fond rouge clair */
+.fiche-interdits {
+  background: var(--gen-interdits-bg);
+  border-top: 3px solid var(--gen-interdits-border);
+}
+
+/* Bloc outils : rangée de badges pill */
+.fiche-outils {
+  border-top: 1px solid rgba(0,0,0,0.07);
+  background: var(--background-color, rgba(215, 210, 255, 0.15));
+}
+
+.fiche-outils-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Un badge outil */
+.fiche-outil-badge {
+  background: var(--gen-accent);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Bloc mention personnalisée */
+.fiche-mention {
+  border-top: 1px solid rgba(0,0,0,0.07);
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.fiche-mention p {
+  margin: 0;
+}
+
+/* Zone de signatures */
+.fiche-signature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 24px;
+  border-top: 2px dashed rgba(0,0,0,0.1);
+}
+
+.fiche-signature-zone {
+  border: 1px dashed #aaa;
+  border-radius: 8px;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 12px;
+}
+
+.fiche-signature-zone span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   STYLES D'IMPRESSION (@media print)
+   
+   Quand l'utilisateur clique "Imprimer" ou "Enregistrer en PDF",
+   ces règles s'appliquent À LA PLACE des règles normales.
+   
+   Principe : on masque tout SAUF la fiche,
+   on retire les couleurs de fond pour économiser l'encre,
+   et on force les sauts de page aux bons endroits.
+   ───────────────────────────────────────────────────────────── */
+@media print {
+
+  /* Masque tout ce qui ne doit pas s'imprimer */
+  header,
+  footer,
+  nav,
+  .menu,
+  .sidebar,
+  .containerNav,
+  #section-generateur,     /* masque le formulaire */
+  .fiche-actions,          /* masque les boutons Imprimer/Copier */
+  .reading-progress,
+  #reading-progress {
+    display: none !important;
+  }
+
+  /* La fiche prend toute la page */
+  #fiche-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Supprime les ombres et arrondis pour l'impression */
+  #fiche-content {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #ccc;
+  }
+
+  /* Force l'impression des couleurs de fond (vert/rouge des blocs) */
+  /* Note : certains navigateurs nécessitent que l'utilisateur active
+     "Imprimer les arrière-plans" dans les options d'impression */
+  .fiche-autorises,
+  .fiche-interdits,
+  .fiche-outils {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Évite qu'un bloc soit coupé entre deux pages */
+  .fiche-bloc,
+  .fiche-signature {
+    break-inside: avoid;
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE — MOBILE (max 768px)
+   ───────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+
+  /* Le formulaire passe en 1 colonne */
+  .gen-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Les blocs full-width n'ont plus besoin du span explicite */
+  .gen-form-group.full-width {
+    grid-column: 1;
+  }
+
+  /* Le corps de la fiche passe en 1 colonne */
+  .fiche-corps {
+    grid-template-columns: 1fr;
+  }
+
+  /* Retire la bordure droite devenue inutile */
+  .fiche-autorises {
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  /* La zone de signatures passe en 1 colonne */
+  .fiche-signature {
+    grid-template-columns: 1fr;
+  }
+
+  /* Les métadonnées se centrent */
+  .fiche-meta {
+    justify-content: center;
+  }
+}
