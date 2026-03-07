@@ -1,0 +1,27 @@
+/* ===== BARRE DE PROGRESSION DE LECTURE ===== */
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #6703aa, #5542fd, #00d4ff);
+  z-index: 1001; /* au-dessus du header (z-index: 1000) */
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none; /* ne capte pas les clics */
+}
+
+/* Thème sombre : légèrement plus lumineux */
+html[data-theme="dark"] #reading-progress {
+  background: linear-gradient(90deg, #8fb6ff, #5542fd, #00d4ff);
+  opacity: 0.9;
+}
+
+/* Respect du mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  #reading-progress {
+    transition: none;
+  }
+}
