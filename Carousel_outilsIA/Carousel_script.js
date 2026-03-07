@@ -67,7 +67,7 @@ const N = cards.length;
 
 // Dimensions de référence utilisées pour calculer le rayon de l'orbite.
 // CARD_W doit rester cohérent avec la largeur CSS des cartes.
-const CARD_W = 240;
+const CARD_W = 200;
 const ORBIT_OFFSET = 200;
 
 // Rayon de l'orbite 3D:

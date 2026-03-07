@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +13,8 @@
   --primary-blue: rgba(9, 31, 233, 0.25);
   --hover-blue: rgba(9, 80, 233, 0.35);
   --glow-blue: rgba(9, 80, 233, 0.2);
+  --carousel-card-width: 208px;
+  --carousel-card-height: 320px;
 }
 
 body {
@@ -175,7 +176,7 @@ body {
   background-color: #00bcd4;
 }
 
-.menu.active + .sidebar {
+.menu.active+.sidebar {
   left: 0;
 }
 
@@ -248,7 +249,7 @@ header {
 }
 
 header h1 {
-   margin: 0;
+  margin: 0;
   font-size: 2.4rem;
   font-family: 'Syne', sans-serif;
   text-transform: none;
@@ -283,6 +284,14 @@ p {
   line-height: 1.7;
   margin-bottom: 1em;
   color: var(--text-color);
+}
+
+.titleh3 {
+  color: #00bcd4;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+
 }
 
 .intro {
@@ -429,10 +438,7 @@ footer {
   transform: translateY(-3px);
 }
 
-:root {
-  --carousel-card-width: 240px;
-  --carousel-card-height: 360px;
-}
+
 
 main {
   margin-top: 40px;
@@ -461,10 +467,10 @@ main {
 }
 
 .scene {
-  perspective:1450px;
+  perspective: 1450px;
   perspective-origin: 50% 50%;
   width: 100%;
-  height: 620px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -507,6 +513,10 @@ main {
   justify-content: center;
   color: #fff;
   background: linear-gradient(140deg, #7f59cc, #5e39b2);
+}
+
+.carousel-card .card-image {
+  flex: 0 0 33%;
 }
 
 .card-icon {
@@ -558,6 +568,19 @@ main {
   background: linear-gradient(140deg, #86b64b, #4f7a2b);
 }
 
+/* ── Nouvelles icônes galerie (ajoutées avec le générateur de cadre) ── */
+.card-image.icon-flipcard {
+  background: linear-gradient(140deg, #e85d9f, #a8245e);
+}
+
+.card-image.icon-lexique {
+  background: linear-gradient(140deg, #f07d2a, #b84e10);
+}
+
+.card-image.icon-cadre {
+  background: linear-gradient(140deg, #2eb8a0, #1a7a6e);
+}
+
 .card-body {
   flex: 1;
   padding: 18px 20px 22px;
@@ -583,6 +606,19 @@ main {
   font-size: 1.25rem;
   color: #1a1525;
   line-height: 1.25;
+}
+
+.carousel-card .card-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.carousel-card .card-body {
+  padding: 14px 16px 18px;
+}
+
+.carousel-card .card-title {
+  font-size: 1.12rem;
 }
 
 .card-desc {
@@ -675,13 +711,15 @@ main {
   transform: scale(1.45);
 }
 
-#listeCarte .inner {
+#listeCarte .containerCard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
   justify-content: center;
   gap: 30px;
   padding-top: 10px;
 }
+
+
 
 #listeCarte .liste-card {
   border-radius: 20px;
@@ -693,15 +731,15 @@ main {
   flex-direction: column;
   min-height: 320px;
   transform: perspective(1000px) rotateY(-20deg) translate3d(0, 0, -40px);
-  transition:  all 0.22s ease;
+  transition: all 0.22s ease;
 }
 
 #listeCarte .liste-card:hover {
- transform: perspective(1000px) rotateY(0deg) translate3d(0, 0, -40px);
+  transform: perspective(1000px) rotateY(0deg) translate3d(0, 0, -40px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
-#listeCarte .liste-card:hover .card-tag{
+#listeCarte .liste-card:hover .card-tag {
   transform: translateX(20px);
   background-color: #00bcd4;
   color: white;
@@ -744,27 +782,31 @@ main {
 
 @media (max-width: 768px) {
 
-  #galerie{
+  #galerie {
     display: none;
   }
-  
+
   .scene {
     height: 500px;
   }
 
   .carousel-3d,
   .carousel-card {
-    width: 210px;
-    height: 320px;
+    width: 186px;
+    height: 286px;
   }
 
-  .card-body {
-    padding: 14px 14px 16px;
+  .carousel-card .card-body {
+    padding: 12px 12px 14px;
   }
 
-  .card-icon {
-    width: 66px;
-    height: 66px;
+  .carousel-card .card-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .carousel-card .card-image {
+    flex-basis: 31%;
   }
 
   #listeCarte .inner {
