@@ -34,6 +34,43 @@
   width: 100%;
 }
 
+.MAJ{
+  border-radius: 10px;
+  background-color: rgba(153, 0, 255, 0.137);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.liste{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  line-height: 1.7;
+}
+
+.liste li{
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.raw-text-scroll {
+  max-height: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  letter-spacing: 0.01em;
+  tab-size: 2;
+  padding: 16px 18px;
+  border: 1px solid #d3d7de;
+  border-radius: 8px;
+  background: #f7f8fa;
+  color: black;
+}
+
 @media (max-width: 850px) {
   .containerCaramel {
     grid-template-columns: 1fr;

@@ -32,18 +32,7 @@
 
     <main>
         <!-- Navigation latérale-->
-        <nav class="menu">
-            <div class="menu-toggle">☰</div>
-        </nav>
-        <div class="sidebar">
-            <div class="icone">
-                <img src="../../Images/logo_blanc_150px.png" alt="logo" />
-            </div>
-            <a href="../../index.html">Accueil</a>
-            <a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a>
-            <a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a>
-            <a href="../Carousel_index.html">Outils pour la classe</a>
-        </div>
+        <div data-shared-sidebar data-base="../../" data-current="outils"></div>
         <!-- Fin de navigation latérale-->
 
         <!-- Navigation interne article-->
@@ -353,74 +342,13 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Section À propos -->
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="footer-logo-text">DéclicIA</span>
-                    </div>
-                    <p>
-                        Des notions et des outils sur l'intelligence artificielle dans
-                        l'éducation. Un site dédié aux enseignants pour comprendre et
-                        intégrer l'IA de manière réfléchie et responsable.
-                    </p>
-                </div>
 
-                <!-- Section Navigation -->
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul class="footer-links">
-                        <li><a href="../../index.html">Accueil</a></li>
-                        <li><a href="../../LIA_cest_quoi/indexIA.html">L'IA c'est quoi ?</a></li>
-                        <li><a href="../../Cadre_et_défit/IndexCadreDefi.html">Cadre et défis</a></li>
-                        <li><a href="../../Carousel_outilsIA/Carousel_index.html">Outils pour la classe</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section Ressources -->
-                <div class="footer-section">
-                    <h3>Ressources</h3>
-                    <ul class="footer-links">
-                        <li><a href="../../index.html#profil">Profil face à l'IA</a></li>
-                        <li><a href="../../LIA_cest_quoi/indexIA.html">Définitions IA</a></li>
-                        <li><a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>
-                        <li><a href="../Carousel_index.html">Outils recommandés</a></li>
-                        <li><a href="#">Formations</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section Contact -->
-                <div class="footer-section">
-                    <h3>Contact & Communauté</h3>
-                    <p>
-                        Envie d'échanger, de contribuer ou de partager vos expériences ?
-                    </p>
-                    <div class="social-links">
-                        <a href="../../Contact/contactIndex.html" class="social-link" title="Contact">✉</a>
-                        <a href="https://github.com/" class="social-link" title="GitHub"><i style="font-size: 24px"
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/thomas-brouillet-5371a63a0" class="social-link" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6.169H2.542V13.5h2.401zM3.742 5.17c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248-.822 0-1.358.538-1.358 1.248 0 .694.521 1.248 1.327 1.248h.015zM13.458 13.5V9.522c0-2.13-1.136-3.122-2.65-3.122-1.22 0-1.767.67-2.072 1.14v-1.37H6.336c.03.908 0 7.33 0 7.33h2.401V9.406c0-.22.016-.44.081-.597.178-.44.584-.895 1.266-.895.893 0 1.251.675 1.251 1.665V13.5h2.123z"/></svg></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script> DéclicIA - Tous droits réservés
-                </p>
-                <p class="footer-credits">
-                    Conçu avec passion pour l'éducation et l'innovation pédagogique
-                </p>
-                <p>@Thomas BROUILLET</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Scripts -->
+     <!--Injection du footer-->
+  <div data-shared-footer data-base="../../"></div>
+  <script src="../../search-local.js"></script>
+  <script src="../../shared-components.js"></script>
     <script src="script_art_du_prompt.js"></script>
 </body>
 
