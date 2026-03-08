@@ -459,6 +459,10 @@ main {
   overflow: visible;
 }
 
+#listeCarte.collapsible-section.open .section-content .inner {
+  overflow: visible;
+}
+
 .scene-wrapper {
   position: relative;
   width: 100%;
@@ -811,6 +815,15 @@ main {
 
   #listeCarte .inner {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  #listeCarte .containerCard {
+    padding-inline: 12px;
+  }
+
+  #listeCarte .liste-card {
+    width: min(100%, 300px);
+    margin-inline: auto;
   }
 
   #listeCarte .liste-card .card-icon {

@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Theme Sync -->
-    <script src="../../theme-sync.js"></script>
-  <meta name="description" content="ChatMD : un chatbot polyvalent pour créer des parcours conversationnels pédagogiques avec ou sans IA." />
+  <!-- Theme Sync -->
+  <script src="../../theme-sync.js"></script>
+  <meta name="description"
+    content="ChatMD : un chatbot polyvalent pour créer des parcours conversationnels pédagogiques avec ou sans IA." />
   <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
@@ -14,7 +15,8 @@
 
   <title>ChatMD</title>
   <link rel="stylesheet" href="style_chatMD.css" />
-    <link rel="stylesheet" href="../../theme-sync.css" />
+  <link rel="stylesheet" href="../../theme-sync.css" />
+  <link rel="stylesheet" href="../../reading-progress.css">
 </head>
 
 <body>
@@ -25,14 +27,14 @@
 
   <main>
     <div data-shared-sidebar data-base="../../" data-current="outils"></div>
-    
+
 
     <div class="containerNav">
       <div class="titreNav">Dans cet article</div>
       <div class="navigationPage">
         <a href="#chat">Réponse à un besoin</a>
-        <a href="#tuto">Tutoriel</a>
-        <a href="#usage-ia">Utilisation de l'IA</a>
+        <a href="#tuto">Tutoriel sans IA</a>
+        <a href="#tutoIA">Tutoriel avec l'IA</a>
       </div>
     </div>
 
@@ -96,7 +98,8 @@
                 <p>On va créer un parcours libre ou scénarisé qui va guider l'utilisateur, lui poser des questions,
                   vérifier ses connaissances ou compétences. <br />
                   Nous devons donc prévoir à l'avance un fichier contenant les questions et réponses possibles.
-                  L'algorithme principal de ChatMd va calculer, sans IA, la réponse la plus pertinente mais tout est géré
+                  L'algorithme principal de ChatMd va calculer, sans IA, la réponse la plus pertinente mais tout est
+                  géré
                   depuis le fichier de l'enseignant.
                 </p>
               </div>
@@ -132,8 +135,8 @@
           <p>
             De nombreux usages sont possibles... À vous les tutoriels, les FAQ, les guides méthodologiques, les
             conversations avec des personnages historiques, les outils de révision,etc. <br />
-            Pour en savoir plus et solliciter de l'aide pour tout problème, vous pouvez, comme moi, rejoindre le salon <a
-              href="https://www.tchap.gouv.fr/#/welcome">Tchap</a> dédié à l'aide et à l'utilisation de cet outil.
+            Pour en savoir plus et solliciter de l'aide pour tout problème, vous pouvez, comme moi, rejoindre le salon
+            <a href="https://www.tchap.gouv.fr/#/welcome">Tchap</a> dédié à l'aide et à l'utilisation de cet outil.
           </p>
 
           <h3 id="tuto" class="titleh3">Tutoriel d'utilisation sans IA</h3>
@@ -144,11 +147,14 @@
           </p>
 
           <div class="preambule">
-            <strong>En préambule : </strong> J'ai choisi de travailler sans IA pour le moment. Pour réaliser le fichier
+            <strong>En préambule : </strong> J'ai choisi de travailler sans IA dans un premier temps. Pour réaliser le
+            fichier
             Markdown, j'utilise <a href="https://codimd.apps.education.fr/">CodiMD</a>. Un des nombreux outils proposés
             sur <a href="https://portail.apps.education.fr">apps.education.fr</a>. Il suffit d'avoir une adresse
-            professionnelle académique pour se connecter facilement. Ce logiciel en ligne est un éditeur de texte amélioré
-            collaboratif permettant de générer des documents au format Markdown. C'est une sorte de langage de balisage des documents
+            professionnelle académique pour se connecter facilement. Ce logiciel en ligne est un éditeur de texte
+            amélioré
+            collaboratif permettant de générer des documents au format Markdown. C'est une sorte de langage de balisage
+            des documents
             texte. Un seul inconvénient... Markdown n'a jamais été standardisé donc il existe des variantes de ce
             langage. Il faut donc trouver la bonne... <br />
             Je mettrai en téléchargement mon fichier de configuration du chatbot pour que vous puissiez l'adapter.
@@ -219,23 +225,217 @@
             </div>
           </div>
 
-          <h3 id="tuto" class="titleh3">Tutoriel d'utilisation avec IA</h3>
-          <p>À venir...</p>
+          <h3 id="tutoIA" class="titleh3">Tutoriel d'utilisation avec IA</h3>
+          <p class="preambule">
+            <strong>En préambule : </strong>Nous allons maintenant envisager l'utilisation de l'IA avec ChatMD. <br>
+            Toutes les propriètés évoquées précedemment restent valables. Là ou ChatMD va montrer tout son potentiel,
+            c'est dans la possibilité de configurer le recours de l'IA à la demande. <br>
+            J'ai créé un autre chatbot pour l'occasion. Le fonctionnement de base est identique. J'héberge le fichier de
+            configuration au format Markdown sur <a href="https://codimd.apps.education.fr/">CodiMD</a> (je vous le
+            propose en téléchargement plus bas). Pour utiliser le chatbot vous devez entrer la clé ci-dessous. SI vous
+            avez cliquez sur "Annuler", rechargez la page simplement et entrer le code. <br>
+            <strong> CLÉ D'UTILISATION DU CHATBOT PLATICHON : 123</strong>
+          </p>
+          <div class="containerChatbot">
+            <div class="texteChatbot">
+              <p class="attention"><strong>IMPORTANT : </strong> Pour pouvoir accéder aux fonctionnalités IA, il faut
+                avoir une clé API
+                chez
+                un fournisseur de LLM. <br>
+                ✍🏻 <strong>Comment créer une clé API ? </strong> <br>
+                Selon l'utilisation, les solutions sont diverses mais si vous souhaitez simplement tester ChatMD ou que
+                votre public est limité, certains fournisseurs peuvent proposer gratuitement des plans pour la création
+                de clés API. <br>
+                Voici une liste avec quelques propositions gratuites pour créer votre clé : <a
+                  href="https://github.com/cheahjs/free-llm-api-resources">Free LLM API ressources</a>
+              </p>
+              <p>
+                Après avoir obtenue votre clé API, vous aller devoir la chiffrer pour ne pas qu'elle apparaisse en clair
+                (publiquement) dans votre fichier de configuration sans quoi, elle pourrait être utilisée par nimporte
+                qui pour faire n'importe quoi. <br>
+                Voici un lien mis à disposition par les concepteur de ChatMD pour chiffre en un clic votre clé : <a
+                  href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#"> Chiffrement de la clé API</a>
+                <br>
+                Ensuite il faut respecter 2 choses :
+              </p>
+              <ul class="liste">
+                <li>Déclarer l'utilisation de l'IA dans l'entête YAML du fichier de configuration</li>
+                <li>Expliciter au chatbot quel recours à l'IA vous souhaitez (ponctuel ou prolongé)</li>
+              </ul>
+              <p>
+                Téléchargement :
+                <a href="../../doc/Platichon.md">Télécharger le fichier de configuration de Platichon</a>
+              </p>
+              <p>
+                Comme précédemment, si vous souhaitez plus de précision, la <a
+                href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a> de ChatMD est très bien faite.
+                Je n'effleure ici, que quelques possibilités liée à l'utilisation de l'IA dans ce type de bot. <br>
+                C'est parti !
+              </p>
+            </div>
+            <div class="chatbot">
+              <iframe src="https://chatmd.forge.apps.education.fr//#https://codimd.apps.education.fr/s/q1pWceXIN"
+                style="border:0; width:100%; height:800px"></iframe>
+            </div>
+          </div>
+          <p>
+            🟢 Configuration du LLM dans le YAML : <br>
+            Ajouter dans l'entête YAML de votre fichier de configuration le code ci-dessous complété. <br>
+            Le fait de chiffrer la clé API empêche seulement que la clé soit récupérée par quelqu'un qui n'a pas le mot
+            de passe.
+            Mais une personne qui a le mot de passe et un peu de connaissances techniques pourrait récupérer la clé API.
+            Ce n'est donc pas une solution parfaite et il faut alors vérifier les usages de sa clé, et la réinitialiser
+            en cas de problème.
+          </p>
+          <pre><code>
+          useLLM:
+            url: URL_API
+            model: nom_du_modèle_de_langage
+            encryptedAPIkey: clé_chiffrée</code>
+          </pre>
+          <p>
+            🟢 Utilisation de l'IA <br>
+            ChatMD peut se connecter à un LLM en ligne ou en local. Ici, je ne traite que de l'appel en ligne. Je vous
+            renvoie à la <a href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a> pour
+            l'utilisation d'un LLM local. <br>
+            Ce qui me parait très intéressant avec ChatMD est que l'on peut utiliser l'IA de manière
+            sobre et ciblée, au sein d'un parcours scénarisé dont on garde le contrôle.
+            De plus, l'utilisateur n'aura pas besoin de créer un compte pour accéder à votre chatbot : il faudra
+            simplement lui communiquer un mot de passe (123 ici). <br>
+            Sur le plan général, l'appel et les instructions donnés au LLM dans le fichier de configuration se font
+            comme suit :
+          </p>
+          <pre><code>
+          `!useLLM`
+          Prompt
+          `END !useLLM` </code>
+          </pre>
+          <p>
+            Voici un exemple simple repris dans le bot ci-dessus :
+          </p>
+          <pre><code>
+          ## Dictée niveau quatrième
+          Voici une dictée générée automatiquement par l'IA  :
+
+          `!useLLM`
+
+            Rédige une dictée d'environ 80 à 100 mots, destinée à des élèves de quatrième.  
+            Le texte doit être rédigé au passé simple et à l'imparfait, contenir au moins trois adjectifs accordés en genre et en nombre, ainsi qu'une proposition subordonnée relative.  
+            Le vocabulaire doit rester accessible pour ce niveau, et le ton peut être narratif ou descriptif.
+
+            `END !useLLM`
+
+            📝 Conseil à l'élève : lis d'abord la dictée une première fois en entier, puis fais-la à l'écrit sans te précipiter. Pense à bien accorder les adjectifs et les verbes, surtout à l'imparfait !
+
+            1. [Suite ?](Poursuite)
+            2. [Quitter ?](Sortir) </code>
+            </pre>
+          <p>
+            Par défaut, l'appel à l'IA est unique et ponctuel. Autrement dit, on ne peut pas continuer la conversation
+            avec l'IA et cette dernière n'a pas accès à l'historique de conversation. Bien sûr, ces propriètés sont
+            parfaitement paramétrables. <br>
+            Si vous choisissez de prolonger l'utilisation de l'IA, il faut penser à donner à l'utilisateur une
+            possibilité de sortie de la conversation.
+          </p>
+          <ul class="liste">
+            <li>Soit par un bouton qui renvoie à un menu.</li>
+            <li>Soit une sortie automatique après un certain nombre de messages.</li>
+            <li>Soit une sortie si un mot clé est détecté.</li>
+            <li>Soit une sortie suite à l'analyse de la réponse par l'IA.</li>
+            <li>...</li>
+          </ul>
+          <p>
+            Bref, les exemples dans le bot sont nombreux et le fichier de configuration vous montrera la syntaxe à
+            adopter.
+          </p>
+          <p>🟢 Le RAG <br>
+            Il est important d'attirer l'attention sur un autre type d'utilisation de ChatMD : le RAG <br>
+            Le RAG (Retrieval-Augmented Generation) consiste à demander à une IA générative de répondre, non pas
+            seulement
+            à partir des informations issues de son entraînement, mais à partir d'une base de connaissances qu'on lui a
+            fournie. <br>
+            On pourrait par exemple fournir une liste de définitions, de méthodes, de textes propres à sa discipline et
+            son approche pédagogique.
+            Le but est d'améliorer la pertinence du contenu généré et de forcer l'IA à répondre d'après le cadre qu'on
+            lui
+            donne. <br>
+            Pour activer le RAG et ajouter une base de connaissance qui sera utilisée par le LLM pour produire sa
+            réponse, on ajoute dans le YAML :
+          </p>
+          <pre><code>
+          useLLM:
+            url: URL_API
+            model: nom_du_modèle_de_langage
+            encryptedAPIkey: clé_chiffrée
+            RAGinformations: ["URL1", "URL2", "URL3"]
+ </code>
+          </pre>
+          <p>
+            On le voit, il est possible de mettre plusieurs adresses de fichiers à récupérer pour constituer la base de
+            connaissance. <br>
+            <strong>Important : la base de connaissance doit être constituée de fichiers texte. Il est impossible
+              d'utiliser le format PDF.</strong> On peut éventuellement mettre directement du texte en lieu et place des
+            URLs dans le YAML si la base de
+            connaissances est très succincte. A l'inverse, si la base est conséquente, on conseille de la charger avant
+            que LLM soit sollicité afin d'améliorer les performances grâce au paramètre <em>preload</em> dans le YAML.
+          </p>
+          <p>
+            <strong>Fonctionnement du RAG : </strong> <br>
+            ChatMD utilise un système de RAG simplifié qui fonctionne ainsi :
+          </p>
+          <ul class="liste">
+            <li><strong>Préparation de la base de connaissances : </strong>ChatMD découpe en segments (chunks) la base
+              de connaissances.</li>
+            <li><strong>Recherche des passages pertinents lors d'une requête : </strong>Quand une question est posée,
+              ChatMD fait un calcul de similarité entre la question et ces différents segments, afin d'identifier les
+              passages les plus pertinents.</li>
+            <li><strong>Construction du prompt enrichi : </strong>ChatMD ajoute les passages les plus pertinents au
+              prompt et demande au LLM de répondre en prenant en compte ces passages.</li>
+          </ul>
+          <div class="RAGtec">
+            <p><strong>🚀 Aspects techniques</strong> <br>
+              Comme il est précisé dans la <a
+                href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a>, Contrairement aux systèmes
+              RAG classiques, ChatMD ne repose pas sur une vectorisation sémantique des documents à l'aide d'embeddings
+              stockés dans une base vectorielle. <br>
+
+              À la place, ChatMD effectue une vectorisation lexicale légère : les documents sont représentés sous forme
+              de tokens, et la similarité entre une question et les documents est calculée à l'aide de méthodes
+              classiques (similarité cosinus, calcul de distance lexicale, prise en compte de la taille et de la
+              position des tokens …). <br>
+              Ce choix vise à :
+            </p>
+            <ul class="liste">
+              <li>Favoriser un usage sobre de l'intelligence artificielle, en évitant les appels à des services d'API
+                pour la vectorisation.</li>
+              <li>Simplifier le déploiement en supprimant la dépendance à une base de données externe ou à un moteur de
+                recherche sémantique</li>
+            </ul>
+            <p>
+              Par ailleurs le parti-pris est que dans les cadres d'usages de ChatMD, notamment institutionnels ou
+              pédagogiques, les documents utilisés pour la base de connaissance intègrent suffisamment de mots-clés pour
+              pouvoir se passer de la vectorisation sémantique.
+            </p>
+          </div>
+          <p>Pour ces raisons et bien d'autres, il est donc impératif de bien contruire ses fichiers à destination du RAG.
+          Je conseille donc de travailler avec des fichiers texte dans lesquels le balisage Markdown est à l'oeuvre.
+          Le balisage Markdown va permettre à ChatMD un <em>chunking</em> facilité. Evidemment, je vous propose le
+          fichier du RAG présenté dans le bot ci-dessus en téléchargement : <br>
+          <a href="../../doc/RAG.md">Téléchargement du fichier pour le RAG</a>  <br>
+          A vous de jouer maintenant !
+          </p>
         </div>
       </div>
     </section>
   </main>
 
- 
+
   <!--Injection du footer-->
   <div data-shared-footer data-base="../../"></div>
   <script src="../../search-local.js"></script>
   <script src="../../shared-components.js"></script>
   <script src="script_chatMD.js"></script>
+  <script src="../../reading-progress.js" defer></script>
 </body>
 
 </html>
-
-
-
-

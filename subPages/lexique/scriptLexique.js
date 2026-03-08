@@ -157,6 +157,90 @@ document.getElementById('searchInput').addEventListener('input', e => {
   renderTerms();
 });
 
+function exportLexiqueAsTxt() {
+  // Construit un contenu texte brut reutilisable pour l'export TXT et PDF.
+  const year = new Date().getFullYear();
+  const content = [
+    `Lexique Intelligence Artificielle (${year})`,
+    '',
+    ...terms.map((term, index) => {
+      const plainDef = term.def.replace(/<[^>]+>/g, '');
+      return `${String(index + 1).padStart(2, '0')}. ${term.name} [${term.cat}]\n${plainDef}`;
+    })
+  ].join('\n\n');
+
+  // Export TXT:
+  // 1) creation d'un Blob texte
+  // 2) creation d'une URL temporaire
+  // 3) clic programme sur un lien de telechargement
+  // 4) nettoyage de l'URL temporaire
+  const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `lexique-ia-${year}.txt`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+// Export PDF:
+// Ouvre une fenetre d'impression pre-remplie avec le contenu du lexique.
+// L'utilisateur peut ensuite choisir "Enregistrer au format PDF".
+function exportLexiqueAsPdf() {
+  const year = new Date().getFullYear();
+  const content = [
+    `Lexique Intelligence Artificielle (${year})`,
+    '',
+    ...terms.map((term, index) => {
+      const plainDef = term.def.replace(/<[^>]+>/g, '');
+      return `${String(index + 1).padStart(2, '0')}. ${term.name} [${term.cat}]\n${plainDef}`;
+    })
+  ].join('\n\n');
+
+  const escapedContent = content
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  const printWindow = window.open('', '_blank');
+  if (!printWindow) return;
+
+  printWindow.document.write(`
+    <!DOCTYPE html>
+    <html lang="fr">
+      <head>
+        <meta charset="UTF-8">
+        <title>Lexique IA ${year}</title>
+        <style>
+          body { font-family: Arial, sans-serif; margin: 28px; color: #111; }
+          h1 { margin-bottom: 16px; font-size: 22px; }
+          pre { white-space: pre-wrap; line-height: 1.5; font-size: 13px; }
+        </style>
+      </head>
+      <body>
+        <h1>Lexique Intelligence Artificielle (${year})</h1>
+        <pre>${escapedContent}</pre>
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+}
+
+const exportLexiqueBtn = document.getElementById('exportLexiqueBtn');
+if (exportLexiqueBtn) {
+  exportLexiqueBtn.addEventListener('click', exportLexiqueAsTxt);
+}
+
+// Branche le bouton PDF ajoute dans indexLexique.html.
+const exportLexiquePdfBtn = document.getElementById('exportLexiquePdfBtn');
+if (exportLexiquePdfBtn) {
+  exportLexiquePdfBtn.addEventListener('click', exportLexiqueAsPdf);
+}
+
 // Premier rendu au chargement de la page.
 renderTerms();
 

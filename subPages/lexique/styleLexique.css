@@ -142,6 +142,23 @@ input[type="search"]::placeholder {
   margin-bottom: 48px;
 }
 
+.lexique-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -28px 0 24px;
+}
+
+.export-btn {
+  background: rgba(42, 130, 252, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.export-btn:hover {
+  background: rgba(42, 130, 252, 0.2);
+}
+
 .pill {
   font-family: var(--mono);
   font-size: 11px;

@@ -197,6 +197,33 @@
   transform: translate(3px, 3px);
 }
 
+.attention{
+  background-color: #f59e0b;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(110, 26, 26);
+}
+
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto; /* Ajoute une barre de défilement si le code est trop long */
+    margin-bottom: 10px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #9b278b; /* Une petite couleur pour faire ressortir le code */
+}
+
+.RAGtec{
+  background-color: #8b79f0a6;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
   .containerchatMD {
     display: grid;

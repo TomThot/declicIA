@@ -271,3 +271,50 @@ window.addEventListener("touchend", () => {
 });
   }
 }
+
+// Popup d'information sur les cartes ChatMD.
+const chatMdCards = Array.from(document.querySelectorAll(".carousel-card, .liste-card")).filter(
+  (card) => card.querySelector(".card-title")?.textContent.trim() === "ChatMD"
+);
+
+chatMdCards.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    const clickedLink = event.target.closest("a");
+    const cardLink = card.querySelector(".card-tag");
+    const destination = clickedLink?.getAttribute("href") || cardLink?.getAttribute("href");
+
+    if (clickedLink) event.preventDefault();
+
+    alert("Code pour utiliser le chatbot connecté à l'IA : 123");
+
+    if (destination) {
+      window.location.href = destination;
+    }
+  });
+});
+
+// Uniformise la hauteur des cartes de la galerie selon la plus grande.
+function equalizeListCardHeights() {
+  const listCards = Array.from(document.querySelectorAll("#listeCarte .liste-card"));
+  if (!listCards.length) return;
+
+  listCards.forEach((card) => {
+    card.style.height = "auto";
+  });
+
+  const maxHeight = Math.max(...listCards.map((card) => card.offsetHeight));
+  listCards.forEach((card) => {
+    card.style.height = `${maxHeight}px`;
+  });
+}
+
+equalizeListCardHeights();
+
+let resizeRafId = null;
+window.addEventListener("resize", () => {
+  if (resizeRafId !== null) cancelAnimationFrame(resizeRafId);
+  resizeRafId = requestAnimationFrame(() => {
+    equalizeListCardHeights();
+    resizeRafId = null;
+  });
+});
