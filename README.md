@@ -1,136 +1,207 @@
 # DéclicIA
 
-Site web éducatif sur l'intelligence artificielle en contexte scolaire.
+Site web éducatif sur l'intelligence artificielle en contexte scolaire, destiné aux enseignants.
 
-Site en ligne: https://tomthot.github.io/declicIA/
+🌐 **Site en ligne :** [https://tomthot.github.io/declicIA/](https://tomthot.github.io/declicIA/)
+
+---
 
 ## Objectif
 
-DéclicIA propose:
-- des contenus de vulgarisation sur l'IA
-- un cadre institutionnel et des enjeux
-- des outils concrets pour la classe
-- des interactions front-end (menu, popups, quiz, thème clair/sombre)
+DéclicIA propose :
 
-## Stack
+- des contenus de vulgarisation sur l'IA (définitions, histoire, fonctionnement)
+- le cadre institutionnel, les enjeux et les défis pour l'éducation
+- des outils concrets pour la classe (chatbots, génération de contenu, aide aux dys...)
+- des ressources interactives : lexique, flipcards mythes/réalité, générateur de cadre d'usage
+- des interactions front-end : menu responsive, thème clair/sombre, quiz de profil, barre de lecture
 
-- HTML5
-- CSS3
-- JavaScript vanilla (pas de framework)
-- Déploiement statique (GitHub Pages)
+---
+
+## Stack technique
+
+| Technologie | Usage |
+|---|---|
+| HTML5 | Structure sémantique de toutes les pages |
+| CSS3 | Mise en page, variables, thème, responsive, `@media print` |
+| JavaScript vanilla | Interactions, composants partagés, quiz, carousel 3D |
+| GitHub Pages | Déploiement statique, aucun serveur requis |
+
+Aucun framework, aucune dépendance NPM. Tout fonctionne en ouvrant `index.html` dans un navigateur.
+
+---
 
 ## Architecture du projet
 
 ```text
 Mon site IA/
-├─ index.html
-├─ style.css
-├─ script.js
-├─ theme-sync.css
-├─ theme-sync.js
-├─ data-popups.js
+├─ index.html                        ← Page d'accueil
+├─ style.css                         ← Styles globaux
+├─ script.js                         ← Script page d'accueil
+├─ theme-sync.css                    ← Styles du thème clair/sombre (partagé)
+├─ theme-sync.js                     ← Logique du thème (partagé)
+├─ reading-progress.css              ← Barre de progression de lecture (partagé)
+├─ reading-progress.js               ← Logique de la barre de lecture (partagé)
+├─ shared-components.js              ← Injection du header sidebar et footer (partagé)
+├─ search-local.js                   ← Moteur de recherche interne (partagé)
+├─ data-popups.js                    ← Données des popups de la page d'accueil
+├─ 404.html                          ← Page d'erreur personnalisée
 ├─ README.md
 ├─ .gitignore
-├─ Images/
-├─ LIA_cest_quoi/
+│
+├─ Images/                           ← Illustrations, logos, bannières, icônes
+│
+├─ LIA_cest_quoi/                    ← "L'IA c'est quoi ?"
 │  ├─ indexIA.html
 │  ├─ StyleIA.css
 │  └─ scriptIA.js
-├─ Cadre_et_défit/
+│
+├─ Cadre_et_défit/                   ← "Cadre et défis"
 │  ├─ IndexCadreDefi.html
 │  ├─ StyletCadreDefi.css
-│  └─ ScriptCadreDefi.js
-├─ Outils_Classe/
-│  ├─ IndexOutils.html
-│  ├─ StyleOutils.css
-│  └─ ScriptOutils.js
-├─ Carousel_outilsIA/
+│  ├─ ScriptCadreDefi.js
+│  └─ Generateur_cadre/             ← Générateur de fiche cadre d'usage
+│     ├─ indexGenerateur.html
+│     ├─ styleGenerateur.css
+│     ├─ scriptGenerateur.js
+│     └─ data-cadre.js              ← Données (disciplines, niveaux, usages, outils)
+│
+├─ Carousel_outilsIA/                ← Galerie des outils IA
 │  ├─ Carousel_index.html
 │  ├─ Carousel_style.css
 │  ├─ Carousel_script.js
-│  ├─ lart_du_prompt/
-│  ├─ quelle_IA_choisir/
-│  ├─ P2IA/
-│  ├─ chatMD/
-│  ├─ caramel/
-│  ├─ dysfacile/
-│  └─ notebookLM/
-├─ Assistant_prompt/
-├─ ContactFooter/
-├─ doc/
-├─ assets/
-├─ tramePagesIndex.html
-├─ tramePagesStyle.css
-└─ tramePagesScript.js
+│  ├─ lart_du_prompt/               ← Outil : L'art du prompt
+│  ├─ quelle_IA_choisir/            ← Outil : Comparatif IA 2026
+│  ├─ P2IA/                         ← Outil : Outils P2IA cycle 3
+│  ├─ chatMD/                       ← Outil : ChatMD (chatbot)
+│  ├─ caramel/                      ← Outil : Caramel (H5P)
+│  ├─ dysfacile/                    ← Outil : DysFacile
+│  └─ notebookLM/                   ← Outil : NotebookLM
+│
+├─ subPages/                         ← Sous-pages thématiques
+│  ├─ lexique/                      ← Lexique des termes IA
+│  │  ├─ indexLexique.html
+│  │  ├─ styleLexique.css
+│  │  └─ scriptLexique.js
+│  └─ mythes_réalité/               ← Flipcards mythes vs réalité
+│     ├─ indexMythes.html
+│     ├─ styleMythes.css
+│     └─ scriptMythes.js
+│
+├─ Assistant_prompt/                 ← Assistant prompt (non publié)
+├─ Contact/                          ← Page de contact
+├─ doc/                              ← Documents de travail (non publiés)
+└─ assets/                           ← Fichiers sources (non publiés)
 ```
+
+---
 
 ## Pages principales
 
-- Accueil: `index.html`
-- L'IA c'est quoi: `LIA_cest_quoi/indexIA.html`
-- Cadre et défis: `Cadre_et_défit/IndexCadreDefi.html`
-- Outils pour la classe: `Outils_Classe/IndexOutils.html`
-- Carousel outils: `Carousel_outilsIA/Carousel_index.html`
+| Page | Fichier |
+|---|---|
+| Accueil | `index.html` |
+| L'IA c'est quoi ? | `LIA_cest_quoi/indexIA.html` |
+| Cadre et défis | `Cadre_et_défit/IndexCadreDefi.html` |
+| Générateur de cadre d'usage | `Cadre_et_défit/Generateur_cadre/indexGenerateur.html` |
+| Galerie des outils | `Carousel_outilsIA/Carousel_index.html` |
+| Lexique | `subPages/lexique/indexLexique.html` |
+| Mythes vs Réalité | `subPages/mythes_réalité/indexMythes.html` |
 
-## Fonctionnement du thème
+---
 
-- Le thème est piloté par `data-theme` sur `<html>`.
-- Persistance utilisateur via `localStorage` (`declicia-theme`).
-- Scripts concernés:
-  - `theme-sync.js` (pages secondaires)
-  - `script.js` (page d'accueil)
-- Styles globaux de thème: `theme-sync.css`.
+## Composants partagés
+
+Tous les composants réutilisables sont à la racine du projet et chargés via `<script>` ou `<link>` dans chaque page.
+
+### Thème clair / sombre
+- Piloté par l'attribut `data-theme` sur `<html>` (`"light"` ou `"dark"`)
+- Persistance via `localStorage` (clé : `declicia-theme`)
+- Détection automatique de la préférence système (`prefers-color-scheme`)
+- Fichiers : `theme-sync.js` + `theme-sync.css`
+
+> ⚠️ `theme-sync.js` est chargé **sans `defer`** en tout début de `<head>` pour éviter le flash blanc→sombre au chargement.
+
+### Barre de progression de lecture
+- Apparaît uniquement si la page dépasse 1,5× la hauteur de la fenêtre
+- Créée dynamiquement par JS (dégradation gracieuse si JS désactivé)
+- Accessible : `role="progressbar"` + attributs ARIA
+- Fichiers : `reading-progress.js` + `reading-progress.css`
+
+### Header / Footer / Sidebar
+- Injectés dynamiquement via des placeholders HTML :
+```html
+<div data-shared-sidebar data-base="../" data-current="lia"></div>
+<div data-shared-footer data-base="../" data-current="lia"></div>
+```
+- `data-base` : chemin relatif vers la racine depuis la page courante
+- `data-current` : clé de la page active pour surligner le bon lien nav
+- Fichier : `shared-components.js`
+
+### Recherche interne
+- Recherche locale sur les titres et contenus des pages
+- Fichier : `search-local.js`
+
+---
 
 ## Développement local
 
-1. Cloner le dépôt:
-
 ```bash
+# 1. Cloner le dépôt
 git clone https://github.com/TomThot/declicIA.git
 cd declicIA
+
+# 2. Ouvrir dans le navigateur
+# Option A : double-clic sur index.html
+# Option B : Live Server (VS Code) pour éviter les problèmes CORS
 ```
 
-2. Ouvrir `index.html` dans le navigateur, ou lancer un serveur local (Live Server par exemple).
+Aucune installation, aucun `npm install` requis.
 
-## Fichier .gitignore (état actuel)
+---
 
-Entrées présentes:
+## Fichier .gitignore
 
 ```gitignore
-tramePagesIndex.html
+tramePagesIndex.html    ← Trame de développement (template de nouvelle page)
 tramePagesScript.js
 tramePagesStyle.css
-/ContactFooter
-/assets
-neurone.py
-/Outils_classe
+assets/                 ← Fichiers sources (Illustrator, H5P bruts...)
+doc/neurone.py          ← Script Python de travail
+.vscode/                ← Configuration éditeur locale
 ```
 
-Notes importantes:
-- Le dossier réel est `Outils_Classe` (majuscule `C`), pas `Outils_classe`.
-- `neurone.py` est actuellement dans `doc/neurone.py` (pas à la racine).
+---
 
 ## Contribution
 
-1. Créer une branche:
-
 ```bash
+# Créer une branche de travail
 git checkout -b feature/ma-modif
+
+# Committer avec un message clair
+git commit -m "feat: description de la modification"
+
+# Pousser et ouvrir une Pull Request
+git push origin feature/ma-modif
 ```
 
-2. Committer:
+Convention de messages de commit recommandée :
+- `feat:` nouvelle fonctionnalité
+- `fix:` correction de bug
+- `style:` modification CSS / mise en forme
+- `content:` ajout ou modification de contenu
+- `refactor:` restructuration sans changement fonctionnel
 
-```bash
-git commit -m "Description claire"
-```
-
-3. Ouvrir une Pull Request.
+---
 
 ## Contact
 
-- Email: `tom.thot@gmail.com`
-- GitHub: https://github.com/TomThot
+- ✉️ Email : `tom.thot@gmail.com`
+- 🐙 GitHub : [https://github.com/TomThot](https://github.com/TomThot)
+
+---
 
 ## Licence
 
-© 2026 DéclicIA - Tous droits réservés.
+© 2026 DéclicIA — Thomas BROUILLET. Tous droits réservés.
