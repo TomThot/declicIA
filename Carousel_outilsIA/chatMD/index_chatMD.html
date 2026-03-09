@@ -268,7 +268,8 @@
               </p>
               <p>
                 Comme précédemment, si vous souhaitez plus de précision, la <a
-                href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a> de ChatMD est très bien faite.
+                  href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a> de ChatMD est très bien
+                faite.
                 Je n'effleure ici, que quelques possibilités liée à l'utilisation de l'IA dans ce type de bot. <br>
                 C'est parti !
               </p>
@@ -295,7 +296,8 @@
           </pre>
           <p>
             🟢 Utilisation de l'IA <br>
-            ChatMD peut se connecter à un LLM en ligne ou en local. Ici, je ne traite que de l'appel en ligne. Je vous
+            <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> peut se connecter à un LLM en ligne ou en
+            local. Ici, je ne traite que de l'appel en ligne. Je vous
             renvoie à la <a href="https://chatmd.forge.apps.education.fr/docs/?sec=7&subsec=2#">doc.</a> pour
             l'utilisation d'un LLM local. <br>
             Ce qui me parait très intéressant avec ChatMD est que l'on peut utiliser l'IA de manière
@@ -349,7 +351,8 @@
             adopter.
           </p>
           <p>🟢 Le RAG <br>
-            Il est important d'attirer l'attention sur un autre type d'utilisation de ChatMD : le RAG <br>
+            Il est important d'attirer l'attention sur un autre type d'utilisation de <a
+              href="https://chatmd.forge.apps.education.fr/">ChatMD</a> : le RAG <br>
             Le RAG (Retrieval-Augmented Generation) consiste à demander à une IA générative de répondre, non pas
             seulement
             à partir des informations issues de son entraînement, mais à partir d'une base de connaissances qu'on lui a
@@ -381,15 +384,18 @@
           </p>
           <p>
             <strong>Fonctionnement du RAG : </strong> <br>
-            ChatMD utilise un système de RAG simplifié qui fonctionne ainsi :
+            <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> utilise un système de RAG simplifié qui
+            fonctionne ainsi :
           </p>
           <ul class="liste">
-            <li><strong>Préparation de la base de connaissances : </strong>ChatMD découpe en segments (chunks) la base
+            <li><strong>Préparation de la base de connaissances : </strong><a
+                href="https://chatmd.forge.apps.education.fr/">ChatMD</a> découpe en segments (chunks) la base
               de connaissances.</li>
             <li><strong>Recherche des passages pertinents lors d'une requête : </strong>Quand une question est posée,
               ChatMD fait un calcul de similarité entre la question et ces différents segments, afin d'identifier les
               passages les plus pertinents.</li>
-            <li><strong>Construction du prompt enrichi : </strong>ChatMD ajoute les passages les plus pertinents au
+            <li><strong>Construction du prompt enrichi : </strong><a
+                href="https://chatmd.forge.apps.education.fr/">ChatMD</a> ajoute les passages les plus pertinents au
               prompt et demande au LLM de répondre en prenant en compte ces passages.</li>
           </ul>
           <div class="RAGtec">
@@ -399,7 +405,8 @@
               RAG classiques, ChatMD ne repose pas sur une vectorisation sémantique des documents à l'aide d'embeddings
               stockés dans une base vectorielle. <br>
 
-              À la place, ChatMD effectue une vectorisation lexicale légère : les documents sont représentés sous forme
+              À la place, <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> effectue une vectorisation
+              lexicale légère : les documents sont représentés sous forme
               de tokens, et la similarité entre une question et les documents est calculée à l'aide de méthodes
               classiques (similarité cosinus, calcul de distance lexicale, prise en compte de la taille et de la
               position des tokens …). <br>
@@ -417,12 +424,22 @@
               pouvoir se passer de la vectorisation sémantique.
             </p>
           </div>
-          <p>Pour ces raisons et bien d'autres, il est donc impératif de bien contruire ses fichiers à destination du RAG.
-          Je conseille donc de travailler avec des fichiers texte dans lesquels le balisage Markdown est à l'oeuvre.
-          Le balisage Markdown va permettre à ChatMD un <em>chunking</em> facilité. Evidemment, je vous propose le
-          fichier du RAG présenté dans le bot ci-dessus en téléchargement : <br>
-          <a href="../../doc/RAG.md">Téléchargement du fichier pour le RAG</a>  <br>
-          A vous de jouer maintenant !
+          <p>Pour ces raisons et bien d'autres, il est donc impératif de bien contruire ses fichiers à destination du
+            RAG.
+            Je conseille donc de travailler avec des fichiers texte dans lesquels le balisage Markdown est à l'oeuvre.
+            Le balisage Markdown va permettre à ChatMD un <em>chunking</em> facilité. Evidemment, je vous propose le
+            fichier du RAG présenté dans le bot ci-dessus en téléchargement : <br>
+            <a href="../../doc/RAG.md">Téléchargement du fichier pour le RAG</a> <br>
+            A vous de jouer maintenant !
+          </p>
+          <p class="bilan">
+            <strong>Bilan : </strong> Même sans rentrer dans les détails pointus de la configuration, on sent bien que
+            <a href="https://chatmd.forge.apps.education.fr/">ChatMD</a> est un outil extrêmement polyvalent, presque
+            configurable à l'infini et dont les applications sont très variées. <br>
+            Alors, oui, il faudra un petit temps d'adaptation pour apréhender la syntaxe Markdown mais le jeu en vaut
+            vraiement la chandelle ! Le salon Tchap est très réactif si vous avez des questions, alors n'hésitez plus.
+            Direction la documentation de <a
+              href="https://chatmd.forge.apps.education.fr/">ChatMD</a> et en avant pour proposer vos propres chatbots. 
           </p>
         </div>
       </div>

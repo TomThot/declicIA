@@ -224,6 +224,12 @@ code {
   margin-bottom: 15px;
 }
 
+.bilan{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #9b278c88;
+}
+
 @media (max-width: 768px) {
   .containerchatMD {
     display: grid;
