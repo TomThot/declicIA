@@ -32,7 +32,6 @@
     { title: "Cadre d'usage de l'IA", path: "Cadre_et_défit/IndexCadreDefi.html#cadre", keywords: "cadre usage institutionnel" },
     { title: "Les defis a relever", path: "Cadre_et_défit/IndexCadreDefi.html#defi", keywords: "defis risques" },
     { title: "Charte d'utilisation", path: "Cadre_et_défit/IndexCadreDefi.html#charte", keywords: "charte utilisation ia" },
-    { title: "Outils pour la classe", path: "Outils_Classe/IndexOutils.html", keywords: "outils classe ressources" },
     { title: "Galerie des outils", path: "Carousel_outilsIA/Carousel_index.html", keywords: "carousel galerie outils ia" },
     { title: "L'art du prompt", path: "Carousel_outilsIA/lart_du_prompt/index_art_du_prompt.html", keywords: "prompt actif rispo" },
     { title: "Quelle IA choisir", path: "Carousel_outilsIA/quelle_IA_choisir/index_quelle_IA_choisir.html", keywords: "comparatif choisir ia" },
@@ -41,7 +40,11 @@
     { title: "Caramel", path: "Carousel_outilsIA/caramel/index_caramel.html", keywords: "h5p caramel moodle elea" },
     { title: "DysFacile", path: "Carousel_outilsIA/dysfacile/index_dysfacile.html", keywords: "dys dysfacile accessibilite" },
     { title: "NotebookLM", path: "Carousel_outilsIA/notebookLM/index_notebookLM.html", keywords: "notebooklm podcast quiz" },
-    { title: "Assistant Prompt", path: "Assistant_prompt/IndexPrompt.html", keywords: "assistant prompt actif" }
+    { title: "Assistant Prompt", path: "Assistant_prompt/IndexPrompt.html", keywords: "assistant prompt actif" },
+    { title: "Lexique de l'IA", path: "subPages/lexique/indexLexique.html", keywords: "lexique termes vocabulaire definitions ia" },
+    { title: "Mythes vs Réalité", path: "subPages/mythes_réalité/indexMythes.html", keywords: "mythes realite flipcards idees recues" },
+    { title: "Générateur cadre d'usage", path: "Cadre_et_défit/Generateur_cadre/indexGenerateur.html", keywords: "generateur cadre usage fiche personnalisee classe" },
+    { title: "Contact", path: "Contact/contactIndex.html", keywords: "contact message suggestion erreur contribuer" }
   ];
 
   // Normalise les chaînes (accents, casse, espaces) pour une recherche robuste.
