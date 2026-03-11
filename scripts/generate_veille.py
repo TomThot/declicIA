@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Veille IA dans l'Education - Générateur hebdomadaire
-Collecte des flux RSS + synthèse via Google Gemini
+Collecte des flux RSS + synthèse via Groq (LLaMA 3.3 70B - gratuit, sans CB)
 """
 
 import os
@@ -75,20 +75,20 @@ def fetch_rss_articles(max_per_source=5):
 
 
 def clean_json_response(raw: str) -> str:
-    """Nettoie robustement la réponse Gemini pour extraire le JSON."""
+    """Extrait proprement le JSON de la réponse du LLM."""
     raw = raw.strip()
-    # Supprimer les blocs ```json ... ``` ou ``` ... ```
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
     raw = raw.strip()
-    # Extraire le premier objet JSON {} si du texte traîne avant/après
     match = re.search(r"\{.*\}", raw, re.DOTALL)
     if match:
         return match.group(0)
     return raw
 
 
-def generate_article_with_gemini(articles, api_key):
+def generate_article_with_groq(articles, api_key):
+    """Envoie les articles à Groq (LLaMA 3.3 70B) et récupère la synthèse."""
+
     articles_text = ""
     for i, a in enumerate(articles[:20], 1):
         articles_text += f"\n{i}. [{a['source']}] {a['title']}\n   {a['summary']}\n   URL: {a['url']}\n"
@@ -123,24 +123,36 @@ Structure exacte :
   "conclusion": "..."
 }}"""
 
-    # gemini-2.0-flash : modèle actuel free tier
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    url = "https://api.groq.com/openai/v1/chat/completions"
 
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.7, "maxOutputTokens": 2048}
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
     }
 
-    print("📡 Appel API Gemini (gemini-2.0-flash)...")
-    response = requests.post(url, json=payload, timeout=60)
+    payload = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": [
+            {
+                "role": "system",
+                "content": "Tu es un expert en IA et éducation. Tu réponds toujours en JSON valide uniquement, sans markdown ni backticks."
+            },
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.7,
+        "max_tokens": 2048
+    }
+
+    print("📡 Appel API Groq (llama-3.3-70b-versatile)...")
+    response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
-        print(f"❌ Erreur API Gemini {response.status_code} : {response.text[:500]}")
+        print(f"❌ Erreur API Groq {response.status_code} : {response.text[:500]}")
         response.raise_for_status()
 
     data = response.json()
-    raw_text = data["candidates"][0]["content"]["parts"][0]["text"]
-    print(f"📥 Réponse brute Gemini ({len(raw_text)} chars)")
+    raw_text = data["choices"][0]["message"]["content"]
+    print(f"📥 Réponse brute Groq ({len(raw_text)} chars)")
 
     cleaned = clean_json_response(raw_text)
 
@@ -178,9 +190,9 @@ def save_to_json(article_data, output_path="data/veille.json"):
 
 
 def main():
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
-        raise ValueError("❌ GEMINI_API_KEY manquante dans les variables d'environnement")
+        raise ValueError("❌ GROQ_API_KEY manquante dans les variables d'environnement")
 
     print("🔍 Collecte des articles RSS...")
     articles = fetch_rss_articles()
@@ -189,8 +201,8 @@ def main():
     if len(articles) < 3:
         raise ValueError("❌ Pas assez d'articles collectés pour générer une veille")
 
-    print("🤖 Génération de l'article via Gemini...")
-    article_data = generate_article_with_gemini(articles, api_key)
+    print("🤖 Génération de l'article via Groq...")
+    article_data = generate_article_with_groq(articles, api_key)
 
     print("💾 Sauvegarde dans data/veille.json...")
     entry = save_to_json(article_data)

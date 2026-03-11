@@ -23,7 +23,7 @@ jobs:
 
       - name: Generer l'article de veille
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/generate_veille.py
 
       - name: Commit et push de l'article
