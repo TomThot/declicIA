@@ -340,6 +340,11 @@ html[data-theme="dark"] .subtitle{
   color:var(--white);
 }
 
+html[data-theme="dark"] .veille-encart-footer a{
+  color:#ffffff;
+}
+
+
 /* ===== BEGIN THEME-SYNC: MYTHES REALITE ===== */
 html[data-theme="dark"] {
   --mythe: #1f2740;
