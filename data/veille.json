@@ -2,6 +2,34 @@
   {
     "id": "20260311",
     "date": "2026-03-11",
+    "date_affichage": "11 mars 2026",
+    "titre": "L'IA dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans les salles de classe, mais quels sont les enjeux et les défis pour les enseignants ? Cette semaine, nous avons sélectionné quelques articles pour vous aider à comprendre les dernières tendances et les implications de l'IA pour l'éducation. Les enseignants doivent être en mesure de comprendre et d'intégrer ces outils pour améliorer l'expérience d'apprentissage de leurs élèves.",
+    "breves": [
+      {
+        "titre": "Les écoles de New York investissent dans la formation des enseignants",
+        "contenu": "Les écoles de New York ont décidé d'investir dans la formation des enseignants pour améliorer les résultats scolaires. Cette formation se concentre sur les compétences pédagogiques et la manière de gérer les élèves. L'objectif est de réduire les écarts de résultats entre les élèves et de mieux préparer les enseignants à leurs tâches.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-11-why-nyc-schools-invested-in-coaching-for-staff-outside-the-classroom"
+      },
+      {
+        "titre": "Les législateurs poussent pour des écoles sans écrans",
+        "contenu": "Certains législateurs poussent pour des écoles sans écrans, considérant que les écrans peuvent être une distraction pour les élèves. Cependant, d'autres estiment que les écrans peuvent être un outil pédagogique précieux wenn utilisés de manière appropriée. Les enseignants doivent trouver un équilibre entre les avantages et les inconvénients de l'utilisation des écrans en classe.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-09-screen-free-schools-some-legislators-push-for-a-new-normal"
+      },
+      {
+        "titre": "Les élèves et les enseignants savent ce qui doit changer dans les écoles",
+        "contenu": "Les élèves et les enseignants sont les mieux placés pour savoir ce qui doit changer dans les écoles. Ils ont des idées concrètes pour améliorer l'expérience d'apprentissage et les résultats scolaires. Il est essential de les écouter et de prendre en compte leurs suggestions pour créer des écoles plus efficaces et plus agréables.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-04-schools-keep-facing-the-same-challenges-students-and-educators-know-what-needs-to-change"
+      }
+    ],
+    "conclusion": "L'IA et les outils numériques peuvent être des outils précieux pour les enseignants, mais il est essentiel de les utiliser de manière réfléchie et pédagogique. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pour créer des expériences d'apprentissage personnalisées et engageantes pour leurs élèves."
+  },
+  {
+    "id": "20260311",
+    "date": "2026-03-11",
     "date_affichage": "11 March 2026",
     "titre": "L'IA et l'éducation : une semaine de réflexion et d'innovation",
     "introduction": "Cette semaine, nous avons pu observer de nombreuses réflexions et innovations dans le domaine de l'éducation, notamment avec l'intégration de l'intelligence artificielle. Les articles collectés mettent en avant les défis et les opportunités que présente l'utilisation de l'IA dans les systèmes d'apprentissage. Nous allons explorer quelques-uns de ces points clés.",
