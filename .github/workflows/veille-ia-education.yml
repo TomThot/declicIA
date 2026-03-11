@@ -1,0 +1,35 @@
+name: Veille IA Education - Publication hebdomadaire
+
+on:
+  schedule:
+    - cron: '0 7 * * 0'  # Chaque dimanche à 7h00 UTC
+  workflow_dispatch:      # Permet aussi de lancer manuellement
+
+jobs:
+  generate-article:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dependances
+        run: pip install -r requirements.txt
+
+      - name: Generer l'article de veille
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/generate_veille.py
+
+      - name: Commit et push de l'article
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action - Veille IA"
+          git add data/veille.json
+          git diff --staged --quiet || git commit -m "📰 Veille IA Education - $(date +'%d/%m/%Y')"
+          git push

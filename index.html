@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme-sync.css">
     <link rel="stylesheet" href="reading-progress.css">
+    <link rel="stylesheet" href="css/veille.css">
 </head>
 
 <body>
@@ -113,7 +114,8 @@
                             <li><a href="Cadre_et_défit/IndexCadreDefi.html#pourquoi">Pourquoi l'IA en classe ?</a></li>
                             <li><a href="Cadre_et_défit/IndexCadreDefi.html#cadre">Cadre d'usage de l'IA</a></li>
                             <li><a href="Cadre_et_défit/IndexCadreDefi.html#defi">Les défis à relever</a></li>
-                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#charte">Charte d'utilisation de l'IA</a></li>
+                            <li><a href="Cadre_et_défit/IndexCadreDefi.html#charte">Charte d'utilisation de l'IA</a>
+                            </li>
                             <li><a href="Cadre_et_défit/IndexCadreDefi.html#mythe">Mythes sur l'IA vs réalité</a></li>
                         </ul>
                     </li>
@@ -244,7 +246,9 @@
             </p>
         </section>
 
-
+        <!------------------------------------------------------------------------->
+        <!----------------------------Nouveauté------------------------------------>
+        <!------------------------------------------------------------------------->
         <section class="nouveautés">
             <div class="article">
                 <h3>Les derniers articles du site : </h3>
@@ -268,6 +272,36 @@
                     <li><a href="Carousel_outilsIA/chatMD/index_chatMD.html">ChatMD un chatbot polyvalent </a>: MAJ
                         Utilisation de ChatMD avec l'IA. Tests et configuration (code : 123).</li>
                 </ul>
+            </div>
+        </section>
+
+        <!------------------------------------------------------------------------->
+        <!----------------------------Veille IA------------------------------------>
+        <!------------------------------------------------------------------------->
+
+        <section class="veille-encart-section">
+            <div class="veille-encart-header">
+                <span class="veille-encart-badge">
+                    <span class="veille-encart-dot"></span>
+                    Mis à jour chaque dimanche
+                </span>
+                <h2>Veille IA & Éducation</h2>
+                <p>Les actualités de la semaine sélectionnées et synthétisées automatiquement.</p>
+            </div>
+
+            <!-- Les brèves s'injectent ici via veille.js -->
+            <div id="veille-encart" class="veille-encart-grid">
+                <p class="veille-encart-loading">Chargement des dernières actualités…</p>
+            </div>
+
+            <div class="veille-encart-footer">
+                <a href="subpages/veille-ia.html" class="veille-encart-cta">
+                    Lire toutes les éditions
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -643,8 +677,8 @@
     <script src="data-popups.js"></script>
     <script src="script.js"></script>
     <script src="reading-progress.js" defer></script>
+    <script src="js/veille.js"></script>
 
 </body>
 
 </html>
-
