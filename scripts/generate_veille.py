@@ -123,15 +123,15 @@ Structure exacte :
   "conclusion": "..."
 }}"""
 
-    # gemini-1.5-flash : free tier le plus généreux (1500 RPD, 15 RPM)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # gemini-2.0-flash : modèle actuel free tier
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.7, "maxOutputTokens": 2048}
     }
 
-    print("📡 Appel API Gemini (gemini-1.5-flash)...")
+    print("📡 Appel API Gemini (gemini-2.0-flash)...")
     response = requests.post(url, json=payload, timeout=60)
 
     if not response.ok:
