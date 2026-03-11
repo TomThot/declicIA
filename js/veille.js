@@ -6,7 +6,7 @@
  */
 
 // Chemin vers le JSON selon la page courante
-const isSubpage = window.location.pathname.includes('/subpages/');
+const isSubpage = window.location.pathname.toLowerCase().includes('/subpages/');
 const VEILLE_JSON = isSubpage ? '../data/veille.json' : './data/veille.json';
 
 // Nombre de brèves à afficher dans l'encart
