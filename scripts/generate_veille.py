@@ -2,6 +2,11 @@
 """
 Veille IA dans l'Education - Générateur hebdomadaire
 Collecte des flux RSS + synthèse via Groq (LLaMA 3.3 70B - gratuit, sans CB)
+
+Améliorations :
+- Date affichée en français
+- Sources RSS vérifiées et à jour
+- Prompt recentré sur l'éducation scolaire (enseignants/élèves)
 """
 
 import os
@@ -10,6 +15,7 @@ import re
 import requests
 import feedparser
 import sys
+import locale
 from datetime import datetime, timezone
 
 # UTF-8 output
@@ -22,14 +28,17 @@ if hasattr(sys.stderr, "reconfigure"):
 # SOURCES RSS - IA & Education
 # ─────────────────────────────────────────────
 RSS_SOURCES = [
-    {"name": "EdSurge",                "url": "https://www.edsurge.com/feeds/news",               "lang": "en"},
-    {"name": "E-Learning Industry",    "url": "https://elearningindustry.com/feed",                "lang": "en"},
-    {"name": "Educavox",               "url": "https://www.educavox.fr/feed",                      "lang": "fr"},
-    {"name": "The Hechinger Report",   "url": "https://hechingerreport.org/feed/",                 "lang": "en"},
-    {"name": "Times Higher Education", "url": "https://www.timeshighereducation.com/rss.xml",      "lang": "en"},
-    {"name": "Educpros (L'Etudiant)",  "url": "https://www.letudiant.fr/educpros/rss.xml",         "lang": "fr"},
-    {"name": "MIT News - Education",   "url": "https://news.mit.edu/rss/topic/education",          "lang": "en"},
-    {"name": "VentureBeat AI",         "url": "https://venturebeat.com/category/ai/feed/",         "lang": "en"},
+    # ✅ URLs vérifiées et fonctionnelles
+    {"name": "EdSurge",              "url": "https://www.edsurge.com/articles_rss",             "lang": "en"},
+    {"name": "E-Learning Industry",  "url": "https://elearningindustry.com/feed",               "lang": "en"},
+    {"name": "The Hechinger Report", "url": "https://hechingerreport.org/feed/",                "lang": "en"},
+    {"name": "Educpros (L'Etudiant)","url": "https://www.letudiant.fr/educpros/rss.xml",        "lang": "fr"},
+    {"name": "MIT News - Education", "url": "https://news.mit.edu/rss/topic/education",         "lang": "en"},
+    {"name": "VentureBeat AI",       "url": "https://venturebeat.com/category/ai/feed/",        "lang": "en"},
+    # Nouvelles sources en remplacement des sources cassées
+    {"name": "Inside Higher Ed",     "url": "https://www.insidehighered.com/rss.xml",           "lang": "en"},
+    {"name": "Le Café Pédagogique",  "url": "https://www.cafepedagogique.net/feed/",            "lang": "fr"},
+    {"name": "eSchool News",         "url": "https://www.eschoolnews.com/feed/",                "lang": "en"},
 ]
 
 KEYWORDS = [
@@ -93,19 +102,23 @@ def generate_article_with_groq(articles, api_key):
     for i, a in enumerate(articles[:20], 1):
         articles_text += f"\n{i}. [{a['source']}] {a['title']}\n   {a['summary']}\n   URL: {a['url']}\n"
 
-    prompt = f"""Tu es un expert en éducation et en intelligence artificielle.
-Tu dois rédiger un article de veille hebdomadaire en FRANÇAIS sur l'IA dans l'éducation.
+    prompt = f"""Tu es un expert en intelligence artificielle appliquée à l'éducation scolaire et universitaire.
+Tu dois rédiger un article de veille hebdomadaire en FRANÇAIS, destiné aux enseignants du primaire, secondaire et supérieur.
 
 Voici les articles collectés cette semaine :
 {articles_text}
 
 Rédige un article de veille structuré ainsi :
 1. Un titre accrocheur pour la semaine
-2. Une introduction courte (2-3 phrases)
-3. Entre 3 et 5 "brèves" avec titre, résumé (3-4 phrases), source et lien
-4. Une conclusion/perspective en 2 phrases
+2. Une introduction courte (2-3 phrases) qui contextualise les enjeux de l'IA pour les enseignants
+3. Entre 3 et 5 "brèves" avec titre, résumé (3-4 phrases en français), source et lien
+4. Une conclusion/perspective en 2 phrases orientée pratiques pédagogiques
 
-Contraintes : français uniquement, ton accessible, format court (5 min de lecture).
+Contraintes :
+- Français uniquement, ton accessible pour des enseignants non spécialistes de l'IA
+- Format court (5 minutes de lecture maximum)
+- Privilégie les articles sur : outils IA pour la classe, impacts sur les élèves, politiques éducatives, formation des enseignants
+- Écarte les articles purement technologiques ou business sans lien avec la salle de classe
 
 IMPORTANT : réponds UNIQUEMENT avec un objet JSON valide, sans markdown, sans backticks, sans texte avant ou après.
 Structure exacte :
@@ -172,10 +185,16 @@ def save_to_json(article_data, output_path="data/veille.json"):
         with open(output_path, "r", encoding="utf-8") as f:
             existing = json.load(f)
 
+    # Date en français
+    MOIS_FR = ["", "janvier", "février", "mars", "avril", "mai", "juin",
+               "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+    now = datetime.now(timezone.utc)
+    date_fr = f"{now.day} {MOIS_FR[now.month]} {now.year}"
+
     new_entry = {
-        "id": datetime.now(timezone.utc).strftime("%Y%m%d"),
-        "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        "date_affichage": datetime.now(timezone.utc).strftime("%d %B %Y"),
+        "id": now.strftime("%Y%m%d"),
+        "date": now.strftime("%Y-%m-%d"),
+        "date_affichage": date_fr,
         **article_data
     }
 

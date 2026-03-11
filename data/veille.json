@@ -27,32 +27,4 @@
     ],
     "conclusion": "En conclusion, cette semaine a montré que l'éducation est en constante évolution, avec des défis et des opportunités liés à l'utilisation de l'IA et à la révision des systèmes éducatifs traditionnels. Il est essentiel de poursuivre la réflexion et l'innovation pour offrir des expériences d'apprentissage de haute qualité et pertinentes pour les besoins futurs."
   },
-  {
-    "id": "20250309",
-    "date": "2025-03-09",
-    "date_affichage": "09 March 2025",
-    "titre": "L'IA s'invite dans les salles de classe : tour d'horizon de la semaine",
-    "introduction": "Cette semaine, l'intelligence artificielle continue de transformer les pratiques éducatives à travers le monde. Entre outils d'aide à l'apprentissage et débats sur l'évaluation, le secteur de l'édtech n'a jamais été aussi actif.",
-    "breves": [
-      {
-        "titre": "ChatGPT dans les universités : entre adoption et résistance",
-        "contenu": "De plus en plus d'universités américaines intègrent officiellement ChatGPT dans leurs cours, notamment pour aider les étudiants à structurer leurs travaux. Si certains professeurs voient dans ces outils une opportunité pédagogique, d'autres craignent une dérive vers le plagiat automatisé. Un équilibre difficile à trouver.",
-        "source": "EdSurge",
-        "url": "https://www.edsurge.com"
-      },
-      {
-        "titre": "Des tuteurs IA personnalisés pour chaque élève",
-        "contenu": "Des startups comme Khanmigo (Khan Academy) et MagicSchool AI proposent désormais des tuteurs basés sur l'IA capables d'adapter leur pédagogie au rythme de chaque élève. Les premiers retours terrain montrent une amélioration notable de l'engagement des élèves en difficulté.",
-        "source": "E-Learning Industry",
-        "url": "https://elearningindustry.com"
-      },
-      {
-        "titre": "L'UNESCO publie ses lignes directrices sur l'IA en éducation",
-        "contenu": "L'UNESCO a mis à jour ses recommandations pour l'intégration de l'IA dans les systèmes éducatifs mondiaux. Le document insiste sur la nécessité de former les enseignants à ces outils et de garantir un accès équitable, notamment dans les pays en développement.",
-        "source": "The Hechinger Report",
-        "url": "https://hechingerreport.org"
-      }
-    ],
-    "conclusion": "L'IA en éducation n'est plus une promesse futuriste, c'est une réalité qui demande une adaptation rapide des acteurs du secteur. La semaine prochaine, nous continuerons à suivre les avancées et les débats autour de cette transformation."
-  }
 ]
