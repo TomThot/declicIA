@@ -8,6 +8,7 @@ on:
 jobs:
   generate-article:
     runs-on: ubuntu-latest
+    # Chaque exécution démarre une machine virtuelle Ubuntu fraîche sur les serveurs de GitHub. Elle est détruite à la fin. Ça garantit un environnement propre et reproductible à chaque run.
 
     steps:
       - name: Checkout du repo
@@ -17,14 +18,17 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+          #Installe Python 3.11 sur la VM. La version est fixée explicitement pour éviter les surprises si GitHub change la version par défaut.
 
       - name: Installer les dependances
         run: pip install -r requirements.txt
+        # Installe requests et feedparser depuis requirements.txt. Refait à chaque run depuis zéro (pas de cache).
 
       - name: Generer l'article de veille
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/generate_veille.py
+        # La clé API est injectée comme variable d'environnement depuis les Secrets GitHub. Elle n'apparaît jamais dans les logs ni dans le code — GitHub la masque automatiquement.
 
       - name: Commit et push de l'article
         run: |
