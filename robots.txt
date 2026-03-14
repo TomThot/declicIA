@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Assistant_prompt/
+
+Sitemap: https://declicia.pages.dev/sitemap.xml

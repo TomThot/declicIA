@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://declicia.pages.dev/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://declicia.pages.dev/LIA_cest_quoi/indexIA.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Cadre_et_d%C3%A9fit/IndexCadreDefi.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/Carousel_index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Générateur de cadre d'usage -->
+  <url>
+    <loc>https://declicia.pages.dev/Cadre_et_d%C3%A9fit/Generateur_cadre/indexGenerateur.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Outils pour la classe -->
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/lart_du_prompt/index_art_du_prompt.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/quelle_IA_choisir/index_quelle_IA_choisir.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/chatMD/index_chatMD.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/caramel/index_caramel.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/dysfacile/index_dysfacile.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/notebookLM/index_notebookLM.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/P2IA/index_P2IA.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Sous-pages -->
+  <url>
+    <loc>https://declicia.pages.dev/subPages/lexique/indexLexique.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/subPages/mythes_r%C3%A9alit%C3%A9/indexMythes.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/subPages/veille-ia.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://declicia.pages.dev/Contact/contactIndex.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Ressources téléchargeables -->
+  <url>
+    <loc>https://declicia.pages.dev/doc/Texte-adapte-OpenDyslexic-14pt-13-56-06.pdf</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

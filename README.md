@@ -2,7 +2,7 @@
 
 Site web éducatif sur l'intelligence artificielle en contexte scolaire, destiné aux enseignants.
 
-🌐 **Site en ligne :** [https://tomthot.github.io/declicIA/](https://tomthot.github.io/declicIA/)
+🌐 **Site en ligne :** [https://declicia.pages.dev/](https://declicia.pages.dev/)
 
 ---
 
