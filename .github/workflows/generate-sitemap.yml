@@ -1,0 +1,38 @@
+name: Génération automatique du sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.html'       # Se déclenche uniquement si un fichier HTML a changé
+      - 'doc/**/*.pdf'    # Ou si un PDF est ajouté/modifié
+  workflow_dispatch:      # Permet aussi de lancer manuellement
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # Nécessaire pour récupérer tout l'historique git (dates de commits)
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Générer le sitemap
+        run: python scripts/generate_sitemap.py
+        # Parcourt tous les .html publics, récupère les dates de dernier commit,
+        # et écrit sitemap.xml à la racine du projet.
+
+      - name: Commit et push du sitemap
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action - Sitemap"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "🗺️ Sitemap mis à jour - $(date +'%d/%m/%Y')"
+          git push
