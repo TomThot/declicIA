@@ -45,6 +45,9 @@ RSS_SOURCES = [
     {"name": "Inside Higher Ed",     "url": "https://www.insidehighered.com/rss.xml",           "lang": "en"},
     {"name": "Le Café Pédagogique",  "url": "https://www.cafepedagogique.net/feed/",            "lang": "fr"},
     {"name": "eSchool News",         "url": "https://www.eschoolnews.com/feed/",                "lang": "en"},
+    # Sources françaises ajoutées pour rééquilibrer vers le contexte scolaire français
+    {"name": "Educavox",             "url": "https://www.educavox.fr/feed",                     "lang": "fr"},
+    {"name": "éduscol Veille numérique", "url": "https://eduscol.education.fr/186/veille-education-numerique?format=feed&type=rss", "lang": "fr"},
 ]
 # La liste de mots-clés qui sert de filtre
 KEYWORDS = [
@@ -130,6 +133,8 @@ Contraintes :
 - Format court (5 minutes de lecture maximum)
 - Privilégie les articles sur : outils IA pour la classe, impacts sur les élèves, politiques éducatives, formation des enseignants
 - Écarte les articles purement technologiques ou business sans lien avec la salle de classe
+- Inclus systématiquement au moins une brève issue d'une source française (Le Café Pédagogique, Educavox, éduscol, Letudiant/Educpros)
+- Inclus si possible au moins un outil concret ou une ressource directement utilisable en classe
 
 IMPORTANT : réponds UNIQUEMENT avec un objet JSON valide, sans markdown, sans backticks, sans texte avant ou après.
 Structure exacte :
