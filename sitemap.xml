@@ -10,7 +10,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/Cadre_et_d%C3%A9fit/IndexCadreDefi.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -80,7 +80,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/LIA_cest_quoi/indexIA.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -97,6 +97,13 @@
     <lastmod>2026-03-14</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/subPages/faq/indexFAQ.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
