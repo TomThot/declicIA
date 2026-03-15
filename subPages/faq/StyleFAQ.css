@@ -4,11 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*variables*/
 :root{
   --white: #ffffff;
   --glow-blue: rgba(9, 80, 233, 0.2);
   --hover-blue: rgba(9, 80, 233, 0.35);
 }
+
 body {
   font-family: 'DM Sans', Arial, sans-serif;
   color: var(--text-color, #333);
