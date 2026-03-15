@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../theme-sync.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon_color-16x16.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- SEO et métadonnées -->
+  <title>DéclicIA - FAQ : IA en classe, données et réglementation</title>
+  <meta name="description" content="Les questions que se posent vraiment les enseignants sur l'IA : données élèves, RGPD, ce qu'on peut faire en classe, ce qui est interdit. Réponses sourcées et nuancées.">
+  <meta name="author" content="Thomas BROUILLET">
+  <link rel="canonical" href="https://declicia.pages.dev/subPages/faq/indexFAQ.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://declicia.pages.dev/subPages/faq/indexFAQ.html">
+  <meta property="og:title" content="DéclicIA - FAQ : IA en classe, données et réglementation">
+  <meta property="og:description" content="Les questions que se posent vraiment les enseignants sur l'IA : données élèves, RGPD, ce qu'on peut faire en classe, ce qui est interdit.">
+  <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="DéclicIA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DéclicIA - FAQ : IA en classe, données et réglementation">
+  <meta name="twitter:description" content="Les questions que se posent vraiment les enseignants sur l'IA : données, RGPD, ce qui est autorisé en classe.">
+  <meta name="twitter:image" content="https://declicia.pages.dev/Images/og-image.png">
+
+  <link rel="stylesheet" href="../../theme-sync.css">
+  <link rel="stylesheet" href="../../reading-progress.css">
+  <link rel="stylesheet" href="styleFAQ.css">
+
+  <!-- Données structurées schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Puis-je entrer des données personnelles d'élèves dans une IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Entrer des données personnelles identifiables (nom, prénom, résultats scolaires, situation familiale) dans des outils d'IA grand public est interdit par le RGPD sans cadre juridique approprié."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "À partir de quel âge les élèves peuvent-ils utiliser l'IA en classe ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Selon le cadre d'usage MEN de juin 2025, l'usage pédagogique encadré des IA génératives est autorisé à partir de la 4e. Au lycée, les élèves peuvent les utiliser de manière autonome dans un cadre défini par l'enseignant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un élève qui utilise ChatGPT pour faire son devoir, c'est de la triche ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, si l'enseignant n'a pas explicitement autorisé l'usage de l'IA pour ce devoir. Le cadre MEN de juin 2025 assimile ce comportement à une fraude équivalente au plagiat."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div data-shared-sidebar data-base="../../" data-current="cadre"></div>
+
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <header class="faq-header">
+    <span class="faq-tag">Mis à jour Décembre 2025</span>
+    <h1>FAQ — L'IA en classe</h1>
+    <p class="faq-subtitle">Les questions que vous vous posez vraiment, avec des réponses nuancées et sourcées.</p>
+  </header>
+
+  <main class="faq-container" id="main-content">
+
+    <!-- Sommaire -->
+    <nav class="faq-nav" aria-label="Sommaire">
+      <div class="faq-nav-title">Dans cette page</div>
+      <div class="faq-nav-links">
+        <a href="#donnees">Données & RGPD</a>
+        <a href="#eleves">Élèves en classe</a>
+        <a href="#enseignants">Enseignants</a>
+        <a href="#fraude">Fraude & évaluation</a>
+        <a href="#outils">Choisir un outil</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SECTION 1 : DONNÉES & RGPD ===================== -->
+    <section class="faq-section" id="donnees">
+      <h2 class="faq-section-title">
+        <span class="faq-section-icon" aria-hidden="true"><i class="fa fa-shield"></i></span>
+        Données & RGPD
+      </h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Puis-je entrer des données personnelles d'élèves dans une IA ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Non, en règle générale.</strong> Entrer des données personnelles identifiables dans des outils d'IA grand public (nom, prénom, résultats scolaires, situation familiale, données de santé) constitue un traitement de données soumis au RGPD. Sans base juridique appropriée et sans vérification de conformité de l'outil, cela est interdit.</p>
+          <p>Ce qui est considéré comme donnée personnelle dans ce contexte :</p>
+          <ul>
+            <li>Noms et prénoms d'élèves</li>
+            <li>Copies ou productions scolaires identifiables</li>
+            <li>Bulletins, résultats, appréciations</li>
+            <li>Informations sur des situations particulières (handicap, famille...)</li>
+            <li>Photos de classe</li>
+          </ul>
+          <p>En revanche, vous pouvez utiliser une IA avec des données anonymisées ou fictives — par exemple pour générer un exercice type, corriger un texte-exemple, ou créer un scénario pédagogique.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a> · RGPD, Règlement (UE) 2016/679
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Est-ce que je dois informer les parents si j'utilise une IA avec les données de leurs enfants ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Oui, si l'outil traite des données personnelles des élèves.</strong> Le RGPD impose d'informer les personnes concernées (élèves et parents) dès qu'un traitement de leurs données personnelles a lieu.</p>
+          <p>Concrètement, si un outil pédagogique IA est déployé dans votre établissement et traite des données élèves :</p>
+          <ul>
+            <li>L'information doit être donnée aux parents et aux élèves</li>
+            <li>Ils peuvent s'y opposer pour des raisons liées à leur situation particulière</li>
+            <li>Le délégué à la protection des données (DPO) de votre académie doit être associé à la démarche</li>
+          </ul>
+          <p>Cette obligation incombe au responsable de traitement (chef d'établissement, ministère), pas directement à l'enseignant. Mais l'enseignant doit en être informé et ne pas contourner ce cadre.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a> · <a href="https://www.cnil.fr/fr/education-mise-en-place-systeme-ia" target="_blank" rel="noopener">CNIL — Pour les responsables de traitement</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Les outils d'IA grand public (ChatGPT, Gemini...) sont-ils conformes au RGPD ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>La conformité est variable et difficile à garantir.</strong> La CNIL alerte explicitement sur le fait que tous les outils d'IA ne respectent pas la réglementation sur la protection des données.</p>
+          <p>Les outils grand public posent plusieurs problèmes :</p>
+          <ul>
+            <li>Leurs serveurs sont souvent hébergés hors UE (États-Unis), ce qui complique le transfert de données</li>
+            <li>Leurs conditions d'utilisation autorisent parfois la réutilisation des données saisies pour l'entraînement des modèles</li>
+            <li>L'âge minimal requis (souvent 13 ou 18 ans selon les outils) n'est pas toujours respecté</li>
+          </ul>
+          <p>Le cadre MEN de juin 2025 recommande de privilégier des solutions libres et respectueuses du RGPD, et d'éviter les outils grand public pour tout usage impliquant des données d'élèves.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a> · <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Puis-je coller une copie d'élève dans ChatGPT pour me faire aider à la corriger ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Cela dépend de l'identification de la copie.</strong> Si la copie contient le nom de l'élève ou d'autres éléments permettant de l'identifier, vous transmettez une donnée personnelle à un tiers non habilité — ce qui est problématique au regard du RGPD.</p>
+          <p>Ce que vous pouvez faire :</p>
+          <ul>
+            <li>✅ Supprimer le nom et tout élément identifiant avant de coller le texte</li>
+            <li>✅ Utiliser une copie anonymisée ou fictive comme exemple-type</li>
+            <li>✅ Utiliser des outils conformes déployés par votre établissement ou académie</li>
+            <li>❌ Ne pas coller une copie identifiable dans un outil grand public</li>
+          </ul>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a> · RGPD, Règlement (UE) 2016/679, art. 5
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SECTION 2 : ÉLÈVES EN CLASSE ===================== -->
+    <section class="faq-section" id="eleves">
+      <h2 class="faq-section-title">
+        <span class="faq-section-icon" aria-hidden="true"><i class="fa fa-graduation-cap"></i></span>
+        Élèves en classe
+      </h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          À partir de quel âge les élèves peuvent-ils utiliser une IA générative ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Le <strong>cadre d'usage MEN de juin 2025</strong> établit une progression par niveau :</p>
+          <ul>
+            <li><strong>Primaire :</strong> sensibilisation aux bases de l'IA, mais pas de manipulation directe d'outils d'IA générative.</li>
+            <li><strong>À partir de la 4e :</strong> usage pédagogique encadré autorisé en classe, sous la supervision et avec les explications de l'enseignant.</li>
+            <li><strong>Au lycée :</strong> les élèves peuvent utiliser l'IA de manière plus autonome, dans un cadre d'apprentissage explicitement défini par l'enseignant.</li>
+          </ul>
+          <p>Par ailleurs, une formation obligatoire aux IA est instaurée pour tous les élèves de 4e, de 2de et de première année de CAP via la plateforme Pix, à partir de la rentrée 2025.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Puis-je demander à mes élèves de créer un compte sur ChatGPT ou Gemini ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Non.</strong> Le cadre MEN de juin 2025 interdit explicitement de demander aux élèves de créer un compte sur des services d'IA externes grand public.</p>
+          <p>Les raisons sont multiples :</p>
+          <ul>
+            <li>Ces services ont des conditions d'utilisation qui ne sont pas adaptées au contexte scolaire</li>
+            <li>L'âge minimum est souvent fixé à 13 ans (voire 18 ans pour certains services), sans vérification réelle</li>
+            <li>La création d'un compte implique la transmission de données personnelles à des tiers</li>
+            <li>Les données saisies peuvent être utilisées pour entraîner les modèles</li>
+          </ul>
+          <p>Si vous souhaitez faire utiliser une IA à vos élèves, orientez-vous vers des outils déployés par votre établissement ou votre académie, ou des outils accessibles sans création de compte.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Un élève peut-il utiliser l'IA à la maison pour ses devoirs ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Cela dépend des consignes de l'enseignant.</strong> Il n'existe pas d'interdiction générale d'utiliser l'IA à la maison. En revanche, le cadre MEN est clair sur un point :</p>
+          <p>Utiliser une IA générative pour réaliser un devoir scolaire <strong>sans autorisation explicite de l'enseignant et sans travail personnel d'appropriation</strong> est assimilé à une fraude, au même titre que le plagiat.</p>
+          <p>Autrement dit :</p>
+          <ul>
+            <li>❌ Faire rédiger son devoir par une IA et le rendre tel quel → fraude</li>
+            <li>✅ Utiliser l'IA pour comprendre un concept difficile, se faire expliquer une notion → autorisé</li>
+            <li>✅ Utiliser l'IA comme support de révision → autorisé</li>
+            <li>⚠️ Utiliser l'IA pour améliorer sa rédaction avec son accord → à définir selon les consignes de l'enseignant</li>
+          </ul>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SECTION 3 : ENSEIGNANTS ===================== -->
+    <section class="faq-section" id="enseignants">
+      <h2 class="faq-section-title">
+        <span class="faq-section-icon" aria-hidden="true"><i class="fa fa-user"></i></span>
+        Enseignants
+      </h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Ai-je le droit d'utiliser une IA pour préparer mes cours ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Oui, c'est explicitement autorisé</strong> par le cadre MEN de juin 2025, sous réserve de respecter certaines conditions.</p>
+          <p>Usages autorisés pour les enseignants :</p>
+          <ul>
+            <li>✅ Préparation de cours, génération d'exercices, création de supports</li>
+            <li>✅ Aide à l'évaluation et au feedback personnalisé (sans données identifiables d'élèves)</li>
+            <li>✅ Différenciation pédagogique et adaptation de contenus</li>
+            <li>✅ Tâches administratives (rédaction de courriers, synthèses, comptes rendus)</li>
+          </ul>
+          <p>Conditions à respecter :</p>
+          <ul>
+            <li>Exercer son esprit critique sur les contenus produits</li>
+            <li>Vérifier les informations générées par l'IA avant utilisation</li>
+            <li>Faire preuve de transparence dans l'utilisation</li>
+            <li>Ne pas transmettre de données personnelles d'élèves</li>
+          </ul>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Suis-je obligé de me former à l'IA ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Le cadre MEN de juin 2025 indique que <strong>la formation de tous les personnels est nécessaire</strong>, mais sans fixer d'obligation réglementaire immédiate au sens strict.</p>
+          <p>Concrètement, le ministère prévoit :</p>
+          <ul>
+            <li>Une intégration de la formation à l'IA dans la formation initiale et continue des enseignants</li>
+            <li>Des ressources disponibles sur M@gistère via la CREIA (Communauté de réflexion en éducation sur l'IA)</li>
+            <li>Des webinaires organisés par les équipes académiques</li>
+            <li>Le manuel ouvert AI4T (IA pour les enseignants), accessible librement</li>
+          </ul>
+          <p>Si ce n'est pas encore une obligation formelle, le contexte pousse clairement vers une montée en compétences de tous les personnels. Se former est une démarche professionnelle attendue.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA, juin 2025</a> · <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Puis-je utiliser une IA pour générer des sujets d'évaluation ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Oui, c'est autorisé.</strong> L'aide à la conception d'évaluations fait partie des usages explicitement reconnus pour les enseignants.</p>
+          <p>Quelques points de vigilance :</p>
+          <ul>
+            <li>Vérifier la cohérence des sujets avec les programmes officiels</li>
+            <li>Contrôler l'exactitude des contenus générés (les IA peuvent produire des erreurs factuelles)</li>
+            <li>Ne pas utiliser d'IA pour prendre des décisions qui affectent les parcours des élèves sans supervision humaine — le cadre MEN exige une validation humaine pour les usages à impact significatif sur les résultats</li>
+          </ul>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SECTION 4 : FRAUDE & ÉVALUATION ===================== -->
+    <section class="faq-section" id="fraude">
+      <h2 class="faq-section-title">
+        <span class="faq-section-icon" aria-hidden="true"><i class="fa fa-exclamation-triangle"></i></span>
+        Fraude & évaluation
+      </h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Un élève qui utilise ChatGPT pour faire son devoir, c'est de la triche ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Oui, si l'enseignant n'a pas explicitement autorisé l'usage.</strong> Le cadre MEN de juin 2025 est très clair : utiliser une IA générative pour réaliser un devoir scolaire sans autorisation expresse et sans travail personnel d'appropriation est assimilé à une fraude, équivalente à une intervention extérieure ou à un plagiat non signalé.</p>
+          <p>Ce que cela implique concrètement :</p>
+          <ul>
+            <li>Les sanctions prévues pour la fraude scolaire peuvent s'appliquer</li>
+            <li>L'autorisation doit être explicite — le silence de l'enseignant ne vaut pas autorisation</li>
+            <li>L'élève doit avoir fourni un travail personnel réel, même avec l'assistance de l'IA</li>
+          </ul>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA en éducation, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Les détecteurs de textes générés par IA sont-ils fiables ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Non, pas suffisamment pour être utilisés comme preuve.</strong> C'est l'un des points les plus délicats du sujet.</p>
+          <p>Les outils de détection disponibles (GPTZero, Turnitin IA, Copyleaks...) présentent des limites importantes :</p>
+          <ul>
+            <li>Taux de faux positifs non négligeables — des textes rédigés par des humains peuvent être signalés comme générés par IA</li>
+            <li>Les élèves ayant un style scolaire très "normé" sont parfois mal détectés</li>
+            <li>Les textes reformulés ou légèrement modifiés après génération passent souvent inaperçus</li>
+            <li>Aucun outil n'est reconnu officiellement par l'Éducation nationale comme preuve de fraude</li>
+          </ul>
+          <p>Ces outils peuvent être un signal d'alerte, mais ne peuvent pas constituer à eux seuls une preuve de fraude dans une procédure disciplinaire. La détection passe davantage par la connaissance du travail habituel de l'élève et par un oral de restitution.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Source : recommandations pédagogiques de la communauté enseignante et académique, 2024-2025.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SECTION 5 : CHOISIR UN OUTIL ===================== -->
+    <section class="faq-section" id="outils">
+      <h2 class="faq-section-title">
+        <span class="faq-section-icon" aria-hidden="true"><i class="fa fa-wrench"></i></span>
+        Choisir un outil
+      </h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quelle IA puis-je utiliser sans risque en classe ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Il n'existe pas de liste officielle validée par le MEN, mais voici des critères pour évaluer un outil :</p>
+          <ul>
+            <li>✅ <strong>Hébergement en France ou en UE</strong> — réduit les risques liés aux transferts de données hors UE</li>
+            <li>✅ <strong>Pas de création de compte obligatoire pour les élèves</strong></li>
+            <li>✅ <strong>Données non réutilisées pour l'entraînement</strong> — vérifier les CGU</li>
+            <li>✅ <strong>Outil validé ou recommandé par votre académie ou le MEN</strong></li>
+            <li>✅ <strong>Accessibilité sans âge minimum ou avec une vérification adaptée</strong></li>
+          </ul>
+          <p>Des outils comme <strong>ChatMD</strong> (open source, hébergeable), les ressources <strong>Éléa / M@gistère</strong>, ou les outils validés par votre académie sont à privilégier. Retrouvez des outils testés dans la <a href="../../Carousel_outilsIA/Carousel_index.html">galerie DéclicIA</a>.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Sources : <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL — FAQ pour les enseignants</a> · <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">MEN — Cadre d'usage IA, juin 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Y a-t-il des outils IA gratuits pour les enseignants ?
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p><strong>Oui, plusieurs.</strong> Voici une sélection d'outils utilisables gratuitement :</p>
+          <ul>
+            <li><strong>ChatMD</strong> — chatbot open source personnalisable, sans compte élève requis</li>
+            <li><strong>NotebookLM (Google)</strong> — analyse de documents, génération de podcasts et résumés (compte Google requis pour l'enseignant)</li>
+            <li><strong>Mistral AI (Le Chat)</strong> — IA française, version gratuite disponible, hébergement en France</li>
+            <li><strong>Claude (Anthropic)</strong> — version gratuite disponible, bonnes performances sur les tâches rédactionnelles</li>
+            <li><strong>Caramel (H5P)</strong> — création d'activités interactives, intégration Moodle/Éléa</li>
+          </ul>
+          <p>Pour les usages en classe avec les élèves, privilégiez les outils ne nécessitant pas de création de compte.</p>
+          <div class="faq-source">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Retrouvez les fiches détaillées dans la <a href="../../Carousel_outilsIA/Carousel_index.html">galerie d'outils DéclicIA</a>.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Mention mise à jour -->
+    <div class="faq-update">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      Cette FAQ est mise à jour régulièrement. Dernière révision : décembre 2025, suite à la publication du cadre d'usage MEN et des recommandations CNIL.
+    </div>
+
+  </main>
+
+  <div data-shared-footer data-base="../../" data-current="cadre"></div>
+
+  <script src="../../shared-components.js"></script>
+  <script src="../../tramePagesScript.js"></script>
+  <script src="../../theme-sync.js"></script>
+  <script src="../../reading-progress.js"></script>
+  <script src="scriptFAQ.js"></script>
+</body>
+</html>

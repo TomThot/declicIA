@@ -3,16 +3,35 @@
  * Injecte les blocs communs via placeholders HTML:
  * - sidebar (menu + liens + toggle thème)
  * - footer standard
+ * - shared-components.css (styles communs sidebar + footer)
  *
  * Utilisation côté HTML:
  * <div data-shared-sidebar data-base="../" data-current="lia"></div>
  * <div data-shared-footer data-base="../" data-current="lia"></div>
+ *
+ * Le CSS partagé est injecté automatiquement — inutile de le charger manuellement.
  */
 (function () {
+
+  // Injecte shared-components.css dans le <head> si ce n'est pas déjà fait.
+  // La base est déduite depuis le premier placeholder trouvé sur la page.
+  function injectSharedCSS() {
+    if (document.getElementById('shared-components-css')) return;
+    var base = './';
+    var firstPlaceholder = document.querySelector('[data-shared-sidebar],[data-shared-footer]');
+    if (firstPlaceholder && firstPlaceholder.dataset.base) {
+      base = firstPlaceholder.dataset.base;
+    }
+    var link = document.createElement('link');
+    link.id = 'shared-components-css';
+    link.rel = 'stylesheet';
+    link.href = base + 'shared-components.css';
+    document.head.appendChild(link);
+  }
   // Crée un lien de navigation et marque la page courante.
   function createNavLink(base, current, key, label, path) {
     if (current === key) {
-      return '<a href="#" aria-current="page">' + label + "</a>";
+      return '<a href="' + base + path + '" aria-current="page" class="is-current">' + label + "</a>";
     }
     return '<a href="' + base + path + '">' + label + "</a>";
   }
@@ -41,6 +60,7 @@
       "</div>";
 
     placeholder.outerHTML = sidebarHtml;
+    ensureLocalSearch(base);
   }
 
   // Remplace le placeholder footer par le HTML final.
@@ -104,10 +124,30 @@
     placeholder.outerHTML = footerHtml;
   }
 
+  // Charge dynamiquement le moteur de recherche local si nécessaire.
+  function ensureLocalSearch(base) {
+    if (window.__decliciaLocalSearchMounted || window.__decliciaSearchLocalLoading) return;
+    if (document.querySelector('script[data-declicia-search-local]')) return;
+
+    window.__decliciaSearchLocalLoading = true;
+    const script = document.createElement("script");
+    script.dataset.decliciaSearchLocal = "true";
+    script.src = new URL(base + "search-local.js", window.location.href).href;
+    script.onload = function () {
+      window.__decliciaSearchLocalLoading = false;
+    };
+    script.onerror = function () {
+      window.__decliciaSearchLocalLoading = false;
+    };
+    document.head.appendChild(script);
+  }
+
   // Monte tous les composants partagés présents sur la page.
   function mountSharedComponents() {
+    injectSharedCSS();
     document.querySelectorAll("[data-shared-sidebar]").forEach(renderSidebar);
     document.querySelectorAll("[data-shared-footer]").forEach(renderFooter);
+    document.dispatchEvent(new Event("declicia:components-mounted"));
   }
 
   // Évite les doubles montages en cas de chargements multiples.
@@ -123,4 +163,3 @@
     document.addEventListener("DOMContentLoaded", safeMount);
   }
 })();
-

@@ -93,20 +93,31 @@
   // (FOUC entre clair et sombre au chargement initial).
   applyTheme(getPreferredTheme());
 
+  // Branche l'interaction utilisateur si le toggle existe.
+  function bindThemeToggle() {
+    const themeToggle = document.getElementById("themeToggle");
+    if (!themeToggle) return;
+    if (themeToggle.dataset.bound === "true") return;
+    themeToggle.dataset.bound = "true";
+
+    themeToggle.addEventListener("click", function () {
+      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+    });
+  }
+
   // Une fois le DOM prêt, branche les interactions utilisateur.
   window.addEventListener("DOMContentLoaded", function () {
     // Réapplique le thème après construction du DOM pour synchroniser
     // les éléments ajoutés plus tard (logo, switch, labels ARIA).
     applyTheme(root.dataset.theme || getPreferredTheme());
+    bindThemeToggle();
+  });
 
-    const themeToggle = document.getElementById("themeToggle");
-    if (!themeToggle) return;
-
-    // Alterne dark <-> light à chaque clic sur le toggle.
-    themeToggle.addEventListener("click", function () {
-      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-      setTheme(nextTheme);
-    });
+  // Réessaie le binding après injection de composants partagés.
+  document.addEventListener("declicia:components-mounted", function () {
+    applyTheme(root.dataset.theme || getPreferredTheme());
+    bindThemeToggle();
   });
 
   // Synchronisation inter-onglets:
