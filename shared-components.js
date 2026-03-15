@@ -53,6 +53,7 @@
       createNavLink(base, current, "lia", "L'IA c'est quoi ?", "LIA_cest_quoi/indexIA.html") +
       createNavLink(base, current, "cadre", "Cadre et défis", "Cadre_et_défit/IndexCadreDefi.html") +
       createNavLink(base, current, "outils", "Outils pour la classe", "Carousel_outilsIA/Carousel_index.html") +
+      createNavLink(base, current, "faq", "FAQ", "subPages/faq/indexFAQ.html") +
       '  <button id="themeToggle" class="theme-toggle sidebar-theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Basculer le thème" title="Basculer le thème">' +
       '    <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__thumb"></span></span>' +
       '    <span class="theme-toggle__label">Thème</span>' +
@@ -92,6 +93,7 @@
       '          <li><a href="' + base + 'LIA_cest_quoi/indexIA.html#Definition">Définitions IA</a></li>' +
       '          <li><a href="' + base + 'Cadre_et_défit/IndexCadreDefi.html#cadre2">Cadre institutionnel</a></li>' +
       '          <li><a href="' + base + 'Carousel_outilsIA/Carousel_index.html">Outils recommandés</a></li>' +
+      '          <li><a href="' + base + 'subPages/faq/indexFAQ.html">FAQ</a></li>' +
       "          <li><a href=\"#\">Formations</a></li>" +
       "        </ul>" +
       "      </div>" +

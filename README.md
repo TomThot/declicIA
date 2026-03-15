@@ -13,7 +13,7 @@ DéclicIA propose :
 - des contenus de vulgarisation sur l'IA (définitions, histoire, fonctionnement)
 - le cadre institutionnel, les enjeux et les défis pour l'éducation
 - des outils concrets pour la classe (chatbots, génération de contenu, aide aux dys...)
-- des ressources interactives : lexique, flipcards mythes/réalité, générateur de cadre d'usage
+- des ressources interactives : lexique, flipcards mythes/réalité, générateur de cadre d'usage, FAQ
 - des interactions front-end : menu responsive, thème clair/sombre, quiz de profil, barre de lecture
 
 ---
@@ -25,7 +25,8 @@ DéclicIA propose :
 | HTML5 | Structure sémantique de toutes les pages |
 | CSS3 | Mise en page, variables, thème, responsive, `@media print` |
 | JavaScript vanilla | Interactions, composants partagés, quiz, carousel 3D |
-| GitHub Pages | Déploiement statique, aucun serveur requis |
+| Cloudflare Pages | Déploiement statique, CDN mondial, HTTPS automatique |
+| GitHub Actions | Automatisation veille IA (hebdo) + génération sitemap |
 
 Aucun framework, aucune dépendance NPM. Tout fonctionne en ouvrant `index.html` dans un navigateur.
 
@@ -42,9 +43,12 @@ Mon site IA/
 ├─ theme-sync.js                     ← Logique du thème (partagé)
 ├─ reading-progress.css              ← Barre de progression de lecture (partagé)
 ├─ reading-progress.js               ← Logique de la barre de lecture (partagé)
-├─ shared-components.js              ← Injection du header sidebar et footer (partagé)
+├─ shared-components.js              ← Injection sidebar, footer + CSS partagé (partagé)
+├─ shared-components.css             ← Styles sidebar et footer (partagé, injecté par le JS)
 ├─ search-local.js                   ← Moteur de recherche interne (partagé)
 ├─ data-popups.js                    ← Données des popups de la page d'accueil
+├─ robots.txt                        ← Directives pour les robots de recherche
+├─ sitemap.xml                       ← Plan du site (généré automatiquement)
 ├─ 404.html                          ← Page d'erreur personnalisée
 ├─ README.md
 ├─ .gitignore
@@ -79,19 +83,40 @@ Mon site IA/
 │  └─ notebookLM/                   ← Outil : NotebookLM
 │
 ├─ subPages/                         ← Sous-pages thématiques
+│  ├─ faq/                          ← FAQ : IA en classe, données et réglementation
+│  │  ├─ indexFAQ.html
+│  │  ├─ styleFAQ.css
+│  │  └─ scriptFAQ.js
 │  ├─ lexique/                      ← Lexique des termes IA
 │  │  ├─ indexLexique.html
 │  │  ├─ styleLexique.css
 │  │  └─ scriptLexique.js
-│  └─ mythes_réalité/               ← Flipcards mythes vs réalité
-│     ├─ indexMythes.html
-│     ├─ styleMythes.css
-│     └─ scriptMythes.js
+│  ├─ mythes_réalité/               ← Flipcards mythes vs réalité
+│  │  ├─ indexMythes.html
+│  │  ├─ styleMythes.css
+│  │  └─ scriptMythes.js
+│  └─ veille-ia.html                ← Archives de la veille IA
+│
+├─ css/                              ← Feuilles de style globales supplémentaires
+│  └─ veille.css
+│
+├─ js/                               ← Scripts globaux supplémentaires
+│  └─ veille.js
+│
+├─ data/                             ← Données JSON
+│  └─ veille.json                   ← Articles de veille IA (généré automatiquement)
+│
+├─ scripts/                          ← Scripts d'automatisation
+│  ├─ generate_veille.py            ← Génère la veille IA via Groq + RSS
+│  └─ generate_sitemap.py           ← Génère sitemap.xml automatiquement
+│
+├─ .github/workflows/               ← GitHub Actions
+│  ├─ veille-ia-education.yml       ← Veille IA hebdomadaire (chaque dimanche)
+│  └─ generate-sitemap.yml          ← Sitemap auto (à chaque modif HTML)
 │
 ├─ Assistant_prompt/                 ← Assistant prompt (non publié)
 ├─ Contact/                          ← Page de contact
-├─ doc/                              ← Documents de travail (non publiés)
-└─ assets/                           ← Fichiers sources (non publiés)
+└─ doc/                              ← Ressources téléchargeables (PDF, documents)
 ```
 
 ---
@@ -105,8 +130,11 @@ Mon site IA/
 | Cadre et défis | `Cadre_et_défit/IndexCadreDefi.html` |
 | Générateur de cadre d'usage | `Cadre_et_défit/Generateur_cadre/indexGenerateur.html` |
 | Galerie des outils | `Carousel_outilsIA/Carousel_index.html` |
+| FAQ — IA en classe | `subPages/faq/indexFAQ.html` |
 | Lexique | `subPages/lexique/indexLexique.html` |
 | Mythes vs Réalité | `subPages/mythes_réalité/indexMythes.html` |
+| Veille IA & Éducation | `subPages/veille-ia.html` |
+| Contact | `Contact/contactIndex.html` |
 
 ---
 
@@ -128,19 +156,50 @@ Tous les composants réutilisables sont à la racine du projet et chargés via `
 - Accessible : `role="progressbar"` + attributs ARIA
 - Fichiers : `reading-progress.js` + `reading-progress.css`
 
-### Header / Footer / Sidebar
+### Sidebar / Footer / CSS partagé
 - Injectés dynamiquement via des placeholders HTML :
 ```html
 <div data-shared-sidebar data-base="../" data-current="lia"></div>
 <div data-shared-footer data-base="../" data-current="lia"></div>
 ```
 - `data-base` : chemin relatif vers la racine depuis la page courante
-- `data-current` : clé de la page active pour surligner le bon lien nav
-- Fichier : `shared-components.js`
+- `data-current` : clé de la page active pour surligner le bon lien nav (`home`, `lia`, `cadre`, `outils`, `faq`)
+- `shared-components.js` injecte aussi automatiquement `shared-components.css` dans le `<head>` — inutile de le charger manuellement
+- Fichiers : `shared-components.js` + `shared-components.css`
 
 ### Recherche interne
 - Recherche locale sur les titres et contenus des pages
+- Chargé automatiquement par `shared-components.js`
 - Fichier : `search-local.js`
+
+---
+
+## Automatisation GitHub Actions
+
+### Veille IA hebdomadaire
+- Déclenché chaque dimanche à 7h UTC
+- Collecte des flux RSS (9 sources FR/EN)
+- Synthèse via API Groq (LLaMA 3.3 70B)
+- Résultat inséré en tête de `data/veille.json`
+- Clé API stockée dans GitHub Actions Secrets (`GROQ_API_KEY`)
+- Fichier : `.github/workflows/veille-ia-education.yml`
+
+### Génération automatique du sitemap
+- Déclenché à chaque push modifiant un `.html` ou `.pdf`
+- Parcourt tous les fichiers HTML publics du dépôt
+- Récupère la date du dernier commit git pour chaque fichier (`lastmod`)
+- Génère et commite `sitemap.xml` à la racine
+- Fichier : `.github/workflows/generate-sitemap.yml`
+
+---
+
+## SEO & visibilité
+
+- Balises canonical, Open Graph et Twitter Card sur toutes les pages
+- `robots.txt` à la racine avec référence au sitemap
+- `sitemap.xml` généré automatiquement et soumis à Google Search Console
+- Données structurées `schema.org` (FAQPage) sur la page FAQ
+- Score Lighthouse : 95+
 
 ---
 
@@ -169,6 +228,7 @@ tramePagesStyle.css
 assets/                 ← Fichiers sources (Illustrator, H5P bruts...)
 doc/neurone.py          ← Script Python de travail
 .vscode/                ← Configuration éditeur locale
+.venv/                  ← Environnement virtuel Python
 ```
 
 ---

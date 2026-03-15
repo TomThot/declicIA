@@ -4,4 +4,4 @@ tramePagesStyle.css
 assets/
 doc/neurone.py
 .vscode/
-
+.venv/
