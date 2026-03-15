@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260315",
+    "date": "2026-03-15",
+    "date_affichage": "15 mars 2026",
+    "titre": "L'IA en classe : quelle place pour les écrans et les outils numériques ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans les salles de classe, mais son impact sur l'apprentissage et les élèves est encore débattu. Cette semaine, nous nous intéressons aux enjeux de l'IA en éducation, notamment en ce qui concerne les outils numériques et les politiques éducatives. Les enseignants sont-ils prêts à intégrer ces nouveaux outils dans leur pratique pédagogique ?",
+    "breves": [
+      {
+        "titre": "Les écrans en classe : un débat enflammé",
+        "contenu": "Un article d'EdSurge souligne que les écrans en classe peuvent avoir un impact négatif sur l'apprentissage des élèves, notamment en ce qui concerne la créativité et la motivation. Les enseignants doivent trouver un équilibre entre l'utilisation des outils numériques et les activités traditionnelles.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-09-screen-free-schools-some-legislators-push-for-a-new-normal"
+      },
+      {
+        "titre": "La formation des enseignants : un enjeu clé pour l'intégration de l'IA",
+        "contenu": "Un article de The Hechinger Report met en avant l'importance de la formation des enseignants pour intégrer les outils d'IA dans leur pratique pédagogique. Les enseignants doivent être en mesure de comprendre les avantages et les limites de ces outils pour les utiliser de manière efficace.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/behind-ideological-attacks-on-higher-ed-surprising-bipartisan-reforms-are-happening/"
+      },
+      {
+        "titre": "Les élèves et l'IA : un rapport complexe",
+        "contenu": "Un article d'E-Learning Industry explore les liens entre les élèves et l'IA, notamment en ce qui concerne la confiance et la motivation. Les élèves sont de plus en plus à l'aise avec les outils d'IA, mais les enseignants doivent veiller à ce que ces outils soient utilisés de manière responsable et éthique.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/why-your-tutoring-business-needs-tutor-management-software-in-2026"
+      }
+    ],
+    "conclusion": "L'intégration de l'IA en classe nécessite une réflexion approfondie sur les enjeux pédagogiques et éthiques. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et responsable, tout en veillant à ce que les élèves soient préparés à utiliser ces outils de manière critique et créative."
+  },
+  {
     "id": "20260311",
     "date": "2026-03-11",
     "date_affichage": "11 mars 2026",
