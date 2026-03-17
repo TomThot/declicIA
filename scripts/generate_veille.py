@@ -71,7 +71,7 @@ def fetch_rss_articles(max_per_source=5):
                 link    = entry.get("link", "")
                 if any(kw.lower() in (title + " " + summary).lower() for kw in KEYWORDS): #Pour chaque article, on concatène titre + résumé et on vérifie si un mot-clé apparaît dedans. Si oui, l'article est gardé.
                     matched.append({"source": source["name"], "title": title,
-                                    "summary": summary[:500], "url": link, "lang": source["lang"]})
+                                    "summary": summary[:900], "url": link, "lang": source["lang"]})
 
             # Assouplir si aucun match
             # Filet de sécurité : si aucun article de cette source ne passe le filtre (source généraliste ce jour-là), 
@@ -81,7 +81,7 @@ def fetch_rss_articles(max_per_source=5):
                     matched.append({
                         "source": source["name"],
                         "title": entry.get("title", ""),
-                        "summary": entry.get("summary", entry.get("description", ""))[:500],
+                        "summary": entry.get("summary", entry.get("description", ""))[:900],
                         "url": entry.get("link", ""),
                         "lang": source["lang"]
                     })
@@ -124,13 +124,13 @@ Voici les articles collectés cette semaine :
 
 Rédige un article de veille structuré ainsi :
 1. Un titre accrocheur pour la semaine
-2. Une introduction courte (2-3 phrases) qui contextualise les enjeux de l'IA pour les enseignants
-3. Entre 3 et 5 "brèves" avec titre, résumé (3-4 phrases en français), source et lien
-4. Une conclusion/perspective en 2 phrases orientée pratiques pédagogiques
+2. Une introduction (5-6 phrases) qui contextualise les enjeux de l'IA pour les enseignants
+3. Entre 3 et 5 "brèves" avec titre, résumé (7-9 phrases en français), source et lien
+4. Une conclusion/perspective en 4-5 phrases orientée pratiques pédagogiques
 
 Contraintes :
 - Français uniquement, ton accessible pour des enseignants non spécialistes de l'IA
-- Format court (5 minutes de lecture maximum)
+- Format 900-1200 mots
 - Privilégie les articles sur : outils IA pour la classe, impacts sur les élèves, politiques éducatives, formation des enseignants
 - Écarte les articles purement technologiques ou business sans lien avec la salle de classe
 - Inclus systématiquement au moins une brève issue d'une source française (Le Café Pédagogique, Educavox, éduscol, Letudiant/Educpros)
@@ -169,7 +169,7 @@ Structure exacte :
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 2048
+        "max_tokens": 4096
     }
 
     print("📡 Appel API Groq (llama-3.3-70b-versatile)...")
