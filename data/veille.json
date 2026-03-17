@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260317",
+    "date": "2026-03-17",
+    "date_affichage": "17 mars 2026",
+    "titre": "L'IA dans la classe : vers une éducation plus personnalisée et inclusive",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans le monde de l'éducation, offrant des possibilités de personnalisation et d'amélioration de l'apprentissage. Les enseignants peuvent désormais utiliser des outils IA pour adapter leurs cours aux besoins individuels de leurs élèves, tout en favorisant une approche plus inclusive et accessible. Cependant, il est essentiel de comprendre les enjeux et les défis liés à l'intégration de l'IA dans la classe. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et éthique, tout en garantissant que les élèves ne soient pas laissés pour compte. Dans cet article, nous allons explorer quelques-unes des dernières tendances et innovations en matière d'IA dans l'éducation, ainsi que les implications pour les enseignants et les élèves.",
+    "breves": [
+      {
+        "titre": "Les élus étudiants : quelle influence sur la vie des établissements ?",
+        "contenu": "Les étudiants sont représentés dans l'ensemble des instances des universités et écoles publiques, et plus ou moins fréquemment dans les écoles consulaires et privées. Dans quelle mesure cette présence se traduit-elle dans les décisions stratégiques des établissements ? Selon une enquête menée par Educpros, les élus étudiants ont une influence significative sur la vie des établissements, notamment en ce qui concerne les questions de formation et de recherche. Cependant, il est important de noter que cette influence peut varier en fonction de la taille et du type d'établissement. Les élus étudiants doivent être en mesure de travailler en étroite collaboration avec les enseignants et les administrateurs pour garantir que les besoins des élèves soient pris en compte. Pour cela, il est essentiel de mettre en place des mécanismes de communication efficaces et de formation pour les élus étudiants.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/enquetes/les-elus-etudiants-quelle-influence-sur-la-vie-des-etablissements.html"
+      },
+      {
+        "titre": "Accessible eLearning : comment l'éducation numérique peut-elle être plus inclusive ?",
+        "contenu": "L'éducation numérique peut être un outil puissant pour améliorer l'accès à l'éducation, notamment pour les élèves ayant des besoins spécifiques. Cependant, il est essentiel de garantir que les plateformes et les cours en ligne soient accessibles à tous. Selon un article publié sur E-Learning Industry, les concepteurs de cours en ligne doivent prendre en compte les principes de l'accessible eLearning pour créer des expériences d'apprentissage inclusives. Cela peut inclure l'utilisation de sous-titres, de descriptions d'images et de liens accessibles. Les enseignants peuvent également utiliser des outils tels que les lecteurs d'écran pour aider les élèves ayant des difficultés de lecture.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/accessible-elearning-how-inclusive-digital-education-improves-learning-for-everyone"
+      },
+      {
+        "titre": "L'IA pour améliorer la formation des enseignants",
+        "contenu": "La formation des enseignants est un aspect essentiel de l'éducation, et l'IA peut y jouer un rôle important. Selon un article publié sur EdSurge, les outils IA peuvent aider les enseignants à améliorer leurs compétences et à développer de nouvelles stratégies pédagogiques. Les enseignants peuvent utiliser des outils tels que les simulations et les jeux de rôle pour pratiquer leurs compétences et recevoir des commentaires immédiats. Cela peut être particulièrement utile pour les enseignants débutants ou ceux qui enseignent des matières complexes.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-11-why-nyc-schools-invested-in-coaching-for-staff-outside-the-classroom"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre des possibilités considérables pour améliorer l'éducation et la rendre plus personnalisée et inclusive. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et éthique, tout en garantissant que les élèves ne soient pas laissés pour compte. Il est essentiel de mettre en place des mécanismes de communication efficaces et de formation pour les enseignants et les élus étudiants pour garantir que les besoins des élèves soient pris en compte. Enfin, les concepteurs de cours en ligne doivent prendre en compte les principes de l'accessible eLearning pour créer des expériences d'apprentissage inclusives."
+  },
+  {
     "id": "20260315",
     "date": "2026-03-15",
     "date_affichage": "15 mars 2026",
