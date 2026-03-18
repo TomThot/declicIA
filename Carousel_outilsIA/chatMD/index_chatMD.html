@@ -445,14 +445,44 @@
       </div>
     </section>
 
-    <section id="chat" class="card Chat collapsible-section open">
+    <section id="mistral" class="card mistral collapsible-section open">
       <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Fonctionalités et nouveautés
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
         <div class="inner">
           <h3 class="titleh3">Un chatbot pour aider à configurer ChatMD</h3>
-          <p>A venir très bientôt</p>
+          <p>Voici une petite astuce découverte sur le forum <a href="https://www.tchap.gouv.fr/#/welcome">Tchap</a> et
+            proposé par Cedric Eysette et Axel Manguy. <br>
+            Mistral AI permet maintenant d'ajouter un serveur MCP, même dans la version gratuite du Chat, ce qui permet
+            d'avoir un assistant à la création d'un chatbot, connecté (c'est ce que permet le protocole MCP) à la
+            documentation de ChatMD (elle-même préparée pour être lue par des LLM).
+          </p>
+          <ul class="liste">
+            <li>Se connecter au chat de Mistral AI : <a
+                href="https://chat.mistral.ai/chat">https://chat.mistral.ai/chat</a></li>
+            <li>Cliquer sur "Intelligence", puis "Connecteurs", puis "Ajouter un connecteur", puis "Connecteur MCP
+              personnalisé"</li>
+            <li>Vous donnez le nom que vous voulez à ce connecteur (par exemple : ChatMD-GitMCP), et vous indiquez cette
+              url comme "Serveur du connecteur" : <a
+                href="https://gitmcp.io/eyssette/chatMD-docs/">https://gitmcp.io/eyssette/chatMD-docs/</a></li>
+            <li>Et voilà… Vous avez maintenant Mistrail.ai qui joue le rôle de votre assistant à la configuration de <a
+                href="https://chatmd.forge.apps.education.fr/">ChatMD</a>. Il peut désormais lire la documentation sans
+              restriction. Attention, ça
+              n'exclut toujours pas les erreurs possibles, mais normalement il devrait y en avoir moins.</li>
+          </ul>
+          <p>Les premiers tests on été mitigés notemment les questions sur la configuration du RAG dans <a
+              href="https://chatmd.forge.apps.education.fr/">ChatMD.</a> Une solution est alors d'utiliser Context7 qui
+            est un serveur de documentation en temps réel utilisant le protocole MCP.</p>
+          <ul class="liste">
+            <li>Même procédure pour l'installer, sauf que pour le serveur, il faut mettre : <a
+                href="https://mcp.context7.com/mcp">https://mcp.context7.com/mcp</a></li>
+            <li>Pour l'utiliser (une fois qu'on a activé le connecteur), il faut mettre "use context7" à la fin de son
+              prompt (et il faut bien qu'il y ait "ChatMD" dans le prompt, car c'est un serveur MCP qui renvoie à plein
+              d'applis possibles et pas seulement à ChatMD).</li>
+          </ul>
+          <p>Les tests suivants ont été bien meilleurs. N'hésitez pas à passer par le formulaire de contact (lien en bas de page) si vous avez des questions ou inscrivez-vous sur
+            le forum <a href="https://www.tchap.gouv.fr/#/welcome">Tchap</a>.</p>
         </div>
       </div>
     </section>
