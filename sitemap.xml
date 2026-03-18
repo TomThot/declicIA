@@ -38,7 +38,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/Carousel_outilsIA/chatMD/index_chatMD.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -80,7 +80,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/LIA_cest_quoi/indexIA.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -94,7 +94,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -116,6 +116,13 @@
   <url>
     <loc>https://declicia.pages.dev/subPages/mythes_r%C3%A9alit%C3%A9/indexMythes.html</loc>
     <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/subPages/tokenisation/indexTokensition.html</loc>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
