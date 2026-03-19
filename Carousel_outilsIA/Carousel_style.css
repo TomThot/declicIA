@@ -585,6 +585,10 @@ main {
   background: linear-gradient(140deg, #2eb8a0, #1a7a6e);
 }
 
+.card-image.icon-token {
+  background: linear-gradient(140deg, #1f9d78, #0f5b7a);
+}
+
 .card-body {
   flex: 1;
   padding: 18px 20px 22px;

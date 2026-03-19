@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../theme-sync.js"></script>
-    <title>DéclicIA - Tokenisation</title>
+
     <!-- Feuille de styles externe -->
     <link rel="stylesheet" href="../../theme-sync.css">
     <link rel="stylesheet" href="../../reading-progress.css">
@@ -16,6 +16,36 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- SEO et métadonnées -->
+    <title>DéclicIA - Tokenisation</title>
+    <meta name="description"
+        content="Comprendre la tokenisation : Comment le LLM découpe le texte pour le convertir en unités mathématiques">
+    <meta name="author" content="Thomas BROUILLET">
+    <link rel="canonical" href="https://declicia.pages.dev/subPages/tokenisation/indexTokensition.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://declicia.pages.dev/subPages/tokenisation/indexTokensition.html">
+    <meta property="og:title" content="DéclicIA - La tokenisation">
+    <meta property="og:description"
+        content="Comprendre la tokenisation : Comment le LLM découpe le texte pour le convertir en unités mathématiques">
+    <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DéclicIA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DéclicIA - L'IA c'est quoi ?">
+    <meta name="twitter:description"
+        content="Comprendre la tokenisation : Comment le LLM découpe le texte pour le convertir en unités mathématiques">
+    <meta name="twitter:image" content="https://declicia.pages.dev/Images/og-image.png">
 </head>
 
 <body>
@@ -30,288 +60,359 @@
         </p>
     </header>
 
-    <div class="page-wrapper">
+    <main>
+        <div class="intro">
+            <p>
+                La tokenisation est la toute première étape (et l'une des plus cruciales) lorsqu'une IA traite du texte.
+                Comme les modèles d'IA ne comprennent pas les lettres ou les mots comme nous, ils ont besoin de
+                transformer
+                le langage humain en unités mathématiques.
+                Voici comment cela fonctionne, de manière simple (plus de détail dans l'onglet Théorie) :
+            </p>
+            <ol class="liste">
+                <li><strong>Le token</strong> <br>
+                    Un token n'est pas forcément un mot entier. Selon la méthode utilisée, un token peut être : <br>
+                    <ul class="liste">
+                        <li>Un mot complet ("chat")</li>
+                        <li>Une partie de mot ("ir-", "-ré-", "-el")</li>
+                        <li>Un signe de ponctuation ou un espace.</li>
+                    </ul>
+                    En moyenne, pour l'anglais et le français, on considère que 1 000 tokens correspondent à environ 750
+                    mots.
+                </li>
+                <li><strong>Le processus de transformation</strong> <br>
+                    Le passage du texte vers l'IA suit trois grandes étapes clés :
+                    <ol class="liste">
+                        <li><strong>Découpage (Splitting) : </strong>La phrase "Les élèves adorent l'intelligence
+                            artificielle !" est découpée en morceaux.</li>
+                        <li><strong>Indexation : </strong>Chaque morceau unique est associé à un numéro dans un immense
+                            dictionnaire (le vocabulaire du modèle).
+                            Exemple : "chat" = 432, "mange" = 1056.</li>
+                        <li><strong>Conversion en Vecteurs : </strong>Ces numéros sont ensuite transformés en listes de
+                            nombres complexes (les embeddings) que l'IA peut manipuler pour comprendre le sens.</li>
+                    </ol>
+                </li>
+                <li><strong>Pourquoi ne pas utiliser simplement des mots ? </strong><br>
+                    Les chercheurs ont réalisé que découper par "sous-mots" (méthode BPE ou Byte Pair Encoding) est bien
+                    plus efficace :
+                    <ul class="liste">
+                        <li><strong>Gestion de l'inconnu : </strong>Si l'IA rencontre un mot nouveau (ex:
+                            "Dé-confinement" en 2020), elle peut le comprendre en combinant les tokens "Dé", "confine"
+                            et "ment".</li>
+                        <li><strong>Efficacité mémoire : </strong>Cela évite d'avoir un dictionnaire de 10 millions de
+                            mots différents ; avec 50 000 tokens de base, on peut reconstruire presque tous les mots du
+                            monde.</li>
+                        <li><strong>Racines communes : </strong>"Danser", "Danseur" et "Dansons" partageront le même
+                            token racine ("Dans"), ce qui aide l'IA à comprendre qu'ils parlent de la même idée.</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="cout">
+                ⚠️ L'impact sur le coût et la performance <br>
+                C'est ici que ça devient concret pour l'utilisateur :
+            </div>
+            <ul class="liste">
+                <li><strong>La facturation : </strong>Les services comme OpenAI ou Anthropic facturent au nombre de
+                    tokens (entrée + sortie), pas au nombre de caractères.</li>
+                <li><strong>La "fenêtre de contexte" : </strong>Chaque modèle a une limite de mémoire (ex: 128k tokens).
+                    Une fois cette limite atteinte, l'IA "oublie" le début de la conversation.</li>
 
-        <!-- TABS NAV -->
-        <div class="tabs fade-up">
-            <button class="tab-btn active" data-tab="demo">🔬 Tokeniseur</button>
-            <button class="tab-btn" data-tab="compare">📊 Comparaison</button>
-            <button class="tab-btn" data-tab="freq">📈 Vocabulaire</button>
-            <button class="tab-btn" data-tab="cost">💰 Coût & contexte</button>
-            <button class="tab-btn" data-tab="theory">📚 Théorie</button>
+            </ul>
         </div>
-
-        <!-- ══════════════════════════════════════════════════════ -->
-        <!-- TAB 1 : Démo tokeniseur -->
-        <!-- ══════════════════════════════════════════════════════ -->
-        <div class="tab-pane active" id="tab-demo">
-
-            <div class="card fade-up">
-                <div class="section-label">01 — Démo live</div>
-                <h2>Tokenise ton texte</h2>
-                <p class="section-desc">
-                    Tape n'importe quel texte et observe comment il est découpé en tokens en temps réel.
-                </p>
-
-                <div class="tokenizer-input-row">
-                    <textarea id="mainInput"
-                        placeholder="Écris quelque chose… par exemple : « Les élèves adorent l'IA ! »">Les élèves adorent l'intelligence artificielle !</textarea>
-                    <div class="tokenizer-controls">
-                        <select id="modeSelect">
-                            <option value="word">Mode Mot (BPE simplifié)</option>
-                            <option value="subword">Sous-mots (réaliste)</option>
-                            <option value="char">Caractère par caractère</option>
-                        </select>
-                        <button class="btn btn-ghost" id="clearBtn">🗑 Effacer</button>
-                        <button class="btn btn-ghost" id="exampleBtn">✨ Exemple</button>
-                    </div>
-                </div>
-
-                <div class="stats-bar">
-                    <div class="stat"><span class="stat-val" id="statChars">0</span><span
-                            class="stat-label">caractères</span></div>
-                    <div class="stat"><span class="stat-val" id="statTokens">0</span><span
-                            class="stat-label">tokens</span></div>
-                    <div class="stat"><span class="stat-val" id="statRatio">0</span><span
-                            class="stat-label">chars/token</span></div>
-                    <div class="stat"><span class="stat-val" id="statWords">0</span><span class="stat-label">mots</span>
-                    </div>
-                </div>
-
-                <div class="token-display" id="tokenDisplay">
-                    <span class="token-placeholder">Les tokens apparaîtront
-                        ici…</span>
-                </div>
-
-                <div class="legend" id="legend"></div>
+        <div class="page-wrapper">
+            <!-- TABS NAV -->
+            <div class="tabs fade-up">
+                <button class="tab-btn active" data-tab="demo">🔬 Tokeniseur</button>
+                <button class="tab-btn" data-tab="compare">📊 Comparaison</button>
+                <button class="tab-btn" data-tab="freq">📈 Vocabulaire</button>
+                <button class="tab-btn" data-tab="cost">💰 Coût & contexte</button>
+                <button class="tab-btn" data-tab="theory">📚 Théorie</button>
             </div>
 
-            <!-- Explications types de tokens -->
-            <div class="card card-sm fade-up">
-                <p class="hint-text">
-                    💡 <strong>Le saviez-vous ?</strong>
-                    En moyenne, 1 token ≈ 4 caractères en anglais, mais <em>davantage en français</em> — ce qui rend les
-                    prompts français légèrement plus coûteux. Les emojis, formules mathématiques ou mots rares utilisent
-                    souvent <strong>plusieurs tokens</strong>.
-                </p>
-            </div>
+            <!-- ══════════════════════════════════════════════════════ -->
+            <!-- TAB 1 : Démo tokeniseur -->
+            <!-- ══════════════════════════════════════════════════════ -->
+            <div class="tab-pane active" id="tab-demo">
 
-        </div>
+                <div class="card fade-up">
+                    <div class="section-label">01 — Démo live</div>
+                    <h2>Tokenise ton texte</h2>
+                    <p class="section-desc">
+                        Tape n'importe quel texte et observe comment il est découpé en tokens en temps réel.
+                    </p>
 
-        <!-- ══════════════════════════════════════════════════════ -->
-        <!-- TAB 2 : Comparaison encodages -->
-        <!-- ══════════════════════════════════════════════════════ -->
-        <div class="tab-pane" id="tab-compare">
-            <div class="card fade-up">
-                <div class="section-label">02 — Comparaison</div>
-                <h2>Même texte, encodages différents</h2>
-                <p class="section-desc">
-                    Selon la stratégie choisie, le même texte produit un nombre de tokens très différent.
-                </p>
+                    <div class="tokenizer-input-row">
+                        <textarea id="mainInput"
+                            placeholder="Écris quelque chose… par exemple : « Les élèves adorent l'IA ! »">Les élèves adorent l'intelligence artificielle !</textarea>
+                        <div class="tokenizer-controls">
+                            <select id="modeSelect">
+                                <option value="word">Mode Mot (BPE simplifié)</option>
+                                <option value="subword">Sous-mots (réaliste)</option>
+                                <option value="char">Caractère par caractère</option>
+                            </select>
+                            <button class="btn btn-ghost" id="clearBtn">🗑 Effacer</button>
+                            <button class="btn btn-ghost" id="exampleBtn">✨ Exemple</button>
+                        </div>
+                    </div>
 
-                <textarea id="compareInput" class="text-area text-area--sm"
-                    placeholder="Texte à comparer…">Le chat mange du poisson frais chaque matin.</textarea>
+                    <div class="stats-bar">
+                        <div class="stat"><span class="stat-val" id="statChars">0</span><span
+                                class="stat-label">caractères</span></div>
+                        <div class="stat"><span class="stat-val" id="statTokens">0</span><span
+                                class="stat-label">tokens</span></div>
+                        <div class="stat"><span class="stat-val" id="statRatio">0</span><span
+                                class="stat-label">chars/token</span></div>
+                        <div class="stat"><span class="stat-val" id="statWords">0</span><span
+                                class="stat-label">mots</span>
+                        </div>
+                    </div>
 
-                <div class="encoding-grid" id="encodingGrid">
-                    <!-- filled by JS -->
+                    <div class="token-display" id="tokenDisplay">
+                        <span class="token-placeholder">Les tokens apparaîtront
+                            ici…</span>
+                    </div>
+
+                    <div class="legend" id="legend"></div>
                 </div>
 
-                <div class="info-box">
-                    <p class="info-text">
-                        🎯 <strong>Byte-Pair Encoding (BPE)</strong> — utilisé par GPT —
-                        fusionne les paires de caractères les plus fréquentes de façon itérative, créant un vocabulaire
-                        de sous-mots optimisé sur un corpus massif. C'est l'équilibre idéal entre vocabulaire exhaustif
-                        (trop de mots) et caractère par caractère (trop de tokens).
+                <!-- Explications types de tokens -->
+                <div class="card card-sm fade-up">
+                    <p class="hint-text">
+                        💡 <strong>Le saviez-vous ?</strong>
+                        En moyenne, 1 token ≈ 4 caractères en anglais, mais <em>davantage en français</em> — ce qui rend
+                        les
+                        prompts français légèrement plus coûteux. Les emojis, formules mathématiques ou mots rares
+                        utilisent
+                        souvent <strong>plusieurs tokens</strong>.
                     </p>
                 </div>
+
             </div>
-        </div>
 
-        <!-- ══════════════════════════════════════════════════════ -->
-        <!-- TAB 3 : Fréquences -->
-        <!-- ══════════════════════════════════════════════════════ -->
-        <div class="tab-pane" id="tab-freq">
-            <div class="card fade-up">
-                <div class="section-label">03 — Vocabulaire</div>
-                <h2>Distribution des tokens dans ton texte</h2>
-                <p class="section-desc">
-                    Colle un texte plus long pour voir quels tokens sont les plus fréquents.
-                </p>
-                <textarea id="freqInput" class="text-area text-area--lg" placeholder="Colle un texte plus long ici…"></textarea>
-                <button class="btn btn-primary freq-btn" id="freqBtn">Analyser</button>
-                <div id="freqResult"></div>
-            </div>
-        </div>
+            <!-- ══════════════════════════════════════════════════════ -->
+            <!-- TAB 2 : Comparaison encodages -->
+            <!-- ══════════════════════════════════════════════════════ -->
+            <div class="tab-pane" id="tab-compare">
+                <div class="card fade-up">
+                    <div class="section-label">02 — Comparaison</div>
+                    <h2>Même texte, encodages différents</h2>
+                    <p class="section-desc">
+                        Selon la stratégie choisie, le même texte produit un nombre de tokens très différent.
+                    </p>
 
-        <!-- ══════════════════════════════════════════════════════ -->
-        <!-- TAB 4 : Coût & contexte -->
-        <!-- ══════════════════════════════════════════════════════ -->
-        <div class="tab-pane" id="tab-cost">
-            <div class="card fade-up">
-                <div class="section-label">04 — Coût & Fenêtre de contexte</div>
-                <h2>Simulateur de coût API</h2>
-                <p class="section-desc">
-                    Estimez le coût d'utilisation d'un LLM pour votre projet pédagogique.
-                </p>
+                    <textarea id="compareInput" class="text-area text-area--sm"
+                        placeholder="Texte à comparer…">Le chat mange du poisson frais chaque matin.</textarea>
 
-                <div class="cost-inputs">
-                    <label>
-                        <span>Tokens en entrée (prompt)</span>
-                        <input type="number" id="inputTokens" value="500" min="0" />
-                    </label>
-                    <label>
-                        <span>Tokens en sortie (réponse)</span>
-                        <input type="number" id="outputTokens" value="300" min="0" />
-                    </label>
-                    <label>
-                        <span>Nombre d'appels / jour</span>
-                        <input type="number" id="callsPerDay" value="30" min="1" />
-                    </label>
-                </div>
-
-                <div class="model-block">
-                    <span class="model-label">Modèle</span>
-                    <div id="modelSelector" class="model-selector">
-                        <button class="btn btn-ghost model-btn active" data-in="0.15" data-out="0.60"
-                            data-name="GPT-4o mini">GPT-4o mini</button>
-                        <button class="btn btn-ghost model-btn" data-in="2.50" data-out="10.00"
-                            data-name="GPT-4o">GPT-4o</button>
-                        <button class="btn btn-ghost model-btn" data-in="0.25" data-out="1.25"
-                            data-name="Claude Haiku">Claude Haiku</button>
-                        <button class="btn btn-ghost model-btn" data-in="3.00" data-out="15.00"
-                            data-name="Claude Sonnet">Claude Sonnet</button>
+                    <div class="encoding-grid" id="encodingGrid">
+                        <!-- filled by JS -->
                     </div>
-                    <p class="model-hint">* Tarifs indicatifs en $/M tokens
-                        (mai 2025) — vérifier sur les sites officiels</p>
-                </div>
 
-                <div class="cost-result" id="costResult">
-                    <!-- filled by JS -->
+                    <div class="info-box">
+                        <p class="info-text">
+                            🎯 <strong>Byte-Pair Encoding (BPE)</strong> — utilisé par GPT —
+                            fusionne les paires de caractères les plus fréquentes de façon itérative, créant un
+                            vocabulaire
+                            de sous-mots optimisé sur un corpus massif. C'est l'équilibre idéal entre vocabulaire
+                            exhaustif
+                            (trop de mots) et caractère par caractère (trop de tokens).
+                        </p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Context window visualizer -->
-                <div class="ctx-visualizer">
-                    <div class="section-label">Fenêtre de contexte</div>
-                    <p class="ctx-desc">Visualisez l'occupation de la
-                        fenêtre de contexte du modèle sélectionné.</p>
-                    <div class="ctx-panel">
-                        <div class="ctx-row">
-                            <span id="ctxUsedLabel">0 tokens utilisés</span>
-                            <span id="ctxTotalLabel">128k contexte</span>
+            <!-- ══════════════════════════════════════════════════════ -->
+            <!-- TAB 3 : Fréquences -->
+            <!-- ══════════════════════════════════════════════════════ -->
+            <div class="tab-pane" id="tab-freq">
+                <div class="card fade-up">
+                    <div class="section-label">03 — Vocabulaire</div>
+                    <h2>Distribution des tokens dans ton texte</h2>
+                    <p class="section-desc">
+                        Colle un texte plus long pour voir quels tokens sont les plus fréquents.
+                    </p>
+                    <textarea id="freqInput" class="text-area text-area--lg"
+                        placeholder="Colle un texte plus long ici…"></textarea>
+                    <button class="btn btn-primary freq-btn" id="freqBtn">Analyser</button>
+                    <div id="freqResult"></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════ -->
+            <!-- TAB 4 : Coût & contexte -->
+            <!-- ══════════════════════════════════════════════════════ -->
+            <div class="tab-pane" id="tab-cost">
+                <div class="card fade-up">
+                    <div class="section-label">04 — Coût & Fenêtre de contexte</div>
+                    <h2>Simulateur de coût API</h2>
+                    <p class="section-desc">
+                        Estimez le coût d'utilisation d'un LLM pour votre projet pédagogique.
+                    </p>
+
+                    <div class="cost-inputs">
+                        <label>
+                            <span>Tokens en entrée (prompt)</span>
+                            <input type="number" id="inputTokens" value="500" min="0" />
+                        </label>
+                        <label>
+                            <span>Tokens en sortie (réponse)</span>
+                            <input type="number" id="outputTokens" value="300" min="0" />
+                        </label>
+                        <label>
+                            <span>Nombre d'appels / jour</span>
+                            <input type="number" id="callsPerDay" value="30" min="1" />
+                        </label>
+                    </div>
+
+                    <div class="model-block">
+                        <span class="model-label">Modèle</span>
+                        <div id="modelSelector" class="model-selector">
+                            <button class="btn btn-ghost model-btn active" data-in="0.15" data-out="0.60"
+                                data-name="GPT-4o mini">GPT-4o mini</button>
+                            <button class="btn btn-ghost model-btn" data-in="2.50" data-out="10.00"
+                                data-name="GPT-4o">GPT-4o</button>
+                            <button class="btn btn-ghost model-btn" data-in="0.25" data-out="1.25"
+                                data-name="Claude Haiku">Claude Haiku</button>
+                            <button class="btn btn-ghost model-btn" data-in="3.00" data-out="15.00"
+                                data-name="Claude Sonnet">Claude Sonnet</button>
                         </div>
-                        <div class="ctx-bar-bg">
-                            <div id="ctxBar" class="ctx-bar">
+                        <p class="model-hint">* Tarifs indicatifs en $/M tokens
+                            (mai 2025) — vérifier sur les sites officiels</p>
+                    </div>
+
+                    <div class="cost-result" id="costResult">
+                        <!-- filled by JS -->
+                    </div>
+
+                    <!-- Context window visualizer -->
+                    <div class="ctx-visualizer">
+                        <div class="section-label">Fenêtre de contexte</div>
+                        <p class="ctx-desc">Visualisez l'occupation de la
+                            fenêtre de contexte du modèle sélectionné.</p>
+                        <div class="ctx-panel">
+                            <div class="ctx-row">
+                                <span id="ctxUsedLabel">0 tokens utilisés</span>
+                                <span id="ctxTotalLabel">128k contexte</span>
                             </div>
+                            <div class="ctx-bar-bg">
+                                <div id="ctxBar" class="ctx-bar">
+                                </div>
+                            </div>
+                            <p id="ctxMessage" class="ctx-message"></p>
                         </div>
-                        <p id="ctxMessage" class="ctx-message"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ══════════════════════════════════════════════════════ -->
-        <!-- TAB 5 : Théorie -->
-        <!-- ══════════════════════════════════════════════════════ -->
-        <div class="tab-pane" id="tab-theory">
-
-            <div class="card fade-up">
-                <div class="section-label">05 — Théorie</div>
-                <h2>Comment ça marche ?</h2>
-                <p class="section-desc">Les grandes étapes de la tokenisation
-                    dans un LLM moderne.</p>
-
-                <div class="explainer-grid">
-                    <div class="exp-block">
-                        <div class="exp-icon">🔤</div>
-                        <div class="exp-title">1. Texte brut</div>
-                        <div class="exp-text">Le modèle reçoit une chaîne de caractères. Avant tout traitement, le texte
-                            est normalisé (minuscules, unicode, espaces).</div>
-                    </div>
-                    <div class="exp-block">
-                        <div class="exp-icon">✂️</div>
-                        <div class="exp-title">2. Pré-tokenisation</div>
-                        <div class="exp-text">Le texte est d'abord divisé grossièrement en mots et ponctuations à l'aide
-                            d'expressions régulières.</div>
-                    </div>
-                    <div class="exp-block">
-                        <div class="exp-icon">🧩</div>
-                        <div class="exp-title">3. Encodage BPE</div>
-                        <div class="exp-text">Byte-Pair Encoding fusionne les sous-mots les plus fréquents jusqu'à
-                            atteindre la taille de vocabulaire cible (ex : 50k tokens pour GPT-2).</div>
-                    </div>
-                    <div class="exp-block">
-                        <div class="exp-icon">🔢</div>
-                        <div class="exp-title">4. IDs numériques</div>
-                        <div class="exp-text">Chaque token est converti en un entier (son ID dans le vocabulaire). C'est
-                            ce vecteur d'entiers que le transformer va traiter.</div>
-                    </div>
-                    <div class="exp-block">
-                        <div class="exp-icon">📐</div>
-                        <div class="exp-title">5. Embeddings</div>
-                        <div class="exp-text">Chaque ID est ensuite projeté dans un espace vectoriel dense (~768
-                            dimensions) : c'est là que le sens commence à émerger.</div>
-                    </div>
-                    <div class="exp-block">
-                        <div class="exp-icon">🎯</div>
-                        <div class="exp-title">6. Attention</div>
-                        <div class="exp-text">Le mécanisme d'attention permet à chaque token de "regarder" les autres
-                            pour construire une représentation contextuelle riche.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Curiosités -->
-            <div class="card fade-up">
-                <div class="section-label">Curiosités</div>
-                <h2>Les tokens qui surprennent</h2>
-                <p class="section-desc">Quelques exemples contre-intuitifs de
-                    tokenisation.</p>
-                <div class="curiosities">
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">🇫🇷 Le français coûte plus cher</div>
-                        <div class="curiosity-text">Le vocabulaire BPE de GPT est entraîné majoritairement sur de
-                            l'anglais. Les mots français sont souvent découpés en plus de sous-unités.</div>
-                        <span class="curiosity-token">« indisponibilité » → 5 tokens</span>
-                    </div>
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">🔢 Les nombres sont imprévisibles</div>
-                        <div class="curiosity-text">« 1234 » peut être 1 token, mais « 12345 » peut en être 3. Cela
-                            explique pourquoi les LLM peinent en arithmétique.</div>
-                        <span class="curiosity-token">« 1000000 » → 3-4 tokens</span>
-                    </div>
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">😀 Les emojis coûtent cher</div>
-                        <div class="curiosity-text">Un emoji peut représenter 1 à 3 tokens selon l'encodage UTF-8. Les
-                            textes très émojisés gaspillent du contexte.</div>
-                        <span class="curiosity-token">« 🎉 » → 1–3 tokens</span>
-                    </div>
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">🌐 Les langues rares explosent</div>
-                        <div class="curiosity-text">Une phrase en arabe ou en thaï peut nécessiter 3 à 8× plus de tokens
-                            qu'en anglais pour le même sens — et donc 3 à 8× plus cher.</div>
-                        <span class="curiosity-token">ratio token/mot × 4</span>
-                    </div>
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">✏️ Les espaces comptent</div>
-                        <div class="curiosity-text">En BPE, l'espace précédant un mot fait souvent partie du token. «
-                            chat » et « chat » (avec espace) sont deux tokens différents !</div>
-                        <span class="curiosity-token">▁chat ≠ chat</span>
-                    </div>
-                    <div class="curiosity-card">
-                        <div class="curiosity-title">📝 Le code est efficace</div>
-                        <div class="curiosity-text">Les keywords Python comme <code>return</code>, <code>def</code>,
-                            <code>import</code> sont souvent des tokens uniques car très fréquents dans le corpus
-                            d'entraînement.
+            <!-- ══════════════════════════════════════════════════════ -->
+            <!-- TAB 5 : Théorie -->
+            <!-- ══════════════════════════════════════════════════════ -->
+            <div class="tab-pane" id="tab-theory">
+
+                <div class="card fade-up">
+                    <div class="section-label">05 — Théorie</div>
+                    <h2>Comment ça marche ?</h2>
+                    <p class="section-desc">Les grandes étapes de la tokenisation
+                        dans un LLM moderne.</p>
+
+                    <div class="explainer-grid">
+                        <div class="exp-block">
+                            <div class="exp-icon">🔤</div>
+                            <div class="exp-title">1. Texte brut</div>
+                            <div class="exp-text">Le modèle reçoit une chaîne de caractères. Avant tout traitement, le
+                                texte
+                                est normalisé (minuscules, unicode, espaces).</div>
                         </div>
-                        <span class="curiosity-token">« import » → 1 token</span>
+                        <div class="exp-block">
+                            <div class="exp-icon">✂️</div>
+                            <div class="exp-title">2. Pré-tokenisation</div>
+                            <div class="exp-text">Le texte est d'abord divisé grossièrement en mots et ponctuations à
+                                l'aide
+                                d'expressions régulières.</div>
+                        </div>
+                        <div class="exp-block">
+                            <div class="exp-icon">🧩</div>
+                            <div class="exp-title">3. Encodage BPE</div>
+                            <div class="exp-text">Byte-Pair Encoding fusionne les sous-mots les plus fréquents jusqu'à
+                                atteindre la taille de vocabulaire cible (ex : 50k tokens pour GPT-2).</div>
+                        </div>
+                        <div class="exp-block">
+                            <div class="exp-icon">🔢</div>
+                            <div class="exp-title">4. IDs numériques</div>
+                            <div class="exp-text">Chaque token est converti en un entier (son ID dans le vocabulaire).
+                                C'est
+                                ce vecteur d'entiers que le transformer va traiter.</div>
+                        </div>
+                        <div class="exp-block">
+                            <div class="exp-icon">📐</div>
+                            <div class="exp-title">5. Embeddings</div>
+                            <div class="exp-text">Chaque ID est ensuite projeté dans un espace vectoriel dense (~768
+                                dimensions) : c'est là que le sens commence à émerger.</div>
+                        </div>
+                        <div class="exp-block">
+                            <div class="exp-icon">🎯</div>
+                            <div class="exp-title">6. Attention</div>
+                            <div class="exp-text">Le mécanisme d'attention permet à chaque token de "regarder" les
+                                autres
+                                pour construire une représentation contextuelle riche.</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Curiosités -->
+                <div class="card fade-up">
+                    <div class="section-label">Curiosités</div>
+                    <h2>Les tokens qui surprennent</h2>
+                    <p class="section-desc">Quelques exemples contre-intuitifs de
+                        tokenisation.</p>
+                    <div class="curiosities">
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">🇫🇷 Le français coûte plus cher</div>
+                            <div class="curiosity-text">Le vocabulaire BPE de GPT est entraîné majoritairement sur de
+                                l'anglais. Les mots français sont souvent découpés en plus de sous-unités.</div>
+                            <span class="curiosity-token">« indisponibilité » → 5 tokens</span>
+                        </div>
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">🔢 Les nombres sont imprévisibles</div>
+                            <div class="curiosity-text">« 1234 » peut être 1 token, mais « 12345 » peut en être 3. Cela
+                                explique pourquoi les LLM peinent en arithmétique.</div>
+                            <span class="curiosity-token">« 1000000 » → 3-4 tokens</span>
+                        </div>
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">😀 Les emojis coûtent cher</div>
+                            <div class="curiosity-text">Un emoji peut représenter 1 à 3 tokens selon l'encodage UTF-8.
+                                Les
+                                textes très émojisés gaspillent du contexte.</div>
+                            <span class="curiosity-token">« 🎉 » → 1–3 tokens</span>
+                        </div>
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">🌐 Les langues rares explosent</div>
+                            <div class="curiosity-text">Une phrase en arabe ou en thaï peut nécessiter 3 à 8× plus de
+                                tokens
+                                qu'en anglais pour le même sens — et donc 3 à 8× plus cher.</div>
+                            <span class="curiosity-token">ratio token/mot × 4</span>
+                        </div>
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">✏️ Les espaces comptent</div>
+                            <div class="curiosity-text">En BPE, l'espace précédant un mot fait souvent partie du token.
+                                «
+                                chat » et « chat » (avec espace) sont deux tokens différents !</div>
+                            <span class="curiosity-token">▁chat ≠ chat</span>
+                        </div>
+                        <div class="curiosity-card">
+                            <div class="curiosity-title">📝 Le code est efficace</div>
+                            <div class="curiosity-text">Les keywords Python comme <code>return</code>, <code>def</code>,
+                                <code>import</code> sont souvent des tokens uniques car très fréquents dans le corpus
+                                d'entraînement.
+                            </div>
+                            <span class="curiosity-token">« import » → 1 token</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-
-    </div><!-- /page-wrapper -->
-
+        </div><!-- /page-wrapper -->
+    </main>
 
     <div data-shared-footer data-base="../../" data-current="lia"></div>
     <script src="../../shared-components.js"></script>
@@ -322,4 +423,3 @@
 </body>
 
 </html>
-

@@ -83,6 +83,20 @@
         padding: 40px 24px 48px;
     }
 
+    .intro {
+        max-width: 960px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-size: 16px;
+         font-family: Arial, sans-serif;
+    }
+
+    .liste{
+        margin-left: 30px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
     .page-hero {
         background: linear-gradient(180deg, var(--hero-grad-1), var(--hero-grad-2));
         color: #fff;
@@ -108,7 +122,6 @@
         color: rgba(255, 255, 255, 0.93);
     }
 
-
     /* ─── Layout ────────────────────────────────────────── */
     .page-wrapper {
         max-width: 960px;
@@ -116,10 +129,8 @@
         padding: 0 24px 80px;
         position: relative;
         z-index: 1;
-        
+
     }
-
-
 
     /* ─── Hero ──────────────────────────────────────────── */
     .hero {
