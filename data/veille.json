@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260322",
+    "date": "2026-03-22",
+    "date_affichage": "22 mars 2026",
+    "titre": "L'intelligence artificielle à l'école : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre société, et l'éducation n'est pas en reste. Les enseignants doivent se former pour intégrer ces outils dans leur pédagogie, mais les enjeux sont nombreux. Les élèves doivent-ils apprendre à utiliser des outils d'IA pour améliorer leur apprentissage ? Les enseignants doivent-ils se former pour utiliser ces outils dans leur enseignement ? Les politiques éducatives doivent-elles prendre en compte l'impact de l'IA sur l'éducation ? C'est à ces questions que nous allons essayer de répondre dans cet article. L'IA peut être un outil puissant pour améliorer l'apprentissage, mais il est important de bien comprendre ses limites et ses potentialités. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pour aider les élèves à développer les compétences nécessaires pour vivre dans un monde où l'IA est de plus en plus présente.",
+    "breves": [
+      {
+        "titre": "Les écoles d'ingénieurs du numérique s'adaptent à l'intelligence artificielle",
+        "contenu": "Les écoles d'ingénieurs du numérique sont amenées à repenser en profondeur leurs formations, leurs méthodes pédagogiques et leurs modes d'évaluation, pour former des professionnels capables de maîtriser les technologies de l'IA. Cela nécessite une formation spécifique pour les enseignants, ainsi que des outils et des ressources adaptés pour les élèves. Les écoles doivent également prendre en compte les enjeux éthiques liés à l'utilisation de l'IA dans l'éducation. Pour aider les enseignants à intégrer l'IA dans leur pédagogie, des ressources telles que des cours en ligne et des ateliers de formation sont disponibles. Par exemple, le site web de l'Université de Paris propose des ressources pour les enseignants qui souhaitent intégrer l'IA dans leur enseignement.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/enquetes/comment-les-ecoles-d-ingenieurs-du-numerique-s-adaptent-a-l-intelligence-artificielle.html"
+      },
+      {
+        "titre": "L'impact de l'IA sur les élèves",
+        "contenu": "L'IA peut avoir un impact significatif sur les élèves, en particulier en termes d'apprentissage et de développement des compétences. Les outils d'IA peuvent aider les élèves à améliorer leur compréhension des concepts complexes, à développer leurs compétences en résolution de problèmes et à améliorer leur créativité. Cependant, il est important de noter que l'IA ne doit pas remplacer les enseignants, mais plutôt les aider à mieux enseigner. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et pour aider les élèves à développer les compétences nécessaires pour vivre dans un monde où l'IA est de plus en plus présente. Par exemple, l'outil d'IA 'IBM Watson' peut être utilisé pour aider les élèves à améliorer leur compréhension des concepts scientifiques.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-18-what-happens-when-employers-co-design-the-cybersecurity-classroom"
+      },
+      {
+        "titre": "La formation des enseignants à l'IA",
+        "contenu": "La formation des enseignants à l'IA est essentielle pour que les élèves puissent bénéficier des avantages de l'IA dans l'éducation. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace, pour aider les élèves à développer les compétences nécessaires pour vivre dans un monde où l'IA est de plus en plus présente. Les enseignants doivent également être formés pour prendre en compte les enjeux éthiques liés à l'utilisation de l'IA dans l'éducation. Pour aider les enseignants à se former, des ressources telles que des cours en ligne et des ateliers de formation sont disponibles. Par exemple, le site web de l'Université de Paris propose des ressources pour les enseignants qui souhaitent intégrer l'IA dans leur enseignement.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/how-generative-ai-is-reshaping-workplace-learning"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut améliorer l'apprentissage et le développement des compétences des élèves. Cependant, il est important de noter que l'IA ne doit pas remplacer les enseignants, mais plutôt les aider à mieux enseigner. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et pour aider les élèves à développer les compétences nécessaires pour vivre dans un monde où l'IA est de plus en plus présente. Les politiques éducatives doivent prendre en compte l'impact de l'IA sur l'éducation et fournir des ressources pour aider les enseignants à intégrer l'IA dans leur pédagogie. Enfin, il est important de prendre en compte les enjeux éthiques liés à l'utilisation de l'IA dans l'éducation et de veiller à ce que les élèves soient préparés à vivre dans un monde où l'IA est de plus en plus présente."
+  },
+  {
     "id": "20260317",
     "date": "2026-03-17",
     "date_affichage": "17 mars 2026",
