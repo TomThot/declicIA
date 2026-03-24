@@ -17,7 +17,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/Carousel_outilsIA/Carousel_index.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -53,6 +53,13 @@
   <url>
     <loc>https://declicia.pages.dev/Carousel_outilsIA/lart_du_prompt/index_art_du_prompt.html</loc>
     <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://declicia.pages.dev/Carousel_outilsIA/napkin/indexNapkin.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -94,7 +101,7 @@
 
   <url>
     <loc>https://declicia.pages.dev/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
