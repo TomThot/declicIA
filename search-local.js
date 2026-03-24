@@ -40,6 +40,7 @@
     { title: "Caramel", path: "Carousel_outilsIA/caramel/index_caramel.html", keywords: "h5p caramel moodle elea" },
     { title: "DysFacile", path: "Carousel_outilsIA/dysfacile/index_dysfacile.html", keywords: "dys dysfacile accessibilite" },
     { title: "NotebookLM", path: "Carousel_outilsIA/notebookLM/index_notebookLM.html", keywords: "notebooklm podcast quiz" },
+    { title: "Napkin.AI", path: "subPages/napkin/indexNapkin.html", keywords: "napkin napkinai visuels schemas infographies" },
     { title: "Assistant Prompt", path: "Assistant_prompt/IndexPrompt.html", keywords: "assistant prompt actif" },
     { title: "Lexique de l'IA", path: "subPages/lexique/indexLexique.html", keywords: "lexique termes vocabulaire definitions ia" },
     { title: "Mythes vs Réalité", path: "subPages/mythes_réalité/indexMythes.html", keywords: "mythes realite flipcards idees recues" },

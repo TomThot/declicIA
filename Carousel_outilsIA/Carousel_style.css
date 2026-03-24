@@ -568,6 +568,10 @@ main {
   background: linear-gradient(140deg, #2f9ec9, #1b6f8e);
 }
 
+.card-image.icon-napkin {
+  background: linear-gradient(140deg, #ff7a59, #ffb347);
+}
+
 .card-image.icon-nature {
   background: linear-gradient(140deg, #86b64b, #4f7a2b);
 }

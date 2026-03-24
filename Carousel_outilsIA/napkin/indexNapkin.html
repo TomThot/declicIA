@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../theme-sync.js"></script>
+
+    <!-- Feuille de styles externe -->
+    <link rel="stylesheet" href="../../theme-sync.css">
+    <link rel="stylesheet" href="../../reading-progress.css">
+    <link rel="stylesheet" href="styleNapkin.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- SEO et métadonnées -->
+    <title>DéclicIA - Napkin</title>
+    <meta name="description" content="Comprendre et utiliser NapkinAI">
+    <meta name="author" content="Thomas BROUILLET">
+    <link rel="canonical" href="https://declicia.pages.dev/subPages/tokenisation/indexNapkin.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://declicia.pages.dev/subPages/tokenisation/indexNapkin.html">
+    <meta property="og:title" content="DéclicIA - NapkinAI">
+    <meta property="og:description" content="Comprendre et utiliser NapkinAI pour générer des visuels">
+    <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DéclicIA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DéclicIA - L'IA c'est quoi ?">
+    <meta name="twitter:description" content="Comprendre et utiliser NapkinAI pour générer des visuels">
+    <meta name="twitter:image" content="https://declicia.pages.dev/Images/og-image.png">
+</head>
+
+<body>
+    <div data-shared-sidebar data-base="../../" data-current="outils"></div>
+
+    <!-- HERO -->
+    <header class="page-hero">
+        <h1>NapkinAI</h1>
+        <p>Transformer vos textes en présentation visuelle pertienentes sans compétences en design</p>
+    </header>
+
+    <main>
+        <!-- Navigation interne article-->
+        <div class="containerNav">
+            <div class="titreNav">Dans cet article</div>
+            <div class="navigationPage">
+                <a href="#présentation">Présentation</a>
+                <a href="#utilisation">Exemple avec l'IA</a>
+            </div>
+        </div>
+
+        <div class="intro">
+            <p>
+                On ne parle pas d'un simple outil de prise de notes mais d'une petite révolution pour ceux qui
+                détestent
+                passer des heures sur PowerPoint ou Canva. <br>
+                Le concept est simple : On colle un texte, et l'IA le transforme instantanément en schémas visuels,
+                infographies et diagrammes éditables. C'est l'outil idéal pour passer de "l'idée brute" à une
+                "présentation
+                visuelle" sans avoir de compétences en design.
+            </p>
+        </div>
+
+        <section id="présentation" class="card napkin collapsible-section open">
+            <h2 data-tooltip="Cliquez pour replier/déplier le contenu">NapkinAI pour penser en images
+                <span class="toggle-arrow">▼</span>
+            </h2>
+            <div class="section-content">
+                <div class="inner">
+
+                    <figure>
+                        <img src="../../Images/NmpkinAI.PNG" alt="Accueil Napkin">
+                    </figure>
+                    <h3 class="titleh3">Présentation</h3>
+                    <p>Il est vrai que la promesse est belle, transformer un texte en infographie et contrairement à
+                        NotebookLM, les visuels obtenus sont entièrement modifiables. <br>
+                        En creusant un peu, on découvre que c'est surtout la
+                        manière dont l'outil "réfléchit" qui est intéressante. Napkin ne se contente pas de mettre des
+                        icônes au hasard ; il cherche la structure logique de ton propos. <br>
+                        Vous pouvez coller un texte personnel existant ou demander à l'IA de <a
+                            href="https://app.napkin.ai">Napkin AI</a> de le générer automatiquement en décrivant vos
+                        idées. Enfin, vous pouvez importer d'autres documents et demander à L'IA de les analyser pour
+                        les
+                        convertir en texte. <br>
+                        <a href="https://app.napkin.ai">Napkin AI</a> fonctionne de la manière suivante :
+                    </p>
+
+                    <ul class="liste">
+                        <li><strong>Il procède à l'analyse contextuelle de votre texte</strong> <br>
+                            L'IA lit le paragraphe et comprend les relations entre les idées (hiérarchie, cycle,
+                            opposition, liste). Un scan du texte est effectué pour repérer les connecteurs logiques et
+                            proposer les illustrations les plus adaptées. <br>
+                            par exemple :
+                            <ul class="liste">
+                                <li><strong>Si "Ensuite", "Puis", "Finalement" sont utilisés : </strong>Il proposera
+                                    des Timeline ou des Workflows.</li>
+                                <li><strong>Si "Mais", "Cependant", "Versus" sont utilisés : </strong>Il proposera des
+                                    graphiques de Contraste ou des balances.</li>
+                                <li><strong>Si on liste des composants : </strong>Il créera des Mind Maps ou des roues
+                                    de composants.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Génération visuelle (Napkins) : </strong>Elle propose plusieurs styles de schémas
+                            pour illustrer ce texte précis. <br>
+                            Le bouton "spark" ⚡️ est le cœur de l'interface. Il suffit de surligner une phrase ou un
+                            paragraphe,
+                            cliquer sur l'icône "Spark", et une bibliothèque de styles apparaît sur le côté. Un choix
+                            peut se faire alors entre :
+                            <ul class="liste">
+                                <li><strong>Le style "Sketch" : </strong>Pour un look "dessiné à la main" très propre.
+                                </li>
+                                <li><strong>Le style "Flat" : </strong>Plus corporate, minimaliste et professionnel.
+                                </li>
+                                <li><strong>Le style "Isométrique" : </strong>Pour donner un peu de relief et de
+                                    modernité. </li>
+                            </ul>
+                        </li>
+                        <li><strong>Édition dynamique : </strong>Contrairement à une image fixe générée par DALL-E,
+                            chaque élément du schéma (icône, texte, couleur) est modifiable manuellement.</li>
+                    </ul>
+
+                    <h3 class="titleh3">Les avantages de Napkin.AI</h3>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Fonctionnalité</th>
+                                    <th>Napkin AI</th>
+                                    <th>Outils de Design Classiques</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Vitesse</td>
+                                    <td>Instantané (quelques secondes)</td>
+                                    <td>Manuel (plusieurs minutes/heures)</td>
+                                </tr>
+                                <tr>
+                                    <td>Compétence requise</td>
+                                    <td>Aucune (juste savoir lire/écrire)</td>
+                                    <td>Maîtrise des calques et des formes</td>
+                                </tr>
+                                <tr>
+                                    <td>Flexibilité</td>
+                                    <td>Texte et visuel sont liés</td>
+                                    <td>Visuel déconnecté du fond</td>
+                                </tr>
+                                <tr>
+                                    <td>Export</td>
+                                    <td>PNG, SVG, PDF</td>
+                                    <td>Souvent limité en version gratuite</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="titleh3">🎨 Edition post-IA</h3>
+                    <p>C'est là que Napkin bat les générateurs d'images classiques (comme Midjourney). Une fois le
+                        schéma généré :</p>
+                    <ul class="liste">
+                        <li><strong>Changement d'icône : </strong>Si l'IA a mis une icône de pomme et que vous préférez
+                            une poire, cliquez sur l'icône et choisisez-en une autre dans leur immense bibliothèque.
+                        </li>
+                        <li><strong>Ajustement des flèches : </strong>Vous pouvez étirer, tordre ou supprimer les liens
+                            entre les blocs.
+                        </li>
+                        <li><strong>Charte graphique : </strong>Vous pouvez définir une palette de couleurs (ex: le bleu
+                            de ta boîte) et l'appliquer à tous tes schémas en un clic pour une cohérence totale.
+                        </li>
+                    </ul>
+                    <h3 class="titleh3">⚠️ Limites à connaitre</h3>
+                    <ul class="liste">
+                        <li><strong>Le texte en français : </strong>L'interface est souvent en anglais, mais il comprend
+                            très bien le français pour générer les schémas. Cependant, vérifie toujours que les mots
+                            n'ont pas été coupés bizarrement dans les bulles.</li>
+                        <li><strong>La complexité : </strong>Si on lui donne un texte de 3 pages d'un coup, il va
+                            s'emmêler les pinceaux. Napkin brille sur des blocs d'idées précis (entre 2 et 10 lignes).
+                        </li>
+                        <li><strong>Export : </strong>En version gratuite, tu as un quota. Pour une utilisation pro
+                            intensive (export en SVG pour agrandir sans perdre de qualité), il faut souvent passer à la
+                            caisse.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="utilisation" class="card utilisation collapsible-section open">
+            <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Exemple d'utilisation
+                <span class="toggle-arrow">▼</span>
+            </h2>
+            <div class="section-content">
+                <div class="inner">
+
+                    <p class="ex">Voici un exemple généré par l'IA de <a href="https://app.napkin.ai">Napkin AI</a> Le
+                        texte et les
+                        schémas ont été générés automatiquement. <br>
+                        Le prompt était volontairement "leger" : <br>
+                        <em>Ecrit un texte sur la décroissance radioactive en l'illustrant de schémas.</em>
+                    </p>
+                    <h3 class="titleh3">La décroissance radioactive</h3>
+                    <h3>Abstract</h3>
+                    <p class="ex">
+                        La décroissance radioactive est un phénomène naturel par lequel un noyau instable se transforme
+                        en un noyau plus stable, émettant des radiations dans le processus. Ce document explore les
+                        principes fondamentaux de la décroissance radioactive, ses types, ses lois et ses applications,
+                        tout en illustrant ces concepts à l'aide de schémas explicatifs.
+                    </p>
+
+                    <h3>Introduction</h3>
+                    <p class="ex">
+                        La décroissance radioactive est un processus essentiel en physique nucléaire et en
+                        radioprotection. Elle joue un rôle crucial dans des domaines variés tels que la médecine,
+                        l'archéologie et la gestion des déchets nucléaires. Comprendre ce phénomène permet d'appréhender
+                        les risques associés aux matériaux radioactifs et d'exploiter leurs propriétés de manière
+                        sécurisée.
+                    </p>
+
+                    <h3>1. Qu'est-ce que la Décroissance Radioactive ?</h3>
+                    <p class="ex">La décroissance radioactive se produit lorsque des noyaux atomiques instables perdent
+                        de l'énergie en émettant des particules ou des rayonnements. Ce processus peut se produire de
+                        plusieurs manières, notamment par l'émission de particules alpha, bêta ou gamma.</p>
+                    <h4>1.1 Types de Décroissance</h4>
+                    <ul class="liste">
+                        <li><strong>Décroissance Alpha (α) :</strong>Émission d'une particule alpha (2 protons et 2
+                            neutrons).</li>
+                        <li><strong>Décroissance Bêta (β) :</strong>Transformation d'un neutron en proton (ou vice
+                            versa) avec émission d'un électron ou d'un positron.</li>
+                        <li><strong>Décroissance Gamma (γ) : </strong>Émission de rayonnement électromagnétique sans
+                            changement dans le nombre de protons ou de neutrons.</li>
+                    </ul>
+                    <figure>
+                        <img src="../../Images/La-Décroissance-Radioactive-visual-selection.webp"
+                            alt="types de décroissance">
+                    </figure>
+
+                    <h3>2. La Loi de Décroissance</h3>
+                    <p class="ex">La loi de décroissance radioactive est décrite par la formule :
+                        [ N(t) = N_0 e^{-\lambda t} ]</p>
+                    <ul class="liste">
+                        <li>( N(t) ) est le nombre de noyaux restants à un instant ( t ),</li>
+                        <li>( N_0 ) est le nombre initial de noyaux,</li>
+                        <li>( \lambda ) est la constante de décroissance,</li>
+                        <li>( t ) est le temps écoulé.</li>
+                    </ul>
+                    <h4>2.1 Demi-vie</h4>
+                    <p class="ex">La demi-vie (( T_{1/2} )) est le temps nécessaire pour que la moitié des noyaux d'un
+                        échantillon radioactif se soient désintégrés. Elle est liée à la constante de décroissance par
+                        la formule : <br>
+                        [ T_{1/2} = \frac{\ln(2)}{\lambda} ]</p>
+
+                    <figure>
+                        <img class="demiVie" src="../../Images/demie-vie.webp" alt="demi-vie">
+                    </figure>
+
+                    <h3>3. Applications de la Décroissance Radioactive</h3>
+                    <p class="ex">La décroissance radioactive a de nombreuses applications pratiques :</p>
+
+                    <h4>3.1 Médecine</h4>
+                    <p class="ex">Les isotopes radioactifs sont utilisés en médecine pour le diagnostic et le
+                        traitement. Par exemple, l'iode-131 est utilisé pour traiter les maladies de la thyroïde.</p>
+
+                    <h4>3.2 Archéologie</h4>
+                    <p class="ex">La datation au carbone 14 permet de déterminer l'âge des objets organiques en mesurant
+                        la quantité de carbone 14 restant.</p>
+
+                    <h4>3.3 Énergie Nucléaire</h4>
+                    <p class="ex">La fission nucléaire, qui libère une grande quantité d'énergie, repose sur la
+                        décroissance radioactive des isotopes lourds comme l'uranium-235.</p>
+
+                    <figure>
+                        <img src="../../Images/appliaction décroissance.webp" alt="application dédroissance">
+                    </figure>
+
+                    <h3>4. Risques et Sécurité</h3>
+                    <p class="ex">La manipulation de matériaux radioactifs présente des risques pour la santé humaine et
+                        l'environnement. Il est essentiel de suivre des protocoles de sécurité stricts pour minimiser
+                        l'exposition aux radiations.</p>
+
+                    <h4>4.1 Protection Contre les Radiations</h4>
+                    <p class="ex">Les mesures de protection incluent :</p>
+                    <ul class="liste">
+                        <li>L'utilisation de blindages (plomb, béton).</li>
+                        <li>La limitation du temps d'exposition.</li>
+                        <li>L'augmentation de la distance entre la source radioactive et l'observateur.</li>
+                    </ul>
+                    <figure>
+                        <img src="../../Images/sécurité radio.webp" alt="sécurité radioactive">
+                    </figure>
+
+                    <h3>Conclusion</h3>
+                    <p class="ex">La décroissance radioactive est un phénomène complexe mais fondamental qui a des
+                        implications profondes dans divers domaines scientifiques et technologiques. En comprenant ses
+                        mécanismes et ses applications, nous pouvons mieux gérer les risques associés et tirer parti des
+                        avantages qu'elle offre.</p>
+
+                    <figure>
+                        <img src="../../Images/Conclusion.webp" alt="conclusion">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-shared-footer data-base="../../" data-current="lia"></div>
+    <script src="../../shared-components.js"></script>
+    <script src="../../search-local.js"></script>
+    <script src="scriptNapkin.js"></script>
+    <script src="../../reading-progress.js" defer></script>
+
+</body>
+
+</html>
