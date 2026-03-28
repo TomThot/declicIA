@@ -28,9 +28,9 @@ if (menuToggle && menuBar && sidebar) {
 }
 
 // ============================================================
-// CLÉ API xAI (Grok) — ne jamais committer une clé en dur
+// APPEL API via Cloudflare Pages Function (clé côté serveur)
 // ============================================================
-const CLE_API_GROK = '';
+const NUTRISCORE_API_URL = '/nutriscore';
 
 // ============================================================
 // CHIPS CONTEXTE
@@ -88,16 +88,15 @@ Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après, sans 
   "ameliorations": ["suggestion concrète 1", "suggestion concrète 2", "suggestion concrète 3"]
 }`;
 
-  const response = await fetch('https://api.x.ai/v1/chat/completions', {
+  const response = await fetch(NUTRISCORE_API_URL, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${CLE_API_GROK}`
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       model: 'grok-3-mini',
       max_tokens: 1000,
-      messages: [{ role: 'user', content: prompt }]
+      prompt
     })
   });
 
