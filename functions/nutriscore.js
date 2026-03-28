@@ -1,7 +1,7 @@
 export async function onRequestPost({ request, env }) {
-  if (!env.XAI_API_KEY) {
+  if (!env.MISTRAL_API_KEY) {
     return new Response(
-      JSON.stringify({ error: "Missing XAI_API_KEY on server" }),
+      JSON.stringify({ error: "Missing MISTRAL_API_KEY on server" }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -17,7 +17,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   const prompt = body.prompt;
-  const model = body.model || "grok-3-mini";
+  const model = body.model || "mistral-small-latest";
   const max_tokens = body.max_tokens || 1000;
 
   if (!prompt || typeof prompt !== "string") {
@@ -27,11 +27,11 @@ export async function onRequestPost({ request, env }) {
     );
   }
 
-  const upstream = await fetch("https://api.x.ai/v1/chat/completions", {
+  const upstream = await fetch("https://api.mistral.ai/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${env.XAI_API_KEY}`
+      Authorization: `Bearer ${env.MISTRAL_API_KEY}`
     },
     body: JSON.stringify({
       model,

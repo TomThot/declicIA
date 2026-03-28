@@ -28,9 +28,9 @@ if (menuToggle && menuBar && sidebar) {
 }
 
 // ============================================================
-// APPEL API via Cloudflare Pages Function (clé côté serveur)
+// WORKER PROXY Cloudflare — clé xAI stockée côté serveur
 // ============================================================
-const NUTRISCORE_API_URL = '/nutriscore';
+const NUTRISCORE_API_URL = 'https://nutriscore-proxy.tom-thot.workers.dev';
 
 // ============================================================
 // CHIPS CONTEXTE
@@ -93,11 +93,7 @@ Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après, sans 
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      model: 'grok-3-mini',
-      max_tokens: 1000,
-      prompt
-    })
+    body: JSON.stringify({ prompt })
   });
 
   if (!response.ok) {
