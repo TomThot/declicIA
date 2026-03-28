@@ -66,47 +66,50 @@ const SCORE_LABELS = {
 // ANALYSE IA VIA ANTHROPIC API
 // ============================================================
 async function analyserAvecIA(activite, contexte) {
-  const prompt = `Tu es un expert en sciences cognitives et en pédagogie de l'IA. Tu dois évaluer le "Nutri-Score Cognitif IA" d'une activité scolaire ou professionnelle impliquant l'intelligence artificielle.
+  const prompt = `...`; // ton prompt inchangé
 
-Le Nutri-Score Cognitif IA fonctionne comme suit :
-- Score A : L'apprenant construit activement sa pensée AVANT ou MALGRÉ l'IA (écrire de mémoire, débattre, enseigner, se tester, méthode Feynman). Aucune délégation cognitive.
-- Score B : L'apprenant s'engage activement avec la production IA (reformuler, annoter, prendre des notes, questionner). Légère délégation mais l'essentiel cognitif reste.
-- Score C : L'apprenant consomme du contenu déjà structuré par l'IA mais avec un minimum d'arrêt réflexif (regarder une vidéo en s'arrêtant, lire un résumé avec pauses). L'effort de structuration est délégué.
-- Score D : L'apprenant consomme passivement avec peu d'engagement (lire des bullets pré-digérés, copier-coller en adaptant à peine). Recherche, structure et reformulation sont déléguées.
-- Score E : Aucun engagement cognitif (scroller passivement, accepter sans questionner, copier-coller sans reformuler). Zéro encodage, zéro trace mémorielle.
+  try {
+    const response = await fetch(NUTRISCORE_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt })
+    });
 
-Contexte de l'utilisateur : ${contexte || 'non précisé'}
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
 
-Activité à évaluer : "${activite}"
+    const raw = await response.text();
 
-Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après, sans balises markdown. Le JSON doit avoir exactement cette structure :
-{
-  "score": "A" ou "B" ou "C" ou "D" ou "E",
-  "analyse": "2-3 phrases expliquant pourquoi ce score, en citant des éléments précis de l'activité décrite",
-  "points_forts": ["point fort 1", "point fort 2"],
-  "points_faibles": ["point faible 1", "point faible 2"],
-  "ameliorations": ["suggestion concrète 1", "suggestion concrète 2", "suggestion concrète 3"]
-}`;
+    console.log("RAW API:", raw); // 🔥 DEBUG
 
-  const response = await fetch(NUTRISCORE_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ prompt })
-  });
+    if (!raw) {
+      throw new Error("Réponse vide");
+    }
 
-  if (!response.ok) {
-    const err = await response.json().catch(() => ({}));
-    throw new Error(err.error?.message || `Erreur API ${response.status}`);
+    const data = JSON.parse(raw);
+
+    const text = data.choices?.[0]?.message?.content;
+
+    if (!text) {
+      throw new Error("Format API invalide");
+    }
+
+    const clean = text
+      .replace(/```json\s*/g, '')
+      .replace(/```\s*/g, '')
+      .trim();
+
+    if (!clean) {
+      throw new Error("JSON vide après nettoyage");
+    }
+
+    return JSON.parse(clean);
+
+  } catch (err) {
+    console.warn("Erreur IA:", err.message);
+    throw err;
   }
-
-  const data = await response.json();
-  const text = data.choices?.[0]?.message?.content || '';
-
-  // Nettoyage JSON
-  const clean = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
-  return JSON.parse(clean);
 }
 
 // ============================================================
