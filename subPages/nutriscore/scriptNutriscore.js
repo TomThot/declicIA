@@ -63,10 +63,39 @@ const SCORE_LABELS = {
 };
 
 // ============================================================
-// ANALYSE IA VIA ANTHROPIC API
+// ANALYSE IA VIA MISTRAL API
 // ============================================================
 async function analyserAvecIA(activite, contexte) {
-  const prompt = `...`; // ton prompt inchangé
+const prompt = `
+Tu es un assistant qui analyse une activité pédagogique et attribue un score "Nutriscore cognitif" (A à E).
+
+Retour attendu :
+- Un JSON STRICT uniquement
+- Sans texte autour
+- Sans explication
+- Sans markdown
+- Sans bloc de code
+
+Format exact :
+
+{
+  "score": "A|B|C|D|E",
+  "analyse": "texte court",
+  "points_forts": ["..."],
+  "points_faibles": ["..."],
+  "ameliorations": ["..."]
+}
+
+Activité :
+"${activite}"
+
+Contexte :
+"${contexte}"
+
+Règles :
+- Réponds uniquement avec un JSON valide
+- Aucun texte hors JSON
+`;
 
   try {
     const response = await fetch(NUTRISCORE_API_URL, {
@@ -95,16 +124,21 @@ async function analyserAvecIA(activite, contexte) {
       throw new Error("Format API invalide");
     }
 
-    const clean = text
-      .replace(/```json\s*/g, '')
-      .replace(/```\s*/g, '')
-      .trim();
+let clean = text
+  .replace(/```json\s*/g, '')
+  .replace(/```/g, '')
+  .trim();
 
-    if (!clean) {
-      throw new Error("JSON vide après nettoyage");
-    }
+// Vérification simple
+if (!clean.startsWith('{')) {
+  throw new Error("La réponse IA n'est pas du JSON");
+}
 
-    return JSON.parse(clean);
+try {
+  return JSON.parse(clean);
+} catch (e) {
+  throw new Error("JSON invalide après nettoyage");
+}
 
   } catch (err) {
     console.warn("Erreur IA:", err.message);
