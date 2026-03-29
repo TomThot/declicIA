@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260329",
+    "date": "2026-03-29",
+    "date_affichage": "29 mars 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et la salle de classe n'y échappe pas. Les enseignants se posent de nombreuses questions sur les enjeux de l'IA pour leur pratique pédagogique. Comment les outils d'IA peuvent-ils aider à personnaliser l'apprentissage ? Quels sont les risques et les bénéfices de l'utilisation de l'IA en classe ? Les politiques éducatives sont-elles prêtes à intégrer l'IA dans les cursus scolaires ? Cette semaine, nous allons explorer quelques-unes de ces questions à travers des articles et des ressources concrètes. Nous allons voir comment les enseignants peuvent utiliser les outils d'IA pour améliorer leur pratique pédagogique, et comment les politiques éducatives peuvent soutenir cette intégration. Nous allons également aborder les questions éthiques soulevées par l'utilisation de l'IA en classe.",
+    "breves": [
+      {
+        "titre": "Les écoles d'ingénieurs du numérique s'adaptent à l'intelligence artificielle",
+        "contenu": "Les écoles d'ingénieurs du numérique sont amenées à repenser en profondeur leurs formations, leurs méthodes pédagogiques et leurs modes d'évaluation, pour former des professionnels capables de maîtriser les technologies d'IA. Cela implique de développer des compétences en analyse de données, en apprentissage automatique et en développement de modèles d'IA. Les enseignants doivent également être formés pour intégrer ces nouvelles technologies dans leur pratique pédagogique. L'article de Educpros explore les différentes façons dont les écoles d'ingénieurs du numérique s'adaptent à l'IA.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/enquetes/comment-les-ecoles-d-ingenieurs-du-numerique-s-adaptent-a-l-intelligence-artificielle.html"
+      },
+      {
+        "titre": "L'IA peut-elle aider à améliorer la lecture des élèves ?",
+        "contenu": "Un article de The Hechinger Report explore les différentes façons dont l'IA peut être utilisée pour améliorer la lecture des élèves. Les outils d'IA peuvent aider à personnaliser l'apprentissage, en proposant des exercices et des textes adaptés au niveau de lecture de chaque élève. Les enseignants peuvent également utiliser les outils d'IA pour analyser les progrès des élèves et identifier les domaines où ils ont besoin d'aide supplémentaire. Cependant, l'article souligne également les limites de l'IA dans l'enseignement de la lecture, et la nécessité de maintenir une approche pédagogique globale.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/new-york-ten-million-reading-instruction/"
+      },
+      {
+        "titre": "Les enseignants et l'IA : quels enjeux pour la formation ?",
+        "contenu": "L'utilisation de l'IA en classe soulève de nombreuses questions pour la formation des enseignants. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace, et pour intégrer l'IA dans leur pratique pédagogique. Cela implique de développer des compétences en analyse de données, en apprentissage automatique et en développement de modèles d'IA. L'article de EdSurge explore les différentes façons dont les enseignants peuvent être formés pour utiliser l'IA en classe.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-03-27-the-ai-use-case-question-teachers-are-still-asking"
+      }
+    ],
+    "conclusion": "L'intégration de l'IA en classe est un enjeu majeur pour les enseignants, qui doivent être formés pour utiliser les outils d'IA de manière efficace. Les politiques éducatives doivent également soutenir cette intégration, en proposant des formations et des ressources concrètes pour les enseignants. Les enseignants peuvent utiliser les outils d'IA pour améliorer leur pratique pédagogique, et pour personnaliser l'apprentissage. Cependant, il est important de maintenir une approche pédagogique globale, et de ne pas se reposer uniquement sur les outils d'IA. Les enseignants doivent être conscients des limites de l'IA, et utiliser ces outils de manière critique et réfléchie."
+  },
+  {
     "id": "20260322",
     "date": "2026-03-22",
     "date_affichage": "22 mars 2026",
