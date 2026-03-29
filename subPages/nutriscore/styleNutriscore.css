@@ -54,31 +54,13 @@ body {
 
 /* ====== HEADER ====== */
 header {
-  background: linear-gradient(160deg, #360143 0%, #2a3a9e 60%, #2a81fc 100%);
+  background: linear-gradient(180deg, #360143, #2a81fc);
   color: white;
   padding: 60px 20px 40px;
   text-align: center;
-  box-shadow: 0 5px 30px rgba(54, 1, 67, 0.5);
+  box-shadow: 0 5px 20px rgb(54, 66, 109);
   position: relative;
   overflow: hidden;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: -60px; left: -60px;
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(97,74,231,0.3) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 250px; height: 250px;
-  background: radial-gradient(circle, rgba(42,129,252,0.25) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .header-content {
@@ -86,17 +68,6 @@ header::after {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.header-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-size: 0.85rem;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
 }
 
 header h1 {

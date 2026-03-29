@@ -45,7 +45,8 @@
     { title: "Lexique de l'IA", path: "subPages/lexique/indexLexique.html", keywords: "lexique termes vocabulaire definitions ia" },
     { title: "Mythes vs Réalité", path: "subPages/mythes_réalité/indexMythes.html", keywords: "mythes realite flipcards idees recues" },
     { title: "Générateur cadre d'usage", path: "Cadre_et_défit/Generateur_cadre/indexGenerateur.html", keywords: "generateur cadre usage fiche personnalisee classe" },
-    { title: "Contact", path: "Contact/contactIndex.html", keywords: "contact message suggestion erreur contribuer" }
+    { title: "Contact", path: "Contact/contactIndex.html", keywords: "contact message suggestion erreur contribuer" },
+    { title : "Nutriscore cognitif", path : "subPages/nutriscore/indexNutriscore.html", keywords: "nutriscore cognitif friction "}
   ];
 
   // Normalise les chaînes (accents, casse, espaces) pour une recherche robuste.
