@@ -28,7 +28,7 @@ if (menuToggle && menuBar && sidebar) {
 }
 
 // ============================================================
-// WORKER PROXY Cloudflare — clé xAI stockée côté serveur
+// WORKER PROXY Cloudflare — clé Mistral stockée côté serveur
 // ============================================================
 const NUTRISCORE_API_URL = 'https://nutriscore-proxy.tom-thot.workers.dev';
 

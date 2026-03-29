@@ -1,6 +1,6 @@
 # DéclicIA
 
-Site web éducatif sur l'intelligence artificielle en contexte scolaire, destiné aux enseignants.
+Site web éducatif sur l’intelligence artificielle en contexte scolaire, destiné aux enseignants.
 
 🌐 **Site en ligne :** [https://declicia.pages.dev/](https://declicia.pages.dev/)
 
@@ -10,11 +10,11 @@ Site web éducatif sur l'intelligence artificielle en contexte scolaire, destin�
 
 DéclicIA propose :
 
-- des contenus de vulgarisation sur l'IA (définitions, histoire, fonctionnement)
-- le cadre institutionnel, les enjeux et les défis pour l'éducation
-- des outils concrets pour la classe (chatbots, génération de contenu, aide aux dys...)
-- des ressources interactives : lexique, flipcards mythes/réalité, générateur de cadre d'usage, FAQ
-- des interactions front-end : menu responsive, thème clair/sombre, quiz de profil, barre de lecture
+- des contenus de vulgarisation sur l’IA (définitions, histoire, fonctionnement)
+- le cadre institutionnel, les enjeux et les défis pour l’éducation
+- des outils concrets pour la classe (chatbots, génération de contenu, aide aux dys, etc.)
+- des ressources interactives : lexique, flipcards mythes/réalité, générateur de cadre d’usage, FAQ
+- des interactions front‑end : menu responsive, thème clair/sombre, quiz de profil, barre de lecture
 
 ---
 
@@ -25,8 +25,10 @@ DéclicIA propose :
 | HTML5 | Structure sémantique de toutes les pages |
 | CSS3 | Mise en page, variables, thème, responsive, `@media print` |
 | JavaScript vanilla | Interactions, composants partagés, quiz, carousel 3D |
-| Cloudflare Pages | Déploiement statique, CDN mondial, HTTPS automatique |
-| GitHub Actions | Automatisation veille IA (hebdo) + génération sitemap |
+| Cloudflare Pages | Déploiement statique, CDN mondial, HTTPS |
+| Cloudflare Functions | API Nutriscore (proxy Mistral) |
+| Python | Scripts d’automatisation (veille, sitemap) |
+| GitHub Actions | Automatisation veille IA + génération sitemap |
 
 Aucun framework, aucune dépendance NPM. Tout fonctionne en ouvrant `index.html` dans un navigateur.
 
@@ -36,26 +38,28 @@ Aucun framework, aucune dépendance NPM. Tout fonctionne en ouvrant `index.html`
 
 ```text
 Mon site IA/
-├─ index.html                        ← Page d'accueil
+├─ index.html                        ← Page d’accueil
 ├─ style.css                         ← Styles globaux
-├─ script.js                         ← Script page d'accueil
+├─ script.js                         ← Script page d’accueil
 ├─ theme-sync.css                    ← Styles du thème clair/sombre (partagé)
 ├─ theme-sync.js                     ← Logique du thème (partagé)
 ├─ reading-progress.css              ← Barre de progression de lecture (partagé)
 ├─ reading-progress.js               ← Logique de la barre de lecture (partagé)
-├─ shared-components.js              ← Injection sidebar, footer + CSS partagé (partagé)
-├─ shared-components.css             ← Styles sidebar et footer (partagé, injecté par le JS)
+├─ shared-components.js              ← Injection sidebar, footer + CSS partagé
+├─ shared-components.css             ← Styles sidebar et footer (injectés)
 ├─ search-local.js                   ← Moteur de recherche interne (partagé)
-├─ data-popups.js                    ← Données des popups de la page d'accueil
+├─ data-popups.js                    ← Données des popups de la page d’accueil
 ├─ robots.txt                        ← Directives pour les robots de recherche
 ├─ sitemap.xml                       ← Plan du site (généré automatiquement)
-├─ 404.html                          ← Page d'erreur personnalisée
+├─ google2451f49a31f7902f.html       ← Vérification Google Search Console
+├─ 404.html                          ← Page d’erreur personnalisée
 ├─ README.md
 ├─ .gitignore
 │
 ├─ Images/                           ← Illustrations, logos, bannières, icônes
+├─ assets/                           ← Sources de travail (non publiées)
 │
-├─ LIA_cest_quoi/                    ← "L'IA c'est quoi ?"
+├─ LIA_cest_quoi/                    ← "L’IA c’est quoi ?"
 │  ├─ indexIA.html
 │  ├─ StyleIA.css
 │  └─ scriptIA.js
@@ -64,7 +68,7 @@ Mon site IA/
 │  ├─ IndexCadreDefi.html
 │  ├─ StyletCadreDefi.css
 │  ├─ ScriptCadreDefi.js
-│  └─ Generateur_cadre/             ← Générateur de fiche cadre d'usage
+│  └─ Generateur_cadre/             ← Générateur de fiche cadre d’usage
 │     ├─ indexGenerateur.html
 │     ├─ styleGenerateur.css
 │     ├─ scriptGenerateur.js
@@ -74,28 +78,22 @@ Mon site IA/
 │  ├─ Carousel_index.html
 │  ├─ Carousel_style.css
 │  ├─ Carousel_script.js
-│  ├─ lart_du_prompt/               ← Outil : L'art du prompt
-│  ├─ quelle_IA_choisir/            ← Outil : Comparatif IA 2026
-│  ├─ P2IA/                         ← Outil : Outils P2IA cycle 3
-│  ├─ chatMD/                       ← Outil : ChatMD (chatbot)
-│  ├─ caramel/                      ← Outil : Caramel (H5P)
-│  ├─ dysfacile/                    ← Outil : DysFacile
-│  └─ notebookLM/                   ← Outil : NotebookLM
+│  ├─ lart_du_prompt/
+│  ├─ quelle_IA_choisir/
+│  ├─ P2IA/
+│  ├─ chatMD/
+│  ├─ caramel/
+│  ├─ dysfacile/
+│  ├─ notebookLM/
+│  └─ napkin/
 │
-├─ subPages/                         ← Sous-pages thématiques
-│  ├─ faq/                          ← FAQ : IA en classe, données et réglementation
-│  │  ├─ indexFAQ.html
-│  │  ├─ styleFAQ.css
-│  │  └─ scriptFAQ.js
-│  ├─ lexique/                      ← Lexique des termes IA
-│  │  ├─ indexLexique.html
-│  │  ├─ styleLexique.css
-│  │  └─ scriptLexique.js
-│  ├─ mythes_réalité/               ← Flipcards mythes vs réalité
-│  │  ├─ indexMythes.html
-│  │  ├─ styleMythes.css
-│  │  └─ scriptMythes.js
-│  └─ veille-ia.html                ← Archives de la veille IA
+├─ subPages/                         ← Sous‑pages thématiques
+│  ├─ faq/
+│  ├─ lexique/
+│  ├─ mythes_réalité/
+│  ├─ tokenisation/
+│  ├─ nutriscore/
+│  └─ veille-ia.html
 │
 ├─ css/                              ← Feuilles de style globales supplémentaires
 │  └─ veille.css
@@ -106,12 +104,15 @@ Mon site IA/
 ├─ data/                             ← Données JSON
 │  └─ veille.json                   ← Articles de veille IA (généré automatiquement)
 │
-├─ scripts/                          ← Scripts d'automatisation
+├─ functions/                        ← Cloudflare Functions
+│  └─ nutriscore.js                 ← Proxy API Mistral pour Nutriscore
+│
+├─ scripts/                          ← Scripts d’automatisation
 │  ├─ generate_veille.py            ← Génère la veille IA via Groq + RSS
 │  └─ generate_sitemap.py           ← Génère sitemap.xml automatiquement
 │
 ├─ .github/workflows/               ← GitHub Actions
-│  ├─ veille-ia-education.yml       ← Veille IA hebdomadaire (chaque dimanche)
+│  ├─ veille-ia-education.yml       ← Veille IA hebdomadaire
 │  └─ generate-sitemap.yml          ← Sitemap auto (à chaque modif HTML)
 │
 ├─ Assistant_prompt/                 ← Assistant prompt (non publié)
@@ -126,10 +127,12 @@ Mon site IA/
 | Page | Fichier |
 |---|---|
 | Accueil | `index.html` |
-| L'IA c'est quoi ? | `LIA_cest_quoi/indexIA.html` |
+| L’IA c’est quoi ? | `LIA_cest_quoi/indexIA.html` |
 | Cadre et défis | `Cadre_et_défit/IndexCadreDefi.html` |
-| Générateur de cadre d'usage | `Cadre_et_défit/Generateur_cadre/indexGenerateur.html` |
+| Générateur de cadre d’usage | `Cadre_et_défit/Generateur_cadre/indexGenerateur.html` |
 | Galerie des outils | `Carousel_outilsIA/Carousel_index.html` |
+| Tokenisation | `subPages/tokenisation/indexTokensition.html` |
+| Nutriscore cognitif | `subPages/nutriscore/indexNutriscore.html` |
 | FAQ — IA en classe | `subPages/faq/indexFAQ.html` |
 | Lexique | `subPages/lexique/indexLexique.html` |
 | Mythes vs Réalité | `subPages/mythes_réalité/indexMythes.html` |
@@ -143,12 +146,12 @@ Mon site IA/
 Tous les composants réutilisables sont à la racine du projet et chargés via `<script>` ou `<link>` dans chaque page.
 
 ### Thème clair / sombre
-- Piloté par l'attribut `data-theme` sur `<html>` (`"light"` ou `"dark"`)
+- Piloté par l’attribut `data-theme` sur `<html>` (`"light"` ou `"dark"`)
 - Persistance via `localStorage` (clé : `declicia-theme`)
 - Détection automatique de la préférence système (`prefers-color-scheme`)
 - Fichiers : `theme-sync.js` + `theme-sync.css`
 
-> ⚠️ `theme-sync.js` est chargé **sans `defer`** en tout début de `<head>` pour éviter le flash blanc→sombre au chargement.
+> `theme-sync.js` est chargé sans `defer` en tout début de `<head>` pour éviter le flash clair → sombre au chargement.
 
 ### Barre de progression de lecture
 - Apparaît uniquement si la page dépasse 1,5× la hauteur de la fenêtre
@@ -163,13 +166,13 @@ Tous les composants réutilisables sont à la racine du projet et chargés via `
 <div data-shared-footer data-base="../" data-current="lia"></div>
 ```
 - `data-base` : chemin relatif vers la racine depuis la page courante
-- `data-current` : clé de la page active pour surligner le bon lien nav (`home`, `lia`, `cadre`, `outils`, `faq`)
-- `shared-components.js` injecte aussi automatiquement `shared-components.css` dans le `<head>` — inutile de le charger manuellement
+- `data-current` : clé de la page active (`home`, `lia`, `cadre`, `outils`, `faq`)
+- `shared-components.js` injecte automatiquement `shared-components.css` dans le `<head>`
 - Fichiers : `shared-components.js` + `shared-components.css`
 
 ### Recherche interne
 - Recherche locale sur les titres et contenus des pages
-- Chargé automatiquement par `shared-components.js`
+- Chargée automatiquement par `shared-components.js`
 - Fichier : `search-local.js`
 
 ---
@@ -177,29 +180,19 @@ Tous les composants réutilisables sont à la racine du projet et chargés via `
 ## Automatisation GitHub Actions
 
 ### Veille IA hebdomadaire
-- Déclenché chaque dimanche à 7h UTC
-- Collecte des flux RSS (9 sources FR/EN)
+- Déclenchée chaque dimanche à 7h UTC
+- Collecte des flux RSS
 - Synthèse via API Groq (LLaMA 3.3 70B)
 - Résultat inséré en tête de `data/veille.json`
 - Clé API stockée dans GitHub Actions Secrets (`GROQ_API_KEY`)
 - Fichier : `.github/workflows/veille-ia-education.yml`
 
 ### Génération automatique du sitemap
-- Déclenché à chaque push modifiant un `.html` ou `.pdf`
+- Déclenchée à chaque push modifiant un `.html` ou `.pdf`
 - Parcourt tous les fichiers HTML publics du dépôt
 - Récupère la date du dernier commit git pour chaque fichier (`lastmod`)
-- Génère et commite `sitemap.xml` à la racine
+- Génère et commit `sitemap.xml` à la racine
 - Fichier : `.github/workflows/generate-sitemap.yml`
-
----
-
-## SEO & visibilité
-
-- Balises canonical, Open Graph et Twitter Card sur toutes les pages
-- `robots.txt` à la racine avec référence au sitemap
-- `sitemap.xml` généré automatiquement et soumis à Google Search Console
-- Données structurées `schema.org` (FAQPage) sur la page FAQ
-- Score Lighthouse : 95+
 
 ---
 
@@ -216,20 +209,6 @@ cd declicIA
 ```
 
 Aucune installation, aucun `npm install` requis.
-
----
-
-## Fichier .gitignore
-
-```gitignore
-tramePagesIndex.html    ← Trame de développement (template de nouvelle page)
-tramePagesScript.js
-tramePagesStyle.css
-assets/                 ← Fichiers sources (Illustrator, H5P bruts...)
-doc/neurone.py          ← Script Python de travail
-.vscode/                ← Configuration éditeur locale
-.venv/                  ← Environnement virtuel Python
-```
 
 ---
 
@@ -257,8 +236,8 @@ Convention de messages de commit recommandée :
 
 ## Contact
 
-- ✉️ Email : `tom.thot@gmail.com`
-- 🐙 GitHub : [https://github.com/TomThot](https://github.com/TomThot)
+- Email : `tom.thot@gmail.com`
+- GitHub : [https://github.com/TomThot](https://github.com/TomThot)
 
 ---
 
