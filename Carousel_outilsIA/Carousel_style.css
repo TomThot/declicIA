@@ -318,6 +318,7 @@ main {
   transform-style: preserve-3d;
   position: relative;
   cursor: grab;
+  will-change: transform;
 }
 
 .carousel-3d:active {
@@ -338,6 +339,8 @@ main {
   top: 0;
   left: 0;
   will-change: transform, filter, opacity;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .card-image {
@@ -349,6 +352,7 @@ main {
   justify-content: center;
   color: #fff;
   background: linear-gradient(140deg, #7f59cc, #5e39b2);
+  backface-visibility: hidden;
 }
 
 .carousel-card .card-image {
@@ -412,6 +416,10 @@ main {
   background: linear-gradient(140deg, #37b24d, #f59f00);
 }
 
+.card-image.icon-dictia {
+  background: linear-gradient(140deg, #5a73e6, #2b3a8f);
+}
+
 /* ── Nouvelles icônes galerie (ajoutées avec le générateur de cadre) ── */
 .card-image.icon-flipcard {
   background: linear-gradient(140deg, #e85d9f, #a8245e);
@@ -438,6 +446,7 @@ main {
   gap: 8px;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  backface-visibility: hidden;
 }
 
 .card-label {

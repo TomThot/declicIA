@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../theme-sync.js"></script>
+
+    <!-- Feuille de styles externe -->
+    <link rel="stylesheet" href="../../theme-sync.css">
+    <link rel="stylesheet" href="../../reading-progress.css">
+    <link rel="stylesheet" href="styleDictia.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon_color-16x16.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- SEO et métadonnées -->
+    <title>DéclicIA - Dictia</title>
+    <meta name="description" content="Comprendre et utiliser DictIA">
+    <meta name="author" content="Thomas BROUILLET">
+    <link rel="canonical" href="https://declicia.pages.dev/Crousel_outilsIA/Dictia/indexDictia/html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://declicia.pages.dev/Crousel_outilsIA/Dictia/indexDictia/html">
+    <meta property="og:title" content="DéclicIA - DictIA">
+    <meta property="og:description" content="Comprendre et utiliser DictIA pour générer des dictée adaptées">
+    <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DéclicIA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DéclicIA - DictIA">
+    <meta name="twitter:description" content="Comprendre et utiliser DictIA pour générer des dictée adaptées">
+    <meta name="twitter:image" content="https://declicia.pages.dev/Images/og-image.png">
+</head>
+
+<body>
+    <div data-shared-sidebar data-base="../../" data-current="outils"></div>
+
+    <!-- HERO -->
+    <header class="page-hero">
+        <h1>DictIA</h1>
+        <p>Générer des dictées adpatées selon le niveau, le styles, la longueur et les temps voulus ainsi que bien
+            d'autres paramètres ajustables.</p>
+    </header>
+
+    <main>
+        <!-- Navigation interne article-->
+        <div class="containerNav">
+            <div class="titreNav">Dans cet article</div>
+            <div class="navigationPage">
+                <a href="#présentation">Présentation</a>
+                <a href="#fonctionalités">Fonctionalités</a>
+            </div>
+        </div>
+
+        <div class="intro">
+            <p>
+                <a href="https://educajou.forge.apps.education.fr/dictia/">DictIA</a> est un outil en ligne innovant et
+                gratuit, conçu par Arnaud Champollion (ERUN - Enseignant
+                Référent aux Usages du Numérique). Il est hébergé sur la Forge des Communs Numériques Éducatifs. DictIA
+                est un outil "chef d'orchestre" qui permet de transformer les modèles de langage (LLM) en experts de la
+                pédagogie. Fini les dictées génériques du manuel : place au sur-mesure.
+            </p>
+        </div>
+
+        <section id="présentation" class="card dictia collapsible-section open">
+            <h2 data-tooltip="Cliquez pour replier/déplier le contenu">DictIA - La solution rapide pour générer des
+                dictées.
+                <span class="toggle-arrow">▼</span>
+            </h2>
+            <div class="section-content">
+                <div class="inner">
+                    <figure>
+                        <img src="../../Images/dictia.webp" alt="DictIA">
+                    </figure>
+                    <p>
+                        Contrairement à ce qu'on pourrait penser, <a
+                            href="https://educajou.forge.apps.education.fr/dictia/">DictIA</a> n'est pas une
+                        intelligence artificielle en soi.
+                        C'est ce qu'on appelle une interface de "Prompt Engineering".
+
+                        Sur le plan technique, l'outil est hébergé sur la Forge Apps Education, garantissant un
+                        environnement sans traqueurs et respectueux des données. Le code est transparent et s'appuie sur
+                        une structure simple :
+                    </p>
+                    <ul class="liste">
+                        <li><strong>Interface intuitive : </strong> Ce que les developpeurs appellent le front-end. Il
+                            vous
+                            suffit de paramétrer vos variables (niveau, thèmes, contraintes...).</li>
+                        <li><strong>Le Moteur de concaténation :</strong> Il injecte vos variables dans un prompt
+                            pré-rédigée pour optimiser la réponse de l'IA.</li>
+                        <li><strong>L'Interconnectivité : </strong> Il utilise des liens profonds pour envoyer cette
+                            commande vers les plateformes comme Mistral, ChatGPT, Claude ou Perplexity.</li>
+                    </ul>
+                    <h3 class="titleh3" id="fonctionalités">Les fonctionalités clés pour les enseignants</h3>
+                    <h4>1. Paramétrage granulaire</h4>
+                    <p>
+                        L'outil permet de définir des critères que l'on oublie souvent de préciser à une IA généraliste.
+                        C'est l'intérêt majeur de <a href="https://educajou.forge.apps.education.fr/dictia/">DictIA</a>
+                    </p>
+                    <ul class="liste">
+                        <li><strong>Le niveau scolaire : </strong>Du cycle 2 au cycle 3, avec une adaptation du
+                            vocabulaire.</li>
+                        <li><strong>Le focus orthographique : </strong>Vous pouvez forcer l'IA à utiliser des mots
+                            contenant le son [on/ont], des accords complexes en "es" ou des participes passés
+                            spécifiques.</li>
+                        <li><strong>Le thème : </strong>Indispensable pour lier la dictée à un projet de classe
+                            (histoire, sciences, littérature).</li>
+                        <li><strong>Le style : </strong>Vous pouvez orienter le style littéraire de la dictée selon un
+                            auteur favori ou étudié.</li>
+                        <li><strong>Longueur de la dictée : </strong>La longueur de la dictée est définie par le nombre
+                            de mot et de phrases que vous indiquerez. Par défaut, il y a 100 mots et 8 phrases.</li>
+                        <li><strong>Les temps : </strong>Vous pouvez choisir les temps utilisés dans la dictée. Par
+                            défaut, certains temps sont cochés selon le niveau choisi mais tout reste paramétrable.</li>
+                    </ul>
+
+                    <h4>2. La différenciation en un clic</h4>
+                    <p>Un autre aspect puissant de <a href="https://educajou.forge.apps.education.fr/dictia/">DictIA</a>
+                        est de proposer des options pour générer instantanément :</p>
+
+                    <ul class="liste">
+                        <li><strong>Une dictée à trous : </strong>L'IA identifie les mots cibles et crée l'exercice de
+                            remédiation automatiquement.</li>
+                        <li><strong>Une version simplifiée : </strong>Réduction de la longueur des phrases pour les
+                            élèves en difficulté.</li>
+                    </ul>
+
+                    <h4>3. L'ouverture vers les modèles souverains</h4>
+                    <p>
+                        <a href="https://educajou.forge.apps.education.fr/dictia/">DictIA</a> ne vous enferme pas chez
+                        un géant américain. L'interface propose d'utiliser Mistral, l'IA française, ce qui est un point
+                        fort pour rester en cohérence avec les préconisations de l'Éducation Nationale sur la
+                        souveraineté numérique. <br>
+                        Si vous souhaitez éviter de faire analyser vos requêtes personnelles par les IA en ligne, il
+                        existe des modèles libres et efficaces que vous pouvez utiliser localement sur votre ordinateur.
+                        Pour ceux qui sont curieux et un peu geek, voici quelques projets intéressants :
+                    </p>
+                    <ul class="liste">
+                        <li><strong><a href="https://ollama.com/">Ollama : </a></strong>Propose divers modèles libres
+                            tels que Mistral, Gemini, Llama, DeepSeek ou Phi.</li>
+                        <li><strong><a href="https://docs.openwebui.com/">OpenWebUI : </a></strong>Offre une interface
+                            graphique inspirée des chats en ligne pour faciliter l'interaction avec ces modèles.</li>
+                        <li><strong><a href="https://www.jan.ai/">Jan : </a></strong>Très simple à utiliser : après
+                            installation, directement depuis Jan, téléchargez et discutez localement avec le modèle d'IA
+                            de votre choix. De plus, Jan vous indique quels modèles sont susceptibles de tourner
+                            correctement sur votre machine.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div data-shared-footer data-base="../../" data-current="lia"></div>
+    <script src="../../shared-components.js"></script>
+    <script src="../../search-local.js"></script>
+    <script src="scriptDictia.js"></script>
+    <script src="../../reading-progress.js" defer></script>
+
+</body>
+
+</html>

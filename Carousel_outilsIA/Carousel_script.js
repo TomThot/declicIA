@@ -49,6 +49,11 @@ const carousel = document.getElementById("carousel");
 if (!carousel) {
   console.warn("Element #carousel introuvable.");
 } else {
+  // Réglages rapides.
+  const RENDER_FPS = 40;
+  const RENDER_INTERVAL = 1000 / RENDER_FPS;
+  const AUTOPLAY_SPEED = 10; // degrés par seconde
+
   // Sur petits écrans, le carousel 3D est désactivé pour éviter
   // les sauts de rendu/jank. Les contrôles associés sont cachés.
   const disableCarouselMq = window.matchMedia("(max-width: 768px)");
@@ -101,6 +106,7 @@ let dragStartX = 0;
 let dragStartAngle = 0;
 let currentIndex = 0;
 let lastTime = null;
+let lastRender = 0;
 
 // Réglages d'affichage selon l'angle relatif à la face avant.
 // Au-delà de HIDE_DEG, la carte est masquée pour éviter de voir son "dos".
@@ -135,14 +141,18 @@ function updateCards(globalRot) {
     // - blur croissant (non linéaire)
     // - légère réduction d'échelle
     const blurT = Math.max(0, (absA - BLUR_START) / (HIDE_DEG - BLUR_START));
-    const blur = blurT * blurT * 12;
+    const blur = blurT * blurT * 6;
 
     const fadeStart = HIDE_DEG - 15;
     const opacity = absA > fadeStart ? 1 - (absA - fadeStart) / (HIDE_DEG - fadeStart) : 1;
 
     const scale = 1 - blurT * 0.035;
 
-    card.style.filter = `blur(${blur.toFixed(1)}px)`;
+    if (isDragging) {
+      card.style.filter = blur > 0.1 ? `blur(${blur.toFixed(1)}px)` : "none";
+    } else {
+      card.style.filter = "none";
+    }
     card.style.opacity = Math.max(0, opacity).toFixed(3);
     card.style.pointerEvents = opacity > 0.4 ? "auto" : "none";
     card.style.transform = `rotateY(${cardAngle}deg) translateZ(${radius}px) scale(${scale.toFixed(3)})`;
@@ -161,11 +171,18 @@ function tick(ts) {
   const dt = Math.min((ts - lastTime) / 1000, 0.05);
   lastTime = ts;
 
+  // Limite la fréquence de rendu pour réduire la charge.
+  if (ts - lastRender < RENDER_INTERVAL) {
+    requestAnimationFrame(tick);
+    return;
+  }
+  lastRender = ts;
+
   // Rotation auto + interpolation douce vers la cible.
   if (!isDragging) {
     if (!paused) {
-      // Vitesse de l'autoplay: 10 deg/s.
-      autoAngle += 10 * dt;
+      // Vitesse de l'autoplay.
+      autoAngle += AUTOPLAY_SPEED * dt;
       targetAngle = autoAngle;
     }
     currentAngle += (targetAngle - currentAngle) * 0.07;
