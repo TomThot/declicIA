@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260405",
+    "date": "2026-04-05",
+    "date_affichage": "5 avril 2026",
+    "titre": "L'IA au service de l'éducation : quels outils et quelles stratégies pour améliorer l'enseignement ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans le monde de l'éducation. Les enseignants doivent se former pour intégrer ces outils dans leur pratique pédagogique. Les articles de cette semaine mettent en avant les avantages et les limites de l'IA dans la classe. Les enseignants doivent être en mesure de tirer parti de ces outils pour améliorer l'apprentissage de leurs élèves. Cela nécessite une formation adaptée et des ressources concrètes pour intégrer l'IA dans la pratique pédagogique. Les politiques éducatives doivent également évoluer pour prendre en compte les défis et les opportunités liés à l'IA.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer la productivité des enseignants",
+        "contenu": "Un article d'EdSurge met en avant les avantages de l'IA pour améliorer la productivité des enseignants. Les outils d'IA peuvent aider les enseignants à gérer leur temps et leurs ressources de manière plus efficace. Cela peut inclure des outils pour la correction automatique, la planification de cours et la communication avec les élèves. Les enseignants peuvent ainsi se concentrer sur les aspects les plus importants de leur travail, tels que la relation avec les élèves et la conception de cours personnalisés.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-04-03-as-a-tool-of-productivity-ai-can-make-the-effort-to-learn-more-meaningful"
+      },
+      {
+        "titre": "Les défis de l'intégration de l'IA dans la classe",
+        "contenu": "Un article de The Hechinger Report met en avant les défis que les enseignants rencontrent lors de l'intégration de l'IA dans la classe. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et doivent également être en mesure de gérer les risques liés à l'IA, tels que la dépendance aux technologies et la perte de compétences humaines. Les politiques éducatives doivent également évoluer pour prendre en compte ces défis et garantir que les enseignants soient préparés à intégrer l'IA dans leur pratique pédagogique.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/delaying-kindergarten-may-have-limited-benefit/"
+      },
+      {
+        "titre": "L'IA pour améliorer la formation des enseignants",
+        "contenu": "Un article d'Educpros met en avant les avantages de l'IA pour améliorer la formation des enseignants. Les outils d'IA peuvent aider les enseignants à développer leurs compétences et à améliorer leur pratique pédagogique. Cela peut inclure des outils pour la formation en ligne, la simulation de cours et la rétroaction automatique. Les enseignants peuvent ainsi améliorer leur capacité à enseigner et à apprendre, et à intégrer l'IA dans leur pratique pédagogique de manière efficace.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/enquetes/enseignement-superieur-le-presentiel-reprend-ses-droits.html"
+      }
+    ],
+    "conclusion": "L'IA offre de nombreux avantages pour améliorer l'enseignement, mais les enseignants doivent être formés pour intégrer ces outils dans leur pratique pédagogique. Les politiques éducatives doivent également évoluer pour prendre en compte les défis et les opportunités liés à l'IA. Les enseignants doivent être en mesure de tirer parti de ces outils pour améliorer l'apprentissage de leurs élèves et développer leurs propres compétences. Il est essentiel de fournir des ressources concrètes et des formations adaptées pour aider les enseignants à intégrer l'IA dans leur pratique pédagogique de manière efficace."
+  },
+  {
     "id": "20260329",
     "date": "2026-03-29",
     "date_affichage": "29 mars 2026",
