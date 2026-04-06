@@ -13,8 +13,8 @@
   --primary-blue: rgba(9, 31, 233, 0.25);
   --hover-blue: rgba(9, 80, 233, 0.35);
   --glow-blue: rgba(9, 80, 233, 0.2);
-  --carousel-card-width: 208px;
-  --carousel-card-height: 320px;
+  --carousel-card-width: 190px;
+  --carousel-card-height: 300px;
 }
 
 body {
@@ -540,12 +540,6 @@ main {
   color: #7040cc;
   transform: scale(1.08);
   box-shadow: 0 4px 18px rgba(120, 80, 200, 0.2);
-}
-
-.controls .btn-pause {
-  width: 52px;
-  height: 52px;
-  font-size: 14px;
 }
 
 .dots {

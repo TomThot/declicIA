@@ -52,7 +52,6 @@ if (!carousel) {
   // Réglages rapides.
   const RENDER_FPS = 40;
   const RENDER_INTERVAL = 1000 / RENDER_FPS;
-  const AUTOPLAY_SPEED = 10; // degrés par seconde
 
   // Sur petits écrans, le carousel 3D est désactivé pour éviter
   // les sauts de rendu/jank. Les contrôles associés sont cachés.
@@ -72,7 +71,7 @@ const N = cards.length;
 
 // Dimensions de référence utilisées pour calculer le rayon de l'orbite.
 // CARD_W doit rester cohérent avec la largeur CSS des cartes.
-const CARD_W = 200;
+const CARD_W = 180;
 const ORBIT_OFFSET = 200;
 
 // Rayon de l'orbite 3D:
@@ -99,13 +98,10 @@ for (let i = 0; i < N; i++) {
 
 let currentAngle = 0;
 let targetAngle = 0;
-let autoAngle = 0;
-let paused = false;
 let isDragging = false;
 let dragStartX = 0;
 let dragStartAngle = 0;
 let currentIndex = 0;
-let lastTime = null;
 let lastRender = 0;
 
 // Réglages d'affichage selon l'angle relatif à la face avant.
@@ -146,7 +142,6 @@ function updateCards(globalRot) {
     const fadeStart = HIDE_DEG - 15;
     const opacity = absA > fadeStart ? 1 - (absA - fadeStart) / (HIDE_DEG - fadeStart) : 1;
 
-    const scale = 1 - blurT * 0.035;
 
     if (isDragging) {
       card.style.filter = blur > 0.1 ? `blur(${blur.toFixed(1)}px)` : "none";
@@ -155,22 +150,16 @@ function updateCards(globalRot) {
     }
     card.style.opacity = Math.max(0, opacity).toFixed(3);
     card.style.pointerEvents = opacity > 0.4 ? "auto" : "none";
-    card.style.transform = `rotateY(${cardAngle}deg) translateZ(${radius}px) scale(${scale.toFixed(3)})`;
+    card.style.transform = `rotateY(${cardAngle}deg) translateZ(${radius}px)`;
     card.style.zIndex = Math.round((1 - absA / 180) * 10);
   });
 }
 
 // Boucle d'animation principale (RAF):
 // - calcule dt pour une vitesse stable
-// - applique l'autoplay si non pausé
 // - interpole currentAngle vers targetAngle pour lisser la rotation
 // - met à jour les cartes et le dot actif
 function tick(ts) {
-  if (!lastTime) lastTime = ts;
-  // Cap du delta time pour limiter les écarts après un onglet inactif.
-  const dt = Math.min((ts - lastTime) / 1000, 0.05);
-  lastTime = ts;
-
   // Limite la fréquence de rendu pour réduire la charge.
   if (ts - lastRender < RENDER_INTERVAL) {
     requestAnimationFrame(tick);
@@ -178,13 +167,7 @@ function tick(ts) {
   }
   lastRender = ts;
 
-  // Rotation auto + interpolation douce vers la cible.
   if (!isDragging) {
-    if (!paused) {
-      // Vitesse de l'autoplay.
-      autoAngle += AUTOPLAY_SPEED * dt;
-      targetAngle = autoAngle;
-    }
     currentAngle += (targetAngle - currentAngle) * 0.07;
   }
 
@@ -212,34 +195,21 @@ function goTo(index) {
   const target = -index * step;
   const diff = ((target - targetAngle) % 360 + 540) % 360 - 180;
   targetAngle += diff;
-  autoAngle = targetAngle;
 }
 
-const pauseBtn = document.getElementById("pauseBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
-
-// Bouton pause/reprise de l'autoplay.
-if (pauseBtn) {
-  pauseBtn.addEventListener("click", () => {
-    paused = !paused;
-    pauseBtn.textContent = paused ? "▶" : "⏸";
-    if (!paused) autoAngle = targetAngle;
-  });
-}
 
 // Navigation précédente/suivante par pas d'une carte.
 if (prevBtn) {
   prevBtn.addEventListener("click", () => {
     targetAngle += 360 / N;
-    autoAngle = targetAngle;
   });
 }
 
 if (nextBtn) {
   nextBtn.addEventListener("click", () => {
     targetAngle -= 360 / N;
-    autoAngle = targetAngle;
   });
 }
 
@@ -259,7 +229,6 @@ window.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   currentAngle = dragStartAngle + (e.clientX - dragStartX) * 0.3;
   targetAngle = currentAngle;
-  autoAngle = currentAngle;
 });
 
 window.addEventListener("mouseup", () => {
@@ -280,7 +249,6 @@ window.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
   currentAngle = dragStartAngle + (e.touches[0].clientX - dragStartX) * 0.3;
   targetAngle = currentAngle;
-  autoAngle = currentAngle;
 }, { passive: true });
 
 window.addEventListener("touchend", () => {
