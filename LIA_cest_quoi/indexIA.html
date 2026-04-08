@@ -211,9 +211,11 @@
             Nous retiendrons donc que la tokenisation est la toute première étape (et l'une des plus cruciales)
             lorsqu'une IA traite du texte. Comme les modèles d'IA ne comprennent pas les lettres ou les mots comme nous,
             ils ont besoin de transformer le langage humain en unités mathématiques. <br>
-            Pour aller plus loin (si vous le souhaitez), je vous propose un outil interactif permettant de comprendre en détail le phénomène.
-            <a class="btn-voir-lexique" href="../subPages/tokenisation/indexTokensition.html">Voir l'outil de tokénisation</a>
-            
+            Pour aller plus loin (si vous le souhaitez), je vous propose un outil interactif permettant de comprendre en
+            détail le phénomène.
+            <a class="btn-voir-lexique" href="../subPages/tokenisation/indexTokensition.html">Voir l'outil de
+              tokénisation</a>
+
           </p>
         </div>
       </div>
@@ -420,14 +422,14 @@
     </section>
 
     <!-- SECTION 5: Pour aller plus loin -->
-    <section class="neurone collapsible-section">
+    <section class="neurone collapsible-section open">
       <h2 id="neurone" data-tooltip="Cliquez pour replier/déplier le contenu">
         Pour aller plus loin : modélisation d'un neurone artificiel
         <span class="toggle-arrow">▼</span>
       </h2>
       <div class="section-content">
         <div class="inner">
-          <h3>Vous avez dit réseau de neurones ?</h3>
+          <h3 class="titleh3">Vous avez dit réseau de neurones ?</h3>
           <p>
             C'est le cœur de la révolution actuelle en IA. Pour faire simple, un réseau de neurones artificiels est un
             modèle mathématique inspiré (très librement) du fonctionnement des neurones biologiques de notre cerveau.
@@ -665,8 +667,6 @@
           </ul>
           <h4>Mon neurone en action !</h4>
           <div class="containerImageNeuronne">
-
-
             <div class="imageNeurone">
               <img src="../Images/neurone.PNG" alt="neurone " loading="lazy">
             </div>
@@ -676,6 +676,130 @@
               J'ai modélisé un neurone artificiel pour mieux comprendre son fonctionnement. Promis, plus de maths. 🫣
             </p>
           </div>
+
+          <h3 class="titleh3">Gestion des erreurs chez les LLM : Une limite structurelle</h3>
+          <p>
+            Comme nous l'avons vu, les modèles de langage (LLM) d'aujourd’hui reposent sur un principe fondamental :
+            ils prédisent le mot suivant à partir de probabilités, en se basant sur d’immenses quantités de données.
+            Cette approche permet des performances impressionnantes, mais elle implique aussi une réalité incontournable
+            :
+            <strong>les erreurs ne peuvent pas être totalement éliminées</strong>.
+          </p>
+
+          <p>
+            Les recherches en intelligence artificielle ont mis en évidence l’existence de <em>lois d’échelle (scaling
+              laws)</em> :
+            plus on augmente la taille des modèles, les données et la puissance de calcul, plus les performances
+            s’améliorent.
+            Cependant, ces améliorations suivent une courbe particulière : elles sont rapides au début, puis
+            ralentissent progressivement,
+            jusqu’à atteindre une forme de plateau. Ce phénomène est appelé <strong>asymptote</strong>.
+          </p>
+
+          <p>
+            Concrètement, cela signifie que même en mobilisant des ressources considérables, les modèles convergent vers
+            un
+            <strong>niveau minimal d’erreur</strong> qu’ils ne peuvent pas dépasser. Cette limite provient de plusieurs
+            facteurs :
+            la qualité imparfaite des données d’entraînement, la nature probabiliste du modèle, et l’absence de
+            compréhension réelle
+            du monde ou de raisonnement profond.
+          </p>
+
+          <p>
+            Ainsi, augmenter simplement la puissance de calcul ne suffit plus à réduire significativement les erreurs.
+            Les gains deviennent de plus en plus faibles, tandis que les coûts explosent. On parle alors de
+            <strong>rendements décroissants</strong>.
+          </p>
+
+          <p>
+            Pour franchir cette limite, les chercheurs explorent d’autres pistes : amélioration de la qualité des
+            données,
+            nouvelles architectures, intégration de mémoire ou de capacités de raisonnement, ou encore hybridation avec
+            des systèmes symboliques.
+            Ces approches visent non plus seulement à progresser le long de la courbe, mais à <strong>déplacer la courbe
+              elle-même</strong>.
+          </p>
+
+          <p>
+            En résumé, les LLM ne sont pas simplement limités par la puissance de calcul disponible, mais par des
+            contraintes plus profondes
+            liées à leur fonctionnement. Comprendre cette gestion des erreurs est essentiel pour appréhender à la fois
+            leurs forces
+            et leurs limites actuelles.
+          </p>
+
+          <h3>Modélisation</h3>
+          <p>
+            Dans une première approche très simple, on peux modéliser l'erreur par la relation suivante :
+            $$Erreur = E_{min} + a (compute)^{-\alpha}$$
+            avec : <br>
+            $E_{min}$ : erreur incompressible <br>
+            $a$ : difficulté du problème <br>
+            $\alpha$ : vitesse de l'apprentissage <br>
+            $compute$ : puissance (GPU, taille du modèle, données) <br>
+          </p>
+
+          <p>De faon intuite, on comprend bien que nous devons lutter contre deux choses : </p>
+          <ul class="liste">
+            <li>La pente $\alpha$, c'est à dire à quelle vitesse le modèle progresse</li>
+            <li>l'asymptote (le mur) $E_{min}$ c'est à dire la limite que le modèle ne peut pas franchir</li>
+          </ul>
+
+          <h4>📉 Modèle de Scaling Laws (IA)</h4>
+
+          <div class="scaling-layout">
+            <div class="scaling-controls">
+              <label> &alpha; (vitesse d’apprentissage) :<span id="alphaVal">0.7</span></label>
+              <input type="range" id="alpha" min="0.1" max="1.5" step="0.1" value="0.7">
+
+              <label>Erreur minimale (Emin) : <span id="eminVal">0.2</span></label>
+              <input type="range" id="emin" min="0" max="1" step="0.05" value="0.2">
+
+              <label>Difficulté (a) : <span id="aVal">2</span></label>
+              <input type="range" id="a" min="0.5" max="5" step="0.1" value="2">
+            </div>
+
+            <div class="scaling-canvas">
+              <canvas id="graph" width="600" height="400"></canvas>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </div>
     </section>

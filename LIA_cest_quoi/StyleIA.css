@@ -329,6 +329,11 @@ h2 {
   padding-left: 10px;
 }
 
+.titleh3 {
+  color: #00bcd4;
+  margin-top: 20px;
+}
+
 .resume {
   font-size: clamp(1.2rem, 2.5vw, 1.3rem);
   font-style: italic;
@@ -616,9 +621,8 @@ canvas {
 }
 
 label {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--sigma-muted);
-  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
@@ -747,8 +751,113 @@ p .btn-voir-lexique {
 }
 
 
+/*Gestion de l'erreur chez les LLM*/
+.neurone label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
+.neurone input[type="range"] {
+  width: 100%;
+}
 
+.scaling-layout {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.scaling-controls {
+  flex: 1 1 260px;
+  min-width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+  padding: 1rem 1.1rem;
+}
+
+.scaling-canvas {
+  flex: 1 1 420px;
+  min-width: 320px;
+}
+
+.scaling-controls label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--sigma-muted);
+  letter-spacing: 0.1em;
+}
+
+.scaling-controls label span {
+  color: var(--sigma-accent);
+  margin-left: 0.35rem;
+}
+
+/* Uniformiser tous les sliders comme celui de la sigmoïde */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sigma-accent);
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.45);
+  margin-top: -5px;
+}
+
+input[type=range]::-moz-range-track {
+  height: 4px;
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 2px;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sigma-accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.45);
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  background: var(--sigma-accent);
+}
+
+input[type=range]:active::-moz-range-thumb {
+  background: var(--sigma-accent);
+}
+
+#graph {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  background: var(--sigma-surface);
+  border: 1px solid var(--sigma-border);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+  border-radius: 12px;
+}
 
 
 
