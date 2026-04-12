@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260412",
+    "date": "2026-04-12",
+    "date_affichage": "12 avril 2026",
+    "titre": "L'IA dans la classe : vers une révolution pédagogique ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans les salles de classe, offrant des outils innovants pour améliorer l'apprentissage et la formation des élèves. Les enseignants sont aux prises avec de nouvelles technologies qui peuvent aider à personnaliser l'enseignement, à évaluer les compétences des élèves et à développer de nouvelles méthodes pédagogiques. Cependant, l'intégration de l'IA dans l'éducation soulève également des questions sur la protection des données, la sécurité et la formation des enseignants. Dans ce contexte, il est essentiel pour les enseignants de rester informés sur les dernières tendances et les meilleures pratiques pour utiliser l'IA de manière efficace et responsable dans leur enseignement. Cette veille hebdomadaire présente quelques-unes des actualités les plus intéressantes sur l'IA dans l'éducation, avec un focus sur les outils, les impacts sur les élèves et les politiques éducatives.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer la rédaction",
+        "contenu": "Un article d'EdSurge présente des stratégies pour que les enseignants utilisent l'IA pour améliorer la rédaction de leurs élèves, sans baisser les standards. Les outils d'IA peuvent aider les élèves à améliorer leur écriture, en leur fournissant des retours instantanés et des suggestions de correction. Cependant, il est important de noter que l'IA ne doit pas remplacer l'enseignant, mais plutôt le soutenir dans son rôle de guide et de mentor. Les enseignants peuvent utiliser des outils tels que des logiciels de correction de grammaire et d'orthographe, ou des plateformes de rédaction en ligne qui offrent des retours personnalisés aux élèves.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-04-08-how-teachers-make-writing-achievable-without-lowering-standards"
+      },
+      {
+        "titre": "La formation des enseignants à l'IA",
+        "contenu": "Un article d'Educpros (L'Etudiant) présente le plan stratégique 2026-2030 de l'EGC Business School, qui inclut des formations pour les enseignants sur l'utilisation de l'IA dans leur enseignement. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et responsable, afin de fournir aux élèves les compétences nécessaires pour réussir dans un monde de plus en plus numérisé. Les formations pour les enseignants doivent inclure des modules sur la sécurité des données, la protection des élèves et l'utilisation éthique de l'IA dans l'éducation.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/nouveaux-campus-cours-territorialises-formations-bac-5-ce-qui-attend-l-egc-business-school-d-ici-2030.html"
+      },
+      {
+        "titre": "L'impact de l'IA sur les élèves",
+        "contenu": "Un article de The Hechinger Report présente les résultats d'une étude sur l'impact de l'IA sur les élèves, notamment en termes de motivation et de réussite scolaire. Les résultats montrent que les élèves qui utilisent des outils d'IA pour apprendre sont plus motivés et ont de meilleurs résultats scolaires que ceux qui n'utilisent pas ces outils. Cependant, il est important de noter que l'IA ne doit pas remplacer les interactions humaines, mais plutôt les compléter. Les enseignants doivent trouver un équilibre entre l'utilisation de l'IA et les interactions humaines pour fournir aux élèves une expérience d'apprentissage complète et équilibrée.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/the-quest-to-build-a-better-ai-tutor/"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre des opportunités considérables pour améliorer l'enseignement et la formation des élèves, mais il est essentiel de l'utiliser de manière responsable et éthique. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et doivent trouver un équilibre entre l'utilisation de l'IA et les interactions humaines. Les politiques éducatives doivent également prendre en compte les enjeux de la protection des données et de la sécurité pour garantir que l'IA soit utilisée de manière sécurisée et responsable dans les salles de classe. Enfin, les enseignants et les élèves doivent être conscients des avantages et des limites de l'IA pour utiliser ces outils de manière efficace et responsable."
+  },
+  {
     "id": "20260405",
     "date": "2026-04-05",
     "date_affichage": "5 avril 2026",
