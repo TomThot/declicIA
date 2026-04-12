@@ -1,0 +1,618 @@
+/* ============================================================
+   PARCOURS DE FORMATION — styleParcours.css
+   ============================================================ */
+
+/* ---- Variables locales (héritent du thème global) ---- */
+:root {
+  --step1: #6c63ff;
+  --step2: #e74c8b;
+  --step3: #f5a623;
+  --step4: #27ae60;
+  --step5: #2980b9;
+  --step-radius: 16px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color, #333);
+  background: var(--page-bg, #fff);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.parcours-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a0533 0%, #2c1060 40%, #1b3a6b 100%);
+  color: #fff;
+  padding: 60px 24px 60px;
+  text-align: center;
+}
+
+.hero-bg-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.shape-1 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #a78bfa, transparent);
+  top: -120px; left: -80px;
+  animation: floatShape 8s ease-in-out infinite;
+}
+.shape-2 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, #60a5fa, transparent);
+  bottom: -100px; right: -60px;
+  animation: floatShape 10s ease-in-out infinite reverse;
+}
+.shape-3 {
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, #f472b6, transparent);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatShape 12s ease-in-out infinite;
+}
+@keyframes floatShape {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: #fff; }
+
+.hero-label {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.parcours-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 1200px;
+  margin: 0 auto 28px;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+}
+.hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================================
+   BARRE DE PROGRESSION NAVIGATION
+   ============================================================ */
+.progress-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--surface-bg, #fff);
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 0 16px;
+}
+
+.progress-track {
+  height: 3px;
+  background: var(--border-color, #e0e0e0);
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--step1), var(--step5));
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.steps-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 4px;
+  padding: 10px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.step-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  color: var(--text-color, #333);
+}
+.step-nav-btn:hover {
+  background: var(--surface-bg-soft, #f0f0f0);
+}
+
+.step-nav-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--border-color, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s;
+}
+
+.step-nav-item.done .step-nav-num {
+  background: #27ae60;
+  color: #fff;
+}
+.step-nav-item[data-step="1"].active .step-nav-num { background: var(--step1); color: #fff; }
+.step-nav-item[data-step="2"].active .step-nav-num { background: var(--step2); color: #fff; }
+.step-nav-item[data-step="3"].active .step-nav-num { background: var(--step3); color: #fff; }
+.step-nav-item[data-step="4"].active .step-nav-num { background: var(--step4); color: #fff; }
+.step-nav-item[data-step="5"].active .step-nav-num { background: var(--step5); color: #fff; }
+
+.step-nav-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-color, #555);
+  white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+  .step-nav-label { display: none; }
+  .step-nav-btn { padding: 6px 8px; }
+}
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+.parcours-intro {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+
+.intro-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--surface-bg-soft, #f8f9fa);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: var(--step-radius);
+  padding: 28px 32px;
+}
+.intro-icon { font-size: 2.5rem; flex-shrink: 0; }
+.intro-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.intro-card p { margin-bottom: 8px; font-size: 0.95rem; }
+.intro-card p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   ÉTAPES
+   ============================================================ */
+.step-section {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 24px;
+  scroll-margin-top: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.step-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- En-tête d'étape --- */
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.step-badge {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-badge-1 { background: linear-gradient(135deg, var(--step1), #9c8fff); }
+.step-badge-2 { background: linear-gradient(135deg, var(--step2), #ff8dc7); }
+.step-badge-3 { background: linear-gradient(135deg, var(--step3), #ffd580); }
+.step-badge-4 { background: linear-gradient(135deg, var(--step4), #6edba0); }
+.step-badge-5 { background: linear-gradient(135deg, var(--step5), #74c0fc); }
+
+.step-number {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.step-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--titre-color, #8d31b8);
+  margin-bottom: 6px;
+}
+
+.step-title {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.step-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* --- Corps d'étape --- */
+.step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 0;
+  border-left: 3px solid var(--border-color, #e0e0e0);
+  padding-left: 28px;
+  margin-left: 32px;
+}
+
+.step-section:nth-child(1) .step-body { border-color: var(--step1); }
+.step-section:nth-child(2) .step-body { border-color: var(--step2); }
+.step-section:nth-child(3) .step-body { border-color: var(--step3); }
+.step-section:nth-child(4) .step-body { border-color: var(--step4); }
+.step-section:nth-child(5) .step-body { border-color: var(--step5); }
+
+/* Appliquer la couleur de bordure par data-step */
+.step-section[data-step="1"] .step-body { border-color: var(--step1); }
+.step-section[data-step="2"] .step-body { border-color: var(--step2); }
+.step-section[data-step="3"] .step-body { border-color: var(--step3); }
+.step-section[data-step="4"] .step-body { border-color: var(--step4); }
+.step-section[data-step="5"] .step-body { border-color: var(--step5); }
+
+.step-text p {
+  font-size: 0.97rem;
+  margin-bottom: 12px;
+}
+.step-text p:last-child { margin-bottom: 0; }
+
+/* --- Citation --- */
+.step-quote {
+  background: var(--surface-bg-soft, #f8f9fa);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-style: italic;
+  color: var(--text-color);
+  position: relative;
+  font-size: 0.95rem;
+}
+.step-quote::before {
+  content: '"';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  opacity: 0.15;
+  color: var(--titre-color, #8d31b8);
+}
+.step-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+/* --- Ressources --- */
+.step-resources h3,
+.step-key-points h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resource-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-bg, #fff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.resource-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateX(4px);
+}
+
+.resource-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.resource-read .resource-type   { background: rgba(108,99,255,0.12); color: var(--step1); }
+.resource-interactive .resource-type { background: rgba(231,76,139,0.12); color: var(--step2); }
+.resource-tool .resource-type   { background: rgba(39,174,96,0.12); color: var(--step4); }
+
+.resource-item a {
+  flex: 1;
+  color: var(--link-color, #0066cc);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.resource-item a:hover { text-decoration: underline; }
+
+.resource-time {
+  font-size: 0.78rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --- Points clés --- */
+.step-key-points {
+  background: var(--surface-bg-soft, #f8f9fa);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.step-key-points ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.step-key-points li {
+  font-size: 0.92rem;
+  padding-left: 20px;
+  position: relative;
+}
+.step-key-points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--titre-color, #8d31b8);
+  font-weight: 700;
+}
+
+/* --- Tip --- */
+.step-tip {
+  display: flex;
+  gap: 16px;
+  background: rgba(245, 166, 35, 0.08);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  border-radius: 12px;
+  padding: 18px 20px;
+  font-size: 0.92rem;
+}
+.tip-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+/* --- Activité --- */
+.step-activity {
+  background: var(--surface-bg, #fff);
+  border: 2px dashed var(--border-color, #e0e0e0);
+  border-radius: 14px;
+  padding: 24px 28px;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.activity-header i {
+  color: var(--titre-color, #8d31b8);
+  font-size: 1.1rem;
+}
+.activity-header h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.step-activity p {
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+}
+.step-activity a {
+  color: var(--link-color, #0066cc);
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+  user-select: none;
+}
+.check-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--titre-color, #8d31b8);
+}
+
+/* ============================================================
+   FÉLICITATIONS
+   ============================================================ */
+.congrats-section {
+  max-width: 860px;
+  margin: 64px auto 80px;
+  padding: 0 24px;
+  display: none;
+}
+.congrats-section.show { display: block; }
+
+.congrats-card {
+  background: linear-gradient(135deg, #1a0533, #1b3a6b);
+  color: #fff;
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+.congrats-icon { font-size: 3.5rem; margin-bottom: 20px; }
+.congrats-card h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.congrats-card p {
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  margin: 0 auto 32px;
+  font-size: 1rem;
+}
+
+.congrats-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.btn-primary, .btn-secondary {
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary {
+  background: #fff;
+  color: #1a0533;
+}
+.btn-secondary {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+}
+.btn-primary:hover, .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* ============================================================
+   DARK THEME OVERRIDES
+   ============================================================ */
+html[data-theme="dark"] .intro-card,
+html[data-theme="dark"] .step-key-points,
+html[data-theme="dark"] .step-quote {
+  background: var(--surface-bg-soft);
+  border-color: var(--border-color);
+}
+html[data-theme="dark"] .resource-item {
+  background: var(--surface-bg);
+  border-color: var(--border-color);
+}
+html[data-theme="dark"] .step-activity {
+  background: var(--surface-bg);
+  border-color: var(--border-color);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .step-header { flex-direction: column; gap: 12px; }
+  .step-body { margin-left: 0; padding-left: 16px; }
+  .intro-card { flex-direction: column; }
+  .resource-item { flex-wrap: wrap; }
+  .resource-time { width: 100%; padding-left: 0; opacity: 0.5; }
+}

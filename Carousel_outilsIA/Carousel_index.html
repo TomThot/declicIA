@@ -14,7 +14,7 @@
   <!-- SEO et métadonnées -->
   <title>DéclicIA - Outils IA pour la classe</title>
   <meta name="description"
-    content="Galerie interactive d’outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité, comparatif et ressources pédagogiques testés en classe.">
+    content="Galerie interactive d'outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité, comparatif et ressources pédagogiques testés en classe.">
   <meta name="author" content="Thomas BROUILLET">
   <link rel="canonical" href="https://declicia.pages.dev/Carousel_outilsIA/Carousel_index.html">
 
@@ -23,7 +23,7 @@
   <meta property="og:url" content="https://declicia.pages.dev/Carousel_outilsIA/Carousel_index.html">
   <meta property="og:title" content="DéclicIA - Outils IA pour la classe">
   <meta property="og:description"
-    content="Galerie interactive d’outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité, comparatif et ressources pédagogiques testés en classe.">
+    content="Galerie interactive d'outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité, comparatif et ressources pédagogiques testés en classe.">
   <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="DéclicIA">
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DéclicIA - Outils IA pour la classe">
   <meta name="twitter:description"
-    content="Galerie interactive d’outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité et comparatif.">
+    content="Galerie interactive d'outils IA pour les enseignants : prompt, chatbot, H5P, accessibilité et comparatif.">
   <meta name="twitter:image" content="https://declicia.pages.dev/Images/og-image.png">
 
   <!-- Favicon -->
@@ -57,6 +57,32 @@
       Une galerie interactive pour parcourir des idées d'usages et de ressources autour de l'intelligence artificielle.
     </p>
   </header>
+
+  <!-- ═══ BEGIN ENCART PARCOURS DE FORMATION ═══ -->
+  <aside class="parcours-encart" id="parcoursEncart" role="complementary" aria-label="Suggestion de parcours">
+    <div class="parcours-encart__inner">
+      <div class="parcours-encart__icon" aria-hidden="true">🧭</div>
+      <div class="parcours-encart__content">
+        <p class="parcours-encart__label">Première visite ?</p>
+        <p class="parcours-encart__text">
+          Avant de plonger dans les outils, le <strong>parcours de formation en 5 étapes</strong> vous donne les clés
+          pour les choisir et les utiliser intelligemment en classe.
+        </p>
+      </div>
+      <a href="../subPages/parcours/indexParcours.html" class="parcours-encart__cta">
+        Voir le parcours
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <button class="parcours-encart__close" id="parcoursEncartClose" aria-label="Fermer cette suggestion" title="Fermer">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <!-- ═══ END ENCART PARCOURS DE FORMATION ═══ -->
 
   <main>
     <div data-shared-sidebar data-base="../" data-current="outils"></div>
@@ -123,6 +149,7 @@
                     <span class="card-label"><strong>Outil maison</strong></span>
                     <div class="card-title">Tokenisation : outil interactif</div>
                     <div class="card-desc">Tout comprendre sur le découpage du texte dans les LLM</div>
+                    <div class="etapeCarousel">Elément du parcours de formation (1)</div>
                     <a class="card-tag" href="../subPages/tokenisation/indexTokensition.html">Explorer →</a>
                   </div>
                 </article>
@@ -290,6 +317,7 @@
                     <span class="card-label">Création de contenu + <strong>Outil maison</strong></span>
                     <div class="card-title">Nutriscore</div>
                     <div class="card-desc">Calculez le nutriscore cognitif de vos activités grâce à l'IA</div>
+                    <div class="etapeCarousel">Elément du parcours de formation (4)</div>
                     <a class="card-tag" href="../subPages/nutriscore/indexNutriscore.html">Explorer →</a>
                   </div>
                 </article>
@@ -318,6 +346,7 @@
                     <div class="card-title">Flipcards : Mythes vs Réalité</div>
                     <div class="card-desc">Jeu de flipcards classées par catégories pour démystifier l'usage de l'IA.
                     </div>
+                    <div class="etapeCarousel">Elément du parcours de formation (2)</div>
                     <a class="card-tag" href="../subPages/mythes_réalité/indexMythes.html">Explorer →</a>
                   </div>
                 </article>
@@ -356,6 +385,7 @@
                     <div class="card-desc">Générez votre cadre d'usage de l'IA adapté à votre classe selon vos choix,
                       votre
                       matière, votre niveau...</div>
+                      <div class="etapeCarousel">Elément du parcours de formation (3)</div>
                     <a class="card-tag" href="../Cadre_et_défit/Generateur_cadre/indexGenerateur.html">Explorer →</a>
                   </div>
                 </article>
@@ -383,6 +413,7 @@
                     <div class="card-desc">Retrouvez les 30 termes les plus utilisés concernant l'IA en
                       <script>document.write(new Date().getFullYear())</script>, consultables et/ou en version PDF.
                     </div>
+                    <div class="etapeCarousel">Elément du parcours de formation (5)</div>
                     <a class="card-tag" href="../subPages/lexique/indexLexique.html">Explorer →</a>
                   </div>
                 </article>
@@ -460,7 +491,6 @@
 
 
 
-
     <section id="listeCarte" class="gallerie card collapsible-section open">
       <h2 data-tooltip="Cliquez pour replier/déplier le contenu">Galerie
         <span class="toggle-arrow">▼</span>
@@ -497,6 +527,7 @@
                 <span class="card-label"><strong>Outil maison</strong></span>
                 <div class="card-title">Tokenisation : outil interactif</div>
                 <div class="card-desc">Tout comprendre sur le découpage du texte dans les LLM</div>
+                <div class="etape">Elément du parcours de formation (1)</div>
                 <a class="card-tag" href="../subPages/tokenisation/indexTokensition.html">Explorer →</a>
               </div>
             </article>
@@ -523,6 +554,7 @@
                 <span class="card-label"><strong>Outil maison</strong></span>
                 <div class="card-title">Flipcards : Mythes vs Réalité</div>
                 <div class="card-desc">Jeu de flipcards classées par catégories pour démystifier l'usage de l'IA.</div>
+                <div class="etape">Elément du parcours de formation (2)</div>
                 <a class="card-tag" href="../subPages/mythes_réalité/indexMythes.html">Explorer →</a>
               </div>
             </article>
@@ -560,6 +592,7 @@
                 <div class="card-title">Fiche personnalisée sur le cadre d'usage de l'IA</div>
                 <div class="card-desc">Générez votre cadre d'usage de l'IA adapté à votre classe selon vos choix, votre
                   matière, votre niveau...</div>
+                  <div class="etape">Elément du parcours de formation (3)</div>
                 <a class="card-tag" href="../Cadre_et_défit/Generateur_cadre/indexGenerateur.html">Explorer →</a>
               </div>
             </article>
@@ -587,6 +620,7 @@
                 <div class="card-desc">Retrouvez les 30 termes les plus utilisés concernant l'IA en
                   <script>document.write(new Date().getFullYear())</script>, consultables et/ou en version PDF.
                 </div>
+                <div class="etape">Elément du parcours de formation (5)</div>
                 <a class="card-tag" href="../subPages/lexique/indexLexique.html">Explorer →</a>
               </div>
             </article>
@@ -780,6 +814,7 @@
                 <span class="card-label"><strong>Outil maison</strong></span>
                 <div class="card-title">Nutriscore</div>
                 <div class="card-desc">Calculez le nutriscore cognitif de vos activités grâce à l'IA</div>
+                <div class="etape">Elément du parcours de formation (4)</div>
                 <a class="card-tag" href="../subPages/nutriscore/indexNutriscore.html">Explorer →</a>
               </div>
             </article>
@@ -816,27 +851,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </main>
 

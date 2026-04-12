@@ -475,15 +475,14 @@ main {
 }
 
 .carousel-card .card-title {
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 .card-desc {
   font-size: 10px;
   font-weight: 300;
   color: rgba(40, 30, 60, 0.637);
-  line-height: 1.7;
-  margin-top: 2px;
+   margin-top: 2px;
 }
 
 .card-tag {
@@ -501,6 +500,16 @@ main {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.etape{
+  color: #18a999;
+  font-size: 13px;
+}
+
+.etapeCarousel{
+  font-size: 9px;
+  color: #18a999;
 }
 
 .card-tag:hover,
@@ -641,12 +650,7 @@ main {
     height: 500px;
   }
 
-  .carousel-3d,
-  .carousel-card {
-    width: 186px;
-    height: 286px;
-  }
-
+  
   .carousel-card .card-body {
     padding: 12px 12px 14px;
   }
@@ -689,4 +693,122 @@ main {
   #listeCarte .liste-card .card-desc {
     font-size: 12px;
   }
+}
+
+/* ============================================================
+   ENCART PARCOURS DE FORMATION
+   ============================================================ */
+.parcours-encart {
+  background: linear-gradient(135deg, #2c1060 0%, #1b3a6b 100%);
+  color: #fff;
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 200px;
+}
+ 
+.parcours-encart--closing {
+  opacity: 0;
+  transform: translateY(-8px);
+  max-height: 0;
+}
+ 
+.parcours-encart--hidden {
+  display: none;
+}
+ 
+.parcours-encart__inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+ 
+.parcours-encart__icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+ 
+.parcours-encart__content {
+  flex: 1;
+  min-width: 0;
+}
+ 
+.parcours-encart__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 4px;
+}
+ 
+.parcours-encart__text {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.45;
+}
+ 
+.parcours-encart__text strong {
+  color: #fff;
+}
+ 
+.parcours-encart__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+ 
+.parcours-encart__cta:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+ 
+.parcours-encart__close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.2s, background 0.2s;
+}
+ 
+.parcours-encart__close:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+ 
+@media (max-width: 600px) {
+  .parcours-encart__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .parcours-encart__icon { display: none; }
+  .parcours-encart__cta { width: 100%; justify-content: center; }
+  .parcours-encart__close { position: absolute; top: 10px; right: 10px; }
+  .parcours-encart { position: relative; }
+}
+ 
+/* Dark theme */
+html[data-theme="dark"] .parcours-encart {
+  background: linear-gradient(135deg, #1a0533 0%, #0d2040 100%);
 }

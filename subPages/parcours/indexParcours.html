@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../theme-sync.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../../Images/icons/favicon-big.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../Images/icons/favicon-32x32.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <title>DéclicIA – Parcours de formation : 5 étapes pour intégrer l'IA en classe</title>
+  <meta name="description"
+    content="Un parcours progressif en 5 étapes pour aider les enseignants à découvrir, comprendre et intégrer l'IA dans leurs pratiques pédagogiques.">
+  <meta name="author" content="Thomas BROUILLET">
+  <link rel="canonical" href="https://declicia.pages.dev/subPages/parcours/indexParcours.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://declicia.pages.dev/subPages/parcours/indexParcours.html">
+  <meta property="og:title" content="DéclicIA – Parcours de formation : 5 étapes pour intégrer l'IA en classe">
+  <meta property="og:description"
+    content="Un parcours progressif en 5 étapes pour aider les enseignants à découvrir, comprendre et intégrer l'IA dans leurs pratiques pédagogiques.">
+  <meta property="og:image" content="https://declicia.pages.dev/Images/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="DéclicIA">
+
+  <link rel="stylesheet" href="../../theme-sync.css">
+  <link rel="stylesheet" href="../../reading-progress.css">
+  <link rel="stylesheet" href="styleParcours.css">
+</head>
+
+<body>
+  <!-- Barre de menu partagée -->
+  <div data-shared-sidebar data-base="../../" data-current="parcours"></div>
+
+  <!-- Hero -->
+  <header class="parcours-hero">
+    <div class="hero-bg-shapes" aria-hidden="true">
+      <span class="shape shape-1"></span>
+      <span class="shape shape-2"></span>
+      <span class="shape shape-3"></span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-label">Formation</div>
+      <h1>Parcours en 5 étapes</h1>
+      <p class="hero-sub">Un fil conducteur pour aller de la découverte de l'IA à son intégration raisonnée dans votre
+        classe — à votre rythme.</p>
+      <div class="hero-meta">
+        <span><i class="fas fa-clock"></i> ~3h au total</span>
+        <span><i class="fas fa-graduation-cap"></i> Tout niveau</span>
+        <span><i class="fas fa-check-circle"></i> Autonome</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Frise de progression -->
+  <nav class="progress-nav" aria-label="Navigation du parcours">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <ol class="steps-nav">
+      <li class="step-nav-item" data-step="1">
+        <button class="step-nav-btn" onclick="scrollToStep(1)" aria-label="Aller à l'étape 1">
+          <span class="step-nav-num">1</span>
+          <span class="step-nav-label">Comprendre</span>
+        </button>
+      </li>
+      <li class="step-nav-item" data-step="2">
+        <button class="step-nav-btn" onclick="scrollToStep(2)" aria-label="Aller à l'étape 2">
+          <span class="step-nav-num">2</span>
+          <span class="step-nav-label">Questionner</span>
+        </button>
+      </li>
+      <li class="step-nav-item" data-step="3">
+        <button class="step-nav-btn" onclick="scrollToStep(3)" aria-label="Aller à l'étape 3">
+          <span class="step-nav-num">3</span>
+          <span class="step-nav-label">Cadrer</span>
+        </button>
+      </li>
+      <li class="step-nav-item" data-step="4">
+        <button class="step-nav-btn" onclick="scrollToStep(4)" aria-label="Aller à l'étape 4">
+          <span class="step-nav-num">4</span>
+          <span class="step-nav-label">Expérimenter</span>
+        </button>
+      </li>
+      <li class="step-nav-item" data-step="5">
+        <button class="step-nav-btn" onclick="scrollToStep(5)" aria-label="Aller à l'étape 5">
+          <span class="step-nav-num">5</span>
+          <span class="step-nav-label">Intégrer</span>
+        </button>
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- INTRO -->
+    <section class="parcours-intro">
+      <div class="intro-card">
+        <div class="intro-icon">🧭</div>
+        <div>
+          <h2>Comment utiliser ce parcours ?</h2>
+          <p>Ce parcours est conçu pour être suivi <strong>dans l'ordre</strong>, mais chaque étape est indépendante.
+            Vous pouvez y revenir, sauter une étape si vous maîtrisez déjà le sujet, ou vous arrêter quand vous le
+            souhaitez. Chaque étape indique le temps estimé et les ressources disponibles sur ce site.</p>
+          <p>À la fin de chaque étape, une <strong>activité concrète</strong> vous permet de valider vos acquis et de
+            passer à la suivante.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ÉTAPE 1 : COMPRENDRE                                    -->
+    <!-- ======================================================= -->
+    <section class="step-section" id="step-1" data-step="1">
+      <div class="step-header">
+        <div class="step-badge step-badge-1">
+          <span class="step-number">01</span>
+        </div>
+        <div class="step-title-block">
+          <span class="step-tag">Étape 1 · ~30 min</span>
+          <h2 class="step-title">Comprendre ce qu'est vraiment l'IA</h2>
+          <p class="step-subtitle">Démystifier pour mieux aborder</p>
+        </div>
+      </div>
+
+      <div class="step-body">
+        <div class="step-text">
+          <p>Avant de décider si l'IA a sa place dans votre classe, encore faut-il savoir de quoi on parle. Cette étape
+            vise à construire une représentation juste de l'IA : ce qu'elle est, ce qu'elle n'est pas, et comment elle
+            fonctionne à grands traits.</p>
+          <blockquote class="step-quote">
+            "Je pensais que l'IA, c'était comme un être humain numérique. Comprendre que c'est avant tout un moteur de
+            probabilités a tout changé dans ma façon de l'utiliser."
+            <cite>— Un enseignant du secondaire</cite>
+          </blockquote>
+        </div>
+
+        <div class="step-resources">
+          <h3><i class="fas fa-book-open"></i> Ressources de cette étape</h3>
+          <ul class="resource-list">
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../LIA_cest_quoi/indexIA.html#Definition">Définition de l'IA</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../LIA_cest_quoi/indexIA.html#Fonctionnement">Comment ça fonctionne ?</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-interactive">
+              <span class="resource-type">Interactif</span>
+              <a href="../../LIA_cest_quoi/indexIA.html#neurone">Modélisation d'un neurone artificiel</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-interactive">
+              <span class="resource-type">Interactif</span>
+              <a href="../../subPages/tokenisation/indexTokensition.html">Comprendre la tokenisation</a>
+              <span class="resource-time">~15 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-activity">
+          <div class="activity-header">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Activité de validation</h3>
+          </div>
+          <p>Expliquez en 3 phrases, comme si vous parliez à un collègue qui n'a jamais entendu parler d'IA, ce qu'est
+            un grand modèle de langage (LLM). Comparez ensuite avec la définition du lexique.</p>
+          <div class="activity-check">
+            <label class="check-label">
+              <input type="checkbox" class="step-check" data-step="1">
+              <span>J'ai terminé cette étape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ÉTAPE 2 : QUESTIONNER                                   -->
+    <!-- ======================================================= -->
+    <section class="step-section" id="step-2" data-step="2">
+      <div class="step-header">
+        <div class="step-badge step-badge-2">
+          <span class="step-number">02</span>
+        </div>
+        <div class="step-title-block">
+          <span class="step-tag">Étape 2 · ~30 min</span>
+          <h2 class="step-title">Questionner les mythes et les enjeux</h2>
+          <p class="step-subtitle">Distinguer ce qui est vrai de ce qui est fantasmé</p>
+        </div>
+      </div>
+
+      <div class="step-body">
+        <div class="step-text">
+          <p>L'IA fait l'objet de nombreuses idées reçues — dans les deux sens. Certains la voient comme une menace
+            absolue, d'autres comme une solution miracle. La réalité est plus nuancée. Cette étape vous invite à
+            examiner les mythes, les questions éthiques, et les enjeux pour l'éducation.</p>
+          <blockquote class="step-quote">
+            "Ce qui m'a le plus frappé, c'est que beaucoup de mes craintes étaient fondées sur des représentations que
+            j'avais vues dans des films, pas sur la réalité de la technologie."
+            <cite>— Une professeure de lettres</cite>
+          </blockquote>
+        </div>
+
+        <div class="step-resources">
+          <h3><i class="fas fa-book-open"></i> Ressources de cette étape</h3>
+          <ul class="resource-list">
+            <li class="resource-item resource-interactive">
+              <span class="resource-type">Flip cards</span>
+              <a href="../../subPages/mythes_réalité/indexMythes.html">Mythes vs Réalités sur l'IA</a>
+              <span class="resource-time">~15 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../LIA_cest_quoi/indexIA.html#Ethique">Questions éthiques</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-interactive">
+              <span class="resource-type">FAQ</span>
+              <a href="../../subPages/faq/indexFAQ.html">Les vraies questions des enseignants</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-key-points">
+          <h3><i class="fas fa-lightbulb"></i> Points clés à retenir</h3>
+          <ul>
+            <li>L'IA ne "pense" pas — elle prédit des suites de tokens</li>
+            <li>Elle peut "halluciner" : inventer des informations plausibles mais fausses</li>
+            <li>Les questions de données personnelles et de RGPD sont réelles et à prendre en compte</li>
+            <li>L'IA n'a pas pour vocation de remplacer l'enseignant, mais peut l'augmenter</li>
+          </ul>
+        </div>
+
+        <div class="step-activity">
+          <div class="activity-header">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Activité de validation</h3>
+          </div>
+          <p>Notez 2 idées reçues sur l'IA que vous aviez avant cette étape. Comment votre représentation a-t-elle
+            évolué ? Vous pouvez utiliser ces réflexions dans une future discussion avec vos élèves.</p>
+          <div class="activity-check">
+            <label class="check-label">
+              <input type="checkbox" class="step-check" data-step="2">
+              <span>J'ai terminé cette étape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ÉTAPE 3 : CADRER                                        -->
+    <!-- ======================================================= -->
+    <section class="step-section" id="step-3" data-step="3">
+      <div class="step-header">
+        <div class="step-badge step-badge-3">
+          <span class="step-number">03</span>
+        </div>
+        <div class="step-title-block">
+          <span class="step-tag">Étape 3 · ~45 min</span>
+          <h2 class="step-title">Cadrer l'usage dans votre contexte</h2>
+          <p class="step-subtitle">Comprendre le cadre institutionnel et construire le sien</p>
+        </div>
+      </div>
+
+      <div class="step-body">
+        <div class="step-text">
+          <p>L'IA en classe ne peut pas s'improviser. Il faut connaître ce que le cadre institutionnel dit (ou ne dit
+            pas encore), comprendre les enjeux spécifiques à votre niveau et vos disciplines, et commencer à réfléchir à
+            votre propre cadre d'usage avec vos élèves.</p>
+          <p>Cette étape est souvent celle qui rassure le plus les enseignants : se rendre compte qu'on n'est pas seul,
+            qu'il existe des repères, même si les textes officiels évoluent vite.</p>
+        </div>
+
+        <div class="step-resources">
+          <h3><i class="fas fa-book-open"></i> Ressources de cette étape</h3>
+          <ul class="resource-list">
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../Cadre_et_défit/IndexCadreDefi.html#cadre">Le cadre d'usage de l'IA</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../Cadre_et_défit/IndexCadreDefi.html#pourquoi">Pourquoi l'IA en classe ?</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../Cadre_et_défit/IndexCadreDefi.html#dette">Vers une dette cognitive ?</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-tool">
+              <span class="resource-type">Outil</span>
+              <a href="../../Cadre_et_défit/Generateur_cadre/indexGenerateur.html">Générer votre cadre d'usage
+                personnalisé</a>
+              <span class="resource-time">~15 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-activity">
+          <div class="activity-header">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Activité de validation</h3>
+          </div>
+          <p>Utilisez le générateur de cadre d'usage pour produire une fiche adaptée à votre discipline et votre niveau.
+            Imprimez-la ou partagez-la avec un collègue pour discussion.</p>
+          <div class="activity-check">
+            <label class="check-label">
+              <input type="checkbox" class="step-check" data-step="3">
+              <span>J'ai terminé cette étape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ÉTAPE 4 : EXPÉRIMENTER                                  -->
+    <!-- ======================================================= -->
+    <section class="step-section" id="step-4" data-step="4">
+      <div class="step-header">
+        <div class="step-badge step-badge-4">
+          <span class="step-number">04</span>
+        </div>
+        <div class="step-title-block">
+          <span class="step-tag">Étape 4 · ~45 min</span>
+          <h2 class="step-title">Expérimenter avec les outils</h2>
+          <p class="step-subtitle">Tester, évaluer, comparer</p>
+        </div>
+      </div>
+
+      <div class="step-body">
+        <div class="step-text">
+          <p>Il est maintenant temps de mettre les mains dans le cambouis. Pas pour tout adopter, mais pour se faire un
+            avis éclairé. Vous ne pouvez pas conseiller vos élèves sur l'utilisation de l'IA si vous ne l'avez pas
+            vous-même expérimentée.</p>
+          <p>Commencez par les outils les plus accessibles : pas de compte à créer, pas de données sensibles à entrer.
+            L'objectif est de <strong>ressentir comment ça marche</strong>, d'identifier les forces et les limites.</p>
+        </div>
+
+        <div class="step-resources">
+          <h3><i class="fas fa-book-open"></i> Ressources de cette étape</h3>
+          <ul class="resource-list">
+            <li class="resource-item resource-tool">
+              <span class="resource-type">Galerie</span>
+              <a href="../../Carousel_outilsIA/Carousel_index.html">Galerie des outils IA pour la classe</a>
+              <span class="resource-time">~20 min</span>
+            </li>
+            <li class="resource-item resource-interactive">
+              <span class="resource-type">Outil IA</span>
+              <a href="../../subPages/nutriscore/indexNutriscore.html">Nutriscore Cognitif : évaluez vos activités</a>
+              <span class="resource-time">~15 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../Cadre_et_défit/IndexCadreDefi.html#defi">Les défis à relever</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-tip">
+          <div class="tip-icon">💡</div>
+          <div>
+            <strong>Conseil pratique :</strong> Commencez par tester un outil sur <em>votre propre discipline</em>.
+            Demandez-lui de générer une question de cours, une explication, ou un exercice. Repérez ce qui est juste, ce
+            qui est approximatif, et ce qui est faux. C'est ainsi que vous construirez un regard critique solide.
+          </div>
+        </div>
+
+        <div class="step-activity">
+          <div class="activity-header">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Activité de validation</h3>
+          </div>
+          <p>Choisissez un outil de la galerie. Testez-le sur un cas d'usage concret dans votre discipline. Notez : 1
+            point fort, 1 limite, et si vous le proposeriez à vos élèves. Partagez sur le forum d'établissement ou avec
+            un collègue.</p>
+          <div class="activity-check">
+            <label class="check-label">
+              <input type="checkbox" class="step-check" data-step="4">
+              <span>J'ai terminé cette étape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ÉTAPE 5 : INTÉGRER                                      -->
+    <!-- ======================================================= -->
+    <section class="step-section" id="step-5" data-step="5">
+      <div class="step-header">
+        <div class="step-badge step-badge-5">
+          <span class="step-number">05</span>
+        </div>
+        <div class="step-title-block">
+          <span class="step-tag">Étape 5 · ~30 min</span>
+          <h2 class="step-title">Intégrer l'IA dans sa pratique</h2>
+          <p class="step-subtitle">Passer de l'expérimentation à la pédagogie</p>
+        </div>
+      </div>
+
+      <div class="step-body">
+        <div class="step-text">
+          <p>L'objectif final n'est pas d'utiliser l'IA parce que c'est à la mode — c'est de l'intégrer quand elle a une
+            plus-value pédagogique réelle. Cette dernière étape vous aide à réfléchir à <em>comment</em> et
+            <em>pourquoi</em> vous intégrez l'IA dans vos séquences, plutôt qu'à <em>quels outils</em> utiliser.
+          </p>
+          <blockquote class="step-quote">
+            "Le jour où j'ai arrêté de me demander 'est-ce que je dois utiliser l'IA ?' et où je me suis demandé
+            'qu'est-ce que cela apporte à mes élèves ?', tout a changé."
+            <cite>— Un professeur de sciences</cite>
+          </blockquote>
+        </div>
+
+        <div class="step-resources">
+          <h3><i class="fas fa-book-open"></i> Ressources de cette étape</h3>
+          <ul class="resource-list">
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../Cadre_et_défit/IndexCadreDefi.html#charte">Vers une charte d'utilisation</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lecture</span>
+              <a href="../../subPages/veille-ia.html">Veille IA & Éducation</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+            <li class="resource-item resource-read">
+              <span class="resource-type">Lexique</span>
+              <a href="../../subPages/lexique/indexLexique.html">Lexique de l'IA</a>
+              <span class="resource-time">~10 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-key-points">
+          <h3><i class="fas fa-lightbulb"></i> Questions à se poser avant d'intégrer l'IA</h3>
+          <ul>
+            <li>Quel est l'objectif pédagogique de mon activité ? L'IA l'aide-t-elle à l'atteindre ?</li>
+            <li>Mes élèves savent-ils ce qu'est l'IA et ses limites ?</li>
+            <li>Est-ce que j'ai un cadre d'usage clair pour cette activité ?</li>
+            <li>Comment vais-je évaluer ce que l'élève a vraiment appris (et non ce que l'IA a produit) ?</li>
+            <li>Ai-je vérifié les aspects RGPD des outils que j'utilise ?</li>
+          </ul>
+        </div>
+
+        <div class="step-activity">
+          <div class="activity-header">
+            <i class="fas fa-star"></i>
+            <h3>Activité finale — Votre première séquence IA</h3>
+          </div>
+          <p>Concevez une activité de 30 minutes intégrant un outil IA dans votre cours. Définissez : l'objectif
+            pédagogique, l'outil utilisé, la consigne pour les élèves, et comment vous allez évaluer la production. Vous
+            pourrez soumettre votre séquence à l'outil <a href="../../subPages/nutriscore/indexNutriscore.html">Nutriscore</a> pour vous aider. Si
+            vous souhaitez partager votre expérience, <a href="../../Contact/contactIndex.html">contactez-nous</a> —
+            nous serions ravis de publier votre témoignage.</p>
+          <div class="activity-check">
+            <label class="check-label">
+              <input type="checkbox" class="step-check" data-step="5">
+              <span>J'ai terminé cette étape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FÉLICITATIONS -->
+    <section class="congrats-section" id="congratsSection" aria-live="polite">
+      <div class="congrats-card">
+        <div class="congrats-icon">🎉</div>
+        <h2>Parcours complété !</h2>
+        <p>Vous avez maintenant une base solide pour intégrer l'IA dans vos pratiques de façon éclairée et responsable.
+          Ce n'est pas une fin — l'IA évolue vite et ce site est mis à jour régulièrement.</p>
+        <div class="congrats-actions">
+          <a href="../../subPages/veille-ia.html" class="btn-primary">Suivre la veille IA</a>
+          <a href="../../Contact/contactIndex.html" class="btn-secondary">Partager votre expérience</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer partagé -->
+  <div data-shared-footer data-base="../../" data-current="parcours"></div>
+
+  <script src="../../theme-sync.js" defer></script>
+  <script src="../../shared-components.js" defer></script>
+  <script src="../../reading-progress.js" defer></script>
+  <script src="scriptParcours.js" defer></script>
+</body>
+
+</html>

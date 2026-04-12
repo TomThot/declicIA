@@ -29,6 +29,25 @@ if (menuToggle && menuBar && sidebar) {
 }
 
 // ------------------------------------------------------------
+// Apparition/disparition encart parcours
+// ------------------------------------------------------------
+(function () {
+      var key = 'declicia-parcours-encart-closed';
+      var encart = document.getElementById('parcoursEncart');
+      var btn = document.getElementById('parcoursEncartClose');
+      if (sessionStorage.getItem(key)) {
+        encart && encart.classList.add('parcours-encart--hidden');
+      }
+      btn && btn.addEventListener('click', function () {
+        encart && encart.classList.add('parcours-encart--closing');
+        setTimeout(function () {
+          encart && encart.classList.add('parcours-encart--hidden');
+        }, 300);
+        sessionStorage.setItem(key, '1');
+      });
+    })();
+
+// ------------------------------------------------------------
 // Sections repliables
 // ------------------------------------------------------------
 // Chaque <h2> d'une section repliable bascule la classe "open"
@@ -71,7 +90,7 @@ const N = cards.length;
 
 // Dimensions de référence utilisées pour calculer le rayon de l'orbite.
 // CARD_W doit rester cohérent avec la largeur CSS des cartes.
-const CARD_W = 180;
+const CARD_W = 190;
 const ORBIT_OFFSET = 200;
 
 // Rayon de l'orbite 3D:
