@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260419",
+    "date": "2026-04-19",
+    "date_affichage": "19 avril 2026",
+    "titre": "L'intelligence artificielle à l'école : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'est pas en reste. Les enseignants sont confrontés à de nouveaux outils et de nouvelles méthodes qui peuvent les aider à améliorer l'apprentissage de leurs élèves. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour améliorer leur pratique pédagogique ? Les politiques éducatives sont-elles prêtes à intégrer l'IA dans les salles de classe ? Ces questions sont au cœur de la veille de cette semaine, qui présente des articles et des ressources pour aider les enseignants à comprendre et à utiliser l'IA dans leur travail. Les enseignants doivent être accompagnés dans cette évolution pour que l'IA soit un outil au service de l'apprentissage et non un obstacle. Il est donc essentiel de former les enseignants à l'utilisation de l'IA et de leur fournir les ressources nécessaires pour intégrer ces outils dans leur pratique pédagogique.",
+    "breves": [
+      {
+        "titre": "Qu'est-ce qui fait que l'edtech fonctionne pour les étudiants ?",
+        "contenu": "Un article d'EdSurge présente une infographie qui montre ce qui fait que l'edtech fonctionne pour les étudiants. Selon cet article, il est essentiel de prendre en compte les besoins et les préférences des étudiants lors de la conception d'outils éducatifs. L'infographie présente des statistiques sur les habitudes des étudiants en matière de technologie et sur les facteurs qui influencent leur adoption de l'edtech. Cet article est intéressant pour les enseignants qui souhaitent utiliser l'edtech dans leur classe de manière efficace. Il leur permet de comprendre les attentes et les besoins de leurs élèves et de choisir les outils les plus adaptés pour améliorer l'apprentissage.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-04-15-what-makes-edtech-work-for-students-infographic"
+      },
+      {
+        "titre": "La régulation de l'enseignement supérieur privé en France",
+        "contenu": "Un article d'Educpros présente la situation de la régulation de l'enseignement supérieur privé en France. Selon cet article, la régulation de l'enseignement supérieur privé est un enjeu important pour garantir la qualité de l'enseignement et la protection des étudiants. L'article présente les différents acteurs impliqués dans la régulation de l'enseignement supérieur privé et les défis auxquels ils sont confrontés. Cet article est intéressant pour les enseignants qui souhaitent comprendre le contexte éducatif dans lequel ils travaillent. Il leur permet de mieux comprendre les enjeux de la régulation de l'enseignement supérieur privé et les conséquences potentielles pour les étudiants et les enseignants.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/enseignement-superieur-prive-la-regulation-tarde-malgre-une-attente-forte.html"
+      },
+      {
+        "titre": "Les avantages de l'utilisation de l'IA dans la formation des enseignants",
+        "contenu": "Un article de l'E-Learning Industry présente les avantages de l'utilisation de l'IA dans la formation des enseignants. Selon cet article, l'IA peut aider les enseignants à améliorer leur pratique pédagogique en leur fournissant des outils pour personnaliser l'apprentissage et pour évaluer les progrès des étudiants. L'article présente des exemples d'utilisation de l'IA dans la formation des enseignants et les avantages potentiels pour les enseignants et les étudiants. Cet article est intéressant pour les enseignants qui souhaitent utiliser l'IA pour améliorer leur pratique pédagogique. Il leur permet de comprendre les possibilités offertes par l'IA et de réfléchir à la manière de l'intégrer dans leur travail.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/how-ai-powered-learning-tools-are-transforming-employee-training"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut aider les enseignants à améliorer leur pratique pédagogique et à personnaliser l'apprentissage. Cependant, il est essentiel de prendre en compte les besoins et les préférences des étudiants lors de la conception d'outils éducatifs. Les enseignants doivent être accompagnés dans cette évolution pour que l'IA soit un outil au service de l'apprentissage et non un obstacle. Il est donc essentiel de former les enseignants à l'utilisation de l'IA et de leur fournir les ressources nécessaires pour intégrer ces outils dans leur pratique pédagogique. Les enseignants peuvent utiliser des ressources telles que les articles et les infographies présentés dans cette veille pour se former et pour réfléchir à la manière d'intégrer l'IA dans leur travail."
+  },
+  {
     "id": "20260412",
     "date": "2026-04-12",
     "date_affichage": "12 avril 2026",
