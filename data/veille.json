@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260426",
+    "date": "2026-04-26",
+    "date_affichage": "26 avril 2026",
+    "titre": "L'intelligence artificielle au service de l'éducation : une semaine de découvertes",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans le monde de l'éducation. Les enseignants sont confrontés à de nouveaux outils et de nouvelles méthodes qui visent à améliorer l'apprentissage des élèves. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peut-elle aider à personnaliser l'apprentissage, à améliorer la motivation des élèves et à faciliter la tâche des enseignants ? Cette semaine, nous allons explorer les différentes facettes de l'IA dans l'éducation, des outils pour la classe aux politiques éducatives. Nous allons également découvrir des ressources concrètes et des outils utilisables en classe. L'IA peut-elle vraiment révolutionner l'éducation ? Nous allons voir comment les enseignants et les élèves peuvent en tirer parti pour améliorer l'apprentissage.",
+    "breves": [
+      {
+        "titre": "Les écoles de commerce s'ouvrent aux sciences humaines",
+        "contenu": "Les écoles de commerce ne se cantonnent plus au management. Elles s'ouvrent désormais aux sciences humaines, avec des doubles diplômes en philosophie et management, des parcours humanités, etc. Cela répond aux nouveaux besoins des étudiants et des employeurs. Les écoles de commerce doivent former des étudiants capables de réfléchir de manière critique et créative, et de comprendre les enjeux sociaux et environnementaux. Cette évolution est intéressante pour les enseignants qui souhaitent intégrer des éléments de sciences humaines dans leur enseignement.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/les-ecoles-de-commerce-s-ouvrent-aux-sciences-humaines.html"
+      },
+      {
+        "titre": "L'IA dans la classe : comment améliorer l'apprentissage",
+        "contenu": "L'IA peut aider à personnaliser l'apprentissage, à améliorer la motivation des élèves et à faciliter la tâche des enseignants. Les outils d'IA peuvent analyser les données des élèves et proposer des exercices adaptés à leurs besoins. Les enseignants peuvent également utiliser des outils d'IA pour créer des leçons interactives et engageantes. Cependant, il est important de noter que l'IA ne doit pas remplacer l'enseignant, mais plutôt le soutenir dans sa tâche.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-04-15-what-makes-edtech-work-for-students-infographic"
+      },
+      {
+        "titre": "La formation des enseignants : un enjeu clé pour l'intégration de l'IA dans l'éducation",
+        "contenu": "La formation des enseignants est un enjeu clé pour l'intégration de l'IA dans l'éducation. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et pour comprendre les enjeux pédagogiques de l'IA. Les formations doivent également prendre en compte les besoins spécifiques des enseignants et des élèves. Il est important de noter que la formation des enseignants doit être continue et régulière pour tenir compte des évolutions technologiques et pédagogiques.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/how-ai-is-transforming-elearning-from-personalization-to-automation"
+      }
+    ],
+    "conclusion": "L'IA peut être un outil puissant pour améliorer l'éducation, mais il est important de ne pas oublier que l'enseignant est au cœur de l'apprentissage. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et pour comprendre les enjeux pédagogiques de l'IA. Il est également important de noter que l'IA ne doit pas remplacer l'enseignant, mais plutôt le soutenir dans sa tâche. Les enseignants peuvent utiliser des outils d'IA pour personnaliser l'apprentissage, améliorer la motivation des élèves et faciliter leur tâche. Nous espérons que cette semaine de découvertes vous a donné des idées pour intégrer l'IA dans votre enseignement et améliorer l'apprentissage de vos élèves."
+  },
+  {
     "id": "20260419",
     "date": "2026-04-19",
     "date_affichage": "19 avril 2026",
