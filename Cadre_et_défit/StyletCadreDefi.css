@@ -948,6 +948,11 @@ h3 {
   margin: 24px 0 8px;
 }
 
+.carteMentale {
+  text-align: center;
+  margin: 24px 0 8px;
+}
+
 .flipcards-cta {
   display: inline-flex;
   align-items: center;
