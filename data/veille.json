@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260503",
+    "date": "2026-05-03",
+    "date_affichage": "3 mai 2026",
+    "titre": "L'intelligence artificielle dans la classe : enjeux et défis pour les enseignants",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'est pas en reste. Les enseignants sont confrontés à de nouveaux enjeux et défis liés à l'utilisation de l'IA dans la classe. Il est essentiel de comprendre les implications de l'IA sur l'apprentissage et l'enseignement, ainsi que les outils et ressources disponibles pour les enseignants. Cette semaine, nous allons explorer les dernières tendances et actualités en matière d'IA dans l'éducation, avec un focus sur les outils et ressources concrets pour les enseignants. Nous examinerons également les politiques éducatives et la formation des enseignants pour mieux comprendre comment l'IA peut être intégrée de manière efficace dans la classe. Enfin, nous verrons comment les enseignants peuvent utiliser l'IA pour améliorer l'apprentissage et l'enseignement, et quels sont les défis et les limites de l'utilisation de l'IA dans l'éducation.",
+    "breves": [
+      {
+        "titre": "Les écoles de commerce s'ouvrent aux sciences humaines",
+        "contenu": "Les écoles de commerce ne se cantonnent plus au management et s'ouvrent de plus en plus aux sciences humaines. Cela répond aux nouveaux besoins des étudiants et des employeurs, qui recherchent des professionnels polyvalents et capables de comprendre les enjeux sociaux et éthiques de leur métier. Les écoles de commerce proposent désormais des doubles diplômes en philosophie et management, des parcours Humanités, ou encore des écoles d'affaires publiques. Cela permet aux étudiants de développer une compréhension plus large des enjeux économiques et sociaux, et de devenir des leaders plus éclairés et responsables.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/les-ecoles-de-commerce-s-ouvrent-aux-sciences-humaines.html"
+      },
+      {
+        "titre": "L'IA pour améliorer l'apprentissage des mathématiques",
+        "contenu": "L'IA peut être utilisée pour améliorer l'apprentissage des mathématiques, en particulier pour les élèves qui ont des difficultés. Les outils d'IA peuvent fournir des exercices personnalisés, des feedbacks immédiats et des explications claires et concises. Les enseignants peuvent également utiliser l'IA pour analyser les données d'apprentissage et identifier les élèves qui ont besoin d'une aide supplémentaire. Cela permet de cibler les interventions et de maximiser l'efficacité de l'enseignement.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-05-01-girls-around-the-globe-are-losing-gains-in-math-data-shows"
+      },
+      {
+        "titre": "La formation des enseignants dans l'ère de l'IA",
+        "contenu": "La formation des enseignants est essentielle pour intégrer l'IA de manière efficace dans la classe. Les enseignants doivent être formés pour utiliser les outils d'IA de manière pédagogique, pour analyser les données d'apprentissage et pour identifier les élèves qui ont besoin d'une aide supplémentaire. Les politiques éducatives doivent également prendre en compte les enjeux de l'IA et fournir des ressources et des formations pour les enseignants. Cela permet de garantir que les enseignants soient en mesure de utiliser l'IA de manière efficace et de maximiser son impact sur l'apprentissage.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/reforme-de-la-formation-des-enseignants-a-quelques-mois-de-la-rentree-des-inconnues-demeurent.html"
+      }
+    ],
+    "conclusion": "L'IA est une réalité dans la classe, et les enseignants doivent être prêts à l'intégrer de manière efficace. Les outils et ressources d'IA peuvent améliorer l'apprentissage et l'enseignement, mais les enseignants doivent être formés pour les utiliser de manière pédagogique. Les politiques éducatives doivent également prendre en compte les enjeux de l'IA et fournir des ressources et des formations pour les enseignants. Enfin, les enseignants doivent être conscients des défis et des limites de l'utilisation de l'IA dans l'éducation, et être prêts à adapter leur pratique pour maximiser son impact sur l'apprentissage."
+  },
+  {
     "id": "20260426",
     "date": "2026-04-26",
     "date_affichage": "26 avril 2026",
