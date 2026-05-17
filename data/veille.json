@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260517",
+    "date": "2026-05-17",
+    "date_affichage": "17 mai 2026",
+    "titre": "L'IA dans la classe : enjeux et défis pour les enseignants",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre vie quotidienne, et l'éducation n'y échappe pas. Les enseignants doivent désormais prendre en compte les outils et les ressources basés sur l'IA pour améliorer leur pratique pédagogique et répondre aux besoins de leurs élèves. Cependant, l'IA soulève également des questions éthiques et des défis techniques qui doivent être abordés. Dans ce contexte, il est essentiel pour les enseignants de rester informés sur les dernières tendances et les meilleures pratiques en matière d'IA dans l'éducation. Cette veille hebdomadaire propose une sélection d'articles et de ressources pour aider les enseignants à mieux comprendre les enjeux et les défis liés à l'IA dans la classe. Les enseignants doivent être en mesure de tirer parti des outils et des ressources basés sur l'IA pour améliorer l'apprentissage de leurs élèves, tout en veillant à ce que l'IA soit utilisée de manière responsable et éthique.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer la littératie des élèves",
+        "contenu": "Un article récent d'EdSurge montre comment un district scolaire de l'Ohio utilise l'IA pour améliorer la littératie des élèves qui ont des difficultés avec la langue anglaise. Le district a mis en place un programme qui utilise des outils basés sur l'IA pour identifier les élèves qui ont des difficultés et leur offrir des ressources personnalisées pour les aider à améliorer leurs compétences en lecture et en écriture. Les résultats sont prometteurs, avec des améliorations significatives dans les notes des élèves qui ont participé au programme. Cet exemple montre comment l'IA peut être utilisée pour soutenir les enseignants et améliorer les résultats scolaires des élèves.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-05-13-the-pandemic-hindered-english-learners-literacy-this-ohio-district-is-turning-the-tide"
+      },
+      {
+        "titre": "La formation des enseignants à l'IA",
+        "contenu": "Un article d'Educpros souligne l'importance de la formation des enseignants à l'IA. L'article note que les enseignants doivent être en mesure de comprendre comment l'IA peut être utilisée pour améliorer l'apprentissage de leurs élèves, mais également comment l'IA peut être utilisée pour soutenir leur propre pratique pédagogique. L'article propose des ressources et des conseils pour les enseignants qui souhaitent en savoir plus sur l'IA et son utilisation dans la classe. Cet article est particulièrement utile pour les enseignants qui cherchent à se former et à se mettre à jour sur les dernières tendances en matière d'IA dans l'éducation.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/reforme-de-la-formation-des-enseignants-a-quelques-mois-de-la-rentree-des-inconnues-demeurent.html"
+      },
+      {
+        "titre": "Les défis de la cybersécurité dans les écoles",
+        "contenu": "Un article d'EdSurge souligne les défis de la cybersécurité dans les écoles. L'article note que les écoles sont de plus en plus vulnérables aux cyberattaques, qui peuvent avoir des conséquences graves pour la sécurité des élèves et des enseignants. L'article propose des conseils et des ressources pour les écoles qui cherchent à améliorer leur cybersécurité et à protéger leurs données. Cet article est particulièrement utile pour les enseignants et les administrateurs scolaires qui cherchent à comprendre les risques liés à la cybersécurité et à prendre des mesures pour les atténuer.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-05-12-latest-canvas-attack-shows-schools-still-struggle-with-cybersecurity"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut être utilisé pour améliorer l'apprentissage des élèves et soutenir les enseignants dans leur pratique pédagogique. Cependant, il est essentiel de prendre en compte les défis et les risques liés à l'IA, tels que la cybersécurité et les questions éthiques. Les enseignants doivent être en mesure de tirer parti des outils et des ressources basés sur l'IA pour améliorer l'apprentissage de leurs élèves, tout en veillant à ce que l'IA soit utilisée de manière responsable et éthique. Pour cela, il est essentiel de fournir aux enseignants les ressources et la formation nécessaires pour qu'ils puissent utiliser l'IA de manière efficace et éthique."
+  },
+  {
     "id": "20260510",
     "date": "2026-05-10",
     "date_affichage": "10 mai 2026",
