@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260524",
+    "date": "2026-05-24",
+    "date_affichage": "24 mai 2026",
+    "titre": "L'IA dans la classe : vers une révolution pédagogique ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'est pas en reste. Les enseignants sont confrontés à de nouveaux défis, tels que l'intégration de l'IA dans les salles de classe, pour améliorer l'apprentissage et la motivation des élèves. Mais quels sont les enjeux et les opportunités de l'IA dans l'éducation ? Comment les enseignants peuvent-ils utiliser ces outils pour améliorer leur pratique pédagogique ? Cette semaine, nous allons explorer ces questions à travers plusieurs articles qui nous permettront de mieux comprendre les impacts de l'IA sur l'éducation.",
+    "breves": [
+      {
+        "titre": "La réalité virtuelle pour préparer les élèves à leur futur métier",
+        "contenu": "Selon un article d'EdSurge, les élèves du Dakota du Nord vont pouvoir utiliser la réalité virtuelle pour se préparer à leur futur métier. Cette technologie leur permettra de simuler des expériences professionnelles, telles que travailler sur une éolienne ou assister un médecin en salle d'opération. Cet outil innovant permettra aux élèves de découvrir différents métiers et de développer des compétences professionnelles dès le lycée.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-05-20-vr-gives-north-dakota-kids-an-early-career-jump-start"
+      },
+      {
+        "titre": "Le financement des universités en France et en Europe",
+        "contenu": "Selon un article d'Educpros, les universités françaises et européennes sont confrontées à des défis de financement. En France, les universités sont financées principalement par l'État, mais les moyens sont insuffisants pour répondre aux besoins des étudiants et des enseignants. En Europe, les systèmes de financement varient, mais la plupart des pays connaissent des problèmes de sous-financement et de lourdeur administrative.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/comment-sont-financees-les-universites-dans-les-autres-pays-europeens.html"
+      },
+      {
+        "titre": "L'IA pour améliorer la formation des enseignants",
+        "contenu": "Selon un article de l'E-Learning Industry, l'IA peut être utilisée pour améliorer la formation des enseignants. Les outils d'IA peuvent aider les enseignants à créer des cours personnalisés, à évaluer les progrès des élèves et à développer des compétences pédagogiques. Cependant, il est important de noter que l'IA ne peut pas remplacer les enseignants, mais plutôt les aider à améliorer leur pratique pédagogique.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/why-most-learning-investments-fail-to-deliver-engagement"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre de nombreuses opportunités pour améliorer l'éducation, mais il est important de prendre en compte les enjeux et les défis liés à son intégration dans les salles de classe. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pour développer des compétences pédagogiques qui leur permettent de tirer parti de l'IA. Il est également important de noter que l'IA ne peut pas remplacer les enseignants, mais plutôt les aider à améliorer leur pratique pédagogique et à offrir une éducation de qualité aux élèves."
+  },
+  {
     "id": "20260517",
     "date": "2026-05-17",
     "date_affichage": "17 mai 2026",
