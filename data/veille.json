@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260531",
+    "date": "2026-05-31",
+    "date_affichage": "31 mai 2026",
+    "titre": "L'IA dans l'éducation : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'est pas en reste. Les enseignants doivent se former pour intégrer ces outils dans leur pratique pédagogique. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour améliorer l'apprentissage de leurs élèves ? Les articles de cette semaine nous permettent de mieux comprendre les défis et les opportunités liés à l'IA dans l'éducation. Nous allons explorer les différents aspects de l'IA dans l'éducation, des outils pour la classe aux politiques éducatives, en passant par la formation des enseignants. Nous allons également découvrir des ressources concrètes pour les enseignants qui souhaitent intégrer l'IA dans leur pratique.",
+    "breves": [
+      {
+        "titre": "L'importance de la formation des enseignants dans l'ère de l'IA",
+        "contenu": "Selon un article d'EdSurge, les compétences techniques sont en constante évolution, et les enseignants doivent se former pour rester à jour. Cependant, la formation des enseignants est souvent négligée, ce qui peut avoir des conséquences négatives sur la qualité de l'éducation. Il est essentiel de fournir aux enseignants les outils et les ressources nécessaires pour qu'ils puissent intégrer l'IA dans leur pratique pédagogique de manière efficace. Cela peut inclure des formations sur les outils d'IA, des ateliers sur la pédagogie et des ressources pour les aider à créer des leçons personnalisées. Les enseignants doivent également être formés pour évaluer les résultats des élèves et ajuster leur enseignement en conséquence.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-05-28-why-college-degrees-matter-in-the-age-of-ai"
+      },
+      {
+        "titre": "Les enjeux de l'IA dans l'éducation en France",
+        "contenu": "Selon un article d'Educpros, l'IA est de plus en plus présente dans l'éducation en France, mais les enseignants doivent être formés pour l'utiliser de manière efficace. L'article souligne l'importance de la formation des enseignants pour intégrer l'IA dans leur pratique pédagogique. Il est également nécessaire de développer des outils et des ressources pour les enseignants, tels que des plateformes de formation en ligne et des ressources pédagogiques. Les enseignants doivent être en mesure de créer des leçons personnalisées et d'évaluer les résultats des élèves de manière efficace.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/enseignement-superieur-prive-la-fesic-plaide-pour-une-regulation-plus-exigeante.html"
+      },
+      {
+        "titre": "Un outil concret pour les enseignants : le bachelor agro",
+        "contenu": "Selon un article d'Educpros, le bachelor agro est un nouveau diplôme national en trois ans qui vise à former les professionnels des transitions agricoles, alimentaires et environnementales. Cet outil peut être utile pour les enseignants qui souhaitent intégrer des compétences professionnelles dans leur enseignement. Les enseignants peuvent utiliser ce diplôme pour créer des leçons personnalisées et pour évaluer les résultats des élèves de manière efficace. Il est également possible de développer des partenariats avec des entreprises pour offrir des stages et des opportunités de formation aux élèves.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/entretiens/a-l-wack-institut-agro-le-bachelor-agro-devient-un-nouveau-cursus-de-reference-pour-les-ecoles-agronomiques.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut être utilisé pour améliorer l'éducation, mais il est essentiel de former les enseignants pour qu'ils puissent l'utiliser de manière efficace. Les enseignants doivent être en mesure de créer des leçons personnalisées, d'évaluer les résultats des élèves et d'ajuster leur enseignement en conséquence. Les outils et les ressources, tels que le bachelor agro, peuvent être utiles pour les enseignants qui souhaitent intégrer des compétences professionnelles dans leur enseignement. Il est également important de développer des partenariats avec des entreprises pour offrir des stages et des opportunités de formation aux élèves. Enfin, il est essentiel de continuer à explorer les possibilités offertes par l'IA dans l'éducation pour améliorer la qualité de l'enseignement et les résultats des élèves."
+  },
+  {
     "id": "20260524",
     "date": "2026-05-24",
     "date_affichage": "24 mai 2026",
