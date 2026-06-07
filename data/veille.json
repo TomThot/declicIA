@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260607",
+    "date": "2026-06-07",
+    "date_affichage": "7 juin 2026",
+    "titre": "L'intelligence artificielle à l'école : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre société, et l'éducation n'est pas en reste. Les enseignants doivent désormais prendre en compte les possibilités et les limites de l'IA pour améliorer l'apprentissage de leurs élèves. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour améliorer leur pratique pédagogique ? Les réponses à ces questions sont multiples et variées, et c'est ce que nous allons explorer dans cet article de veille. Nous allons présenter plusieurs brèves qui montrent comment l'IA peut être utilisée en classe, mais aussi les défis que les enseignants doivent relever pour intégrer ces outils dans leur pratique. Nous allons également voir comment les politiques éducatives peuvent influencer l'utilisation de l'IA en classe. Enfin, nous présenterons quelques outils concrets qui peuvent être utilisés par les enseignants pour améliorer l'apprentissage de leurs élèves.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer l'apprentissage",
+        "contenu": "Selon un article de EdSurge, l'IA peut être utilisée pour améliorer l'apprentissage en fournissant des outils de personnalisation de l'apprentissage. Les enseignants peuvent utiliser des outils d'IA pour adapter leur enseignement aux besoins individuels de leurs élèves. Cela peut inclure des outils de diagnostic pour identifier les forces et les faiblesses des élèves, ainsi que des outils de recommandation pour suggérer des activités d'apprentissage personnalisées. L'article cite l'exemple d'un outil d'IA qui peut analyser les réponses des élèves à des questions pour identifier les concepts qu'ils ont du mal à comprendre.",
+        "source": "EdSurge",
+        "url": "https://www.edsurge.com/news/2026-06-03-what-to-do-about-ai-begin-by-talking-about-it"
+      },
+      {
+        "titre": "Les défis de l'IA en classe",
+        "contenu": "Un article de The Hechinger Report souligne les défis que les enseignants doivent relever pour intégrer l'IA dans leur pratique. Les enseignants doivent être formés pour utiliser ces outils, mais ils doivent également être conscients des limites de l'IA et de ses potentialités. L'article cite l'exemple d'un enseignant qui a utilisé un outil d'IA pour aider ses élèves à améliorer leur écriture, mais qui a finalement réalisé que l'outil ne pouvait pas remplacer la feedback humaine.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/teacher-voice-ai-is-an-addictive-drug-that-must-be-researched-studied-and-confined/"
+      },
+      {
+        "titre": "L'IA en France : les enjeux pour les enseignants",
+        "contenu": "Un article de Educpros souligne les enjeux de l'IA pour les enseignants en France. Les enseignants doivent être formés pour utiliser les outils d'IA, mais ils doivent également être conscients des politiques éducatives qui influencent l'utilisation de ces outils. L'article cite l'exemple du projet de loi sur la régulation de l'enseignement supérieur privé, qui pourrait avoir des implications pour l'utilisation de l'IA dans les écoles.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/a-l-heure-de-l-ia-et-de-la-transition-ecologique-les-ecoles-de-management-veulent-repenser-leurs-enseignements.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre de nombreuses possibilités pour améliorer l'apprentissage, mais les enseignants doivent être conscients des défis et des limites de ces outils. Les enseignants doivent être formés pour utiliser les outils d'IA, mais ils doivent également être conscients des politiques éducatives qui influencent l'utilisation de ces outils. Les outils concrets tels que les outils de personnalisation de l'apprentissage et les outils de diagnostic peuvent être utilisés pour améliorer l'apprentissage des élèves. Il est important que les enseignants soient accompagnés dans leur pratique pour intégrer l'IA de manière efficace et responsible."
+  },
+  {
     "id": "20260531",
     "date": "2026-05-31",
     "date_affichage": "31 mai 2026",
