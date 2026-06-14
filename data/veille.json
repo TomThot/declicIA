@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260614",
+    "date": "2026-06-14",
+    "date_affichage": "14 juin 2026",
+    "titre": "L'IA dans la classe : quels enjeux pour les enseignants cette semaine ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans la salle de classe, avec des outils qui peuvent aider les enseignants à personnaliser les apprentissages, à détecter les difficultés des élèves et à améliorer la qualité de l'enseignement. Cependant, les enseignants doivent également être conscients des enjeux liés à l'utilisation de l'IA dans l'éducation, tels que la protection des données des élèves, la dépendance aux technologies et la nécessité de former les enseignants à l'utilisation de ces outils. Cette semaine, nous avons sélectionné quelques articles qui abordent ces enjeux et qui proposent des solutions concrètes pour les enseignants. Nous allons voir comment les écoles d'ingénieurs cherchent à retrouver leur attractivité, comment les écoles de management veulent repenser leurs enseignements pour prendre en compte l'IA et la transition écologique, et comment les enseignants peuvent utiliser les outils d'IA pour améliorer la qualité de l'enseignement.",
+    "breves": [
+      {
+        "titre": "Les écoles d'ingénieurs en quête de solutions pour retrouver leur attractivité",
+        "contenu": "Les écoles d'ingénieurs sont actuellement confrontées à une baisse du vivier de recrutement, une diversité des profils et une adaptation des formations. Elles s'interrogent sur les leviers à mobiliser pour répondre aux besoins en ingénieurs. Selon un article d'Éducpros, les écoles d'ingénieurs doivent repenser leurs formations pour prendre en compte les nouveaux défis de l'industrie, tels que la transition écologique et la numérisation. Elles doivent également améliorer leur attractivité pour attirer les meilleurs étudiants.",
+        "source": "Éducpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/les-ecoles-d-ingenieurs-en-quete-de-solutions-pour-retrouver-leur-attractivite.html"
+      },
+      {
+        "titre": "L'IA dans la classe : comment les enseignants peuvent utiliser les outils d'IA pour améliorer la qualité de l'enseignement",
+        "contenu": "Les outils d'IA peuvent aider les enseignants à personnaliser les apprentissages, à détecter les difficultés des élèves et à améliorer la qualité de l'enseignement. Selon un article d'EdSurge, les enseignants peuvent utiliser les outils d'IA pour créer des plans de cours personnalisés, pour détecter les difficultés des élèves et pour améliorer la communication avec les parents. Cependant, les enseignants doivent également être conscients des enjeux liés à l'utilisation de l'IA dans l'éducation, tels que la protection des données des élèves et la dépendance aux technologies.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/ai-wont-replace-educators-but-it-is-changing-how-students-learn"
+      },
+      {
+        "titre": "À l'heure de l'IA et de la transition écologique, les écoles de management veulent repenser leurs enseignements",
+        "contenu": "Les écoles de management sont appelées à réinventer leur mission pour prendre en compte les nouveaux défis de l'industrie, tels que la transition écologique et la numérisation. Selon un article d'Éducpros, les écoles de management doivent repenser leurs formations pour former des leaders capables de penser, de comprendre et d'agir dans un monde en pleine mutation. Elles doivent également améliorer leur attractivité pour attirer les meilleurs étudiants.",
+        "source": "Éducpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/a-l-heure-de-l-ia-et-de-la-transition-ecologique-les-ecoles-de-management-veulent-repenser-leurs-enseignements.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est de plus en plus présente dans la salle de classe et les enseignants doivent être conscients des enjeux liés à son utilisation. Les outils d'IA peuvent aider les enseignants à personnaliser les apprentissages, à détecter les difficultés des élèves et à améliorer la qualité de l'enseignement. Cependant, les enseignants doivent également être conscients des enjeux liés à la protection des données des élèves, à la dépendance aux technologies et à la nécessité de former les enseignants à l'utilisation de ces outils. Les écoles d'ingénieurs, les écoles de management et les enseignants doivent travailler ensemble pour repenser leurs formations et leurs pratiques pour prendre en compte les nouveaux défis de l'industrie et de la société."
+  },
+  {
     "id": "20260607",
     "date": "2026-06-07",
     "date_affichage": "7 juin 2026",
