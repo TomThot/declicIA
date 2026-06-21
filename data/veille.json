@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260621",
+    "date": "2026-06-21",
+    "date_affichage": "21 juin 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre société, et l'éducation n'est pas en reste. Les enseignants doivent se former pour utiliser ces outils dans leur pratique pédagogique. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peut-elle améliorer l'expérience d'apprentissage des élèves ? Quels sont les défis à relever pour une intégration réussie de l'IA dans la classe ? Cette veille hebdomadaire vous propose de découvrir les dernières tendances et les outils concrets pour vous aider à intégrer l'IA dans votre pratique pédagogique. Les articles sélectionnés cette semaine vous permettront de mieux comprendre les enjeux de l'IA dans l'éducation et de découvrir des ressources pratiques pour améliorer votre enseignement. Vous allez également découvrir comment les écoles et les institutions éducatives réagissent face à ces nouveaux défis.",
+    "breves": [
+      {
+        "titre": "Les enfants savent plus d'AI que leurs parents",
+        "contenu": "Un podcast d'EdSurge explore comment les écoles doivent adapter leurs politiques pour prendre en compte l'utilisation de l'IA par les élèves. Les enfants sont de plus en plus familiers avec les outils d'IA, et les écoles doivent suivre ce rythme. Le podcast met en lumière les défis que posent les outils d'IA pour les enseignants et les élèves, et propose des solutions pour une intégration réussie de l'IA dans la classe. Il est important de noter que les élèves ont souvent une meilleure compréhension de l'IA que leurs parents, ce qui peut créer des défis pour les enseignants qui doivent gérer les attentes et les compétences des élèves.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/your-kids-know-more-about-ai-than-you-do"
+      },
+      {
+        "titre": "L'IA dans les lycées parisiens",
+        "contenu": "Selon un article d'Educpros, la mixité sociale et scolaire a progressé dans les lycées publics de la capitale grâce à la réforme d'Affelnet. Le rectorat prévoit de nouveaux aménagements pour la rentrée 2026. Cet article montre comment les politiques éducatives peuvent avoir un impact sur la mixité sociale et scolaire, et comment les outils d'IA peuvent être utilisés pour améliorer l'expérience d'apprentissage des élèves. Il est important de noter que la mixité sociale et scolaire est un enjeu important pour les écoles, et que les outils d'IA peuvent aider à atteindre cet objectif.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/affelnet-dans-les-lycees-parisiens-la-mixite-sociale-progresse-malgre-des-reticences.html"
+      },
+      {
+        "titre": "Les écoles de commerce réinventent leur PGE",
+        "contenu": "Les écoles de commerce sont en train de réinventer leur programme Grande école (PGE) pour prendre en compte les nouvelles attentes des employeurs et les défis de l'IA. Selon un article d'Educpros, les écoles de commerce comme Kedge, Neoma, Audencia, Essec et Skema Business School transforment leur PGE pour mieux préparer les élèves aux défis de l'IA. Cet article montre comment les institutions éducatives réagissent face aux nouveaux défis de l'IA, et comment elles s'adaptent pour mieux préparer les élèves à l'avenir. Il est important de noter que les écoles de commerce ont un rôle important à jouer dans la formation des futurs dirigeants, et que les outils d'IA peuvent aider à améliorer l'expérience d'apprentissage des élèves.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/kedge-neoma-audencia-essec-les-grandes-ecoles-de-commerce-reinventent-leur-pge.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'intégration de l'IA dans la classe est un enjeu important pour les enseignants, qui doivent se former pour utiliser ces outils dans leur pratique pédagogique. Les articles sélectionnés cette semaine montrent comment les outils d'IA peuvent améliorer l'expérience d'apprentissage des élèves, et comment les institutions éducatives réagissent face aux nouveaux défis de l'IA. Il est important de noter que les enseignants ont un rôle important à jouer dans la formation des futurs citoyens, et que les outils d'IA peuvent aider à améliorer l'expérience d'apprentissage des élèves. Nous vous invitons à découvrir les ressources pratiques proposées dans les articles sélectionnés pour améliorer votre enseignement et intégrer l'IA dans votre pratique pédagogique."
+  },
+  {
     "id": "20260614",
     "date": "2026-06-14",
     "date_affichage": "14 juin 2026",
