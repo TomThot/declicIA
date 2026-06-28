@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260628",
+    "date": "2026-06-28",
+    "date_affichage": "28 juin 2026",
+    "titre": "L'intelligence artificielle à l'école : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'est pas en reste. Les enseignants doivent désormais prendre en compte les outils et les ressources basés sur l'IA pour améliorer leur pratique pédagogique. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils intégrer ces outils dans leur classe ? Quels sont les avantages et les limites de l'IA dans l'éducation ? Cette veille hebdomadaire vous présente quelques articles et ressources pour vous aider à mieux comprendre les enjeux de l'IA dans l'éducation. Les enseignants doivent être en mesure de comprendre les potentialités de l'IA pour améliorer l'apprentissage de leurs élèves. L'IA peut aider les enseignants à personnaliser l'apprentissage, à identifier les difficultés des élèves et à développer des stratégies pédagogiques plus efficaces. Mais l'IA ne peut pas se substituer à l'enseignant, elle doit être utilisée de manière complémentaire pour améliorer la qualité de l'enseignement.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer la lecture",
+        "contenu": "Un article d'EdSurge présente un outil basé sur l'IA qui vise à améliorer la lecture des élèves. L'outil, appelé Vibe Coding, utilise l'IA pour analyser les textes et identifier les difficultés de lecture des élèves. Les enseignants peuvent alors utiliser ces informations pour développer des stratégies pédagogiques plus ciblées. Cet outil est un exemple de la manière dont l'IA peut être utilisée pour améliorer l'apprentissage des élèves. Les enseignants peuvent utiliser cet outil pour identifier les difficultés de lecture de leurs élèves et développer des plans d'apprentissage personnalisés.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/vibe-coding-sparked-reading-interest-in-my-students"
+      },
+      {
+        "titre": "La formation des enseignants à l'IA",
+        "contenu": "Un article d'E-Learning Industry souligne l'importance de la formation des enseignants à l'IA. Les enseignants doivent être en mesure de comprendre les potentialités de l'IA pour améliorer l'apprentissage de leurs élèves. L'article présente quelques exemples de formations qui visent à aider les enseignants à intégrer l'IA dans leur pratique pédagogique. Les enseignants peuvent suivre des formations pour apprendre à utiliser les outils basés sur l'IA et à développer des stratégies pédagogiques plus efficaces. C'est un exemple de la manière dont les enseignants peuvent se former pour utiliser l'IA dans leur classe.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/ai-adoption-is-a-learning-problem-before-it-is-a-technology-problem"
+      },
+      {
+        "titre": "L'IA dans les lycées parisiens",
+        "contenu": "Un article d'Educpros présente les résultats d'une étude sur l'utilisation de l'IA dans les lycées parisiens. L'étude montre que les lycées parisiens utilisent de plus en plus l'IA pour améliorer l'apprentissage des élèves. Les enseignants utilisent des outils basés sur l'IA pour identifier les difficultés des élèves et développer des stratégies pédagogiques plus ciblées. C'est un exemple de la manière dont les enseignants peuvent utiliser l'IA pour améliorer la qualité de l'enseignement. Les enseignants peuvent utiliser les résultats de cette étude pour développer des stratégies pédagogiques plus efficaces dans leur propre classe.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/affelnet-dans-les-lycees-parisiens-la-mixite-sociale-progresse-malgre-des-reticences.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut améliorer la qualité de l'enseignement. Les enseignants doivent être en mesure de comprendre les potentialités de l'IA pour améliorer l'apprentissage de leurs élèves. Les outils basés sur l'IA peuvent aider les enseignants à personnaliser l'apprentissage, à identifier les difficultés des élèves et à développer des stratégies pédagogiques plus efficaces. Les enseignants peuvent utiliser les ressources présentées dans cette veille hebdomadaire pour développer leurs compétences en matière d'IA et améliorer la qualité de leur enseignement. Il est important de noter que l'IA ne peut pas se substituer à l'enseignant, elle doit être utilisée de manière complémentaire pour améliorer la qualité de l'enseignement."
+  },
+  {
     "id": "20260621",
     "date": "2026-06-21",
     "date_affichage": "21 juin 2026",
