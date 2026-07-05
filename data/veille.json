@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260705",
+    "date": "2026-07-05",
+    "date_affichage": "5 juillet 2026",
+    "titre": "L'intelligence artificielle dans la classe : vers un enseignement plus personnalisé",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'y échappe pas. Les enseignants se demandent comment intégrer ces outils dans leur pratique pédagogique pour améliorer l'expérience d'apprentissage de leurs élèves. La question est : comment l'IA peut-elle aider à personnaliser l'enseignement et à mieux répondre aux besoins individuels des élèves ? Les articles de la semaine nous apportent des éléments de réflexion sur cette question. L'IA peut être utilisée pour développer des outils de formation continue pour les enseignants, mais également pour créer des environnements d'apprentissage plus interactifs et plus efficaces. Cependant, il est important de prendre en compte les implications éthiques de l'utilisation de l'IA dans l'éducation et de veiller à ce que ces outils soient utilisés de manière responsable. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pour intégrer l'IA dans leur pratique pédagogique. Les politiques éducatives doivent également prendre en compte l'impact de l'IA sur l'éducation et veiller à ce que les enseignants soient soutenus dans leur utilisation de ces outils.",
+    "breves": [
+      {
+        "titre": "Un algorithme pour remplacer l'instinct de l'enseignant ?",
+        "contenu": "Un podcast récent sur EdSurge explore la question de savoir si un algorithme peut remplacer l'instinct d'un enseignant. Deux enseignants ont utilisé un outil pour résoudre un problème et ont partagé leur expérience. Ils ont constaté que l'outil leur a permis de gagner du temps et de se concentrer sur d'autres aspects de leur travail. Cependant, ils ont également souligné l'importance de l'instinct et de l'expérience de l'enseignant dans la prise de décision. L'article souligne l'intérêt de ces outils pour les enseignants, mais également les limites de l'IA dans l'éducation.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/podcast-can-an-algorithm-replace-a-teachers-instinct"
+      },
+      {
+        "titre": "La formation continue des enseignants à l'ère de l'IA",
+        "contenu": "Un article récent sur Educpros explore la question de la formation continue des enseignants dans le contexte de l'IA. L'article souligne l'importance de la formation continue pour les enseignants pour leur permettre de s'adapter aux nouveaux outils et aux nouvelles technologies. L'article cite également des exemples de formations continues qui ont été mises en place pour les enseignants, notamment dans le domaine de l'IA. L'article souligne l'intérêt de ces formations pour les enseignants, mais également les défis à relever pour les mettre en place.",
+        "source": "Educpros",
+        "url": "https://blog.educpros.fr/fredericdevaux/2026/07/02/35-milliards-deuros-et-si-la-formation-continue-etait-le-nouvel-eldorado-de-lenseignement-superieur/"
+      },
+      {
+        "titre": "L'IA pour améliorer la lecture en classe",
+        "contenu": "Un article récent sur EdSurge présente un outil d'IA qui vise à améliorer la lecture en classe. L'outil, appelé Vibe Coding, utilise l'IA pour analyser les textes et fournir des conseils aux élèves pour améliorer leur compréhension. L'article souligne les résultats positifs obtenus par les élèves qui ont utilisé cet outil, notamment en termes de motivation et de confiance. L'article présente également les possibilités offertes par cet outil pour les enseignants, qui peuvent utiliser les données collectées pour ajuster leur enseignement.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/vibe-coding-sparked-reading-interest-in-my-students"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre des possibilités intéressantes pour améliorer l'enseignement et la formation des enseignants. Cependant, il est important de prendre en compte les implications éthiques de l'utilisation de l'IA dans l'éducation et de veiller à ce que ces outils soient utilisés de manière responsable. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pour intégrer l'IA dans leur pratique pédagogique. Les politiques éducatives doivent également prendre en compte l'impact de l'IA sur l'éducation et veiller à ce que les enseignants soient soutenus dans leur utilisation de ces outils. Enfin, il est important de rappeler que l'IA ne peut pas remplacer l'instinct et l'expérience de l'enseignant, mais peut être un outil supplémentaire pour les aider à améliorer leur enseignement."
+  },
+  {
     "id": "20260628",
     "date": "2026-06-28",
     "date_affichage": "28 juin 2026",
