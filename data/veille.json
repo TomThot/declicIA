@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260712",
+    "date": "2026-07-12",
+    "date_affichage": "12 juillet 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et la salle de classe n'échappe pas à cette tendance. Les enseignants se posent désormais la question de savoir comment utiliser ces outils pour améliorer l'apprentissage de leurs élèves. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour améliorer leur pratique pédagogique ? Dans cet article, nous allons explorer quelques-unes des questions clés liées à l'IA dans la classe, notamment les outils disponibles, les impacts sur les élèves et les politiques éducatives en vigueur. Nous examinerons également les défis liés à la formation des enseignants pour qu'ils soient en mesure d'utiliser efficacement ces outils. Enfin, nous présenterons quelques ressources concrètes pour les enseignants qui souhaitent intégrer l'IA dans leur pratique pédagogique.",
+    "breves": [
+      {
+        "titre": "Les enseignants ruraux face à la pénurie de ressources en IA",
+        "contenu": "Un article d'EdSurge met en lumière les difficultés rencontrées par les enseignants dans les districts ruraux pour accéder à des ressources en intelligence artificielle. Malgré ces défis, les enseignants estiment que l'IA peut élargir les horizons de leurs élèves. Cet article souligne l'importance de prendre en compte les disparités géographiques dans l'accès aux ressources éducatives. Les enseignants ruraux ont besoin d'un soutien pour développer les compétences nécessaires pour intégrer l'IA dans leur enseignement. Il est essentiel de fournir des ressources adaptées à leurs besoins pour qu'ils puissent offrir une éducation de qualité à leurs élèves.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/in-rural-districts-ai-resources-for-educators-are-scarce"
+      },
+      {
+        "titre": "AgroParisTech se renouvelle pour accompagner les transitions agroécologiques",
+        "contenu": "AgroParisTech, un établissement d'enseignement supérieur français, a décidé de refondre son cycle ingénieur et de lancer un nouveau cursus bachelor agro pour répondre aux enjeux de souveraineté alimentaire, de transition agroécologique et de changement climatique. Cette initiative montre que les établissements d'enseignement supérieur peuvent s'adapter pour répondre aux besoins de la société. Les enseignants peuvent s'inspirer de cet exemple pour repenser leur propre pratique pédagogique et intégrer des thématiques actuelles dans leur enseignement. Cela permettra aux élèves d'acquérir des compétences plus adaptées au monde d'aujourd'hui.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/agroparistech-adapte-ses-formations-face-aux-transitions-agroecologiques.html"
+      },
+      {
+        "titre": "L'IA peut-elle remplacer l'instinct d'un enseignant ?",
+        "contenu": "Un podcast d'EdSurge explore la question de savoir si un algorithme peut remplacer l'instinct d'un enseignant. Deux enseignants partagent leur expérience d'utilisation d'outils d'IA pour résoudre des problèmes pédagogiques. Cet épisode souligne les limites et les potentialités de l'IA dans l'enseignement. Les enseignants doivent être conscients de ces limites pour utiliser efficacement les outils d'IA et compléter leur propre jugement pédagogique. Il est essentiel de trouver un équilibre entre la technologie et l'expertise humaine pour offrir une éducation de qualité.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/podcast-can-an-algorithm-replace-a-teachers-instinct"
+      }
+    ],
+    "conclusion": "L'intelligence artificielle offre des possibilités pour améliorer l'apprentissage et la pratique pédagogique, mais il est essentiel de considérer les enjeux éthiques et les limites de ces outils. Les enseignants doivent être formés pour utiliser efficacement l'IA dans leur enseignement et pour compléter leur propre jugement pédagogique. Il est également important de prendre en compte les disparités géographiques et les besoins spécifiques des élèves pour offrir une éducation de qualité à tous. En intégrant l'IA de manière réfléchie et équitable, les enseignants peuvent améliorer l'expérience d'apprentissage de leurs élèves et préparer les futurs générations aux défis du monde actuel."
+  },
+  {
     "id": "20260705",
     "date": "2026-07-05",
     "date_affichage": "5 juillet 2026",
