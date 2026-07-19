@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260719",
+    "date": "2026-07-19",
+    "date_affichage": "19 juillet 2026",
+    "titre": "L'IA dans la classe : entre opportunités et défis pour les enseignants",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans le monde de l'éducation, offrant des outils et des ressources pour aider les enseignants dans leur travail. Cependant, cette présence soulève également des questions et des inquiétudes quant à l'impact de l'IA sur les élèves et sur la profession enseignante. Les enseignants doivent naviguer dans ce nouveau paysage pour trouver les outils et les méthodes les plus efficaces pour aider leurs élèves à apprendre et à réussir. Dans ce contexte, il est essentiel de comprendre les enjeux de l'IA pour les enseignants et de les accompagner dans leur utilisation des outils et des ressources liés à l'IA. Les politiques éducatives et la formation des enseignants sont également des aspects clés à prendre en compte pour garantir une intégration efficace de l'IA dans la classe.",
+    "breves": [
+      {
+        "titre": "L'IA pour soutenir les apprenants en langue seconde",
+        "contenu": "Un article d'EdSurge explore comment les chatbots IA peuvent soutenir les apprenants en langue seconde sans aggraver les disparités. Les enseignants sont intrigués par les possibilités offertes par ces outils pour aider les élèves à améliorer leurs compétences linguistiques. Cependant, il est important de considérer les limites et les risques potentiels de l'utilisation de l'IA dans ce contexte. Les enseignants doivent évaluer soigneusement les outils et les ressources disponibles pour garantir qu'ils répondent aux besoins de leurs élèves.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/ai-meets-esl-and-teachers-are-intrigued"
+      },
+      {
+        "titre": "AgroParisTech adapte ses formations face aux transitions agroécologiques",
+        "contenu": "AgroParisTech a refondu son cycle ingénieur et a lancé un nouveau cursus bachelor agro pour accompagner les transitions agroécologiques et le changement climatique. Cette adaptation montre comment les établissements d'enseignement supérieur peuvent évoluer pour répondre aux défis du monde contemporain. Les enseignants et les étudiants peuvent tirer parti de ces changements pour développer de nouvelles compétences et de nouvelles approches pédagogiques. Cet exemple illustre l'importance de l'adaptabilité et de l'innovation dans l'éducation.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/agroparistech-adapte-ses-formations-face-aux-transitions-agroecologiques.html"
+      },
+      {
+        "titre": "Les enseignants et l'IA : gagner du temps, mais au prix de la qualité de l'apprentissage ?",
+        "contenu": "Un article du Hechinger Report examine comment les enseignants utilisent l'IA pour gagner du temps, mais souligne que cela peut avoir un impact négatif sur la qualité de l'apprentissage. Les enseignants doivent trouver un équilibre entre l'utilisation efficace de l'IA et la nécessité de maintenir une approche pédagogique de qualité. Cela nécessite une réflexion approfondie sur les objectifs et les méthodes d'enseignement, ainsi que sur les ressources et les outils disponibles. Les enseignants doivent être conscients des risques potentiels de l'IA et prendre des décisions éclairées pour utiliser ces outils de manière à promouvoir l'apprentissage des élèves.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/proof-points-ai-in-teaching/"
+      }
+    ],
+    "conclusion": "L'intégration de l'IA dans la classe offre des opportunités pour les enseignants et les élèves, mais elle nécessite également une réflexion approfondie et une adaptation continue. Les enseignants doivent être conscients des enjeux et des défis liés à l'utilisation de l'IA dans l'éducation et prendre des décisions éclairées pour utiliser ces outils de manière à promouvoir l'apprentissage des élèves. Les politiques éducatives et la formation des enseignants jouent un rôle clé dans ce processus. En travaillant ensemble, les enseignants, les décideurs et les chercheurs peuvent garantir que l'IA serve à améliorer l'éducation et à offrir de meilleures opportunités d'apprentissage pour tous les élèves."
+  },
+  {
     "id": "20260712",
     "date": "2026-07-12",
     "date_affichage": "12 juillet 2026",
