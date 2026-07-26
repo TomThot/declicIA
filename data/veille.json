@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260726",
+    "date": "2026-07-26",
+    "date_affichage": "26 juillet 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et la salle de classe n'y échappe pas. Les enseignants se demandent comment intégrer ces outils dans leur pédagogie pour améliorer l'apprentissage de leurs élèves. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour personnaliser l'apprentissage et améliorer les résultats de leurs élèves ? La formation des enseignants est-elle adaptée pour prendre en compte les défis de l'IA ? C'est à ces questions que nous allons tenter de répondre dans cet article de veille. Les enseignants doivent être accompanyés dans cette évolution pour garantir que les outils d'IA soient utilisés de manière efficace et pédagogique. L'objectif est de mettre en avant les ressources et les outils concrets qui peuvent être utilisés en classe pour améliorer l'apprentissage.",
+    "breves": [
+      {
+        "titre": "L'IA pour personnaliser l'apprentissage",
+        "contenu": "Un article récent d'EdSurge met en avant l'importance de l'IA pour personnaliser l'apprentissage. Les enseignants peuvent utiliser des outils d'IA pour analyser les données des élèves et adapter leur pédagogie en conséquence. Cela peut aider à améliorer les résultats des élèves et à réduire les écarts de réussite. Les enseignants peuvent également utiliser des outils d'IA pour créer des plans de cours personnalisés pour chaque élève. Cependant, il est important de noter que l'IA ne doit pas remplacer l'enseignant, mais plutôt l'aider à mieux faire son travail. Les enseignants doivent être formés pour utiliser ces outils de manière efficace.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/we-must-stop-using-ai-to-level-down-our-students"
+      },
+      {
+        "titre": "Les défis de l'IA dans la formation des enseignants",
+        "contenu": "Un article d'Educpros met en avant les défis de l'IA dans la formation des enseignants. Les enseignants doivent être formés pour utiliser les outils d'IA de manière efficace et pédagogique. Cela nécessite une formation continue et une mise à jour des compétences des enseignants. Les écoles de formation des enseignants doivent prendre en compte ces défis pour garantir que les enseignants soient préparés à utiliser les outils d'IA dans leur pédagogie. Les enseignants doivent également être sensibilisés aux enjeux éthiques de l'IA dans l'éducation.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/universitarisation-des-ifsi-la-rentree-2026-marque-une-etape-importante.html"
+      },
+      {
+        "titre": "Un outil concret pour la classe",
+        "contenu": "Un article du Hechinger Report met en avant un outil concret pour la classe : un système de rédaction assistée par l'IA. Cet outil peut aider les élèves à améliorer leur rédaction et à développer leurs compétences en écriture. Les enseignants peuvent également utiliser cet outil pour créer des exercices de rédaction personnalisés pour chaque élève. C'est un exemple concret de comment l'IA peut être utilisée pour améliorer l'apprentissage dans la classe.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/the-next-literacy-challenge-teaching-students-how-to-write/"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA peut être un outil puissant pour améliorer l'apprentissage dans la classe. Les enseignants doivent être formés pour utiliser ces outils de manière efficace et pédagogique. Il est important de noter que l'IA ne doit pas remplacer l'enseignant, mais plutôt l'aider à mieux faire son travail. Les enseignants doivent également être sensibilisés aux enjeux éthiques de l'IA dans l'éducation. Avec les bons outils et la bonne formation, les enseignants peuvent utiliser l'IA pour personnaliser l'apprentissage et améliorer les résultats des élèves."
+  },
+  {
     "id": "20260719",
     "date": "2026-07-19",
     "date_affichage": "19 juillet 2026",
