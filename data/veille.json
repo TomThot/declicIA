@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260802",
+    "date": "2026-08-02",
+    "date_affichage": "2 août 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre vie quotidienne, et l'éducation n'est pas en reste. Les enseignants sont confrontés à des défis nouveaux, tels que l'intégration de l'IA dans leur pratique pédagogique, la gestion des ressources en ligne et la formation des élèves à cette technologie. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peut-elle les aider à améliorer leur enseignement et à mieux accompagner leurs élèves ? Dans cet article, nous allons explorer quelques-unes des questions clés liées à l'IA dans la classe. Les enseignants doivent-ils craindre que l'IA remplace leur rôle ou peut-elle être un outil pour les aider à mieux enseigner ? Les politiques éducatives sont-elles prêtes à intégrer l'IA dans les salles de classe ? Nous allons également présenter quelques outils concrets et ressources directement utilisables en classe pour aider les enseignants à démarrer leur aventure avec l'IA.",
+    "breves": [
+      {
+        "titre": "L'IA pour améliorer la formation des enseignants",
+        "contenu": "Selon un article d'EdSurge, l'IA peut aider les enseignants à améliorer leur pratique pédagogique en leur fournissant des outils pour analyser les données des élèves et adapter leur enseignement en conséquence. Cela peut aider les enseignants à identifier les élèves qui ont besoin d'un soutien supplémentaire et à leur offrir des activités personnalisées. L'article cite l'exemple d'un système d'IA qui aide les enseignants à évaluer les compétences des élèves en mathématiques et à leur fournir des exercices ciblés pour améliorer leurs connaissances. Cela montre que l'IA peut être un outil précieux pour les enseignants pour améliorer la formation des élèves.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/what-does-ai-cost-when-we-skip-the-work"
+      },
+      {
+        "titre": "Les défis de l'intégration de l'IA dans les salles de classe",
+        "contenu": "Un article d'Educpros (L'Etudiant) souligne les défis que les enseignants rencontrent lors de l'intégration de l'IA dans leurs salles de classe. Les enseignants doivent souvent se former eux-mêmes pour utiliser ces outils et doivent également gérer les attentes des élèves et des parents. L'article cite l'exemple d'un enseignant qui a utilisé un outil d'IA pour créer des exercices personnalisés pour ses élèves, mais qui a rencontré des difficultés pour les faire accepter par les parents. Cela montre que l'intégration de l'IA dans les salles de classe nécessite une formation et un soutien adéquats pour les enseignants.",
+        "source": "Educpros (L'Etudiant)",
+        "url": "https://www.letudiant.fr/educpros/actualite/universitarisation-des-ifsi-la-rentree-2026-marque-une-etape-importante.html"
+      },
+      {
+        "titre": "Un outil concret pour les enseignants : B.E.R.R.",
+        "contenu": "Un article d'E-Learning Industry présente un outil concret appelé B.E.R.R. (Brainstorm, Enhance, Refine, Review) qui aide les enseignants à intégrer l'IA dans leur pratique pédagogique. Cet outil leur permet de brainstormer des idées pour utiliser l'IA, de les améliorer et de les refiner pour les adapter à leurs besoins. L'article donne des exemples de la façon dont les enseignants peuvent utiliser B.E.R.R. pour créer des activités personnalisées pour les élèves et pour améliorer leur enseignement. Cela montre que les enseignants ont accès à des outils concrets pour les aider à démarrer leur aventure avec l'IA.",
+        "source": "E-Learning Industry",
+        "url": "https://elearningindustry.com/b-e-r-r-a-practical-ai-framework"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA offre de nombreuses opportunités pour les enseignants pour améliorer leur pratique pédagogique et pour mieux accompagner leurs élèves. Cependant, les enseignants doivent également être conscients des défis que l'intégration de l'IA peut poser et doivent avoir accès à une formation et à un soutien adéquats pour les aider à réussir. Les outils concrets tels que B.E.R.R. peuvent aider les enseignants à démarrer leur aventure avec l'IA et à créer des activités personnalisées pour les élèves. Il est important que les politiques éducatives prennent en compte les enjeux de l'IA pour les enseignants et pour les élèves, et qu'elles offrent les ressources nécessaires pour les aider à réussir dans ce nouveau paysage éducatif."
+  },
+  {
     "id": "20260726",
     "date": "2026-07-26",
     "date_affichage": "26 juillet 2026",
