@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260809",
+    "date": "2026-08-09",
+    "date_affichage": "9 août 2026",
+    "titre": "L'intelligence artificielle dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre quotidien, et l'éducation n'y échappe pas. Les enseignants sont confrontés à de nouveaux outils et de nouvelles méthodes qui peuvent les aider à améliorer leur enseignement et à mieux répondre aux besoins de leurs élèves. Cependant, l'IA soulève également des questions éthiques et pédagogiques importantes. Dans cet article, nous allons explorer les enjeux de l'IA pour les enseignants et présenter quelques outils et ressources concrets qui peuvent être utilisés en classe. Les enseignants doivent être en mesure de comprendre les avantages et les limites de l'IA pour intégrer ces outils de manière efficace dans leur enseignement. L'IA peut aider les enseignants à personnaliser l'apprentissage, à automatiser certaines tâches et à améliorer l'évaluation. Cependant, il est important de garantir que l'IA soit utilisée de manière responsable et éthique, en tenant compte des risques potentiels tels que la biais et la confidentialité des données.",
+    "breves": [
+      {
+        "titre": "Les enseignants et l'IA : un rapport en constante évolution",
+        "contenu": "Selon un article d'EdSurge, les enseignants sont de plus en plus nombreux à intégrer l'IA dans leur enseignement. Les enseignants utilisent des outils d'IA pour personnaliser l'apprentissage, automatiser certaines tâches et améliorer l'évaluation. Cependant, les enseignants doivent également être conscients des limites et des risques potentiels de l'IA, tels que la biais et la confidentialité des données. L'article souligne l'importance de la formation des enseignants pour les aider à utiliser l'IA de manière efficace et responsable.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/teachers-forge-ahead-on-integrating-ai"
+      },
+      {
+        "titre": "L'orientation en France : un enjeu important pour les enseignants",
+        "contenu": "Selon un article d'Educpros, l'orientation est un enjeu important pour les enseignants en France. Les enseignants doivent aider les élèves à choisir leur parcours scolaire et professionnel, et l'IA peut être un outil utile pour les aider à prendre ces décisions. L'article présente quelques outils et ressources qui peuvent aider les enseignants à accompagner les élèves dans leur orientation, tels que des plateformes d'orientation en ligne et des outils de simulation de carrière.",
+        "source": "Educpros",
+        "url": "https://blog.educpros.fr/bernard-desclaux/2026/08/08/en-france-lorientation-reste-a-lecole/"
+      },
+      {
+        "titre": "L'IA et la révolution de l'apprentissage",
+        "contenu": "Selon un article de The Hechinger Report, l'IA peut révolutionner l'apprentissage en permettant aux enseignants de personnaliser l'enseignement et de mieux répondre aux besoins des élèves. L'article présente quelques exemples d'outils et de méthodes qui utilisent l'IA pour améliorer l'apprentissage, tels que des plateformes d'apprentissage en ligne et des outils de simulation. Cependant, l'article souligne également l'importance de garantir que l'IA soit utilisée de manière éthique et responsable, en tenant compte des risques potentiels tels que la biais et la confidentialité des données.",
+        "source": "The Hechinger Report",
+        "url": "https://hechingerreport.org/writing-skills-are-getting-more-attention-in-school/"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA est un outil puissant qui peut aider les enseignants à améliorer leur enseignement et à mieux répondre aux besoins des élèves. Cependant, il est important de garantir que l'IA soit utilisée de manière responsable et éthique, en tenant compte des risques potentiels tels que la biais et la confidentialité des données. Les enseignants doivent être formés pour utiliser l'IA de manière efficace et responsable, et les outils et ressources doivent être développés pour les aider à intégrer l'IA dans leur enseignement. Enfin, il est important de souligner que l'IA ne remplacera jamais les enseignants, mais qu'elle peut être un outil utile pour les aider à améliorer leur enseignement et à mieux répondre aux besoins des élèves."
+  },
+  {
     "id": "20260802",
     "date": "2026-08-02",
     "date_affichage": "2 août 2026",
