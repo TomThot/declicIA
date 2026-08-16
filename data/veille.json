@@ -1,5 +1,33 @@
 [
   {
+    "id": "20260816",
+    "date": "2026-08-16",
+    "date_affichage": "16 août 2026",
+    "titre": "L'IA dans la classe : quels enjeux pour les enseignants ?",
+    "introduction": "L'intelligence artificielle (IA) est de plus en plus présente dans notre société, et l'éducation n'est pas en reste. Les enseignants doivent se former pour intégrer ces outils dans leur pratique pédagogique. Mais quels sont les enjeux de l'IA pour les enseignants ? Comment peuvent-ils utiliser ces outils pour améliorer l'apprentissage de leurs élèves ? Les politiques éducatives doivent-elles évoluer pour prendre en compte l'IA ? Ces questions sont au cœur de la veille de cette semaine, qui présente des articles sur les outils IA pour la classe, les impacts sur les élèves, les politiques éducatives et la formation des enseignants. Nous allons voir comment les étudiants peuvent influencer les politiques d'IA dans les écoles, comment les relations entre les enseignants et les élèves peuvent évoluer avec l'IA, et comment les enseignants peuvent utiliser des outils concrets pour intégrer l'IA dans leur enseignement.",
+    "breves": [
+      {
+        "titre": "Les étudiants ont leur mot à dire sur les politiques d'IA",
+        "contenu": "Un article d'EdSurge présente une réunion à Boston où des étudiants ont proposé une politique nationale pour l'utilisation de l'IA dans les salles de classe. Cette initiative montre que les étudiants peuvent avoir un rôle important à jouer dans la définition des politiques éducatives liées à l'IA. Les enseignants doivent prendre en compte les besoins et les attentes de leurs élèves pour intégrer efficacement l'IA dans leur enseignement. Cela peut passer par la mise en place de programmes de formation pour les enseignants, mais aussi par la création de ressources pédagogiques adaptées aux besoins des élèves. Les étudiants peuvent également être impliqués dans la création de ces ressources, pour garantir qu'elles soient pertinentes et efficaces.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/on-ai-policy-students-have-plenty-to-say"
+      },
+      {
+        "titre": "L'IA peut renforcer les relations entre enseignants et élèves",
+        "contenu": "Un article d'EdSurge explique comment l'IA peut aider les enseignants à mieux comprendre les besoins de leurs élèves et à adapter leur enseignement en conséquence. Cela peut renforcer les relations entre les enseignants et les élèves, et améliorer la qualité de l'enseignement. Les enseignants peuvent utiliser des outils d'IA pour analyser les données sur les performances des élèves, et identifier les domaines où les élèves ont besoin d'une aide supplémentaire. Cela peut leur permettre de cibler leurs efforts de formation et de soutien, et d'améliorer les résultats scolaires des élèves.",
+        "source": "EdSurge",
+        "url": "https://edsurge.com/news/the-k-12-silo-wont-survive-ai-but-our-relationships-might"
+      },
+      {
+        "titre": "Les enseignants français face aux défis de l'IA",
+        "contenu": "Un article d'Educpros présente les défis que les enseignants français doivent relever pour intégrer l'IA dans leur enseignement. Les enseignants doivent se former pour utiliser les outils d'IA, mais ils doivent également être capables de les intégrer de manière pédagogique dans leur enseignement. Cela peut nécessiter des changements dans les pratiques pédagogiques, mais aussi dans les politiques éducatives. Les enseignants français peuvent tirer parti des ressources et des outils mis à leur disposition pour les aider à relever ces défis, et pour améliorer la qualité de l'enseignement.",
+        "source": "Educpros",
+        "url": "https://www.letudiant.fr/educpros/actualite/ete-2026-avant-la-presidentielle-de-2027-retour-sur-les-enjeux-de-la-derniere-annee-universitaire.html"
+      }
+    ],
+    "conclusion": "En conclusion, l'IA peut être un outil puissant pour améliorer l'enseignement et l'apprentissage, mais elle nécessite une formation et une implication des enseignants. Les enseignants doivent être capables de comprendre les enjeux de l'IA et de l'intégrer de manière pédagogique dans leur enseignement. Les politiques éducatives doivent également évoluer pour prendre en compte l'IA et garantir que les enseignants aient les ressources nécessaires pour utiliser ces outils de manière efficace. Enfin, les enseignants peuvent utiliser des outils concrets, tels que des plateformes d'apprentissage en ligne, pour intégrer l'IA dans leur enseignement et améliorer les résultats scolaires des élèves."
+  },
+  {
     "id": "20260809",
     "date": "2026-08-09",
     "date_affichage": "9 août 2026",
