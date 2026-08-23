@@ -162,7 +162,7 @@ Structure exacte :
     }
 
     payload = {
-        "model": "qwen/qwen3.6-27b",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
         "messages": [
             {
                 "role": "system",
@@ -174,7 +174,7 @@ Structure exacte :
         "max_tokens": 4096
     }
 
-    print("📡 Appel API Groq (qwen/qwen3.6-27b)...")
+    print("📡 Appel API Groq (meta-llama/llama-4-scout-17b-16e-instruct)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
