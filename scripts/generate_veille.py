@@ -162,7 +162,7 @@ Structure exacte :
     }
 
     payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "model": "openai/gpt-oss-20b",
         "messages": [
             {
                 "role": "system",
@@ -171,10 +171,10 @@ Structure exacte :
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 4096
+        "max_tokens": 2048
     }
 
-    print("📡 Appel API Groq (meta-llama/llama-4-scout-17b-16e-instruct)...")
+    print("📡 Appel API Groq (openai/gpt-oss-20b)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
