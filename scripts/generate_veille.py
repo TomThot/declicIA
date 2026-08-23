@@ -98,14 +98,16 @@ def fetch_rss_articles(max_per_source=5):
 # ou après.
 def clean_json_response(raw: str) -> str:
     """Extrait proprement le JSON de la réponse du LLM."""
+    # Cherche le premier { et le dernier } — ignore <think> et tout le reste
+    start = raw.find("{")
+    end   = raw.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        return raw[start:end + 1]
+    # Fallback nettoyage markdown
     raw = raw.strip()
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
-    raw = raw.strip()
-    match = re.search(r"\{.*\}", raw, re.DOTALL)
-    if match:
-        return match.group(0)
-    return raw
+    return raw.strip()
 
 # On formate les 20 premiers articles collectés en texte numéroté, avec source, titre, résumé et URL. 
 # C'est ce texte qui est envoyé au LLM.
@@ -170,7 +172,6 @@ Structure exacte :
     ],
     "temperature": 0.6,
     "max_tokens": 4096,
-    "thinking": {"type": "disabled"}
 }
 
     print("📡 Appel API Groq (qwen/qwen3.6-27b - thinking disabled)...")
