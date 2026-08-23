@@ -98,16 +98,14 @@ def fetch_rss_articles(max_per_source=5):
 # ou après.
 def clean_json_response(raw: str) -> str:
     """Extrait proprement le JSON de la réponse du LLM."""
-    # Cherche directement le premier { et le dernier } — ignore tout ce qui précède
-    start = raw.find("{")
-    end   = raw.rfind("}")
-    if start != -1 and end != -1 and end > start:
-        return raw[start:end + 1]
-    # Fallback : nettoyage classique markdown
     raw = raw.strip()
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
-    return raw.strip()
+    raw = raw.strip()
+    match = re.search(r"\{.*\}", raw, re.DOTALL)
+    if match:
+        return match.group(0)
+    return raw
 
 # On formate les 20 premiers articles collectés en texte numéroté, avec source, titre, résumé et URL. 
 # C'est ce texte qui est envoyé au LLM.
@@ -162,19 +160,20 @@ Structure exacte :
     }
 
     payload = {
-        "model": "openai/gpt-oss-20b",
-        "messages": [
-            {
-                "role": "system",
-                "content": "Tu es un expert en IA et éducation. Tu réponds toujours en JSON valide uniquement, sans markdown ni backticks."
-            },
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.7,
-        "max_tokens": 2048
-    }
+    "model": "qwen/qwen3.6-27b",
+    "messages": [
+        {
+            "role": "system",
+            "content": "Tu es un expert en IA et éducation. Tu réponds toujours en JSON valide uniquement, sans markdown ni backticks."
+        },
+        {"role": "user", "content": prompt}
+    ],
+    "temperature": 0.6,
+    "max_tokens": 4096,
+    "thinking": {"type": "disabled"}
+}
 
-    print("📡 Appel API Groq (openai/gpt-oss-20b)...")
+    print("📡 Appel API Groq (qwen/qwen3.6-27b - thinking disabled)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
