@@ -26,7 +26,7 @@ jobs:
 
       - name: Generer l'article de veille
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python scripts/generate_veille.py
         # La clé API est injectée comme variable d'environnement depuis les Secrets GitHub. Elle n'apparaît jamais dans les logs ni dans le code — GitHub la masque automatiquement.
 
