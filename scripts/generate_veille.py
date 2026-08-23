@@ -99,6 +99,10 @@ def fetch_rss_articles(max_per_source=5):
 def clean_json_response(raw: str) -> str:
     """Extrait proprement le JSON de la réponse du LLM."""
     raw = raw.strip()
+    # Supprime les blocs <think>...</think> des modèles reasoning (ex: qwen3)
+    raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL)
+    raw = raw.strip()
+    # Supprime les balises markdown
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
     raw = raw.strip()
