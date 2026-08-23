@@ -160,7 +160,7 @@ Structure exacte :
     }
 
     payload = {
-        "model": "openai/gpt-oss-120b",
+        "model": "qwen/qwen3.6-27b",
         "messages": [
             {
                 "role": "system",
@@ -172,7 +172,7 @@ Structure exacte :
         "max_tokens": 4096
     }
 
-    print("📡 Appel API Groq (openai/gpt-oss-120b)...")
+    print("📡 Appel API Groq (qwen/qwen3.6-27b)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
