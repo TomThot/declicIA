@@ -149,7 +149,7 @@ Structure exacte :
   "conclusion": "..."
 }}"""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
 
     headers = {"Content-Type": "application/json"}
 
@@ -161,7 +161,7 @@ Structure exacte :
         }
     }
 
-    print("📡 Appel API Gemini (gemini-1.5-flash)...")
+    print("📡 Appel API Gemini (gemini-2.0-flash)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
