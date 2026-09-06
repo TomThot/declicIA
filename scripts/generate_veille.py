@@ -215,7 +215,7 @@ def save_to_json(article_data, output_path="data/veille.json"):
 def main():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-    raise ValueError("❌ GEMINI_API_KEY manquante dans les variables d'environnement")
+        raise ValueError("❌ GEMINI_API_KEY manquante dans les variables d'environnement")
 
     print("🔍 Collecte des articles RSS...")
     articles = fetch_rss_articles()
