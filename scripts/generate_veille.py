@@ -107,7 +107,7 @@ def clean_json_response(raw: str) -> str:
 
 
 def generate_article_with_mistral(articles, api_key):
-    """Envoie les articles à Mistral (mistral-small-latest) et récupère la synthèse."""
+    """Envoie les articles à Gemini (gemini-1.5-flash) et récupère la synthèse."""
 
     articles_text = ""
     for i, a in enumerate(articles[:20], 1):
@@ -149,37 +149,28 @@ Structure exacte :
   "conclusion": "..."
 }}"""
 
-    # Appel de l'API Mistral
-    url = "https://api.mistral.ai/v1/chat/completions"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
 
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
+    headers = {"Content-Type": "application/json"}
 
     payload = {
-        "model": "mistral-small-latest",
-        "messages": [
-            {
-                "role": "system",
-                "content": "Tu es un expert en IA et éducation. Tu réponds toujours en JSON valide uniquement, sans markdown ni backticks."
-            },
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.7,
-        "max_tokens": 4096
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": 4096
+        }
     }
 
-    print("📡 Appel API Mistral (mistral-small-latest)...")
+    print("📡 Appel API Gemini (gemini-1.5-flash)...")
     response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if not response.ok:
-        print(f"❌ Erreur API Mistral {response.status_code} : {response.text[:500]}")
+        print(f"❌ Erreur API Gemini {response.status_code} : {response.text[:500]}")
         response.raise_for_status()
 
     data = response.json()
-    raw_text = data["choices"][0]["message"]["content"]
-    print(f"📥 Réponse brute Mistral ({len(raw_text)} chars)")
+    raw_text = data["candidates"][0]["content"]["parts"][0]["text"]
+    print(f"📥 Réponse brute Gemini ({len(raw_text)} chars)")
 
     cleaned = clean_json_response(raw_text)
 
@@ -222,9 +213,9 @@ def save_to_json(article_data, output_path="data/veille.json"):
 
 
 def main():
-    api_key = os.environ.get("MISTRAL_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError("❌ MISTRAL_API_KEY manquante dans les variables d'environnement")
+    raise ValueError("❌ GEMINI_API_KEY manquante dans les variables d'environnement")
 
     print("🔍 Collecte des articles RSS...")
     articles = fetch_rss_articles()

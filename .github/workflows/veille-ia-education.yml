@@ -23,7 +23,7 @@ jobs:
 
       - name: Generer l'article de veille
         env:
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
         run: python scripts/generate_veille.py
 
       - name: Commit et push de l'article
